@@ -1,0 +1,17 @@
+---
+title: 'Home'
+---
+
+<%= partial 'header' %>
+
+<section class="posts">
+  <% page_articles.each do |article| %>
+    <article>
+      <%= article.body %>
+    </article>
+  <% end %>
+
+  <aside>
+    To be continued...
+  </aside>
+</section>

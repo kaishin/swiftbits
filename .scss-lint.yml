@@ -1,0 +1,12 @@
+# https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+linters:
+  HexNotation:
+    enabled: true
+    style: uppercase
+  PropertySortOrder:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  ZeroUnit:
+    enabled: false

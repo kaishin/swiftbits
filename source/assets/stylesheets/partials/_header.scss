@@ -1,0 +1,58 @@
+$large-header: new-breakpoint(rem(700));
+
+header {
+  @include linear-gradient(35deg, $red-orange, $casablanca);
+
+  .content {
+    @extend %narrow-container;
+    font-size: .7em;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    @include media($large-header) {
+      font-size: 1em;
+      text-align: left;
+    }
+
+    .logo {
+      @include position(absolute, -20% 0px 0 0);
+      display: inline-block;
+      margin-bottom: .5em;
+      margin-right: 1.5em;
+      max-width: 80%;
+      opacity: .1;
+      z-index: 0;
+
+      @include media($large-header) {
+        top: -40%;
+      }
+    }
+
+    h1 {
+      color: #FFF;
+      display: inline-block;
+      font-size: 4em;
+      letter-spacing: .02em;
+      padding: .8em 0;
+      text-shadow: 0 1px 2px rgba(#000, .2);
+      text-transform: uppercase;
+      z-index: 1;
+      position: relative;
+
+      @include media($large-header) {
+        padding: 1em 0;
+      }
+
+      span {
+        display: block;
+        font-size: .68em;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: .6;
+        margin-bottom: .2em;
+        text-transform: none;
+      }
+    }
+  }
+}

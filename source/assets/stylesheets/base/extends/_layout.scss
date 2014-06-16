@@ -1,0 +1,8 @@
+%narrow-container {
+  @include outer-container;
+  max-width: rem($content-width);
+
+  @include media(new-breakpoint(max-width rem($content-width))) {
+    padding: 1rem;
+  }
+}

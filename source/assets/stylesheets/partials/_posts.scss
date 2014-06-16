@@ -1,0 +1,27 @@
+$wide-column: new-breakpoint($content-width);
+$narrow-column: new-breakpoint(content-width ($content-width - 1));
+
+.posts {
+  @extend %narrow-container;
+
+  @include media($narrow-column) {
+    font-size: .8em;
+    padding: 1em;
+  }
+
+  h3 {
+    border-bottom: 1px solid rgba(#000, .1);
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding-bottom: .2em;
+  }
+
+  aside {
+    border-top: 1px solid rgba(#000, .1);
+    color: rgba(#000, .2);
+    font-size: 1.8em;
+    font-weight: 300;
+    padding: 3em 1em 4em;
+    text-align: center;
+  }
+}
