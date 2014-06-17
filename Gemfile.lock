@@ -121,9 +121,6 @@ GEM
       sprockets (~> 2.2)
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.1.0)
-    middleman-syntax (2.0.0)
-      middleman-core (~> 3.2)
-      rouge (~> 1.0)
     minitest (5.3.4)
     multi_json (1.10.1)
     neat (1.5.1)
@@ -152,7 +149,6 @@ GEM
     rb-kqueue (0.2.3)
       ffi (>= 0.5.0)
     redcarpet (3.1.2)
-    rouge (1.4.0)
     sass (3.2.19)
     sprockets (2.12.1)
       hike (~> 1.2)
@@ -188,6 +184,5 @@ DEPENDENCIES
   middleman-livereload (~> 3.3.0)
   middleman-minify-html
   middleman-neat (~> 0.0.4)
-  middleman-syntax
   rake (~> 10.1.0)
   redcarpet

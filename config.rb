@@ -3,7 +3,6 @@ require 'builder'
 page '/sitemap.xml', layout: false
 page '/feed.xml', layout: false
 
-activate :syntax
 activate :autoprefixer
 activate :dotenv
 
@@ -13,7 +12,6 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :partials_dir, 'partials'
-set :syntax_theme, Rouge::Themes::Github
 set :meta, {
   title: 'Learn Swift',
   url: 'http://learn-swift.org',
