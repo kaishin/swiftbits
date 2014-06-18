@@ -1,0 +1,1 @@
+livesLabel = "You have \(numberOfLives - 1) lives remaining."

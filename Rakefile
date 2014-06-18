@@ -2,8 +2,10 @@ require 'rubygems'
 require 'bundler'
 require 'rake'
 
-Dir["lib/tasks/*"].each do |task|
-  require_relative task
-end
+task :default => [:playground]
 
-task :default => [:open]
+desc "Regenrate playgrounds"
+task :playground do
+  print "Regenerating playgrounds..."
+  `playground #{File.dirname(__FILE__)}/source/playgrounds/ -d #{File.dirname(__FILE__)}/public/`
+end

@@ -1,0 +1,1 @@
+println("Swift is Apple's new programming language for writing iOS and OSX apps.\n It was introduced during WWDC 2014 as a replacement to Objective-C.")
