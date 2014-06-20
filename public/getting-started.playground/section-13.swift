@@ -1,1 +1,0 @@
-var opponentName = "Player 2"
