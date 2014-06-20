@@ -4,3 +4,5 @@
 .DS_Store
 /.cache
 /lib/tasks/*
+/_temp
+/_playgrounds
