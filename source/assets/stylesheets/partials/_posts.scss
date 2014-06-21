@@ -5,8 +5,8 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
   @extend %narrow-container;
 
   @include media($narrow-column) {
-    font-size: .8em;
     padding: 1em;
+    font-size: .8em;
   }
 
   h3 {
@@ -14,6 +14,10 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     margin-bottom: 1em;
     margin-top: 2em;
     padding-bottom: .2em;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   aside {
@@ -23,5 +27,36 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     font-weight: 300;
     padding: 3em 1em 4em;
     text-align: center;
+  }
+
+  .post-header {
+    margin: 4em 0 2em;
+  }
+
+  .post-title {
+    color: rgba(#000, .5);
+    font-size: 1.4em;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  .download-playground {
+    @extend %button;
+    background: #FFF;
+    border-radius: $base-border-radius;
+    border: 1px solid $blue;
+    color: $blue;
+    vertical-align: bottom;
+    display: inline-block;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 1em;
+    padding: .8em 1em .6em;
+
+    &:hover {
+      background: $blue;
+    }
   }
 }
