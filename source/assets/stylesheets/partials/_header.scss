@@ -1,6 +1,6 @@
 $large-header: new-breakpoint(rem(700));
 
-header {
+.main-header {
   @include linear-gradient(35deg, $red-orange, $casablanca);
 
   .content {
