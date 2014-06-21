@@ -13,11 +13,9 @@
     <meta name="keywords" content="<%= keywords.join(',') %>">
     <meta name="description" content="<%= description %>">
     <meta name="author" content="<%= author %>">
-    <%= stylesheet_link_tag 'main' %>
-    <%= partial 'typekit' %>
   </head>
   <body>
     <%= yield %>
-    <%= javascript_include_tag 'main' %>
+    <%= partial 'defer_load' %>
   </body>
 </html>
