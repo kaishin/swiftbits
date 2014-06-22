@@ -94,7 +94,7 @@ code, kbd, pre, samp {
 pre {
   background: rgba(#000, .03);
   padding: .5em;
-  border-radius: $base-border-radius * 2;
+  border-radius: $base-border-radius;
 
   .highlight {
     background: transparent;
