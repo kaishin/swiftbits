@@ -13,6 +13,10 @@
     <meta name="keywords" content="<%= keywords.join(',') %>">
     <meta name="description" content="<%= description %>">
     <meta name="author" content="<%= author %>">
+    <% css_path = sitemap.resources.select { |p| p.source_file.match(/basic[.]scss$/) }.first %>
+    <style>
+      <%= css_path.render %>
+    </style>
   </head>
   <body>
     <%= yield %>
