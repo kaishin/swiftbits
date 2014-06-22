@@ -12,10 +12,6 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :partials_dir, 'partials'
-set :meta, {
-  title: 'Learn Swift',
-  url: 'http://learn-swift.org',
-}
 
 Time.zone = 'Stockholm'
 
