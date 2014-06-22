@@ -1,13 +1,29 @@
 <script type="text/javascript">
   (function() {
+    // Stylesheets
     function loadStylesheet(url) {
       var stylesheet = document.createElement("link");
-          stylesheet.type = "text/css";
-          stylesheet.rel = "stylesheet";
-          stylesheet.href = url;
-          document.getElementsByTagName("head")[0].appendChild(stylesheet);
+      stylesheet.type = "text/css";
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = url;
+      document.getElementsByTagName("head")[0].appendChild(stylesheet);
     }
 
+    function loadAllStylesheets() {
+      stylesheets = ["<%= asset_path(:css, 'main') %>"]
+      var i = stylesheets.length;
+      while (i--) loadStylesheet(stylesheets[i]);
+    };
+
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+    if (requestAnimationFrame) {
+       requestAnimationFrame(loadAllStylesheets);
+    } else {
+      window.addEventListener('load', loadAllStylesheets);
+    }
+
+    // Javascripts
     function loadScript(url, callback) {
       var script = document.createElement("script");
       script.type = "text/javascript";
@@ -30,10 +46,6 @@
       document.getElementsByTagName("head")[0].appendChild(script);
     }
 
-    // Stylesheets
-    loadStylesheet("<%= asset_path(:css, 'main') %>");
-
-    // Javascripts
     loadScript("<%= asset_path(:js, 'main') %>", function(){});
     loadScript("//use.typekit.net/jra4cdq.js", function() {
       try {Typekit.load()} catch(e) {}
