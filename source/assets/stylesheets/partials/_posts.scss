@@ -9,10 +9,14 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     font-size: .8em;
   }
 
+  .wf-loading & {
+    visibility: hidden;
+  }
+
   h3 {
     border-bottom: 1px solid rgba(#000, .1);
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 1em;
     margin-top: 2em;
     padding-bottom: .2em;
@@ -41,6 +45,7 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     font-weight: 300;
     text-transform: uppercase;
     display: inline-block;
+    margin-right: 1em;
   }
 
   .download-playground {
@@ -49,13 +54,13 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     border-radius: $base-border-radius;
     border: 1px solid $blue;
     color: $blue;
-    vertical-align: bottom;
     display: inline-block;
     font-size: .8em;
     font-style: normal;
     font-weight: normal;
-    margin-left: 1em;
+    margin-top: .5em;
     padding: .8em 1em .6em;
+    vertical-align: bottom;
 
     &:hover {
       background: $blue;

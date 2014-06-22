@@ -29,7 +29,7 @@ $large-header: new-breakpoint(rem(700));
       }
     }
 
-    h1 {
+    .main-title {
       color: #FFF;
       display: inline-block;
       font-size: 4em;
@@ -42,6 +42,10 @@ $large-header: new-breakpoint(rem(700));
 
       @include media($large-header) {
         padding: 1em 0;
+      }
+
+      .wf-loading & {
+        visibility: hidden;
       }
 
       span {

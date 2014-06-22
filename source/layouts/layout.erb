@@ -17,7 +17,7 @@
   </head>
   <body>
     <%= yield %>
-    <%= partial 'defer_js' %>
     <%= partial 'typekit' %>
+    <%= javascript_include_tag 'main', async: true %>
   </body>
 </html>
