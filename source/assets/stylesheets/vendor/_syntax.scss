@@ -1,89 +1,81 @@
-.hljs {
-  display: inline-block;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
+.hljs-comment, .hljs-title {
+  color: #8e908c;
 }
 
-.hljs-comment, .hljs-template_comment, .diff .hljs-header, .hljs-javadoc {
-  color: #998;
-  font-style: italic;
+.hljs-variable, .hljs-attribute, .hljs-tag, .hljs-regexp, .ruby .hljs-constant {
+  color: #C82829;
 }
 
-.hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .javascript .hljs-title, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status {
-  color: #333;
-  font-weight: bold;
-}
-
-.hljs-number, .hljs-hexcolor, .ruby .hljs-constant {
-  color: #099;
-}
-
-.hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .tex .hljs-formula {
-  color: #d14;
-}
-
-.hljs-title, .hljs-id, .coffeescript .hljs-params, .scss .hljs-preprocessor {
-  color: #900;
-  font-weight: bold;
-}
-
-.javascript .hljs-title, .lisp .hljs-title, .clojure .hljs-title, .hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-class .hljs-title, .haskell .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {
-  color: #458;
-  font-weight: bold;
-}
-
-.hljs-tag {
-  color: #000080;
-  font-weight: normal;
-  .hljs-title {
-    color: #000080;
-    font-weight: normal;
+.xml {
+  .hljs-tag .hljs-title, .hljs-pi, .hljs-doctype {
+    color: #C82829;
   }
 }
 
-.hljs-rules .hljs-property, .django .hljs-tag .hljs-keyword {
-  color: #000080;
-  font-weight: normal;
+.html .hljs-doctype {
+  color: #C82829;
 }
 
-.hljs-attribute, .hljs-variable, .lisp .hljs-body {
-  color: #008080;
+.css {
+  .hljs-id, .hljs-class, .hljs-pseudo {
+    color: #C82829;
+  }
 }
 
-.hljs-regexp {
-  color: #009926;
+.hljs-number, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .hljs-literal, .hljs-params, .hljs-constant {
+  color: #F5871F;
 }
 
-.hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .tex .hljs-special, .hljs-prompt {
-  color: #990073;
+.ruby .hljs-class .hljs-title, .css .hljs-rules .hljs-attribute {
+  color: #EAB700;
 }
 
-.hljs-built_in, .lisp .hljs-title, .clojure .hljs-built_in {
-  color: #0086b3;
+.hljs-string, .hljs-value, .hljs-inheritance, .hljs-header, .ruby .hljs-symbol, .xml .hljs-cdata {
+  color: #718C00;
 }
 
-.hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {
-  color: #999;
-  font-weight: bold;
+.css .hljs-hexcolor {
+  color: #3E999F;
 }
 
-.hljs-deletion {
-  background: #fdd;
+.hljs-function {
+  color: #4271AE;
 }
 
-.hljs-addition {
-  background: #dfd;
+.python {
+  .hljs-decorator, .hljs-title {
+    color: #4271AE;
+  }
 }
 
-.diff .hljs-change {
-  background: #0086b3;
+.ruby {
+  .hljs-function .hljs-title, .hljs-title .hljs-keyword {
+    color: #4271AE;
+  }
 }
 
-.hljs-chunk {
-  color: #aaa;
+.perl .hljs-sub, .javascript .hljs-title, .coffeescript .hljs-title {
+  color: #4271AE;
+}
+
+.hljs-keyword, .javascript .hljs-function {
+  color: #8959A8;
+}
+
+.hljs {
+  display: inline-block;
+  background: rgba(#000, .03);
+  color: #4D4D4C;
+  padding: 0.5em;
+  border-radius: $base-border-radius;
+}
+
+.coffeescript .javascript, .javascript .xml, .tex .hljs-formula {
+  opacity: 0.5;
+}
+
+.xml {
+  .javascript, .vbscript, .css, .hljs-cdata {
+    opacity: 0.5;
+  }
 }

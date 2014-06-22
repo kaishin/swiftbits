@@ -90,13 +90,3 @@ cite {
 code, kbd, pre, samp {
   font-family: $monospace;
 }
-
-pre {
-  background: rgba(#000, .03);
-  padding: .5em;
-  border-radius: $base-border-radius;
-
-  .highlight {
-    background: transparent;
-  }
-}
