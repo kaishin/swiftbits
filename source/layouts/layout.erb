@@ -13,11 +13,13 @@
     <meta name="keywords" content="<%= keywords.join(',') %>">
     <meta name="description" content="<%= description %>">
     <meta name="author" content="<%= author %>">
+    <meta name="google-site-verification" content="wORXjk9nSO7wqMIvSu_zElBC83WLkkSVGVOJjA9w7W4" />
     <%= stylesheet_link_tag 'main' %>
   </head>
   <body>
     <%= yield %>
     <%= partial 'typekit' %>
+    <%= partial 'analytics' %>
     <%= javascript_include_tag 'main', async: true %>
   </body>
 </html>
