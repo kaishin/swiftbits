@@ -9,3 +9,19 @@
 @import 'tables';
 @import 'lists';
 @import 'buttons';
+
+$wide-column: new-breakpoint($content-width);
+$narrow-column: new-breakpoint(content-width ($content-width - 1));
+
+[data-role=content] {
+  @extend %narrow-container;
+
+  .wf-loading & {
+    visibility: hidden;
+  }
+
+  @include media($narrow-column) {
+    padding: 1em;
+    font-size: .8em;
+  }
+}

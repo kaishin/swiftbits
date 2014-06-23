@@ -1,18 +1,4 @@
-$wide-column: new-breakpoint($content-width);
-$narrow-column: new-breakpoint(content-width ($content-width - 1));
-
-.posts {
-  @extend %narrow-container;
-
-  @include media($narrow-column) {
-    padding: 1em;
-    font-size: .8em;
-  }
-
-  .wf-loading & {
-    visibility: hidden;
-  }
-
+.chapter {
   h3 {
     border-bottom: 1px solid rgba(#000, .1);
     font-size: 1.2em;
@@ -26,20 +12,12 @@ $narrow-column: new-breakpoint(content-width ($content-width - 1));
     }
   }
 
-  aside {
-    border-top: 1px solid rgba(#000, .1);
-    color: rgba(#000, .2);
-    font-size: 1.8em;
-    font-weight: 300;
-    padding: 3em 1em 4em;
-    text-align: center;
-  }
 
-  .post-header {
+  .article-header {
     margin: 4em 0 2em;
   }
 
-  .post-title {
+  .article-title {
     color: rgba(#000, .5);
     font-size: 1.4em;
     font-weight: 300;

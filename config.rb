@@ -17,9 +17,10 @@ Time.zone = 'Stockholm'
 
 activate :blog do |blog|
   blog.sources = "posts/:year-:month-:day-:title.html"
-  blog.permalink = '{year}/{title}.html'
+  blog.permalink = "{year}/{title}.html"
   blog.taglink = "tags/{tag}.html"
   blog.default_extension = ".md"
+  blog.layout = "article"
   blog.paginate = true
   blog.per_page = 10
 end

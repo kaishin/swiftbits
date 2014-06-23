@@ -2,19 +2,9 @@
 title: 'Home'
 ---
 
-<%= partial 'header' %>
-
-<section class="posts">
+<section class="articles" data-role="content">
   <% page_articles.each do |article| %>
-    <article>
-      <header class="post-header">
-        <h2 class="post-title" id="<%= article.title.tr(' ', '-').downcase %>">
-          <%= article.title %>
-        </h2>
-        <a href="<%= playground_download_url(article) %>" class="download-playground">Download Playground</a>
-      </header>
-      <%= article.body %>
-    </article>
+    <%= partial "article_body", locals: { article: article } %>
   <% end %>
 
   <aside>
