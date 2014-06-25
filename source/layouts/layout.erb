@@ -18,10 +18,10 @@
     <%= stylesheet_link_tag 'main' %>
   </head>
   <body>
-    <%= partial 'header' %>
+    <%= partial "header" %>
     <%= yield %>
-    <%= partial 'typekit' %>
-    <%= partial 'analytics' %>
     <%= javascript_include_tag 'main', async: true %>
+    <%= partial "typekit" %>
+    <%= partial "analytics" %>
   </body>
 </html>
