@@ -1,0 +1,105 @@
+.stay-updated {
+  %large-text {
+    color: rgba(#000, .4);
+    font-size: 1.8em;
+    font-weight: 300;
+  }
+
+  .to-be-continued {
+    @extend %large-text;
+    border-top: $base-border;
+    border-bottom: $base-border;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+
+    &:after {
+      $size: 20px;
+      @include size($size);
+      @include transform(rotate(45deg));
+      background: #FFF;
+      border-bottom: $base-border;
+      border-right: $base-border;
+      bottom: -($size / 2) - 1px;
+      content: '';
+      display: block;
+      left: calc(50% - #{$size / 2});
+      position: absolute;
+    }
+  }
+
+  .svg-icon {
+    @include size(14px);
+    vertical-align: top;
+    margin-right: .2em;
+  }
+
+  .hidden-field {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  .submit-button {
+    width: 100%;
+
+    &:hover {
+      .icon-path {
+        fill: #FFF;
+      }
+    }
+
+    .icon-path {
+      fill: $blue;
+    }
+  }
+
+  .email-form {
+    padding-top: 1em;
+  }
+
+  .separator {
+    text-align: center;
+    padding: 1em;
+
+    span {
+      $pseudo-margin: .3em;
+      @extend %large-text;
+      display: block;
+
+      &:before {
+        color: rgba(#000, .2);
+        content: '\2014';
+        margin-right: $pseudo-margin;
+      }
+
+      &:after {
+        color: rgba(#000, .2);
+        content: '\2014';
+        margin-left: $pseudo-margin;
+      }
+    }
+  }
+
+  .rss-link {
+    @extend %button;
+    width: 100%;
+    border-color: $red-casablanca;
+    color: $red-casablanca;
+
+    &:hover {
+      background: $red-casablanca;
+
+      .icon-path {
+        fill: #FFF;
+      }
+    }
+
+    .icon-path {
+      fill: $red-casablanca;
+    }
+  }
+}

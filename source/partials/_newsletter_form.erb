@@ -1,0 +1,11 @@
+<form class="validate email-form"
+  action="http://learn-swift.us8.list-manage1.com/subscribe/post?u=<%= data.mailchimp.user_id %>&id=<%= data.mailchimp.list_id %>"
+  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+
+  <input type="email" class="required email" id="mce-EMAIL" name="EMAIL" placeholder="Your email address. No spam, promise.">
+  <input type="text" class="hidden-field" name="b_<%= data.mailchimp.user_id %>_<%= data.mailchimp.list_id %>" tabindex="-1">
+  <button type="submit" class="submit-button" id="mc-embedded-subscribe" name="subscribe">
+    <%= svg_icon('envelope') %>
+    Email me updates...
+  </button>
+</form>

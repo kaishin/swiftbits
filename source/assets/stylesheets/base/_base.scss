@@ -9,6 +9,7 @@
 @import 'tables';
 @import 'lists';
 @import 'buttons';
+@import 'svg-icons';
 
 $wide-column: new-breakpoint($content-width);
 $narrow-column: new-breakpoint(content-width ($content-width - 1));

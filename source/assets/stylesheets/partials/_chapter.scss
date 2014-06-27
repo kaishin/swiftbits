@@ -12,7 +12,6 @@
     }
   }
 
-
   .article-header {
     margin: 4em 0 2em;
   }
@@ -28,16 +27,8 @@
 
   .download-playground {
     @extend %button;
-    background: #FFF;
-    border-radius: $base-border-radius;
-    border: 1px solid $blue;
-    color: $blue;
-    display: inline-block;
     font-size: .8em;
-    font-style: normal;
-    font-weight: normal;
     margin-top: .5em;
-    padding: .8em 1em .6em;
     vertical-align: bottom;
 
     &:hover {

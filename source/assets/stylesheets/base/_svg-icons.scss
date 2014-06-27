@@ -1,0 +1,9 @@
+.svg-icon {
+  @include size(16px);
+  vertical-align: middle;
+  pointer-events: none;
+
+  .path {
+    fill: #000;
+  }
+}

@@ -7,7 +7,16 @@ title: 'Home'
     <%= partial "article_body", locals: { article: article } %>
   <% end %>
 
-  <aside>
-    To be continued...
+  <aside class="stay-updated">
+    <span class="to-be-continued">
+      To be continued...
+    </span>
+
+    <%= partial "newsletter_form" %>
+    <div class="separator"><span>or</span></div>
+    <% link_to "#{data.seo.site_url}/feed", class: "rss-link" do %>
+      <%= svg_icon('rss') %>
+      Give me the feed
+    <% end %>
   </aside>
 </section>

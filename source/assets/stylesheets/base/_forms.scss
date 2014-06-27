@@ -32,14 +32,19 @@ select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
   background-color: white;
-  border-radius: $form-border-radius;
-  border: 1px solid $form-border-color;
-  box-shadow: $form-box-shadow;
+  border-bottom: 2px solid $form-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
+  padding-top: $base-line-height / 3;
   width: 100%;
+
+  @include placeholder {
+    font-weight: 300;
+  }
 
   &:hover {
     border-color: $form-border-color-hover;
@@ -47,7 +52,6 @@ select[multiple=multiple] {
 
   &:focus {
     border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
     outline: none;
   }
 }
