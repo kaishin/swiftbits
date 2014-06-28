@@ -30,7 +30,7 @@ textarea,
 #{$all-text-inputs},
 select[multiple=multiple] {
   @include box-sizing(border-box);
-  @include transition(border-color);
+  @include transition(all, .2s);
   background-color: white;
   border-bottom: 2px solid $form-border-color;
   border-left: none;
@@ -39,15 +39,17 @@ select[multiple=multiple] {
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
-  padding-top: $base-line-height / 3;
+  padding: ($base-line-height / 3) .5em 0;
   width: 100%;
 
   @include placeholder {
     font-weight: 300;
+    color: darken(white, 15%);
   }
 
   &:hover {
     border-color: $form-border-color-hover;
+    background-color: darken(white, 2%);
   }
 
   &:focus {
