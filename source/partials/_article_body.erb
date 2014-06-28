@@ -3,7 +3,10 @@
     <h2 class="article-title" id="<%= article.title.tr(' ', '-').downcase %>">
       <%= article.title %>
     </h2>
-    <a href="<%= playground_download_url(article) %>" class="download-playground">Download Playground</a>
+    <a href="<%= playground_download_url(article) %>" class="download-playground">
+      <%= svg_icon(:download) %>
+      Download Playground
+    </a>
   </header>
   <%= article.body %>
 </article>

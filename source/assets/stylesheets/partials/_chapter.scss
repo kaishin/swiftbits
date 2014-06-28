@@ -27,12 +27,28 @@
 
   .download-playground {
     @extend %button;
-    font-size: .8em;
     margin-top: .5em;
-    vertical-align: bottom;
+    border-color: $jungle-green;
+    color: $jungle-green;
+
+    @include media($wide-column) {
+      font-size: .8em;
+    }
+
+    .svg-icon {
+      vertical-align: bottom;
+    }
 
     &:hover {
-      background: $blue;
+      background: $jungle-green;
+
+      .icon-path {
+        fill: #FFF;
+      }
+    }
+
+    .icon-path {
+      fill: $jungle-green;
     }
   }
 }

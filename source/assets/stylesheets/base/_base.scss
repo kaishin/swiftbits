@@ -23,3 +23,9 @@
     font-size: .8em;
   }
 }
+
+.svg-icon {
+  @include size(14px);
+  vertical-align: top;
+  margin-right: .2em;
+}

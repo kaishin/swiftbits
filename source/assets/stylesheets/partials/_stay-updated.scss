@@ -30,10 +30,9 @@
     }
   }
 
-  .svg-icon {
-    @include size(14px);
-    vertical-align: top;
-    margin-right: .2em;
+  .choose-method {
+    @include outer-container;
+    max-width: em(500);
   }
 
   .hidden-field {
@@ -44,7 +43,9 @@
   }
 
   .submit-button {
-    width: 100%;
+    @include media($narrow-column) {
+      width: 100%;
+    }
 
     &:hover {
       .icon-path {
@@ -63,7 +64,7 @@
 
   .separator {
     text-align: center;
-    padding: 1em;
+    padding: 2em 1em;
 
     span {
       $pseudo-margin: .3em;
