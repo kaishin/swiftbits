@@ -107,6 +107,8 @@ GEM
     middleman-imageoptim (0.1.4)
       image_optim (~> 0.9.1)
       middleman-core (>= 3.0)
+    middleman-jquery (2.1.1)
+      thor (>= 0.14, < 2.0)
     middleman-livereload (3.3.3)
       em-websocket (~> 0.5.1)
       middleman-core (~> 3.2)
@@ -187,6 +189,7 @@ DEPENDENCIES
   middleman-deploy
   middleman-dotenv (~> 1.0)
   middleman-imageoptim (~> 0.1.4)
+  middleman-jquery (~> 2.1.0)
   middleman-livereload (~> 3.3.0)
   middleman-minify-html
   middleman-neat (~> 0.0.4)
