@@ -1,5 +1,12 @@
+.hljs {
+  display: inline-block;
+  background: transparent;
+  color: #4D4D4C;
+  padding: 0.5em;
+}
+
 .hljs-comment, .hljs-title {
-  color: #8e908c;
+  color: #8E908C;
 }
 
 .hljs-variable, .hljs-attribute, .hljs-tag, .hljs-regexp, .ruby .hljs-constant {
@@ -31,7 +38,7 @@
 }
 
 .hljs-string, .hljs-value, .hljs-inheritance, .hljs-header, .ruby .hljs-symbol, .xml .hljs-cdata {
-  color: #718C00;
+  color: $jungle-green;
 }
 
 .css .hljs-hexcolor {
@@ -60,14 +67,6 @@
 
 .hljs-keyword, .javascript .hljs-function {
   color: #8959A8;
-}
-
-.hljs {
-  display: inline-block;
-  background: rgba(#000, .03);
-  color: #4D4D4C;
-  padding: 0.5em;
-  border-radius: $base-border-radius;
 }
 
 .coffeescript .javascript, .javascript .xml, .tex .hljs-formula {

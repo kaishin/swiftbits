@@ -87,10 +87,18 @@ cite {
   }
 }
 
+pre {
+  border-radius: $base-border-radius / 2;
+  background: rgba(#000, .02);
+}
+
 code, kbd, pre, samp {
   font-family: $monospace;
 }
 
 code {
   width: 100%;
+  border-radius: $base-border-radius / 2;
+  padding: 0 .2em;
+  background: rgba(#000, .02);
 }
