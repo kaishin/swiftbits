@@ -13,7 +13,11 @@
   }
 
   .article-header {
-    margin: 4em 0 2em;
+    margin: 2em 0;
+
+    @include media($wide-column) {
+      margin: 4em 0 2em;
+    }
   }
 
   .article-title {
