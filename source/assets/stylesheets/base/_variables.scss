@@ -60,6 +60,8 @@ $form-font-family: $base-font-family;
 
 // Layout
 $content-width: 700px;
+$wide-column: new-breakpoint($content-width);
+$narrow-column: new-breakpoint(max-width ($content-width - 1));
 
 // Misc
 $base-border: 1px solid rgba(#000, .1);
