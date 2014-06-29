@@ -12,11 +12,9 @@ title: 'Home'
       To be continued...
     </span>
 
-    <%= partial "newsletter_form" %>
-    <div class="separator"><span>or</span></div>
-    <% link_to "#{data.seo.site_url}/feed", class: "rss-link" do %>
-      <%= svg_icon('rss') %>
-      Give me the feed
-    <% end %>
+    <section class="choose-method">
+      <%= partial "social/subscribe_button" %>
+      <%= partial "social/rss_link" %>
+    </section>
   </aside>
 </section>
