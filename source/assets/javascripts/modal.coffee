@@ -12,13 +12,13 @@ class Modal
     @_bindCloseButtonClickEvents()
 
   _bindOverlayClickEvents: =>
-    $overlay.on 'click', @_hideModal
+    $overlay.on "click", @_hideModal
 
   _bindTriggerClickEvents: =>
-    $trigger.on 'click', @_showModal
+    $trigger.on "click", @_showModal
 
   _bindCloseButtonClickEvents: =>
-    $closeButton.on 'click', @_hideModal
+    $closeButton.on "click", @_hideModal
 
   _showModal: ->
     $modal.addClass(VISIBLE_CLASS)

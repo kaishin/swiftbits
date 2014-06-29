@@ -55,6 +55,11 @@ select[multiple=multiple] {
     border-color: $form-border-color-focus;
     outline: none;
   }
+
+  &._oops {
+    @extend %shake;
+    border-color: $red-casablanca;
+  }
 }
 
 textarea {
