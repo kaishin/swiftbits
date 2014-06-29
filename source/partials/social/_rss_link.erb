@@ -1,4 +1,4 @@
-<% link_to "#{data.seo.site_url}/feed", class: "rss-link" do %>
+<% link_to "#{data.seo.site_url}/feed", class: "rss-link", data: { role: "button" } do %>
   <%= svg_icon("rss") %>
-  Give me the <strong>RSS feed</strong>
+  Gimme the <strong>RSS feed</strong>
 <% end %>

@@ -1,20 +1,9 @@
 .email-form {
-  @include row();
-  padding-top: 1em;
   position: relative;
 
-  input {
-    display: inline-block;
-  }
-
   [type=email] {
-    @include media($wide-column) {
-      @include span-columns(7);
-    }
-
-    @include media($narrow-column) {
-      margin-bottom: 1.5em;
-    }
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
   }
 
   .hidden-field {
@@ -26,12 +15,6 @@
   }
 
   .submit-button {
-    @include media($wide-column) {
-      @include span-columns(5);
-    }
-
-    @include media($narrow-column) {
-      width: 100%;
-    }
+    width: 100%;
   }
 }

@@ -1,0 +1,30 @@
+%animated {
+  animation-fill-mode: both;
+}
+
+%bounce-in-up {
+  @extend %animated;
+  animation-name: bounce-in-up;
+}
+
+$initial-bounce-overshoot: -40px;
+
+@keyframes bounce-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY($initial-bounce-overshoot);
+  }
+
+  70% {
+    transform: translateY($initial-bounce-overshoot / -2)
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

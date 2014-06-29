@@ -30,26 +30,32 @@
     }
   }
 
-  .choose-method {
+  .social-buttons {
     @include outer-container;
-    padding-bottom: 4em;
+    padding: 2em 1em 4em;
     text-align: center;
-
-    @include media($narrow-column) {
-      max-width: em(500);
-    }
-  }
-
-  .rss-link {
-    @extend %orange-button;
+    max-width: em(400);
 
     @include media($narrow-column) {
       width: 100%;
     }
 
     @include media($wide-column) {
-      min-width: em(300);
       margin: 0 auto;
     }
+
+    [data-role=button] {
+      display: block;
+      margin-bottom: 1em;
+      width: 100%;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .rss-link {
+    @extend %orange-button;
   }
 }

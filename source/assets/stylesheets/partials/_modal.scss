@@ -15,6 +15,7 @@ $overlay-z-index: 5;
 
   .#{$visible-class} ~ & {
     opacity: 1;
+    transition: all .4s;
     visibility: visible;
   }
 }
@@ -40,12 +41,13 @@ $overlay-z-index: 5;
   opacity: 0;
   padding: $modal-padding;
   position: relative;
-  transform: translateY(40%);
-  transition: all 0.2s;
 
   .#{$visible-class} & {
-    transform: translateY(0);
+    @extend %bounce-in-up;
+    animation-duration: .5s;
+    animation-timing-function: $ease-out-sine;
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
