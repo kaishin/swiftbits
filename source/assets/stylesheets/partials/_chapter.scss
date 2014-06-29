@@ -30,10 +30,8 @@
   }
 
   .download-playground {
-    @extend %button;
-    margin-top: .5em;
-    border-color: $jungle-green;
-    color: $jungle-green;
+    @extend %green-button;
+    vertical-align: text-bottom;
 
     @include media($wide-column) {
       font-size: .8em;
@@ -41,18 +39,6 @@
 
     .svg-icon {
       vertical-align: bottom;
-    }
-
-    &:hover {
-      background: $jungle-green;
-
-      .icon-path {
-        fill: #FFF;
-      }
-    }
-
-    .icon-path {
-      fill: $jungle-green;
     }
   }
 }

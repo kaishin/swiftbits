@@ -1,9 +1,10 @@
 %button {
+  @include button-with-color($blue);
   -webkit-font-smoothing: antialiased;
   background: $base-button-color;
   border-radius: $base-border-radius;
-  border: 1px solid $blue;
-  color: $blue;
+  border-width: 1px;
+  border-style: solid;
   display: inline-block;
   font-size: $base-font-size;
   font-style: normal;
@@ -15,11 +16,20 @@
   text-decoration: none;
 
   &:hover {
-    background: $blue;
-    color: white;
-  }
+    color: #FFF;
 
-  &:focus {
-    box-shadow: $form-box-shadow;
+    .icon-path {
+      fill: #FFF;
+    }
   }
+}
+
+%orange-button {
+  @extend %button;
+  @include button-with-color($red-casablanca);
+}
+
+%green-button {
+  @extend %button;
+  @include button-with-color($jungle-green);
 }

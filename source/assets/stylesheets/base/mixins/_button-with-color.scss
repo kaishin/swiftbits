@@ -1,0 +1,16 @@
+@mixin button-with-color($color: color) {
+  border-color: $color;
+  color: $color;
+
+  &:hover {
+    background: $color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px rgba($color, .8);
+  }
+
+  .icon-path {
+    fill: $color;
+  }
+}
