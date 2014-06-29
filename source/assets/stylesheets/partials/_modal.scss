@@ -37,8 +37,16 @@ $overlay-z-index: 5;
   background: $modal-background;
   border-radius: $base-border-radius;
   margin: 0 auto;
+  opacity: 0;
   padding: $modal-padding;
   position: relative;
+  transform: translateY(40%);
+  transition: all 0.2s;
+
+  .#{$visible-class} & {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-close {
