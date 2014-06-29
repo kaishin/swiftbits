@@ -30,7 +30,6 @@ textarea,
 #{$all-text-inputs},
 select[multiple=multiple] {
   @include box-sizing(border-box);
-  @include transition(all, .2s);
   background-color: white;
   border-bottom: 2px solid $form-border-color;
   border-left: none;
