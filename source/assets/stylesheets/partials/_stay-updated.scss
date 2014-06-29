@@ -10,7 +10,7 @@
     border-top: $base-border;
     border-bottom: $base-border;
     display: block;
-    padding: 1em;
+    padding: 2em 1em;
     text-align: center;
     margin-bottom: 1em;
     position: relative;
@@ -32,75 +32,24 @@
 
   .choose-method {
     @include outer-container;
-    max-width: em(500);
-  }
-
-  .hidden-field {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin: 0;
-  }
-
-  .submit-button {
-    @include media($narrow-column) {
-      width: 100%;
-    }
-
-    &:hover {
-      .icon-path {
-        fill: #FFF;
-      }
-    }
-
-    .icon-path {
-      fill: $blue;
-    }
-  }
-
-  .email-form {
-    padding-top: 1em;
-  }
-
-  .separator {
+    padding-bottom: 4em;
     text-align: center;
-    padding: 2em 1em;
 
-    span {
-      $pseudo-margin: .3em;
-      @extend %large-text;
-      display: block;
-
-      &:before {
-        color: rgba(#000, .2);
-        content: '\2014';
-        margin-right: $pseudo-margin;
-      }
-
-      &:after {
-        color: rgba(#000, .2);
-        content: '\2014';
-        margin-left: $pseudo-margin;
-      }
+    @include media($narrow-column) {
+      max-width: em(500);
     }
   }
 
   .rss-link {
-    @extend %button;
-    width: 100%;
-    border-color: $red-casablanca;
-    color: $red-casablanca;
+    @extend %orange-button;
 
-    &:hover {
-      background: $red-casablanca;
-
-      .icon-path {
-        fill: #FFF;
-      }
+    @include media($narrow-column) {
+      width: 100%;
     }
 
-    .icon-path {
-      fill: $red-casablanca;
+    @include media($wide-column) {
+      min-width: em(300);
+      margin: 0 auto;
     }
   }
 }

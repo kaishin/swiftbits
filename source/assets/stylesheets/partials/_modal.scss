@@ -1,0 +1,71 @@
+$modal-padding: 3em;
+$modal-background: #FFF;
+$modal-close-color: $light-gray;
+$visible-class: "_visible";
+$overlay-z-index: 5;
+
+.modal-overlay {
+  @include position(fixed, 0px 0 0 0px);
+  @include size(100%);
+  background: rgba($blue, .9);
+  opacity: 0;
+  transition: all .3s;
+  visibility: hidden;
+  z-index: $overlay-z-index;
+
+  .#{$visible-class} ~ & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+[data-role*=modal] {
+  @include position(fixed, 50% 0 0 50%);
+  @include size(50% auto);
+  backface-visibility: hidden;
+  max-width: em(500);
+  transform: translateX(-50%) translateY(-50%);
+  visibility: hidden;
+  z-index: $overlay-z-index + 1;
+
+  &.#{$visible-class} {
+    visibility: visible;
+  }
+}
+
+.modal-content {
+  background: $modal-background;
+  border-radius: $base-border-radius;
+  margin: 0 auto;
+  padding: $modal-padding;
+  position: relative;
+}
+
+.modal-close {
+  @include position(absolute, ($modal-padding / 2) ($modal-padding / 2) 0 0);
+  @include size(1.5em);
+  cursor: pointer;
+  background: $modal-background;
+
+  &:hover {
+    &:after, &:before {
+      background: darken($modal-close-color, 10);
+    }
+  }
+
+  &:after, &:before {
+    @include position(absolute, 3px 3px 0 50%);
+    @include size(.15em 1.5em);
+    background: $modal-close-color;
+    content: '';
+    display: block;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+}
