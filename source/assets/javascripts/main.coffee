@@ -1,4 +1,4 @@
 #= require jquery
-#= require 'vendor/vendor'
-
-hljs.initHighlightingOnLoad()
+#= require vendor/vendor
+#= require initializer
+#= require modal

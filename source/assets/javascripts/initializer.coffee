@@ -1,0 +1,3 @@
+window.App = {}
+
+hljs.initHighlightingOnLoad()
