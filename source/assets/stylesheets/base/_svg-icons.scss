@@ -1,7 +1,8 @@
 .svg-icon {
-  @include size(16px);
-  vertical-align: middle;
+  @include size(14px);
+  margin-right: .2em;
   pointer-events: none;
+  vertical-align: top;
 
   .path {
     fill: #000;
