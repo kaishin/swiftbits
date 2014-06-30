@@ -1,6 +1,6 @@
 class Modal
-  $trigger = $("[data-trigger]")
-  $modal = $("[data-role$=modal]")
+  $triggers = $("[data-trigger]")
+  $modals = $("[data-role$=modal]")
   $overlay = $("[data-role=overlay]")
   $closeButton = $("[data-role=close]")
 
@@ -15,16 +15,20 @@ class Modal
     $overlay.on "click", @_hideModal
 
   _bindTriggerClickEvents: =>
-    $trigger.on "click", @_showModal
+    $triggers.on "click", @_showModal
 
   _bindCloseButtonClickEvents: =>
     $closeButton.on "click", @_hideModal
 
-  _showModal: ->
+  _showModal: (event) ->
+    event.preventDefault()
+    $trigger = $(event.target)
+    modalRole = $trigger.data("trigger")
+    $modal = $("[data-role=#{modalRole}]")
     $modal.addClass(VISIBLE_CLASS)
 
   _hideModal: ->
-    $modal.removeClass(VISIBLE_CLASS)
+    $modals.removeClass(VISIBLE_CLASS)
 
 App.Modal = Modal
 
