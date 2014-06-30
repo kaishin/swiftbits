@@ -10,17 +10,17 @@
     <title><%= page_data.title %></title>
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="keywords" content="<%= keywords.join(',') %>">
+    <meta name="keywords" content="<%= keywords.join(",") %>">
     <meta name="description" content="<%= description %>">
     <meta name="author" content="<%= author %>">
     <meta name="google-site-verification" content="<%= data.seo.google_verification %>" />
     <link rel="alternate" type="application/rss+xml" title="Learn Swift Feed" href="<%= data.seo.site_url %>/feed">
-    <%= stylesheet_link_tag 'main' %>
+    <%= stylesheet_link_tag "main" %>
   </head>
   <body>
     <%= partial "header" %>
     <%= yield %>
-    <%= javascript_include_tag 'main', async: true %>
+    <%= javascript_include_tag "main", async: true %>
     <%= partial "typekit" %>
     <%= partial "analytics" %>
   </body>
