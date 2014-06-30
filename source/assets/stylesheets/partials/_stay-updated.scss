@@ -58,4 +58,14 @@
   .rss-link {
     @extend %orange-button;
   }
+
+  .twitter-link {
+    @extend %button;
+    @include button-with-color(#55ACEE);
+
+    .svg-icon {
+      @include size(18px);
+      margin-right: .1em;
+    }
+  }
 }
