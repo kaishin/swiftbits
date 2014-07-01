@@ -8,7 +8,7 @@ casting and string interpolation."
 ### Console Output
 
 ~~~swift
-println("Swift is Apple's new programming language for writing iOS and OSX apps.\nIt was introduced during WWDC 2014 as a replacement to Objective-C.")
+println("Hello, Swift.")
 ~~~
 
 ### Variables
