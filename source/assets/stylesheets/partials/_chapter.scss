@@ -22,19 +22,27 @@
 
   .article-title {
     color: rgba(#000, .5);
+    display: inline-block;
     font-size: 1.4em;
     font-weight: 300;
-    text-transform: uppercase;
-    display: inline-block;
     margin-right: 1em;
+    text-transform: uppercase;
+
+    @include media($wide-column) {
+      vertical-align: bottom;
+    }
+
+    @include media($narrow-column) {
+      margin-bottom: .5em;
+    }
   }
 
   .download-playground {
     @extend %green-button;
-    vertical-align: text-bottom;
 
     @include media($wide-column) {
       font-size: .8em;
+      float: right;
     }
 
     .svg-icon {
