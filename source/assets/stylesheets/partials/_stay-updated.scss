@@ -61,7 +61,7 @@
 
   .twitter-link {
     @extend %button;
-    @include button-with-color(#55ACEE);
+    @include button-with-color($twitter-blue);
 
     .svg-icon {
       @include size(18px);

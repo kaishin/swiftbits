@@ -28,8 +28,3 @@
   @extend %button;
   @include button-with-color($red-casablanca);
 }
-
-%green-button {
-  @extend %button;
-  @include button-with-color($jungle-green);
-}

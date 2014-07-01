@@ -38,7 +38,7 @@
   }
 
   .download-playground {
-    @extend %green-button;
+    @extend %button;
 
     @include media($wide-column) {
       font-size: .8em;
