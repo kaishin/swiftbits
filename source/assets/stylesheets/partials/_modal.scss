@@ -7,7 +7,6 @@ $overlay-z-index: 5;
 .modal-overlay {
   @include position(fixed, 0px 0 0 0px);
   @include size(100%);
-  background: rgba($blue, .9);
   opacity: 0;
   transition: all .3s;
   visibility: hidden;
@@ -17,6 +16,14 @@ $overlay-z-index: 5;
     opacity: 1;
     transition: all .4s;
     visibility: visible;
+  }
+
+  .subscription-modal.#{$visible-class} ~ & {
+    background: rgba($blue, .9);
+  }
+
+  .donation-modal.#{$visible-class} ~ & {
+    background: rgba($matcha, .8);
   }
 }
 

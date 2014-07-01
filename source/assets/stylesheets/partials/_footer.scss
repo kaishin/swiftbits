@@ -1,0 +1,16 @@
+footer {
+  @include linear-gradient(rgba(#000, .01), #FFF);
+  border-top: 1px solid $light-gray;
+  color: rgba(#000, .4);
+  font-size: .9em;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.donate-button {
+  @include button-with-color($matcha);
+  font-size: 1.1em;
+  width: 100%;
+  max-width: rem(370);
+  margin: 1em 0;
+}

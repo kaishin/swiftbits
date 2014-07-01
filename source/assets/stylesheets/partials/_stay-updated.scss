@@ -34,7 +34,7 @@
     @include outer-container;
     padding: 2em 1em 4em;
     text-align: center;
-    max-width: em(400);
+    max-width: rem(400);
 
     @include media($narrow-column) {
       width: 100%;
@@ -47,10 +47,11 @@
     [data-role=button] {
       display: block;
       margin-bottom: 1em;
+      position: relative;
       width: 100%;
 
-      strong {
-        font-weight: 500;
+      .svg-icon {
+        margin-right: .6em;
       }
     }
   }
