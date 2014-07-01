@@ -2,6 +2,8 @@
 title: 'Home'
 ---
 
+<%= partial "intro" %>
+
 <section class="articles" data-role="content">
   <% page_articles.each do |article| %>
     <%= partial "article_body", locals: { article: article } %>
