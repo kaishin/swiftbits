@@ -60,6 +60,10 @@ select[multiple=multiple] {
     @extend %shake;
     border-color: $red-casablanca;
   }
+
+  &[disabled], &[readonly] {
+    background-color: darken($base-background-color, 2%);
+  }
 }
 
 textarea {

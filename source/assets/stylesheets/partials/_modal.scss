@@ -41,7 +41,7 @@ $overlay-z-index: 5;
   }
 }
 
-.modal-content {
+[class*=modal-content] {
   background: $modal-background;
   border-radius: $base-border-radius;
   margin: 0 auto;
@@ -56,10 +56,19 @@ $overlay-z-index: 5;
     opacity: 1;
     transform: translateY(0);
   }
+
+  .title {
+    margin-bottom: .5em;
+  }
+
+  .note {
+    font-size: .8em;
+    color: lighten($base-font-color, 15%);
+  }
 }
 
 .modal-close {
-  @include position(absolute, ($modal-padding / 2) ($modal-padding / 2) 0 0);
+  @include position(absolute, 1em 1em 0 0);
   @include size(1.5em);
   cursor: pointer;
   background: $modal-background;
@@ -71,8 +80,8 @@ $overlay-z-index: 5;
   }
 
   &:after, &:before {
-    @include position(absolute, 3px 3px 0 50%);
-    @include size(.15em 1.5em);
+    @include position(absolute, 0 0 0 50%);
+    @include size(2px rem(22));
     background: $modal-close-color;
     content: '';
     display: block;

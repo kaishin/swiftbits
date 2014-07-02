@@ -1,0 +1,45 @@
+.donation-modal-content {
+  $icon-width: em(32);
+
+  .bitcoin {
+    margin: 1.5em 0;
+
+    .svg-icon {
+      @include size($icon-width);
+      position: absolute;
+      z-index: 10;
+
+      .icon-path {
+        fill: $casablanca;
+      }
+    }
+  }
+
+  .fiat {
+    border-top: 1px solid $base-border-color;
+    padding-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .wallet-id {
+    background: darken($base-background-color, 2%);
+    border-radius: $base-border-radius;
+    display: inline-block;
+    line-height: 1.6;
+    margin-left: $icon-width / 2;
+    padding: .2em 1em;
+    text-align: center;
+    width: 100%;
+    width: calc(100% - #{$icon-width});
+    position: relative;
+
+    &:before {
+      @include position(absolute, 3px null null ($icon-width / -2.5));
+      @include size($icon-width * .8);
+      background: #FFF;
+      border-radius: 50%;
+      content: '';
+      display: block;
+    }
+  }
+}
