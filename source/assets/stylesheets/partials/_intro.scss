@@ -1,6 +1,5 @@
 .intro-container {
-  @include linear-gradient(#FFF, rgba(#000, .02));
-  background: lighten(black, 97%);
+  @include linear-gradient(#FFF, darken(#FFF, 2%));
   border-bottom: 1px solid $light-gray;
 
   .intro {

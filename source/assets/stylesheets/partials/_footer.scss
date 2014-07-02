@@ -1,5 +1,5 @@
 footer {
-  @include linear-gradient(rgba(#000, .01), #FFF);
+  @include linear-gradient(darken(#FFF, 2%), #FFF);
   border-top: 1px solid $light-gray;
   color: rgba(#000, .4);
   font-size: .9em;
