@@ -2,6 +2,8 @@ window.App = {}
 
 hljs.initHighlightingOnLoad()
 
+$(".js-disabled").removeClass("js-disabled").addClass("js-enabled")
+
 $("data.wallet-id").on "click", -> selectText(event.target)
 
 selectText = (element) ->
