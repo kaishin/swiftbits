@@ -4,7 +4,10 @@ footer {
   color: rgba(#000, .4);
   font-size: .9em;
   padding: 2em 1em;
-  text-align: center;
+
+  [data-role=content] {
+    text-align: center;
+  }
 }
 
 .donate-button {
