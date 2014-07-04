@@ -11,7 +11,8 @@ footer {
   }
 }
 
-.donate-button {
+.donate-link {
+  @extend %button;
   @include button-with-color($matcha);
   font-size: 1.1em;
   width: 100%;
