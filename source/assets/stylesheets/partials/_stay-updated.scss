@@ -31,10 +31,9 @@
   }
 
   .social-buttons {
-    @include outer-container;
+    @extend %very-narrow-container;
     padding: 2em 1em 4em;
     text-align: center;
-    max-width: rem(400);
 
     @include media($narrow-column) {
       width: 100%;

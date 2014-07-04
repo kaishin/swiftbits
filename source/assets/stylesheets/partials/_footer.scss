@@ -6,6 +6,7 @@ footer {
   padding: 2em 1em;
 
   [data-role=content] {
+    @extend %very-narrow-container;
     text-align: center;
   }
 }

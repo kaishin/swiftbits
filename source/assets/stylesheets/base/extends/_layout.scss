@@ -6,3 +6,8 @@
     padding: 1rem;
   }
 }
+
+%very-narrow-container {
+  @extend %narrow-container;
+  max-width: rem(400);
+}
