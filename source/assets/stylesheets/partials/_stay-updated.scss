@@ -55,6 +55,12 @@
     }
   }
 
+  .subscribe-link {
+    .js-disabled & {
+      display: none;
+    }
+  }
+
   .rss-link {
     @extend %orange-button;
   }
