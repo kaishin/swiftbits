@@ -30,7 +30,7 @@
     }
   }
 
-  .social-buttons {
+  .social-links {
     @extend %very-narrow-container;
     padding: 2em 1em 4em;
     text-align: center;
@@ -43,7 +43,7 @@
       margin: 0 auto;
     }
 
-    [data-role=button] {
+    [class*=link] {
       display: block;
       margin-bottom: 1em;
       position: relative;

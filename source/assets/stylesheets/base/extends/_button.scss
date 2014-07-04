@@ -23,6 +23,11 @@
       fill: #FFF;
     }
   }
+
+  strong {
+    pointer-events: none;
+    font-weight: 500;
+  }
 }
 
 %orange-button {

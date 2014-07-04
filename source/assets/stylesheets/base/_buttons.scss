@@ -6,14 +6,4 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
-  strong {
-    pointer-events: none;
-  }
-}
-
-[data-role=button] {
-  strong {
-    font-weight: 500;
-  }
 }
