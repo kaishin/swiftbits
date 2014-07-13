@@ -19,7 +19,7 @@ def remove_frontmatter(body, title)
 end
 
 def comment_runtime_errors(body)
-  body.gsub!(/(.*)(\/\/.)/, '\2\1')
+  body.gsub!(/(.*)(\/\/.)(<--.*)/, '\2\1')
 end
 
 def remove_links(body)
