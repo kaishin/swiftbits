@@ -18,7 +18,7 @@ desc "Generate playgrounds"
 task :generate do
   generate_playgrounds
   generated_playgrounds_summary
-  # delete_temp_dir
+  delete_temp_dir
 end
 
 desc "Clean things up (./build, ./_playgrounds, ./_temp and ./tmp)"
