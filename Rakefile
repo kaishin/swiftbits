@@ -9,13 +9,9 @@ FileList.new("./lib/**/*.rb").each { |file| require file }
 
 task :default => ["generate"]
 
-desc "Prepare posts for conversion"
-task :prepare do
-  prepare_posts
-end
-
 desc "Generate playgrounds"
 task :generate do
+  prepare_posts
   generate_playgrounds
   generated_playgrounds_summary
   delete_temp_dir
