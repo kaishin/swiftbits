@@ -1,8 +1,9 @@
 def sanitize_posts
   FileList.new("#{temp_dir_path}/*.md").each do |post|
     body = File.read(post)
-    file = File.open(post, "w+")
-    file.puts sanitize_post_body(body, post)
+    File.open(post, "w") {
+      |file| file.puts sanitize_post_body(body, post)
+    }
   end
 end
 
