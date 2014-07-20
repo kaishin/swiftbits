@@ -39,7 +39,7 @@ def add_metadata(body, post)
 end
 
 def comment_runtime_errors(body)
-  body.gsub!(/(.*)(\ )(\/\/.)(<--.*)/, '\3Error >> \1')
+  body.gsub!(/(.*)(\ )(\/\/.)(-->.*error.*)/, '/* \1 */')
 end
 
 def remove_links(body)
@@ -47,9 +47,14 @@ def remove_links(body)
 end
 
 def code_summary_from_body(body)
-  content_array = body.scan(/((?<=~{3}swift\n).*)|(\#{3}\ .*\n)/)
-  content = content_array.join("\n").gsub!(/(\#{3}\ )(.*)/, &:upcase)
-  content.gsub!(/(\#{3}\ )(.*)/, '// \2')
+  content_array = body.scan(/((?<=~{3}swift\n).*)|(\#{3}\ .*)/)
+  content_array = content_array.map { |array|
+    value = array[1] || array[0]
+    value << "\n"
+    value.scan(/\#{3}/)[0] ? value.prepend("\n") : value
+  }
+
+  content = content_array.join.gsub!(/(\#{3}\ )(.*)/, '// \2')
   content.prepend("~~~swift") << ("~~~")
 end
 
