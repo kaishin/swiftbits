@@ -7,14 +7,26 @@ require "cli-colorize"
 
 FileList.new("./lib/**/*.rb").each { |file| require file }
 
-task :default => ["generate"]
+task :default => ["generate:abridged"]
 
-desc "Generate playgrounds"
-task :generate do
-  prepare_posts
-  generate_playgrounds
-  generated_playgrounds_summary
-  delete_temp_dir
+namespace :generate do
+  desc "Generate full-post playgrounds"
+  task :full do
+    copy_posts
+    sanitize_posts(:abridged => false)
+    generate_playgrounds
+    generated_playgrounds_summary
+    delete_temp_dir
+  end
+
+  desc "Generate abridged playgrounds"
+  task :abridged do
+    copy_posts
+    sanitize_posts(:abridged => true)
+    generate_playgrounds
+    generated_playgrounds_summary
+    delete_temp_dir
+  end
 end
 
 desc "Clean things up (./build, ./_playgrounds, ./_temp and ./tmp)"
