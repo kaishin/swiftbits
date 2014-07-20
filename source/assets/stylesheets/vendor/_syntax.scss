@@ -3,6 +3,17 @@
   background: transparent;
   color: #4D4D4C;
   padding: 0.5em;
+
+  &:hover {
+    .hljs-comment {
+      opacity: 1;
+    }
+  }
+}
+
+.hljs-comment {
+  opacity: .3;
+  transition: opacity .2s;
 }
 
 .hljs-comment, .hljs-title {
