@@ -76,5 +76,5 @@ Values can be included in strings using a `\` and the desired value between
 parentheses.
 
 ~~~swift
-let livesLabel = "You have \(numberOfLives - 1) lives remaining."
+livesLabel = "You have \(numberOfLives - 1) lives remaining."
 ~~~
