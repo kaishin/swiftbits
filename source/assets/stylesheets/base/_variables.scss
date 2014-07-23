@@ -18,16 +18,20 @@ $matcha: #8EB212;
 $twitter-blue: #55ACEE;
 $dark-gray: #333;
 $medium-gray: #999;
+
 $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+
 $emerald: #44C55F;
 $casablanca: #FAAD4C;
 $red-orange: #FC3A32;
 $red-casablanca: mix($casablanca, $red-orange);
+
 $lochmara: #0093C8;
 $bright-turquoise: #0CE0B1;
+$bright-lochmara: mix($lochmara, $bright-turquoise);
 
 // Background Color
 $base-background-color: #FFF;
