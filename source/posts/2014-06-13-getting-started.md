@@ -13,8 +13,8 @@ println("Hello, Swift.")
 ### Variables
 
 Variables are declared using the keyword `var`, followed by the variable name
-and its type (optional, see Type Inference). A value can be assigned to the variable
-using the `=` operand.
+and its type (optional, see [Type Inference](#type-inference)). A value can be assigned to the variable
+using the `=` operand:
 
 ~~~swift
 var playerName: String = "Player 1"
@@ -35,7 +35,7 @@ playerName = nil // --> Runtime error
 ### Constants
 
 Constants are declared similarly to [variables](#variables), except they use the
-keyword `let` instead.
+keyword `let` instead:
 
 ~~~swift
 let gameTitle: String = "Flappy Swift"
@@ -53,7 +53,7 @@ Like variables, constants cannot be `nil`.
 
 Type inference refers to the compiler's ability
 to implicitly determine the type of a variable without having to
-specify it in the declaration.
+specify it in the declaration:
 
 ~~~swift
 var opponentName = "Player 2"
@@ -62,19 +62,19 @@ var opponentName = "Player 2"
 ### Type Casting
 
 Values can be converted to another type by creating a new instance of the
-desired type.
+desired type:
 
 ~~~swift
 var numberOfLives = 99
 let label = "Lives remaining: "
-var livesLabel = label + String(numberOfLives)
+var livesLabel = label + String(numberOfLives) // --> "Lives remaining: 99"
 ~~~
 
 ### String Interpolation
 
 Values can be included in strings using a `\` and the desired value between
-parentheses.
+parentheses:
 
 ~~~swift
-livesLabel = "You have \(numberOfLives - 1) lives remaining."
+livesLabel = "You have \(numberOfLives - 1) lives remaining." // --> "You have 98 lives remaining."
 ~~~

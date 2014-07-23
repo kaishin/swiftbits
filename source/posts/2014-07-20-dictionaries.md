@@ -49,12 +49,20 @@ a given key.
 bossNames["Chemical Planet"] // --> "Water"
 ~~~
 
-### Adding Pairs to Dictionary
+### Adding to a Dictionary
 
 To add a new key/value pair, use the subscript operator:
 
 ~~~swift
 moreBossNames["Casino Night"] = "Catcher" // --> ["Casino Night": "Catcher"]
+~~~
+
+### Updating Dictionary Values
+
+To update an existing value, use the subscript syntax:
+
+~~~swift
+bossNames["Emerald Hill"] = "Drill" // --> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Planet": "Water"]
 ~~~
 
 ### Mutating Dictionaries
@@ -65,14 +73,6 @@ to be declared as a variable using the `var` keyword:
 ~~~swift
 let constantBossNames: [String: String] = [:]
 constantBossNames["Emerald Hill"] = "Drill" // --> Runtime error
-~~~
-
-### Updating Dictionary Values
-
-To update an existing value, use the subscript syntax:
-
-~~~swift
-bossNames["Emerald Hill"] = "Drill" // --> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Planet": "Water"]
 ~~~
 
 ### Deleting Dictionary Values
