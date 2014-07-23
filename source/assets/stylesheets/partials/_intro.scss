@@ -5,5 +5,15 @@
   .intro {
     margin-bottom: 0;
     padding: 2em 1em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .tagline {
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: .5em;
   }
 }
