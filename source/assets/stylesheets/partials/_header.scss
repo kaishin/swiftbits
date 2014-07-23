@@ -1,7 +1,7 @@
 $large-header: new-breakpoint(rem(700));
 
 .main-header {
-  @include linear-gradient(35deg, $red-orange, $casablanca);
+  @include linear-gradient(35deg, $lochmara, $bright-turquoise);
   overflow: hidden;
   position: relative;
 
@@ -12,7 +12,7 @@ $large-header: new-breakpoint(rem(700));
     z-index: 0;
 
     .icon-path {
-      fill: red;
+      fill: white;
     }
   }
 
