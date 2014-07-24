@@ -1,5 +1,9 @@
 {
   "site_url": "http://learn-swift.co",
+  "site_name": "Learn -> Swift",
+  "description": "A no-frills introduction to Swift for busy and/or curious people",
+  "author": "Reda Lemeden",
+  "google_verification": "wORXjk9nSO7wqMIvSu_zElBC83WLkkSVGVOJjA9w7W4",
   "keywords": [
     "swift",
     "swift-lang",
@@ -7,9 +11,5 @@
     "programming",
     "apple",
     "ios"
-  ],
-
-  "description": "Learn you some Swift.",
-  "author": "Reda Lemeden",
-  "google_verification": "wORXjk9nSO7wqMIvSu_zElBC83WLkkSVGVOJjA9w7W4"
+  ]
 }
