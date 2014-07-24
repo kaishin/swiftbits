@@ -4,8 +4,12 @@
 
   .intro {
     margin-bottom: 0;
-    padding: 3em 1em;
+    padding: 3em 0;
     color: #555;
+
+    @include media($narrow-column) {
+      padding: 1em;
+    }
 
     p {
       margin: 0;
