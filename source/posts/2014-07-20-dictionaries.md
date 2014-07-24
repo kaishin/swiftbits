@@ -1,5 +1,5 @@
 ---
-title: dictionaries
+title: Dictionaries
 tags: beginner, tutorial
 teaser: "In this section, we'll take a look at Swift dictionaries."
 ---
