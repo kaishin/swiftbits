@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <% page_data = current_page.data %>
-    <% keywords = page_data.keywords ? page_data.keywords : data.seo.keywords %>
-    <% description = page_data.description ? page_data.description : data.seo.description %>
-    <% author = page_data.author ? page_data.author : data.seo.author %>
-    <title><%= page_data.title %></title>
+    <title><%= page_data.title ||= data.seo.site_name %></title>
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="keywords" content="<%= keywords.join(",") %>">
-    <meta name="description" content="<%= description %>">
-    <meta name="author" content="<%= author %>">
+    <meta name="keywords" content="<%= page_data.keywords ||= data.seo.keywords.join(",") %>">
+    <meta name="description" content="<%= page_data.description ||= data.seo.description %>">
+    <meta name="author" content="<%= page_data.author ||= data.seo.author %>">
     <meta name="google-site-verification" content="<%= data.seo.google_verification %>" />
     <link rel="alternate" type="application/rss+xml" title="Learn Swift Feed" href="<%= data.seo.site_url %>/feed">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
