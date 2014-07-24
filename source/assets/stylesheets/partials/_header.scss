@@ -5,57 +5,40 @@ $large-header: new-breakpoint(rem(700));
   overflow: hidden;
   position: relative;
 
-  .swift-logo {
-    @include position(absolute, -28% 12% 0 0);
-    @include size(60% 130%);
-    opacity: .1;
-    z-index: 0;
-
-    .icon-path {
-      fill: white;
-    }
-  }
-
   .content {
     @extend %narrow-container;
     font-size: .7em;
     position: relative;
     text-align: center;
+    padding: 2em 0;
 
     @include media($large-header) {
+      padding: 5em 0;
       font-size: 1em;
       text-align: left;
     }
 
+    .logo {
+      text-decoration: none;
 
-    .main-title {
-      color: #FFF;
-      display: inline-block;
-      font-size: 4em;
-      letter-spacing: .02em;
-      padding: .8em 0;
-      text-shadow: 0 1px 2px rgba(#000, .2);
-      text-transform: uppercase;
-      z-index: 1;
-      position: relative;
+      .logotype {
+        color: #FFF;
+        font-size: 4em;
+        font-weight: 100;
+        letter-spacing: -(.04em);
+        position: relative;
+        text-shadow: 0 1px 2px rgba(#000, .2);
 
-      @include media($large-header) {
-        padding: 1em 0;
-      }
+        .wf-loading & {
+          visibility: hidden;
+        }
 
-      .wf-loading & {
-        visibility: hidden;
-      }
-
-      span {
-        display: block;
-        font-size: .68em;
-        font-weight: 300;
-        letter-spacing: 0;
-        line-height: .6;
-        margin-bottom: .2em;
-        text-transform: none;
+        img {
+          vertical-align: middle;
+          @include size(64px);
+        }
       }
     }
   }
 }
+      // <h1 class="logotype">Learn <%= svg_icon("logomark", "mark", 64) %> Swift</h1>
