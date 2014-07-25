@@ -1,0 +1,19 @@
+# humanstxt.org/
+
+# TEAM
+    Reda Lemeden
+    Design & Development
+    @kaishin
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    Middleman
+    Bourbon.io, Neat, Bitters
+    Typekit
+    Autoprefixer
+    Feedpress
+
+# SITE
+    Language: English
+    Doctype: HTML5
+    IDE: MacVim, Sketch.app, Adobe Illustrator, Xcode
