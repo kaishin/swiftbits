@@ -5,7 +5,7 @@
   "author": "Reda Lemeden",
   "google_verification": "wORXjk9nSO7wqMIvSu_zElBC83WLkkSVGVOJjA9w7W4",
   "bing_verification": "B6743A36BFB03E14D4E7A35A58155A13",
-  "feedburner_url": "http://feeds.feedburner.com/learn-swift/feed",
+  "feed_url": "http://rss.learn-swift.co/feed",
   "keywords": [
     "swift",
     "swift-lang",
