@@ -51,24 +51,12 @@ Like variables, constants cannot be `nil`[^1].
 
 ### Type Inference
 
-T^ype inference refers to the compiler's ability
+Type inference refers to the compiler's ability
 to implicitly determine the type of a variable without having to
 specify it in the declaration:
 
 ~~~swift
 var opponentName = "Player 2"
-~~~
-
-### Type Casting
-
-Values can be converted to another type by creating a new instance of the
-desired type:
-
-~~~swift
-var numberOfLives = 99
-let label = "Lives remaining: "
-var livesLabel = label + String(numberOfLives)
-// -> "Lives remaining: 99"
 ~~~
 
 ### String Interpolation
@@ -77,7 +65,8 @@ Values can be included in strings using a `\` and the desired value between
 parentheses:
 
 ~~~swift
-livesLabel = "You have \(numberOfLives - 1) lives remaining."
+var numberOfLives = 99
+var livesLabel = "You have \(numberOfLives - 1) lives remaining."
 // -> "You have 98 lives remaining."
 ~~~
 
