@@ -32,7 +32,7 @@
 
   .social-links {
     @extend %very-narrow-container;
-    padding: 2em 1em 4em;
+    padding: 2em 1em;
     text-align: center;
 
     @include media($narrow-column) {
