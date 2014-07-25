@@ -10,7 +10,7 @@ Dictionaries hold a collection of key and value pairs. Like arrays, they can be
 declared using the bracket shorthand syntax:
 
 ~~~swift
-var bossNames = ["Emerald Hill": "Mecha", "Chemical Planet": "Water", "Aquatic Ruin": "Hammer"]
+var bossNames = ["Emerald Hill": "Mecha", "Chemical Plant": "Water", "Aquatic Ruin": "Hammer"]
 ~~~
 
 To explicitly set the type of a dictionary, you can use the `[Type: Type]`
@@ -46,7 +46,7 @@ Like arrays, you can use subscript syntax to retrieve the value[^1] correspondin
 a given key.
 
 ~~~swift
-bossNames["Chemical Planet"] // -> "Water"
+bossNames["Chemical Plant"] // -> "Water"
 ~~~
 
 ### Adding to a Dictionary
@@ -64,7 +64,7 @@ To update an existing value, use the subscript syntax:
 
 ~~~swift
 bossNames["Emerald Hill"] = "Drill"
-// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Planet": "Water"]
+// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Plant": "Water"]
 ~~~
 
 ### Mutating Dictionaries
@@ -82,7 +82,7 @@ constantBossNames["Emerald Hill"] = "Drill" // -> Error
 To delete an existing key/value pair, make its value `nil`:
 
 ~~~swift
-bossNames["Chemical Planet"] = nil
+bossNames["Chemical Plant"] = nil
 // -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
 ~~~
 
