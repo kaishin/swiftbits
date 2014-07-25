@@ -7,7 +7,7 @@ require "cli-colorize"
 
 FileList.new("./lib/**/*.rb").each { |file| require file }
 
-task :default => ["generate:abridged"]
+task :default => ["deploy"]
 
 namespace :generate do
   desc "Generate full-post playgrounds"
@@ -40,5 +40,6 @@ end
 
 desc "Deploy site"
 task :deploy do
+  Rake::Task["generate:abridged"].invoke
   %x{middleman deploy}
 end
