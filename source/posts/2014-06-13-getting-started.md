@@ -29,7 +29,7 @@ playerName = "Kaishin"
 Variables cannot be `nil`:
 
 ~~~swift
-playerName = nil // --> Runtime error
+playerName = nil // -> Runtime error
 ~~~
 
 ### Constants
@@ -44,7 +44,7 @@ let gameTitle: String = "Flappy Swift"
 Constants cannot be re-assigned:
 
 ~~~swift
-gameTitle = "Swift Valley" // --> Runtime error
+gameTitle = "Swift Valley" // -> Runtime error
 ~~~
 
 Like variables, constants cannot be `nil`.
@@ -67,7 +67,8 @@ desired type:
 ~~~swift
 var numberOfLives = 99
 let label = "Lives remaining: "
-var livesLabel = label + String(numberOfLives) // --> "Lives remaining: 99"
+var livesLabel = label + String(numberOfLives)
+// -> "Lives remaining: 99"
 ~~~
 
 ### String Interpolation
@@ -76,5 +77,6 @@ Values can be included in strings using a `\` and the desired value between
 parentheses:
 
 ~~~swift
-livesLabel = "You have \(numberOfLives - 1) lives remaining." // --> "You have 98 lives remaining."
+livesLabel = "You have \(numberOfLives - 1) lives remaining."
+// -> "You have 98 lives remaining."
 ~~~

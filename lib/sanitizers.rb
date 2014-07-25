@@ -39,7 +39,7 @@ def add_metadata(body, post)
 end
 
 def comment_runtime_errors(body)
-  body.gsub!(/(.*)(\ )(\/\/.)(-->.*error.*)/, '/* \1 */')
+  body.gsub!(/(.*)(\ )(\/\/.)(->.*error.*)/, '/* \1 */')
 end
 
 def remove_links(body)

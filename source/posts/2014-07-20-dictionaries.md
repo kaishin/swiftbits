@@ -23,7 +23,7 @@ var moreBossNames: [String: String] = [:]
 All keys must be of the same type. The same applies for values:
 
 ~~~swift
-var bossNames: [String: String] = ["Emerald Hill": "Drill", 2: "Water"] // --> Runtime error
+var bossNames: [String: String] = ["Emerald Hill": "Drill", 2: "Water"] // -> Runtime error
 ~~~
 
 ### Inspecting Dictionaries
@@ -31,13 +31,13 @@ var bossNames: [String: String] = ["Emerald Hill": "Drill", 2: "Water"] // --> R
 You can get the number of key/value pairs in a dictionary using `count`:
 
 ~~~swift
-bossNames.count // --> 3
+bossNames.count // -> 3
 ~~~
 
 To check whether a dictionary is empty, you can use the `isEmpty()` function:
 
 ~~~swift
-bossNames.isEmpty // --> false
+bossNames.isEmpty // -> false
 ~~~
 
 ### Getting Dictionary Values
@@ -46,7 +46,7 @@ Like arrays, you can use subscript syntax to retrieve the value corresponding to
 a given key.
 
 ~~~swift
-bossNames["Chemical Planet"] // --> "Water"
+bossNames["Chemical Planet"] // -> "Water"
 ~~~
 
 ### Adding to a Dictionary
@@ -54,7 +54,8 @@ bossNames["Chemical Planet"] // --> "Water"
 To add a new key/value pair, use the subscript operator:
 
 ~~~swift
-moreBossNames["Casino Night"] = "Catcher" // --> ["Casino Night": "Catcher"]
+moreBossNames["Casino Night"] = "Catcher"
+// -> ["Casino Night": "Catcher"]
 ~~~
 
 ### Updating Dictionary Values
@@ -62,7 +63,8 @@ moreBossNames["Casino Night"] = "Catcher" // --> ["Casino Night": "Catcher"]
 To update an existing value, use the subscript syntax:
 
 ~~~swift
-bossNames["Emerald Hill"] = "Drill" // --> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Planet": "Water"]
+bossNames["Emerald Hill"] = "Drill"
+// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Planet": "Water"]
 ~~~
 
 ### Mutating Dictionaries
@@ -72,7 +74,7 @@ to be declared as a variable using the `var` keyword:
 
 ~~~swift
 let constantBossNames: [String: String] = [:]
-constantBossNames["Emerald Hill"] = "Drill" // --> Runtime error
+constantBossNames["Emerald Hill"] = "Drill" // -> Runtime error
 ~~~
 
 ### Deleting Dictionary Values
@@ -80,5 +82,6 @@ constantBossNames["Emerald Hill"] = "Drill" // --> Runtime error
 To delete an existing key/value pair, make its value `nil`:
 
 ~~~swift
-bossNames["Chemical Planet"] = nil // --> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
+bossNames["Chemical Planet"] = nil
+// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
 ~~~
