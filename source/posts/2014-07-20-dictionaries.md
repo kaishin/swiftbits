@@ -23,7 +23,7 @@ var moreBossNames: [String: String] = [:]
 All keys must be of the same type. The same applies for values:
 
 ~~~swift
-var bossNames: [String: String] = ["Emerald Hill": "Drill", 2: "Water"] // -> Runtime error
+var bossNames: [String: String] = ["Emerald Hill": "Drill", 2: "Water"] // -> Error
 ~~~
 
 ### Inspecting Dictionaries
@@ -74,7 +74,7 @@ to be declared as a variable using the `var` keyword:
 
 ~~~swift
 let constantBossNames: [String: String] = [:]
-constantBossNames["Emerald Hill"] = "Drill" // -> Runtime error
+constantBossNames["Emerald Hill"] = "Drill" // -> Error
 ~~~
 
 ### Deleting Dictionary Values

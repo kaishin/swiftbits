@@ -29,7 +29,7 @@ playerName = "Kaishin"
 Variables cannot be `nil`:
 
 ~~~swift
-playerName = nil // -> Runtime error
+playerName = nil // -> Error
 ~~~
 
 ### Constants
@@ -44,7 +44,7 @@ let gameTitle: String = "Flappy Swift"
 Constants cannot be re-assigned:
 
 ~~~swift
-gameTitle = "Swift Valley" // -> Runtime error
+gameTitle = "Swift Valley" // -> Error
 ~~~
 
 Like variables, constants cannot be `nil`.
