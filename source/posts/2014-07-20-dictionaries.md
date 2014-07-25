@@ -42,7 +42,7 @@ bossNames.isEmpty // -> false
 
 ### Getting Dictionary Values
 
-Like arrays, you can use subscript syntax to retrieve the value corresponding to
+Like arrays, you can use subscript syntax to retrieve the value[^1] corresponding to
 a given key.
 
 ~~~swift
@@ -85,3 +85,5 @@ To delete an existing key/value pair, make its value `nil`:
 bossNames["Chemical Planet"] = nil
 // -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
 ~~~
+
+[^1]: 1. In practice, what you get is an optional value, which means it can be `nil`. More on that later.

@@ -6,7 +6,7 @@ page '/feed.xml', layout: false
 activate :autoprefixer
 activate :dotenv
 
-set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
+set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true, footnotes: true
 set :markdown_engine, :redcarpet
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

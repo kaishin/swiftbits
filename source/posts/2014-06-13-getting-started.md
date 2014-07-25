@@ -26,7 +26,7 @@ Variables can be re-assigned:
 playerName = "Kaishin"
 ~~~
 
-Variables cannot be `nil`:
+Variables cannot be `nil`[^1].
 
 ~~~swift
 playerName = nil // -> Error
@@ -47,11 +47,11 @@ Constants cannot be re-assigned:
 gameTitle = "Swift Valley" // -> Error
 ~~~
 
-Like variables, constants cannot be `nil`.
+Like variables, constants cannot be `nil`[^1].
 
 ### Type Inference
 
-Type inference refers to the compiler's ability
+T^ype inference refers to the compiler's ability
 to implicitly determine the type of a variable without having to
 specify it in the declaration:
 
@@ -80,3 +80,5 @@ parentheses:
 livesLabel = "You have \(numberOfLives - 1) lives remaining."
 // -> "You have 98 lives remaining."
 ~~~
+
+[^1]: Variables and constants that are explicitly declared as optional can be `nil`. More on that later.
