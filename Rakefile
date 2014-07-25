@@ -37,3 +37,8 @@ task :cleanup do
   delete_tmp_dir
   delete_temp_dir
 end
+
+desc "Deploy site"
+task :deploy do
+  %x{middleman deploy}
+end
