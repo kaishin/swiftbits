@@ -1,5 +1,14 @@
 .donation-modal-content {
   $icon-width: rem(28);
+
+  .title {
+    .svg-icon {
+      @include size(.9em .8em);
+      margin-right: 0;
+      vertical-align: baseline;
+    }
+  }
+
   .bitcoin {
     margin: 1.5em 0;
 
@@ -27,10 +36,11 @@
   .wallet-id {
     background: darken($base-background-color, 2%);
     border-radius: $base-border-radius;
-    display: inline-block;
+    display: block;
+    font-size: .9em;
     line-height: 1.6;
-    padding: .2em 1em;
-    text-align: center;
+    overflow: scroll;
+    padding: .2em .5em;
     width: 100%;
   }
 

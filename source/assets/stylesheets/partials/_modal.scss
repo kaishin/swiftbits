@@ -1,4 +1,4 @@
-$modal-padding: 3em;
+$modal-padding: 2em;
 $modal-background: #FFF;
 $modal-close-color: $light-gray;
 $visible-class: "_visible";
@@ -52,16 +52,19 @@ $overlay-z-index: 5;
 [class*=modal-content] {
   .js-enabled & {
     background: $modal-background;
-    color: $base-font-color;
     border-radius: $base-border-radius;
+    color: $base-font-color;
+    font-size: 1rem;
     margin: 0 auto;
     opacity: 0;
+    overflow: hidden;
     padding: $modal-padding;
     position: relative;
     text-align: left;
 
     @include media($narrow-column) {
-      padding: $modal-padding $modal-padding/2;
+      padding: $modal-padding 1.5em;
+      font-size: .9rem;
     }
   }
 
