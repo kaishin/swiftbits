@@ -10,10 +10,11 @@
     <meta name="description" content="<%= page_data.description ||= data.seo.description %>">
     <meta name="author" content="<%= page_data.author ||= data.seo.author %>">
     <%= partial "open_graph", locals: { page_data: page_data } %>
+    <%= partial "twitter_card", locals: { page_data: page_data } %>
     <meta name="google-site-verification" content="<%= data.seo.google_verification %>" />
     <meta name="msvalidate.01" content="<%= data.seo.bing_verification %>" />
     <meta name="language" content="english">
-    <link rel="alternate" type="application/rss+xml" title="<%= data.seo.site_name %> Feed" href="<%= data.seo.feed_url %>">
+    <link rel="alternate" type="application/rss+xml" title="<%= data.seo.site_name %> Feed" href="<%= data.social.feed_url %>">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
     <%= stylesheet_link_tag "main" %>
   </head>
