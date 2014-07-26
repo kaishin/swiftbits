@@ -24,6 +24,12 @@ $large-header: new-breakpoint(rem(700));
         font-size: 1em;
       }
 
+      &:hover {
+        img {
+          transform: rotate(-180deg);
+        }
+      }
+
       .logotype {
         color: #FFF;
         font-size: 4em;
@@ -39,6 +45,7 @@ $large-header: new-breakpoint(rem(700));
         img {
           @include size(1.1em);
           vertical-align: middle;
+          transition: transform .3s $ease-out-cubic;
         }
       }
     }
