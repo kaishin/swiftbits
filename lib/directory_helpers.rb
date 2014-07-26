@@ -41,13 +41,6 @@ def delete_playgrounds_dir
   end
 end
 
-def delete_build_dir
-  if File.directory?("build")
-    FileUtils.rm_rf("build")
-    puts "/build directory" + " deleted".red
-  end
-end
-
 def delete_temp_dir
   if File.directory?(temp_dir_path)
     FileUtils.rm_rf(temp_dir_path)
