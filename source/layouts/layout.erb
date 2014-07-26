@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <% page_data = current_page.data %>
-    <%= partial "title", locals: { page_data: page_data }%>
+    <title><%= page_title(page_data) %></title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="keywords" content="<%= page_data.keywords ||= data.seo.keywords.join(",") %>">
     <meta name="description" content="<%= page_data.description ||= data.seo.description %>">
     <meta name="author" content="<%= page_data.author ||= data.seo.author %>">
+    <%= partial "open_graph", locals: { page_data: page_data }%>
     <meta name="google-site-verification" content="<%= data.seo.google_verification %>" />
     <meta name="msvalidate.01" content="<%= data.seo.bing_verification %>" />
     <meta name="language" content="english">
