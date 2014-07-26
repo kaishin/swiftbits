@@ -21,7 +21,7 @@ $overlay-z-index: 5;
   }
 
   .subscription-modal.#{$visible-class} ~ & {
-    background: rgba($blue, .9);
+    background: rgba($brand-color, .9);
   }
 
   .donation-modal.#{$visible-class} ~ & {

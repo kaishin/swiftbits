@@ -1,5 +1,5 @@
 %button {
-  @include button-with-color($bright-lochmara);
+  @include button-with-color($brand-color);
   -webkit-font-smoothing: antialiased;
   background: $base-button-color;
   border-radius: $base-border-radius;
