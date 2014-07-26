@@ -7,19 +7,22 @@ $large-header: new-breakpoint(rem(700));
 
   .content {
     @extend %narrow-container;
-    font-size: .7em;
     position: relative;
     text-align: center;
     padding: 2em 0;
 
     @include media($large-header) {
       padding: 5em 0;
-      font-size: 1em;
       text-align: left;
     }
 
     .logo {
       text-decoration: none;
+      font-size: .6em;
+
+      @include media($large-header) {
+        font-size: 1em;
+      }
 
       .logotype {
         color: #FFF;
@@ -34,8 +37,8 @@ $large-header: new-breakpoint(rem(700));
         }
 
         img {
+          @include size(1.1em);
           vertical-align: middle;
-          @include size(64px);
         }
       }
     }

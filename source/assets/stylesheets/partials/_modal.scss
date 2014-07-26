@@ -38,6 +38,10 @@ $overlay-z-index: 5;
     transform: translateX(-50%) translateY(-50%);
     visibility: hidden;
     z-index: $overlay-z-index + 1;
+
+    @include media($narrow-column) {
+      @include size(95% auto);
+    }
   }
 
   &.#{$visible-class} {
@@ -55,6 +59,10 @@ $overlay-z-index: 5;
     padding: $modal-padding;
     position: relative;
     text-align: left;
+
+    @include media($narrow-column) {
+      padding: $modal-padding $modal-padding/2;
+    }
   }
 
   .js-disabled & {

@@ -1,4 +1,6 @@
 .post {
+  padding: 2em 0;
+
   h3 {
     border-bottom: 1px solid rgba(#000, .1);
     font-size: 1.2em;
@@ -13,11 +15,7 @@
   }
 
   .article-header {
-    margin: 2em 0;
-
-    @include media($wide-column) {
-      margin: 4em 0 2em;
-    }
+    margin-bottom: 2em;
   }
 
   .article-title {
