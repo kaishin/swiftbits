@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <% page_data = current_page.data %>
-    <title><%= page_data.title ||= data.seo.site_name %></title>
+    <%= partial "title", locals: { page_data: page_data }%>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="keywords" content="<%= page_data.keywords ||= data.seo.keywords.join(",") %>">
     <meta name="description" content="<%= page_data.description ||= data.seo.description %>">
@@ -12,7 +12,7 @@
     <meta name="google-site-verification" content="<%= data.seo.google_verification %>" />
     <meta name="msvalidate.01" content="<%= data.seo.bing_verification %>" />
     <meta name="language" content="english">
-    <link rel="alternate" type="application/rss+xml" title="Learn Swift Feed" href="<%= data.seo.feed_url %>">
+    <link rel="alternate" type="application/rss+xml" title="<%= data.seo.site_name %> Feed" href="<%= data.seo.feed_url %>">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
     <%= stylesheet_link_tag "main" %>
   </head>

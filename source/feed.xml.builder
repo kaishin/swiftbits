@@ -2,8 +2,8 @@ xml.instruct!
 
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   site_url = data.seo.site_url
-  xml.title data.seo.site_name
-  xml.subtitle data.seo.description
+  xml.title "#{data.seo.site_name} Feed"
+  xml.subtitle data.seo.tagline
   xml.id site_url
   xml.link 'href' => site_url
   xml.link 'href' => "#{site_url}/feed", 'rel' => 'self'
