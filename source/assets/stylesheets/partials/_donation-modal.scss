@@ -3,10 +3,14 @@
   .bitcoin {
     margin: 1.5em 0;
 
+    .bitcoin-title {
+      font-weight: 500;
+      margin-bottom: .6em;
+    }
+
     .svg-icon {
-      @include size($icon-width);
-      position: absolute;
-      z-index: 10;
+      @include size(1.8em 1.9em);
+      vertical-align: text-bottom;
 
       .icon-path {
         fill: $casablanca;
@@ -25,21 +29,9 @@
     border-radius: $base-border-radius;
     display: inline-block;
     line-height: 1.6;
-    margin-left: $icon-width / 2;
     padding: .2em 1em;
     text-align: center;
     width: 100%;
-    width: calc(100% - #{$icon-width});
-    position: relative;
-
-    &:before {
-      @include position(absolute, 3px null null ($icon-width / -2.5));
-      @include size($icon-width * .8);
-      background: #FFF;
-      border-radius: 50%;
-      content: '';
-      display: block;
-    }
   }
 
   .note {
