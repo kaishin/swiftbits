@@ -55,7 +55,7 @@ To add a new key/value pair, use the subscript operator:
 
 ~~~swift
 moreBossNames["Casino Night"] = "Catcher"
-// -> ["Casino Night": "Catcher"]
+moreBossNames // -> ["Casino Night": "Catcher"]
 ~~~
 
 ### Updating Dictionary Values
@@ -64,7 +64,7 @@ To update an existing value, use the subscript syntax:
 
 ~~~swift
 bossNames["Emerald Hill"] = "Drill"
-// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Plant": "Water"]
+bossNames // -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer", "Chemical Plant": "Water"]
 ~~~
 
 ### Mutating Dictionaries
@@ -83,7 +83,7 @@ To delete an existing key/value pair, make its value `nil`:
 
 ~~~swift
 bossNames["Chemical Plant"] = nil
-// -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
+bossNames // -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
 ~~~
 
 [^1]: 1. In practice, what you get is an optional value, which means it can be `nil`. More on that later.
