@@ -26,12 +26,13 @@ $large-header: new-breakpoint(rem(700));
 
       &:hover {
         img {
-          transform: rotate(-180deg);
+          @extend %pulse;
         }
       }
 
       .logotype {
         color: #FFF;
+        display: inline;
         font-size: 4em;
         font-weight: 100;
         letter-spacing: -(.04em);
@@ -45,7 +46,6 @@ $large-header: new-breakpoint(rem(700));
         img {
           @include size(1.1em);
           vertical-align: middle;
-          transition: transform .3s $ease-out-cubic;
         }
       }
     }
