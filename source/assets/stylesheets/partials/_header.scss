@@ -37,7 +37,7 @@ $large-header: new-breakpoint(rem(700));
         font-weight: 100;
         letter-spacing: -(.04em);
         position: relative;
-        text-shadow: 0 1px 2px rgba(#000, .2);
+        text-shadow: 0 1px 2px rgba(#000, .1);
 
         .wf-loading & {
           visibility: hidden;
