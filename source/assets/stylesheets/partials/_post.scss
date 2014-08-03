@@ -1,6 +1,4 @@
 .post {
-  padding: 2em 0;
-
   h3 {
     border-bottom: 1px solid rgba(#000, .1);
     font-size: 1.2em;
@@ -39,6 +37,7 @@
     }
 
     @include media($narrow-column) {
+      display: block;
       margin-bottom: .5em;
     }
   }

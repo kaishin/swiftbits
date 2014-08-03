@@ -1,8 +1,10 @@
 <%= partial "intro" %>
 
-<section class="articles" data-role="content">
+<section class="articles">
   <% blog.articles.reverse.each do |article| %>
-    <%= partial "article_body", locals: { article: article } %>
+    <div class="article-container">
+      <%= partial "article_body", locals: { article: article } %>
+    </div>
   <% end %>
 
   <aside class="stay-updated">

@@ -1,5 +1,7 @@
 <% wrap_layout :layout do %>
-  <section data-role="content">
-    <%= partial "article_body", locals: { article: current_page } %>
+  <section class="articles">
+    <div class="article-container">
+      <%= partial "article_body", locals: { article: current_page } %>
+    </div>
   </section>
 <% end %>
