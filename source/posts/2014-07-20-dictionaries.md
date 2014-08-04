@@ -86,4 +86,4 @@ bossNames["Chemical Plant"] = nil
 bossNames // -> ["Emerald Hill": "Drill", "Aquatic Ruin": "Hammer"]
 ~~~
 
-[^1]: 1. In practice, what you get is an optional value, which means it can be `nil`. More on that later.
+[^1]: In practice, what you get is an optional value, which means it can be `nil`. More on that later.
