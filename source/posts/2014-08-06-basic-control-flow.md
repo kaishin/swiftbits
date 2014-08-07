@@ -24,7 +24,7 @@ With `else`:
 
 ~~~swift
 if elementalType == "Fairy" {
-  println("Any steel pokemons around?")
+  println("Use poison!")
 } else {
   println("Draco Meteor!") // <-
 }
@@ -36,8 +36,8 @@ Multiple `if` statements can be chained:
 
 ~~~swift
 if elementalType == "Fairy" {
-  println("Any steel pokemons around?")
-} else if elementalType == "Steel" {
+  println("Use poison!")
+} else if elementalType == "Bug" {
   println("Kill it with fire!")
 } else {
   println("Draco Meteor Again.") // <-
@@ -52,8 +52,8 @@ then executes the code corresponding to the one that matches:
 ~~~swift
 switch elementalType {
 case "Fairy":
-  println("Any steel pokemons around?")
-case "Steel":
+  println("Use poison!")
+case "Bug":
   println("Kill it with fire!")
 default:
   println("More Draco Meteor.") // <-
@@ -103,15 +103,15 @@ let baseAttack = 89
 
 switch baseAttack {
 case 1...30:
-  println("Too weak for battles.")
+  println("Jus release it.")
 case 31...70:
-  println("Nothing to threaten the opponent.")
+  println("Meh")
 case 71...150:
   println("Now we're talking!") // <-
 case 151...200:
   println("Uber!")
 default:
-  println("This will get you banned.")
+  println("Hackemon!")
 }
 ~~~
 
@@ -132,7 +132,7 @@ case (_, 80...200):
 case (80...200, _):
   println("Good physical sweeper.") // <-
 default:
-  println("This will get you banned.")
+  println("Not competitive enough.")
 }
 ~~~
 
@@ -148,7 +148,7 @@ case (80...200, let specialAttack):
 case (let attack, 80...200):
   println("Good special sweeper with an attack of \(attack)")
 default:
-  println("Move on.")
+  println("Not competitive enough.")
 }
 ~~~
 
