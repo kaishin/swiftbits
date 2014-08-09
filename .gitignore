@@ -6,3 +6,4 @@
 /lib/tasks/*
 /_temp
 /_playgrounds
+/node_modules
