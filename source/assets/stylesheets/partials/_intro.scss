@@ -1,15 +1,15 @@
 .intro-container {
   @include linear-gradient(#FFF, darken(#FFF, 2%));
   border-bottom: 1px solid $light-gray;
+  padding: 3em 0;
+
+  @include media($narrow-column) {
+    padding: 1em 0;
+  }
 
   .intro {
     margin-bottom: 0;
-    padding: 3em 0;
     color: #555;
-
-    @include media($narrow-column) {
-      padding: 2em 1.5em;
-    }
 
     p {
       margin: 0;
@@ -24,5 +24,29 @@
     font-weight: 500;
     font-size: 1.3em;
     margin-bottom: .5em;
+  }
+
+  .quick-navigation {
+    margin-top: 1em;
+
+    .title {
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    li {
+      display: inline-block;
+
+      &:before {
+        content: "\2014";
+        display: inline-block;
+      }
+
+      &:first-of-type:before {
+        display: none;
+      }
+    }
   }
 }
