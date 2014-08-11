@@ -41,5 +41,4 @@ desc "Deploy site"
 task :deploy do
   Rake::Task["generate:abridged"].invoke
   puts %x{middleman deploy}.blue
-  Rake::Task["cleanup"].invoke
 end
