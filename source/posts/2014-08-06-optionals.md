@@ -1,5 +1,5 @@
 ---
-title: optionals
+title: Optionals
 date: 2014-08-06 20:55 CEST
 tags: beginner, tutorial
 teaser: "Optionals are variables or constants that can either have a value or be
