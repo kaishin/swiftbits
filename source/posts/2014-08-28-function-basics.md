@@ -27,7 +27,7 @@ following the function's name:
 ~~~swift
 func quarterCircle(direction: String) {
   println("Down")
-  println("Down-\(direction.lowercaseString)")
+  println("Down-\(direction)")
   println(direction)
 }
 ~~~
@@ -104,7 +104,7 @@ internal one:
 ~~~swift
 func quarterCircle(relativeDirection direction: String) {
   println("Down")
-  println("Down-\(direction.lowercaseString)")
+  println("Down-\(direction)")
   println(direction)
 }
 ~~~
@@ -135,7 +135,7 @@ You can assign default values to your function parameters:
 ~~~swift
 func quarterCircle(direction: String = "Forward") {
   println("Down")
-  println("Down-\(direction.lowercaseString)")
+  println("Down-\(direction)")
   println(direction)
 }
 ~~~
