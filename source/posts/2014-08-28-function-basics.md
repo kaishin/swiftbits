@@ -1,7 +1,7 @@
 ---
 title: Function Basics
 tags: beginner, tutorial
-teaser: "Functions are an essential part of most modern programming languages. Let's look at what Swift has to offer."
+teaser: "Functions are an essential part of any modern programming language. Let's look at what Swift has to offer."
 ---
 
 ### Defining Functions
