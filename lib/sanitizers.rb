@@ -48,7 +48,8 @@ end
 
 def code_summary_from_body(body)
   content_array = body.scan(/(\#{3}\ .*\n)|((?m)(?<=~{3}swift\n).*?(?=~{3}))/)
-  content = content_array.join.gsub!(/(\#{3}\ )(.*\n)/, "\n// \\2")
+  content = content_array.join("\n").gsub!(/(\#{3}\ )(.*\n)/, "\n// \\2")
+  content.gsub!(/\n\n/, "\n")
   content.prepend("~~~swift") << ("~~~")
 end
 
