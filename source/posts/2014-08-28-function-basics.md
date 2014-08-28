@@ -14,10 +14,10 @@ function name, its parameters, then its return type. Both parameters and the ret
 type can be omitted if the function takes no parameters and returns no value:
 
 ~~~swift
-func quarterCircleForward() {
-  println("Down")
-  println("Down-forward")
-  println("Forward")
+func quarterCircleforward() {
+  println("down")
+  println("down-forward")
+  println("forward")
 }
 ~~~
 
@@ -26,14 +26,14 @@ following the function's name:
 
 ~~~swift
 func quarterCircle(direction: String) {
-  println("Down")
-  println("Down-\(direction)")
+  println("down")
+  println("down-\(direction)")
   println(direction)
 }
 ~~~
 
 ~~~swift
-quarterCircle("Forward") // Prints same output as previous function
+quarterCircle("forward") // Prints same output as previous function
 ~~~
 
 If the function returns a value, the type of the latter should be specified after the closing parenthesis of the parameters, preceded by a `->` (*return arrow*) sign:
@@ -103,14 +103,14 @@ internal one:
 
 ~~~swift
 func quarterCircle(relativeDirection direction: String) {
-  println("Down")
-  println("Down-\(direction)")
+  println("down")
+  println("down-\(direction)")
   println(direction)
 }
 ~~~
 
 ~~~swift
-quarterCircle(relativeDirection: "Backward")
+quarterCircle(relativeDirection: "backward")
 ~~~
 
 Notice how the parameter name is now part of the function's signature.
@@ -133,9 +133,9 @@ canPerformSuperCombo(gauge: 0.5)
 You can assign default values to your function parameters:
 
 ~~~swift
-func quarterCircle(direction: String = "Forward") {
-  println("Down")
-  println("Down-\(direction)")
+func quarterCircle(direction: String = "forward") {
+  println("down")
+  println("down-\(direction)")
   println(direction)
 }
 ~~~
@@ -159,9 +159,5 @@ func directionalInput(directions: String...) {
 ~~~
 
 ~~~swift
-directionalInput("Down", "Up") // Prints "Down", "Up"
+directionalInput("down", "up") // Prints "down", "up"
 ~~~
-
-
-
-
