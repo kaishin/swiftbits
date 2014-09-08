@@ -1,0 +1,35 @@
+.quick-navigation {
+  background: rgba(#FFF, 0.95);
+  border: 1px solid $light-gray;
+  margin-top: -1px;
+  overflow-x: scroll;
+  text-align: center;
+  white-space: nowrap;
+
+  &._fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: -5px;
+
+    a {
+      border-left: 1px solid $light-gray;
+      border-right: 1px solid $light-gray;
+      color: mix($light-gray, $medium-gray);
+      display: block;
+      padding: 1em;
+      text-decoration: none;
+      transition: all .1s;
+
+      &:hover {
+        background: lighten(#EEE, 5%);
+        color: $medium-gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<ol class="quick-navigation">
+  <% blog.articles.reverse.each do |article| %>
+    <li>
+      <%= link_to article.title, "##{article.slug}-article" %>
+    </li>
+  <% end %>
+</ol>

@@ -25,28 +25,4 @@
     font-size: 1.3em;
     margin-bottom: .5em;
   }
-
-  .quick-navigation {
-    margin-top: 1em;
-
-    .title {
-      display: inline-block;
-      font-size: 1em;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
-
-    li {
-      display: inline-block;
-
-      &:before {
-        content: "\2014";
-        display: inline-block;
-      }
-
-      &:first-of-type:before {
-        display: none;
-      }
-    }
-  }
 }

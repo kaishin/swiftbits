@@ -13,5 +13,9 @@
     &:last-of-type {
       border-bottom: none;
     }
+
+    &._adjusted {
+      margin-top: 3.8em;
+    }
   }
 }

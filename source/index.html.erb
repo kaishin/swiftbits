@@ -1,8 +1,9 @@
 <%= partial "intro" %>
+<%= partial "quick_navigation" %>
 
 <section class="articles">
   <% blog.articles.reverse.each do |article| %>
-    <div class="article-container">
+    <div class="article-container" id="<%= article.title.tr(' ', '-').downcase %>-article">
       <%= partial "article_body", locals: { article: article } %>
     </div>
   <% end %>

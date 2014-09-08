@@ -12,3 +12,13 @@ selectText = (element) ->
   range.selectNodeContents element
   selection.removeAllRanges()
   selection.addRange range
+
+$(".quick-navigation").waypoint (direction) ->
+  firstArticle = $(".article-container").first()
+
+  if direction == "down"
+    $(@).addClass "_fixed"
+    firstArticle.addClass "_adjusted"
+  else
+    $(@).removeClass "_fixed"
+    firstArticle.removeClass "_adjusted"
