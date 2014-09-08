@@ -14,8 +14,8 @@
   animation-timing-function: ease;
 }
 
-%pulse {
-  animation-name: pulse;
+%pulsate {
+  animation-name: pulsate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -56,8 +56,8 @@ $initial-bounce-overshoot: -40px;
   }
 }
 
-@keyframes pulse {
-  0%, 50%, 25% {
+@keyframes pulsate {
+  0%, 25%, 50% {
     transform: scale(1);
   }
 

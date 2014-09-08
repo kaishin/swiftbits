@@ -26,7 +26,7 @@ $large-header: new-breakpoint(rem(700));
 
       &:hover {
         img {
-          @extend %pulse;
+          @extend %pulsate;
         }
       }
 
