@@ -34,7 +34,7 @@ $initial-bounce-overshoot: -40px;
   }
 
   70% {
-    transform: translateY($initial-bounce-overshoot / -2)
+    transform: translateY($initial-bounce-overshoot / -2);
   }
 
   100% {
