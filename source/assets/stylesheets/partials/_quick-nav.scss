@@ -1,10 +1,16 @@
 .quick-navigation {
+  -webkit-overflow-scrolling: touch;
   background: rgba(#FFF, 0.95);
   border: 1px solid $light-gray;
   margin-top: -1px;
   overflow-x: scroll;
   text-align: center;
   white-space: nowrap;
+
+  ol {
+    margin: auto;
+    display: inline-flex;
+  }
 
   &._fixed {
     position: fixed;
@@ -14,8 +20,8 @@
   }
 
   li {
-    display: inline-block;
-    margin-left: -5px;
+    list-style: none;
+    margin-left: -1px;
 
     a {
       border-left: 1px solid $light-gray;
