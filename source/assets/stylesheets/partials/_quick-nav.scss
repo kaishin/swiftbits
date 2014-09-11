@@ -12,13 +12,6 @@
     display: inline-flex;
   }
 
-  &._fixed {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-  }
-
   li {
     list-style: none;
     margin-left: -1px;
@@ -35,6 +28,11 @@
       &:hover {
         background: lighten(#EEE, 5%);
         color: $medium-gray;
+      }
+
+      &._active {
+        background: $red-casablanca;
+        color: #FFF;
       }
     }
   }
