@@ -1,5 +1,5 @@
 def generate_playgrounds
-  %x{playground #{temp_dir} -d #{playgrounds_dir}}
+  %x{playground #{temp_dir} -p ios -d #{playgrounds_dir}}
 end
 
 def copy_posts
