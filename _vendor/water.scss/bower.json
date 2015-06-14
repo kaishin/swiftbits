@@ -1,0 +1,31 @@
+{
+  "name": "water.scss",
+  "homepage": "https://github.com/kaishin/water.scss",
+  "authors": [
+    "Reda Lemeden <hello@redalemeden.com>"
+  ],
+  "description": "A Sass micro-library",
+  "main": "source/_water.scss",
+  "keywords": [
+    "css",
+    "mixins",
+    "sass",
+    "scss",
+    "library"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "spec",
+    "lib",
+    "tests",
+    "Gemfile",
+    "Gemfile.lock",
+    "gulp.js",
+    "gulpfile.coffee",
+    "package.json",
+    "README.md",
+    "templates"
+  ]
+}

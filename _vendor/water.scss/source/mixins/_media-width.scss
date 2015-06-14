@@ -1,0 +1,41 @@
+/// Wraps the content in a width-based media query
+/// @access public
+/// @param {String} $constraint
+///   The constraint to use for generating the media query.
+///     - `until` resolves to `max-width`
+///     - `from` resolves to `min-width`
+///     - `equal` resolves to `width`
+///     - `between`  resolves to both `min-width` and `max-width`. Requires two values.
+///     - `until-excluding` resolves to `max-width` while excluding the passed value.
+///     - `from-excluding` resolves to `min-width` while excluding the passed value.
+/// @param {Number} $first-value
+///   - The value to be used in single expression queries.
+/// @param {Number} $second-value (null)
+///   - The value to be used in double expression queries such as `between`.
+@mixin wtr-media-width($constraint, $first-value, $second-value: null) {
+  $feature: "width";
+  @include wtr-assert(wtr-is-media-constraint($constraint), "Invalid constraint argument");
+  @include wtr-assert(wtr-is-length($first-value), "Value should be of type `length`");
+
+  @if $constraint == "between" {
+    @include wtr-assert($second-value, "Constraints of type `between` require a second `length` argument");
+    $first-expression: wtr-media-expression($feature, wtr-media-prefix("from"));
+    $second-expression: wtr-media-expression($feature, wtr-media-prefix("until"));
+
+    @media screen and (#{$first-expression}: $first-value) and (#{$second-expression}: $second-value) {
+      @content;
+    }
+  } @else {
+    $expression: wtr-media-expression($feature, wtr-media-prefix($constraint));
+
+    @if $constraint == "until-excluding" {
+      $first-value: wtr-decrement($first-value);
+    } @else if $constraint == "from-excluding" {
+      $first-value: wtr-increment($first-value);
+    }
+
+    @media screen and (#{$expression}: $first-value) {
+      @content;
+    }
+  }
+}

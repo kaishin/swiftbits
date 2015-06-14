@@ -1,0 +1,69 @@
+/// A list of global CSS values
+/// @type List
+$wtr-global-values:
+  "initial",
+  "inherit",
+  "unset";
+
+/// A list of relative font-based length units
+/// @type List
+$wtr-font-length-units:
+  "em",
+  "ex",
+  "ch",
+  "rem";
+
+/// A list of relative viewport-based length units
+/// @type List
+$wtr-viewport-length-units:
+  "vw",
+  "vh",
+  "vmin",
+  "vmax";
+
+/// A list of relative length units
+/// @type List
+$wtr-relative-length-units: join($wtr-font-length-units, $wtr-viewport-length-units);
+
+/// A list of absolute length units
+/// @type List
+$wtr-absolute-length-units:
+  "cm",
+  "mm",
+  "in",
+  "px",
+  "pt",
+  "pc";
+
+/// A list of length units
+/// @type List
+$wtr-length-units: join($wtr-relative-length-units, $wtr-absolute-length-units);
+
+/// A list of width compatible box-sizing values
+/// @type List
+$wtr-box-sizing-width-values:
+  "border-box",
+  "content-box";
+
+/// A list of box-sizing values
+/// @type List
+$wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box");
+
+/// A list of width/height values
+/// @type List
+$wtr-width-values:
+  "available",
+  "min-content",
+  "max-content",
+  "fit-content",
+  "auto";
+
+/// A list of `media()` constraints
+/// @type List
+$wtr-media-constraints:
+  "until",
+  "until-excluding",
+  "from",
+  "from-excluding",
+  "equal",
+  "between";

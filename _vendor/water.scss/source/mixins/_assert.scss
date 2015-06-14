@@ -1,0 +1,16 @@
+/// Asserts if a condition is true and raises an error or warning if it's not.
+/// @access private
+/// @param {Bool} $condition - The condition to assert.
+/// @param {String} $message
+///   - The error or warning message to display if the assertion fails.
+/// @param {Bool} $warn-only (false)
+///   - Make the assertion throw a warning instead of an error.
+@mixin wtr-assert($condition, $message, $warn-only: false) {
+  @if not($condition) {
+    @if $warn-only {
+      @warn $message;
+    } @else {
+      @error $message;
+    }
+  }
+}

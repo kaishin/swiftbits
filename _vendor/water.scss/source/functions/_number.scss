@@ -1,0 +1,35 @@
+/// Increments a number by a given value
+/// @access public
+/// @param {Number} $value - The value to increment
+/// @param {Number} $increment (1) - The value to increment with
+/// @return {Number} An incremented value
+/// @example scss - Usage
+///   .element {
+///     height: wtr-increment(199px);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     height: 200px;
+///   }
+@function wtr-increment($value, $increment: 1) {
+  @return if(wtr-is-number($value), $value + $increment, null);
+}
+
+/// Decrements a number by a given value
+/// @access public
+/// @param {Number} $value - The value to decrement
+/// @param {Number} $decrement (1) - The value to decrement with
+/// @return {Number} An decremented value
+/// @example scss - Usage
+///   .element {
+///     height: wtr-decrement(200px);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     height: 199px;
+///   }
+@function wtr-decrement($value, $decrement: 1) {
+  @return wtr-increment($value, - $decrement);
+}

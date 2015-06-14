@@ -1,0 +1,7 @@
+/// Checks if a value is a valid constraint argument for `wtr-media()`
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @return {Bool} `true` if the value is a valid constraint value
+@function wtr-is-media-constraint($value) {
+  @return wtr-is-string($value) and wtr-list-contains($wtr-media-constraints, $value);
+}

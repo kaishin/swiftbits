@@ -1,0 +1,28 @@
+/// Sets the width and height of the element.
+/// @access public
+/// @param {Size} $width
+///   - Width value. It will also be used as a height value if the latter is not specified.
+/// @param {Size} $height ($width) - Optional height value.
+/// @example scss - Usage
+///   .element {
+///     @include wtr-size(200px);
+///   }
+///
+///   .other-element {
+///     @include wtr-size(200px, auto)
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     width: 200px;
+///     height: 200px;
+///   }
+///
+///   .other-element {
+///     width: 200px;
+///     height: auto;
+///   }
+@mixin wtr-size($width, $height: $width) {
+  width: if(wtr-is-size($width), $width, null);
+  height: if(wtr-is-size($height), $height, null);
+}

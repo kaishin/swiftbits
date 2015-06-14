@@ -1,0 +1,5 @@
+url: localhost:4000
+future: true
+show_drafts: true
+lsi: false
+limit_posts: 10

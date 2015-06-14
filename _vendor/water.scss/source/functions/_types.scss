@@ -1,0 +1,84 @@
+/// Checks if a value is of type `number`
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a number
+@function wtr-is-number($value) {
+  @return type-of($value) == "number";
+}
+
+/// Checks if a value is of type `list`
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a list
+@function wtr-is-list($value) {
+  @return type-of($value) == "list";
+}
+
+/// Checks if a value is of type `string`
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a string
+@function wtr-is-string($value) {
+  @return type-of($value) == "string";
+}
+
+/// Checks if a value is a valid calc() value
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a calc() value
+@function wtr-is-calc($value) {
+  @return wtr-is-string($value)
+    and str-slice($value, 1, 5) == "calc("
+    and str-slice($value, str-length($value)) == ")";
+}
+
+/// Checks if a value is a valid global CSS value
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a valid global CSS value
+@function wtr-is-global-value($value) {
+  @return wtr-list-contains($wtr-global-values, $value);
+}
+
+/// Checks if a value is a percentage
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a percentage
+@function wtr-is-percentage($value) {
+  @return wtr-is-number($value) and unit($value) == "%";
+}
+
+/// Checks if a value is a length
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a length
+@function wtr-is-length($value) {
+  $valid-number: wtr-is-number($value) and wtr-list-contains($wtr-length-units, unit($value));
+  $valid-calc: wtr-is-calc($value);
+  $unitless-zero: $value == 0;
+  @return $valid-number or $valid-calc or $unitless-zero;
+}
+
+/// Checks if a value is a valid width/height value
+/// @access private
+/// @param {*} $value - The value to inspect
+/// @returns {Bool} `true` if the value is a valid width/height value
+@function wtr-is-size($value) {
+  $list-length: length($value);
+
+  @if $list-length == 1 {
+    @return wtr-is-length($value)
+      or wtr-is-percentage($value)
+      or wtr-list-contains($wtr-width-values, $value)
+      or wtr-is-global-value($value);
+  } @else if $list-length == 2 {
+    $first-value: nth($value, 1);
+    $second-value: nth($value, 2);
+    $valid-first-value:
+      wtr-is-length($first-value)
+      or wtr-is-percentage($first-value);
+    $valid-second-value: wtr-list-contains($wtr-box-sizing-width-values, $second-value);
+    @return $valid-first-value and $valid-second-value;
+  } @else {
+    @return false;
+  }
+}

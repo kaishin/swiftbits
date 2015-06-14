@@ -1,0 +1,31 @@
+/// @requires wtr-size
+/// @alias wtr-size
+@mixin size($arguments...) {
+  @include wtr-size($arguments...);
+}
+
+/// @requires wtr-assert
+/// @alias wtr-assert
+@mixin assert($arguments...) {
+  @include wtr-assert($arguments...);
+}
+
+/// @requires wtr-media-width
+/// @alias wtr-media-width
+@mixin media-width($arguments...) {
+  @include wtr-media-width($arguments...) {
+    @content;
+  }
+}
+
+/// @requires wtr-increment
+/// @alias wtr-increment
+@mixin increment($arguments...) {
+  @include wtr-increment($arguments...);
+}
+
+/// @requires wtr-decrement
+/// @alias wtr-decrement
+@mixin decrement($arguments...) {
+  @include wtr-decrement($arguments...);
+}
