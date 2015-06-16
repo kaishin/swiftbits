@@ -19,6 +19,8 @@ baseurl: ""
 url: http://swiftbits.redalemeden.com
 future: false
 show_drafts: false
+paginate: 10
+paginate_path: "/page-:num"
 limit_posts: 0
 gems:
   - jekyll-sitemap
