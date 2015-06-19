@@ -1,34 +1,59 @@
 $gap: 0.777em;
 
 .main-header {
-  padding: 2rem 0;
-
-  @include media-width(from, $container-breakpoint) {
-    padding-bottom: 3rem;
+  &::after {
+    background-image: linear-gradient(35deg, $casablanca, $red-orange);
+    content: "";
+    display: block;
+    height: 8px;
+    position: relative;
   }
 }
 
-.logotype-heading {
-  margin-bottom: 0;
+.header-content {
+  display: flex;
+  padding: 1rem 0;
+  font-size: 0.9em;
+
+  @include media-width(from, $container-width) {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .intro {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    padding-left: 1.5em;
+  }
 }
 
-.logotype-link {
+.intro-content {
+  margin-top: -0.5rem;
+  text-rendering: optimizeLegibility;
+}
+
+.main-heading {
   font-weight: 100;
-  letter-spacing: -0.04em;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.logomark {
-  max-width: 3em;
-}
-
-.headline {
+.main-description {
   color: $gray;
-  font-size: 1em;
-  font-weight: 200;
-  margin-top: 0.5em;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+}
 
-  a {
-    color: $black;
-    font-weight: 400;
+.logo-image {
+  width: 6em;
+  border-radius: 50%;
+
+  &:hover {
+    @extend %pulsate;
   }
 }
