@@ -1,9 +1,9 @@
 ---
+date: 2014-06-13 14:56:02 +0200
 title: "Getting Started"
 tags:
  - beginner
 teaser: "In this first section, we cover variables, constants, type inference, casting and string interpolation."
-date: 2014-12-31 14:56:02
 ---
 
 ### Console Output
