@@ -1,0 +1,71 @@
+.post-header {
+  margin-bottom: 3rem;
+
+  .post-title {
+    margin-top: 0.5rem;
+
+    @include media-width(from, $container-breakpoint) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+
+
+.post-title {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.post-link {
+  &,
+  &:link,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $link-hover-color;
+  }
+}
+
+[class*=metadata] {
+  color: $gray;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.post-metadata {
+  margin-top: 0.2rem;
+
+  [role=img] {
+    display: inline-block;
+    width: 2.5rem;
+    margin-bottom: 0.08em;
+  }
+}
+
+[class*=tag-list] {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+}
+
+.tag-label {
+  display: inline-block;
+
+  &::after {
+    color: $tertiary-color;
+    content: "/";
+  }
+
+  &:last-of-type::after {
+    content: "";
+  }
+}
+
+.separator {
+  color: $tertiary-color;
+}

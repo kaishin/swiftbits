@@ -14,9 +14,7 @@ println("Hello, Swift.")
 
 ### Variables
 
-Variables are declared using the keyword `var`, followed by the variable name
-and its type (optional, see [Type Inference](#type-inference)). A value can be assigned to the variable
-using the `=` operand:
+Variables are declared using the keyword `var`, followed by the variable name and its type (optional, see [Type Inference](#type-inference)). A value can be assigned to the variable using the `=` operand:
 
 ~~~swift
 var playerName: String = "Player 1"

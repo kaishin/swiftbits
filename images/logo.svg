@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Swiftbits</title>
+  <defs>
+    <circle id="circle" cx="256" cy="256" r="256"/>
+    <linearGradient x1="100%" y1="0%" x2="0%" y2="97.922%" id="gradient-1">
+      <stop stop-color="#0CE0B1" offset="0%"/>
+      <stop stop-color="#0093C8" offset="100%"/>
+    </linearGradient>
+
+    <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="gradient-2">
+      <stop stop-color="#FFF" stop-opacity=".73" offset="0%"/>
+      <stop stop-color="#FFF" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="mask" fill="#FFF">
+      <use xlink:href="#circle"/>
+    </mask>
+
+    <use fill="#D8D8D8" xlink:href="#circle"/>
+      <path fill="url(#gradient-1)" mask="url(#mask)" d="M-3 0h514.96v514.96H-3z"/>
+      <path d="M256 0H0v512h256V0zm0 386l-96.808-61.77C150.802 318.88 144 306.47 144 296.51V171.545c0-19.905 13.607-27.36 30.383-16.656L256 206.965V386z" id="left-path" fill="url(#gradient-2)" mask="url(#mask)"/>
+      <path d="M256,386l96.8078,-61.7687c8.39042,-5.35356 15.1922,-17.7633 15.1922,-27.7211l5.68434e-14,-124.965c0,-19.9053 -13.6075,-27.3595 -30.3827,-16.6559l-81.6173,52.0764l-2.84217e-14,179.034Z" fill="url(#gradient-2)" mask="url(#mask)"/>
+    </g>
+  </svg>

@@ -1,0 +1,13 @@
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+  }
+}

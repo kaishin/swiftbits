@@ -1,0 +1,26 @@
+body {
+  font-family: $sans-serif;
+  color: $black;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+code,
+pre {
+  font-family: $monospace;
+}
+
+code {
+  background-color: $background-color;
+  border-radius: 3px;
+  padding: 0 0.4em;
+}
+
+sup {
+  margin-left: 0.2em;
+  top: 0;
+  vertical-align: super;
+}

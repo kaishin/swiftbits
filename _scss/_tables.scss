@@ -1,0 +1,38 @@
+$table-padding: 1rem;
+
+%padded-cell {
+  padding-bottom: $table-padding;
+  padding-top: $table-padding;
+
+  &:not(:last-child) {
+    padding-right: $table-padding * 2;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: "kern", "liga", "tnum";
+  margin: 1rem 0 2rem;
+  max-width: 100%;
+  min-width: 15rem;
+}
+
+th {
+  @extend %padded-cell;
+  border-bottom: 1px solid darken($ash, 10%);
+  font-weight: 500;
+  text-align: left;
+}
+
+td {
+  @extend %padded-cell;
+  border-bottom: 1px solid $ash;
+  padding-bottom: $table-padding / 2;
+  padding-top: $table-padding / 2;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}

@@ -1,0 +1,90 @@
+article[class*=post] {
+  $image-outdent: 5%;
+  $margin: 1.5em;
+
+  figure {
+    margin: $margin 0;
+
+    @include media-width(from, $container-breakpoint) {
+      margin: ($margin * 2) 0 ($margin * 1.5);
+    }
+  }
+
+  figcaption {
+    color: $gray;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 100;
+    margin-top: 0.5em;
+  }
+
+  img {
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 1px rgba($black , 0.05);
+    margin-left: $image-outdent * -1;
+    max-width: 100% + ($image-outdent * 2);
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  blockquote {
+    border-left: 2px solid $gray;
+    font-style: italic;
+    margin: 2em 0;
+    padding-left: 0.8em;
+  }
+}
+
+.post-content {
+  font-weight: 300;
+
+  a {
+    font-style: italic;
+
+    &:active {
+      color: $link-active-color;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $link-hover-color;
+    }
+
+    &:link {
+      color: $link-color;
+    }
+
+    &:visited {
+      color: $link-visited-color;
+    }
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      color: darken($ash, 20%);
+      content: "–";
+      left: -1em;
+      position: absolute;
+
+      @include media-width(from, $container-width) {
+        left: -1.2em;
+      }
+    }
+  }
+}
+
+.footnotes {
+  border-top: 1px solid $ash;
+  font-size: 0.9em;
+}

@@ -4,7 +4,23 @@ layout: default
 <ul class="post-list">
   {% for post in paginator.posts %}
   <li class="post-list-item">
-    {{ post.title }}
+    <article class="post-summary">
+      <h2 class="post-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <div class="post-metadata">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+      </div>
+
+      <section class="post-content">
+        {{ post.content }}
+      </section>
+    </article>
   </li>
   {% endfor %}
 </ul>

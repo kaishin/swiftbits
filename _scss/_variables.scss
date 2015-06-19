@@ -1,0 +1,33 @@
+// Global
+$border-radius: 4px;
+
+// Container
+$container-width: 40rem;
+$container-padding: 1rem;
+$container-breakpoint: $container-width + ($container-padding * 2);
+
+// Skew
+$skew-degree: 8deg;
+$skewed-pseudo-height: 1.45em;
+
+// Color Names
+$ash: #f5f5f5;
+$black: #555;
+$gray: #b0b0b0;
+$mauve: #7760c3;
+$white: #fff;
+
+// Colors
+$accent-color: $mauve;
+$ashtray: adjust-hue($accent-color, -50deg);
+$link-active-color: darken($accent-color, 40%);
+$link-color: lighten($accent-color, 10%);
+$link-hover-color: $accent-color;
+$link-visited-color: darken($accent-color, 20%);
+$tertiary-color: darken($ash, 5%);
+$background-color: rgba(#000, 0.02);
+
+// Fonts
+$sans-serif: "Fira-Sans", "Helvetica Neue", "Arial", sans-serif;
+$serif: "Georgia", serif;
+$monospace: "Fira-Mono", "Consolas", "Courier", "monospace";

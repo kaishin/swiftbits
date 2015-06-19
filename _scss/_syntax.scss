@@ -1,6 +1,20 @@
 .highlight {
-  background: #ffffff;
+  background: $background-color;
+  border-radius: 0.2em;
   color: #4d4d4c;
+  display: block;
+  padding: 1em;
+
+  &:hover {
+    .hljs-comment {
+      opacity: 1;
+    }
+  }
+
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
 
   .hll {
     background-color: #d6d6d6;
