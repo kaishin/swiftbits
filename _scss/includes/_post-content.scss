@@ -46,6 +46,14 @@ article[class*=post] {
 .post-content {
   font-weight: 300;
 
+  h3 {
+    margin: 2rem 0 0;
+  }
+
+  p {
+    margin: 0.8rem 0;
+  }
+
   a {
     font-style: italic;
 

@@ -1,28 +1,26 @@
 .post-header {
-  margin-bottom: 3rem;
-
-  .post-title {
-    margin-top: 0.5rem;
-
-    @include media-width(from, $container-breakpoint) {
-      font-size: 1.8rem;
-    }
-  }
+  margin-bottom: 2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid $tertiary-color;
 }
-
-
 
 .post-title {
   font-size: 1.4rem;
+  font-weight: 300;
   line-height: 1.3;
-  margin: 0;
+  margin: 0.5rem 0 0;
+  text-transform: uppercase;
+
+  @include media-width(from, $container-breakpoint) {
+    font-size: 1.6rem;
+  }
 }
 
 .post-link {
   &,
   &:link,
   &:visited {
-    color: $black;
+    color: rgba($black, 0.8);
   }
 
   &:hover {

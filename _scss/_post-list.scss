@@ -6,4 +6,8 @@
 .post-list-item {
   list-style: none;
   padding: 2rem 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
 }

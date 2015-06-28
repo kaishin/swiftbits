@@ -22,7 +22,6 @@ $turquoise: #0CE0B1;
 $emerald: #44C55F;
 $casablanca: #FAAD4C;
 $red-orange: #FC3A32;
-$light-green: #EDFFFF;
 
 // Colors
 $accent-color: mix($lochmara, $turquoise);
@@ -33,6 +32,7 @@ $link-hover-color: $accent-color;
 $link-visited-color: darken($accent-color, 20%);
 $tertiary-color: darken($ash, 5%);
 $background-color: rgba(#000, 0.02);
+$header-background-color: #033443;
 
 // Fonts
 $sans-serif: "Fira-Sans", "Helvetica Neue", "Arial", sans-serif;
