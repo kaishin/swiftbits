@@ -2,22 +2,4 @@
 layout: default
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">
-        {{ page.title }}
-      </a>
-    </h1>
-
-    <div class="post-metadata">
-      <time datetime="{{ page.date | data_to_xmlschema }}">
-        {{ page.date | date: "%R %b %-d, %Y" }}
-      </time>
-    </div>
-  </header>
-
-  <section class="post-content">
-    {{ content }}
-  </section>
-</article>
+{% include post.html url=page.url title=page.title date=page.date body=content %}
