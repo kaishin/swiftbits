@@ -1,15 +1,17 @@
+$code-background-color: #343642;
+
 .highlight {
-  background: $background-color;
-  border: 1px solid #eee;
-  border-radius: 0.2em;
-  color: #4d4d4c;
+  background-color: $background-color;
+  border-radius: 0.3em;
+  color: #c1c2c3;
   display: block;
   padding: 1em;
+  transition: all 0.3s;
+  white-space: pre;
+  word-wrap: normal;
 
   &:hover {
-    .hljs-comment {
-      opacity: 1;
-    }
+    background-color: $code-background-color;
   }
 
   code {
@@ -18,7 +20,7 @@
   }
 
   .hll {
-    background-color: #d6d6d6;
+    background-color: #ffc;
   }
 
   .c, // Comment
@@ -28,7 +30,7 @@
   .cs, // Comment.Special
   .gp, // Generic.Prompt
   .sd { // Literal.String.Doc
-    color: #8e908c;
+    color: rgba(lighten($code-background-color, 50%), 0.5);
   }
 
   .k, // Keyword
@@ -36,13 +38,13 @@
   .kd, // Keyword.Declaration
   .kp, // Keyword.Pseudo
   .kr { // Keyword.Reserved
-    color: #8959a8;
+    color: #bb89dd;
   }
 
   .kt, // Keyword.Type
   .nc, // Name.Class
   .nn { // Name.Namespace
-    color: #eab700;
+    color: #e9a94b;
   }
 
   .err, // Error
@@ -53,13 +55,13 @@
   .vc, // Name.Variable.Class
   .vg, // Name.Variable.Global
   .vi { // Name.Variable.Instance
-    color: #c82829;
+    color: #ff6166;
   }
 
   .na, // Name.Attribute
   .nf, // Name.Function
   .nx { // Name.Other
-    color: #4271ae;
+    color: #729fcf;
   }
 
   .gu, // Generic.Subheading
@@ -68,7 +70,7 @@
   .nt, // Name.Tag
   .o, // Operator
   .ow { // Operator.Word
-    color: #3e999f;
+    color: #e9a94b;
   }
 
   .il, // Literal.Number.Integer.Long
@@ -80,7 +82,7 @@
   .mo, // Literal.Number.Oct
   .se, // Literal.String.Escape
   .si { // Literal.String.Interpol
-    color: #f5871f;
+    color: #e9a94b;
   }
 
   .bp, // Name.Builtin.Pseudo
@@ -93,7 +95,7 @@
   .py,
   .sc, // Literal.String.Char
   .w {
-    color: #4d4d4c;
+    color: lighten($code-background-color, 45%);
   }
 
   .gi, // Generic.Inserte
@@ -106,6 +108,6 @@
   .sr, // Literal.String.Regex
   .ss, // Literal.String.Symbol
   .sx { // Literal.String.Other
-    color: #718c00;
+    color: #04c69e;
   }
 }
