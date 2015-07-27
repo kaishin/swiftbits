@@ -20,10 +20,10 @@
   &:link,
   &:visited {
     color: $black;
+    text-decoration: none;
   }
 
   &:hover {
-    text-decoration: none;
     color: $link-hover-color;
   }
 }
