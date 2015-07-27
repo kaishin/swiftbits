@@ -20,10 +20,15 @@ pre {
   font-family: $monospace;
 }
 
+pre {
+  margin: 1.5em 0;
+}
+
 code {
   background-color: $background-color;
   border-radius: 3px;
   padding: 0 0.4em;
+  font-size: 0.9rem;
 }
 
 sup {
