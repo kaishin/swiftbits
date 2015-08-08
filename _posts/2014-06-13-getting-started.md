@@ -33,7 +33,8 @@ playerName = "Blue"
 ...but cannot be `nil`, unless they are optional[^1].
 
 ~~~swift
-playerName = nil // -> Error
+playerName = nil
+// -> Error
 ~~~
 
 ### Constants
@@ -48,7 +49,8 @@ let gameTitle: String = "Pokémon Red"
 ...and cannot be re-assigned:
 
 ~~~swift
-gameTitle = "Pokémon Blue" // -> Error
+gameTitle = "Pokémon Blue"
+// -> Error
 ~~~
 
 Like variables, constants cannot be `nil`[^1].
@@ -68,7 +70,8 @@ Values can be included in strings using a `\` and the desired value between pare
 ~~~swift
 var totalHP = 15
 var damage = 10
-var currentHP = "Current HP: \(totalHP - damage)" // -> "Current HP: 5"
+var currentHP = "Current HP: \(totalHP - damage)"
+// -> "Current HP: 5"
 ~~~
 
 [^1]: Variables and constants that are explicitly declared as optional can be `nil`. More on that later.
