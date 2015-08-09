@@ -3,7 +3,7 @@ date: 2014-06-13 14:56:02 +0200
 title: "Getting Started"
 tags:
  - beginner
- - pokemon
+ - pokémon
  - tutorial
 teaser: "In this first section, we cover variables, constants, type inference, casting, and string interpolation."
 ---
