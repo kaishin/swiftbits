@@ -106,3 +106,11 @@ article[class*=post] {
   border-top: 1px solid $ash;
   font-size: 0.9em;
 }
+
+.swift-version {
+  padding: 1em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  background-color: mix(lighten($casablanca, 35%), yellow, 80%);
+  display: block;
+}

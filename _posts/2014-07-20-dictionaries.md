@@ -5,6 +5,7 @@ tags:
   - tutorial
   - pokémon
 teaser: "In this section, we'll take a look at Swift dictionaries."
+swift: 2.0ß4
 ---
 
 ### Declaring Dictionaries

@@ -14,6 +14,9 @@
   </header>
 
   <section class="post-content">
+    {% if include.swift %}
+      <p class="swift-version">The code below has been compiled using <strong>Swift {{ include.swift }}</strong></p>
+    {% endif %}
     {{ include.body }}
   </section>
 </article>
