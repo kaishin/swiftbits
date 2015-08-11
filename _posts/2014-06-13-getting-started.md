@@ -1,10 +1,10 @@
 ---
-date: 2014-06-13 14:56:02 +0200
 title: "Getting Started"
+date: 2014-06-13 14:56:02 +0200
 tags:
- - beginner
- - pokémon
- - tutorial
+  - beginner
+  - pokémon
+  - tutorial
 teaser: "In this first section, we cover variables, constants, type inference, casting, and string interpolation."
 swift: 2.0ß4
 ---

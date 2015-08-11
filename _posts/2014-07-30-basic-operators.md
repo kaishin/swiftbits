@@ -1,9 +1,12 @@
 ---
-title: Basic Operators
-date: 2014-07-30 17:45 CEST
-tags: beginner, tutorial
-teaser: "Operators are symbols that are used to modify or inspect values. Let's
-backtrack a bit and have a look at some basic ones in Swift."
+title: "Basic Operators"
+date: 2014-07-30 17:45 +0200
+tags:
+  - beginner
+  - tutorial
+  - pokémon
+teaser: "Operators are symbols that are used to modify or inspect values. Let's backtrack a bit and have a look at some basic ones in Swift."
+swift: 2.0ß4
 ---
 
 ### Assignment Operator
@@ -11,56 +14,61 @@ backtrack a bit and have a look at some basic ones in Swift."
 The assignment operator (`=`) is used either to initialize a value regardless of its type, or update it if it was declared as a variable.
 
 ~~~swift
-let pokemonName = "Pikachu"
-let mirrorPokemonName = pokemonName
-mirrorPokemonName // -> "Pikachu"
+let pokémon = "Caterpie"
+let wildPokémon = pokémon
+wildPokémon
+// -> "Caterpie"
 ~~~
 
 The assignment operator does not return a value.
 
 ### Arithmetic Operators
 
-Swift comes with all the arithmetic operators you would expect in a modern
-programming language.
+Swift comes with all the arithmetic operators you would expect in a modern programming language.
 
 ~~~swift
-35 + 10 // -> 45
-35 - 10 // -> 25
-10 * 2 // -> 20
-10 / 3 // -> 3
+35 + 10
+// -> 45
+35 - 10
+// -> 25
+10 * 2
+// -> 20
+10 / 3
+// -> 3
 ~~~
 
 The addition operator can also be used to concatenate two or more strings:
 
 ~~~swift
-"Lightning" + " " + "Rod" // -> "Lightning Rod"
+"Viridian" + " " + "City"
+// -> "Viridian City"
 ~~~
 
 Or arrays:
 
 ~~~swift
-let moves = ["Tail Whip", "Thunder Shock"]
-let moreMoves = ["Growl", "Play Nice"]
+let moves = ["String Shot", "Tackle"]
+let moreMoves = ["Harden"]
 var moveSet = moves + moreMoves
-moveSet // -> ["Tail Whip", "Thunder Shock", "Growl", "Play Nice"]
+// -> ["String Shot", "Tackle", "Harden"]
 ~~~
 
 ### Range Operators
 
-Range operators allow you to express a range of a values using lower and upper
-bounds. They come in two flavors.
+Range operators allow you to express a range of a values using lower and upper bounds. They come in two flavors.
 
 The *closed range operator* includes the value corresponding to the upper bound:
 
 ~~~swift
-moveSet[1...2] // -> ["Thunder Shock", "Growl"]
+moveSet[1...2]
+// -> ["Tackle", "Harden"]
 ~~~
 
-The *half-closed* range operator omits the value corresponding to the upper
-bound:
+The *half-closed* range operator omits the value corresponding to the upper bound:
 
 ~~~swift
-moveSet[1..<2] // -> ["Thunder Shock"]
+moveSet[1..<2]
+// -> ["Tackle"]
 ~~~
 
 ### Remainder Operator
@@ -68,14 +76,17 @@ moveSet[1..<2] // -> ["Thunder Shock"]
 The remainder operator (`%`) outputs the remainder of a division of two numbers:
 
 ~~~swift
-10 % 3 // -> 1
+10 % 3
+// -> 1
 ~~~
 
 It also works with floats and negative numbers:
 
 ~~~swift
-35 % -15 // -> 5
-10 % 3.5 // -> 3.0
+35 % -15
+// -> 5
+10 % 3.5
+// -> 3.0
 ~~~
 
 ### Compound Assignment Operators
@@ -85,11 +96,16 @@ the left operand at the same time:
 
 ~~~swift
 var remainingHP = 35
-remainingHP += 10 // -> 45 (remainingHP = remainingHP + 10)
-remainingHP -= 10 // -> 35 (remainingHP = remainingHP - 10)
-remainingHP *= 2 // -> 70 (remainingHP = remainingHP * 2)
-remainingHP /= 2 // -> 35 (remainingHP = remainingHP / 2)
-remainingHP %= 6 // -> 5 (remainingHP = remainingHP % 6)
+remainingHP += 10
+// -> 45 (remainingHP = remainingHP + 10)
+remainingHP -= 10
+// -> 35 (remainingHP = remainingHP - 10)
+remainingHP *= 2
+// -> 70 (remainingHP = remainingHP * 2)
+remainingHP /= 2
+// -> 35 (remainingHP = remainingHP / 2)
+remainingHP %= 6
+// -> 5 (remainingHP = remainingHP % 6)
 ~~~
 
 ### Unary Operators
@@ -98,39 +114,49 @@ Swift has all the unary operators that are common in other languages:
 
 ~~~swift
 remainingHP = 35
-++remainingHP // -> 36
---remainingHP // -> 35
+++remainingHP
+// -> 36
+--remainingHP
+// -> 35
 
-let damageToKO = -remainingHP // -> -35
-+damageToKO // -> -35
+let damageToKO = -remainingHP
+// -> -35
++damageToKO
+// -> -35
 ~~~
 
-Note that the unary *plus* operator is just syntactic sugar and does not change
-the value it was prepended to.
+Note that the unary *plus* operator is just syntactic sugar and does not change the value it was prepended to.
 
-If the increment or decrement operators are appended as postfix operators
-(`value++`), the variable is modified *after* its value is returned:
+If the increment or decrement operators are appended as postfix operators (`value++`), the variable is modified *after* its value is returned:
 
 ~~~swift
-remainingHP // -> 35
-remainingHP-- // -> 35
-remainingHP // -> 34
+remainingHP
+// -> 35
+remainingHP--
+// -> 35
+remainingHP
+// -> 34
 ~~~
 
 ### Comparison Operators
 
-Comparison operators are binary operators that compare two values and return a
-boolean:
+Comparison operators are binary operators that compare two values and return a boolean:
 
 ~~~swift
-35 == 35 // -> true (is equal)
-180 != 35 // -> true (is not equal)
+35 == 35
+// -> true (is equal)
+180 != 35
+// -> true (is not equal)
 
-180 > 35 // -> true (is greater than)
-35 < 180 // -> true (is less than)
+180 > 35
+// -> true (is greater than)
+35 < 180
+// -> true (is less than)
 
-35 >= 35 // -> true (is greater than or equal)
-180 <= 35 // -> false (is less than or equal)
+35 >= 35
+// -> true (is greater than or equal)
+180 <= 35
+// -> false (is less than or equal)
 ~~~
 
 ### Logical Operators
@@ -138,17 +164,19 @@ boolean:
 Swift has three logical operators that all return a boolean value:
 
 - The NOT operator (`!value`) inverts a boolean value.
-- The AND operator (`value1 && value2`) returns `true` if all values are
-  `true`.
-- The OR operator (`value1 || value2`) returns `true` if at least one value is
-  `true`.
+- The AND operator (`value1 && value2`) returns `true` if all values are `true`.
+- The OR operator (`value1 || value2`) returns `true` if at least one value is `true`.
 
 ~~~swift
 var damage = 56
 var lastPokemon = true
-var oneHitKO = (damage > remainingHP) // -> true
+var oneHitKO = (damage > remainingHP)
+// -> true
 
-!oneHitKO // -> false
-!oneHitKO && lastPokemon // -> false
-!oneHitKO || lastPokemon // -> true
+!oneHitKO
+// -> false
+!oneHitKO && lastPokemon
+// -> false
+!oneHitKO || lastPokemon
+// -> true
 ~~~
