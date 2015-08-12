@@ -71,7 +71,7 @@ catchWildPokémon("Super Ball", statusAttack: "Hypnosis")
 
 ### Multiple Return Values
 
-Functions can also return [tuples](/#tuples):
+Functions can also return [tuples]({% post_url 2014-07-28-tuples %}):
 
 ~~~swift
 func falseSwipe(currentHP: Double) -> (remainingHP: Double, damage: Double) {
