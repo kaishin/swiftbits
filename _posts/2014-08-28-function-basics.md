@@ -1,57 +1,55 @@
 ---
-title: Function Basics
-tags: beginner, tutorial
+title: "Function Basics"
+date: 2014-08-28 20:00:00 +0200
+tags:
+  - beginner
+  - tutorial
+  - pokémon
 teaser: "Functions are an essential part of any modern programming language. Let's look at what Swift has to offer."
+swift: 2.0ß4
 ---
 
 ### Defining Functions
 
-A function is a stand-alone set of instructions that can be reused to achieve
-the same task in different parts of the program.
+A function is a stand-alone set of instructions that can be reused to achieve the same task in different parts of the program.
 
-In Swift, functions are defined using the `func` keyword, followed by the
-function name, its parameters, then its return type. Both parameters and the return
-type can be omitted if the function takes no parameters and returns no value:
+In Swift, functions are defined using the `func` keyword, followed by the function name, its parameters, then its return type. Both parameters and the return type can be omitted if the function takes no parameters and returns no value:
 
 ~~~swift
-func quarterCircleforward() {
-  println("down")
-  println("down-forward")
-  println("forward")
+func catchWildPokémon() {
+  print("Items")
+  print("Poké Ball")
+  print("Wash, rinse, repeat.")
 }
 ~~~
 
-Parameters, if present, should be named and type-labeled inside the parentheses
-following the function's name:
+Parameters, if present, should be named and type-labeled inside the parentheses following the function's name:
 
 ~~~swift
-func quarterCircle(direction: String) {
-  println("down")
-  println("down-\(direction)")
-  println(direction)
+func catchWildPokémon(ballType: String) {
+  print("Items")
+  print(ballType)
+  print("Wash, rinse, repeat.")
 }
-~~~
-
-~~~swift
-quarterCircle("forward") // Prints same output as previous function
 ~~~
 
 If the function returns a value, the type of the latter should be specified after the closing parenthesis of the parameters, preceded by a `->` (*return arrow*) sign:
 
 ~~~swift
-func canPerformSuperCombo(gauge: Float) -> Bool {
-  return gauge == 1.0
+func isMasterBall(successPercent: Double) -> Bool {
+  return successPercent == 100
 }
 ~~~
 
 ### Calling Functions
 
-To call a function, use its name followed immediately by parentheses containing any required
-parameters. The parentheses can't be omitted even in the absence of required
-parameters:
+To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can't be omitted even in the absence of required parameters:
 
 ~~~swift
-canPerformSuperCombo(0.8) // -> false
+catchWildPokémon("Ultra Ball")
+// -> Items
+// -> Ultra Ball
+// -> Wash, rinse, repeat.
 ~~~
 
 ### Multiple Parameters
@@ -59,105 +57,87 @@ canPerformSuperCombo(0.8) // -> false
 Multiple parameters should be separated by commas:
 
 ~~~swift
-func canPerformShinkuHadoken(gauge: Float, name: String) -> Bool {
-  if name == "Ryu" || name == "Sakura" {
-    return canPerformSuperCombo(gauge)
-  } else {
-    return false
-  }
+func catchWildPokémon(ballType: String, statusAttack: String) {
+  print(statusAttack)
+  catchWildPokémon(ballType)
 }
-~~~
 
-~~~swift
-canPerformShinkuHadoken(1.0, "Ryu") // -> true
+catchWildPokémon("Super Ball", statusAttack: "Hypnosis")
+// -> Hypnosis
+// -> Items
+// -> Ultra Ball
+// -> Wash, rinse, repeat.
 ~~~
 
 ### Multiple Return Values
 
-Functions can also return [tuples](http://learn-swift.co/#tuples):
+Functions can also return [tuples](/#tuples):
 
 ~~~swift
-func canPerformUltraCombo(revengeGauge: Float) -> (Bool, damageMultiplier: Float) {
-  if revengeGauge >= 0.5 {
-    if revengeGauge == 1.0 {
-      return (true, 1.5)
-    } else {
-      return (true, 1.0)
-    }
+func falseSwipe(currentHP: Double) -> (remainingHP: Double, damage: Double) {
+  let potentialDamage = 67.0
+
+  if potentialDamage >= currentHP {
+    return(1, currentHP - 1)
   } else {
-    return (false, 0)
+    return(currentHP - potentialDamage, potentialDamage)
   }
 }
-~~~
 
-~~~swift
-canPerformUltraCombo(0.6) // -> (true, 1.0)
+falseSwipe(72)
+// -> (5, 67)
+falseSwipe(20)
+// -> (1, 19)
 ~~~
 
 ### External Parameter Names
 
-In the `quarterCircle(direction: String)` function above, `direction` is only
-used within the function, not in its call signature. For more clarity of intent,
-you can provide an external name for each parameter by placing it before its
-internal one:
+In the `catchWildPokémon(ballType: String) function above, `ballType` is only used within the function, not in its call signature. For more clarity of intent, you can provide an external name for each parameter by placing it before its internal one:
 
 ~~~swift
-func quarterCircle(relativeDirection direction: String) {
-  println("down")
-  println("down-\(direction)")
-  println(direction)
+func catchWildPokémon(withBall ballType: String) {
+  print("Items")
+  print(ballType)
+  print("Wash, rinse, repeat.")
 }
-~~~
 
-~~~swift
-quarterCircle(relativeDirection: "backward")
+catchWildPokémon(withBall: "Speed Ball")
+// -> Items
+// -> Speed Ball
+// -> Wash, rinse, repeat.
 ~~~
 
 Notice how the parameter name is now part of the function's signature.
-
-If you want to use the same value for both internal and external names, you can
-use the `#` shortcut notation:
-
-~~~swift
-func canPerformSuperCombo(#gauge: Float) -> Bool {
-  return gauge == 1.0
-}
-~~~
-
-~~~swift
-canPerformSuperCombo(gauge: 0.5)
-~~~
 
 ### Default Parameter Values
 
 You can assign default values to your function parameters:
 
 ~~~swift
-func quarterCircle(direction: String = "forward") {
-  println("down")
-  println("down-\(direction)")
-  println(direction)
+func lazilyCatchWildPokémon(ballType: String = "Poké Ball") {
+  print("Items")
+  print(ballType)
+  print("Wash, rinse, repeat.")
 }
+
+lazilyCatchWildPokémon()
+// -> Items
+// -> Poké Ball
+// -> Wash, rinse, repeat.
 ~~~
 
-~~~swift
-quarterCircle() // Called without argument
-~~~
 
 ### Variadic Parameters
 
-Functions can take an arbitrary number of arguments of the same type, called variadic
-parameters. Variadic parameters use `...` after their type label in the function
-definition:
+Functions can take an arbitrary number of arguments of the same type, called variadic parameters. Variadic parameters use `...` after their type label in the function definition:
 
 ~~~swift
-func directionalInput(directions: String...) {
-  for direction in directions {
-    println(direction)
+func useMoves(moves: String...) {
+  for move in moves {
+    print(move)
   }
 }
-~~~
 
-~~~swift
-directionalInput("down", "up") // Prints "down", "up"
+useMoves("Tackle", "Leech Seed")
+// -> "Tackle", "Leech Seed"
 ~~~
