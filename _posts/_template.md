@@ -1,6 +1,6 @@
 ---
-date: DATE_PLACEHOLDER
 title: "TITLE_PLACEHOLDER"
-category:
+date: DATE_PLACEHOLDER
 tags:
+category:
 ---
