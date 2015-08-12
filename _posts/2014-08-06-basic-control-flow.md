@@ -1,33 +1,36 @@
 ---
-title: Basic Control Flow
-date: 2014-08-06 17:00 CEST
-tags: beginner, tutorial
-teaser: "This section takes a look at what Swift has to offer in terms of
-control flow, an essential part of every programming language. In this first part we
-will look at 'if' and 'switch' statements."
+title: "Basic Control Flow"
+date: 2014-08-06 17:00 +0200
+tags:
+  - beginner
+  - tutorial
+  - pokémon
+teaser: "This section takes a look at what Swift has to offer in terms of control flow, an essential part of every programming language. In this first part we will look at 'if' and 'switch' statements."
+swift: 2.0ß4
 ---
 
 ### Conditional Statements
 
-The `if` statement evaluates a boolean value and executes a code block if it's
-`true`:
+The `if` statement evaluates a boolean value and executes a code block if it's `true`:
 
 ~~~swift
-let elementalType = "Fire"
+let wildPokémonType = "Bug"
 
-if elementalType == "Fire" {
-  println("Use water!") // <-
+if wildPokémonType == "Bug" {
+  print("Go! Charmander!")
 }
+// -> "Go! Charmander!"
 ~~~
 
 With `else`:
 
 ~~~swift
-if elementalType == "Fairy" {
-  println("Use poison!")
+if wildPokémonType == "Rock" {
+  print("Leech Seed")
 } else {
-  println("Draco Meteor!") // <-
+  print("Tackle")
 }
+// -> "Tackle"
 ~~~
 
 ### Chaining Conditionals
@@ -35,45 +38,46 @@ if elementalType == "Fairy" {
 Multiple `if` statements can be chained:
 
 ~~~swift
-if elementalType == "Fairy" {
-  println("Use poison!")
-} else if elementalType == "Bug" {
-  println("Kill it with fire!")
+if wildPokémonType == "Water" {
+  print("Leech Seed")
+} else if wildPokémonType == "Bug" {
+  print("Come back, Bulbasaur!")
 } else {
-  println("Draco Meteor Again.") // <-
+  print("Tackle")
 }
+// -> "Come back, Bulbasaur!"
 ~~~
 
 ### Switch Statements
 
-The `switch` statement evaluates a value against multiple patterns
-then executes the code corresponding to the one that matches:
+The `switch` statement evaluates a value against multiple patterns then executes the code corresponding to the one that matches:
 
 ~~~swift
-switch elementalType {
-case "Fairy":
-  println("Use poison!")
+switch wildPokémonType {
+case "Water":
+  print("Go! Bulbasaur!")
 case "Bug":
-  println("Kill it with fire!")
+  print("Go! Charmander!")
 default:
-  println("More Draco Meteor.") // <-
+  print("Go! Pikachu!")
 }
+// -> "Go! Charmander!"
 ~~~
 
-A `switch` statement needs to be exhaustive; every possible value should be
-covered. The `default` case covers all the remaining cases.
+A `switch` statement needs to be exhaustive; every possible value should be covered. The `default` case covers all the remaining cases.
 
 A single case can check against multiple values:
 
 ~~~swift
 switch elementalType {
-case "Dragon", "Flying", "Grass", "Ground":
-  println("Freeze it to death.")
-case "Ice":
-  println("Melt it with fire!")
+case "Rock", "Fire":
+  print("Go! Squirtle!")
+case "Bug", "Plant":
+  print("Go! Charmander!")
 default:
-  println("Ready for another Draco Meteor?") // <-
+  print("Go! Pikachu!")
 }
+// -> "Go! Charmander!"
 ~~~
 
 ### Switch Fall-through
@@ -81,18 +85,18 @@ default:
 The execution of a `switch` statement stops as soon a case is matched:
 
 ~~~swift
-let fireType = "Fire"
+let someType = "Fire"
 
-switch fireType {
+switch someType {
 case "Fire":
-  println("Go, Squirtle!") // <-
+  print("Go, Squirtle!")
 default:
-  println("Your turn will never come, Pikachu...")
+  print("Pikachu will not be sent out this round.")
 }
+// -> "Go, Squirtle!"
 ~~~
 
-You can also explicitly end execution using the keyword `break` anywhere in the
-statement.
+You can also explicitly end execution using the keyword `break` anywhere in the statement.
 
 ### Range Matching
 
@@ -102,54 +106,53 @@ Cases in a `switch` statement can check if a value is included in a range:
 let baseAttack = 89
 
 switch baseAttack {
-case 1...30:
-  println("Jus release it.")
-case 31...70:
-  println("Meh")
+case 1...70:
+  print("This pokémon is useless. Set it free.")
 case 71...150:
-  println("Now we're talking!") // <-
+  print("Now we're talking.")
 case 151...200:
-  println("Uber!")
+  print("Uber!")
 default:
-  println("Hackemon!")
+  print("Hackemon!")
 }
+// -> "Now we're talking."
 ~~~
 
 ### Tuple Matching
 
-Tuples can be used as values in `switch` cases. You can ignore a value in the
-tuple by replacing it with `_` in the case's test:
+Tuples can be used as values in `switch` cases. You can ignore a value in the tuple by replacing it with `_` in the case's test:
 
 ~~~swift
 let baseSpecialAttack = 55
-let baseMixedAttack = (baseAttack, baseSpecialAttack)
+var baseMixedAttack = (baseAttack, baseSpecialAttack)
 
 switch baseMixedAttack {
 case (80...200, 80...200):
-  println("Good mixed sweeper.")
+  print("Good mixed sweeper.")
 case (_, 80...200):
-  println("Good special sweeper.")
+  print("Good special sweeper.")
 case (80...200, _):
-  println("Good physical sweeper.") // <-
+  print("Good physical sweeper.")
 default:
-  println("Not competitive enough.")
+  print("Not competitive enough.")
 }
+// -> Good physical sweeper."
 ~~~
 
 ### Binding Values
 
-Matched values can be bound to constants or variables and reused
-inside the case's body:
+Matched values can be bound to constants or variables and reused inside the case's body:
 
 ~~~swift
 switch baseMixedAttack {
 case (80...200, let specialAttack):
-  println("Good physical sweeper with a special attack of \(specialAttack)") // <-
+  print("Good physical sweeper with a special attack of \(specialAttack)")
 case (let attack, 80...200):
-  println("Good special sweeper with an attack of \(attack)")
+  print("Good special sweeper with an attack of \(attack)")
 default:
-  println("Not competitive enough.")
+  print("Not competitive enough.")
 }
+// -> "Good physical sweeper with a special attack of 55"
 ~~~
 
 ### Where
@@ -157,10 +160,13 @@ default:
 Cases in a `switch` statement can use a `where` clause to perform additional checks:
 
 ~~~swift
+baseMixedAttack.0 = 55
+
 switch baseMixedAttack {
 case let (attack, specialAttack) where attack == specialAttack:
-  println("Perfectly balanced attack stats.")
+  print("Perfectly balanced attack stats.")
 default:
-  println("Unbalanced attack stats.")
+  print("Unbalanced attack stats.")
 }
+// -> "Perfectly balanced attack stats."
 ~~~
