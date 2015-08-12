@@ -17,7 +17,7 @@ The assignment operator (`=`) is used either to initialize a value regardless of
 let pokémon = "Caterpie"
 let wildPokémon = pokémon
 wildPokémon
-// -> "Caterpie"
+// -> Caterpie
 ~~~
 
 The assignment operator does not return a value.
@@ -41,7 +41,7 @@ The addition operator can also be used to concatenate two or more strings:
 
 ~~~swift
 "Viridian" + " " + "City"
-// -> "Viridian City"
+// -> Viridian City
 ~~~
 
 Or arrays:

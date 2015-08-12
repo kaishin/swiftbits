@@ -19,7 +19,7 @@ let wildPokémonType = "Bug"
 if wildPokémonType == "Bug" {
   print("Go! Charmander!")
 }
-// -> "Go! Charmander!"
+// -> Go! Charmander!
 ~~~
 
 With `else`:
@@ -30,7 +30,7 @@ if wildPokémonType == "Rock" {
 } else {
   print("Tackle")
 }
-// -> "Tackle"
+// -> Tackle
 ~~~
 
 ### Chaining Conditionals
@@ -45,7 +45,7 @@ if wildPokémonType == "Water" {
 } else {
   print("Tackle")
 }
-// -> "Come back, Bulbasaur!"
+// -> Come back, Bulbasaur!
 ~~~
 
 ### Switch Statements
@@ -61,7 +61,7 @@ case "Bug":
 default:
   print("Go! Pikachu!")
 }
-// -> "Go! Charmander!"
+// -> Go! Charmander!
 ~~~
 
 A `switch` statement needs to be exhaustive; every possible value should be covered. The `default` case covers all the remaining cases.
@@ -77,7 +77,7 @@ case "Bug", "Plant":
 default:
   print("Go! Pikachu!")
 }
-// -> "Go! Charmander!"
+// -> Go! Charmander!
 ~~~
 
 ### Switch Fall-through
@@ -93,7 +93,7 @@ case "Fire":
 default:
   print("Pikachu will not be sent out this round.")
 }
-// -> "Go, Squirtle!"
+// -> Go, Squirtle!
 ~~~
 
 You can also explicitly end execution using the keyword `break` anywhere in the statement.
@@ -115,7 +115,7 @@ case 151...200:
 default:
   print("Hackemon!")
 }
-// -> "Now we're talking."
+// -> Now we're talking.
 ~~~
 
 ### Tuple Matching
@@ -136,7 +136,7 @@ case (80...200, _):
 default:
   print("Not competitive enough.")
 }
-// -> Good physical sweeper."
+// -> Good physical sweeper.
 ~~~
 
 ### Binding Values
@@ -152,7 +152,7 @@ case (let attack, 80...200):
 default:
   print("Not competitive enough.")
 }
-// -> "Good physical sweeper with a special attack of 55"
+// -> Good physical sweeper with a special attack of 55
 ~~~
 
 ### Where
@@ -168,5 +168,5 @@ case let (attack, specialAttack) where attack == specialAttack:
 default:
   print("Unbalanced attack stats.")
 }
-// -> "Perfectly balanced attack stats."
+// -> Perfectly balanced attack stats.
 ~~~
