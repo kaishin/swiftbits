@@ -1,7 +1,12 @@
 ---
-title: Enumerations
-tags: beginner, tutorial
+title: "Enumerations"
+date: 2014-09-16 20:00:00 +0200
+tags:
+  - beginner
+  - tutorial
+  - pokémon
 teaser: "This section explores Enumerations in Swift and what makes them more powerful and flexible than their Objective-C counterparts."
+swift: 2.0ß4
 ---
 
 ### Defining Enumerations
@@ -11,31 +16,31 @@ Enumerations, also commonly referred to as *enums*, are a data type that holds a
 Enumerations are declared using the `enum` keyword, with each member preceded by the `case` keyword:
 
 ~~~swift
-enum WeaponType {
-  case Whip
-  case Chain
-  case Sword
+enum StarterType {
+  case Grass
+  case Fire
+  case Water
 }
 ~~~
 
 The elements can also be declared in the same line:
 
 ~~~swift
-enum SubWeaponType {
-  case Dagger, Axe, Stopwatch
+enum StarterType {
+  case Grass, Fire, Water
 }
 ~~~
 
 Use dot syntax to declare a variable or constant enumeration value:
 
 ~~~swift
-let MagicWhipType = WeaponType.Whip
+let WaterType = StarterType.Water
 ~~~
 
 If you explicitly set the type of the variable or constant, you can omit the enumeration name in the right-hand side of the assignment:
 
 ~~~swift
-var ShortChainType: WeaponType = .Chain
+var FireType: StarterType = .Fire
 ~~~
 
 ### Switching on Enumeration Values
@@ -43,16 +48,15 @@ var ShortChainType: WeaponType = .Chain
 Enumerations are commonly used in `switch` statements:
 
 ~~~swift
-let equippedSubWeaponType = SubWeaponType.Dagger
+let chosenStarterType = StarterType.Water
 
-switch equippedSubWeaponType {
-case .Dagger:
-  println("Keep enemies at a distance.")
-case .Axe:
-  println("Target airborne enemies.")
-case .Stopwatch:
-  println("Freeze time!")
+switch chosenStarterType {
+case .Grass, .Water:
+  print("Brock, here I come!")
+case .Fire:
+  print("Wild Caterpies, here I come!")
 }
+// -> Brock, here I come!
 ~~~
 
 ### Associated Values
@@ -60,46 +64,62 @@ case .Stopwatch:
 Enumeration members can hold associated values of any type. The type of the associated value should be specified in the enumeration declaration:
 
 ~~~swift
-enum ItemType {
-  case Healing(restoredHearts: Int)
-  case Money(amount: Int)
+enum Move {
+  case Healing(percent: Int)
+  case Damage(power: Int)
+  case Status(effect: String)
 }
 
-let smallHeartType = ItemType.Healing(restoredHearts: 1)
+let tackle = Move.Damage(power: 50)
 ~~~
 
 You can check the associated value of an enumeration using a `switch` statement:
 
 ~~~swift
-switch smallHeartType {
-case .Healing(let restoredHearts):
-  println("Restores \(restoredHearts) heart(s).")
-case .Money(let amount):
-  println("Earns you \(amount) of gold. ")
+switch tackle {
+case .Healing(let percentHealed):
+  print("Heals \(percentHealed) of the pokémon's HP.")
+case .Damage(let basePower):
+  print("Deals damage with a base power of \(basePower).")
+case .Status(let statusEffect):
+  print("A status move that inflicts \(statusEffect).")
 }
+// -> Deals damage with a base power of 50.
 ~~~
 
 ### Raw Values
 
-Beside associated values, enumeration members can also hold default—or
-raw—values. Unlike associated values, each member has always the same raw value
-that's specified when the enumeration is declared. To get the raw value of an
-enumeration member, use `toRow()`:
+Beside associated values, enumeration members can also hold default—or raw—values. Unlike associated values, each member has always the same raw value that's specified when the enumeration is declared. To get the raw value of an enumeration member, use `rawValue`:
 
 ~~~swift
-enum EnemyType: String {
-  case Boss = "Boss"
-  case Minion = "Minion"
+enum MoveCategory: String {
+  case Physical = "Physical Move"
+  case Special = "Special Move"
+  case Status = "Status Move"
 }
 
-let bossTypeString = EnemyType.Boss.toRaw() // -> "Boss"
+let physicalTypeName = MoveCategory.Physical.rawValue
+// -> "Physical Move"
 ~~~
 
-To get an enumeration member from a raw value, use `fromRaw()`:
+To get an enumeration member from a raw value, use `MoveCategory(rawValue: String)`:
 
 ~~~swift
-let minionType = EnemyType.fromRaw("Minion")
+let statusType = MoveCategory(rawValue: "Status Move")
+// -> .Status
 ~~~
 
 Raw values can be `String`, `Character`, `Int`, or `Float`/`Double`.
+If you declare the raw value type but not explicitly set it in one or more cases, the compiler assigns implicit raw values to said cases.
+
+~~~swift
+enum MoveCategory: String {
+  case Physical
+  case Special
+  case Status
+}
+
+let physicalTypeName = MoveCategory.Physical.rawValue
+// -> "Physical"
+~~~
 
