@@ -1,6 +1,7 @@
 ---
 title: "Basic Operators"
 date: 2014-07-30 17:45 +0200
+category: learn-swift
 tags:
   - beginner
   - tutorial

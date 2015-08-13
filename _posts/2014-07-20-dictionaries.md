@@ -1,6 +1,7 @@
 ---
 title: "Dictionaries"
 date: 2014-07-05 20:00:00 +0200
+category: learn-swift
 tags:
   - beginner
   - tutorial

@@ -1,6 +1,7 @@
 ---
 title: "Basic Control Flow"
 date: 2014-08-06 17:00 +0200
+category: learn-swift
 tags:
   - beginner
   - tutorial

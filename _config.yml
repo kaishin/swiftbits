@@ -29,7 +29,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-permalink: pretty
+permalink: /:categories/:title/
 exclude: [
   "node_modules",
   "gulp.js",

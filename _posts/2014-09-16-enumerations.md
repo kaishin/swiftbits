@@ -1,6 +1,7 @@
 ---
 title: "Enumerations"
 date: 2014-09-16 20:00:00 +0200
+category: learn-swift
 tags:
   - beginner
   - tutorial
