@@ -1,12 +1,62 @@
 .category-title {
-  background-color: darken($black, 10%);
-  border-radius: 2px;
+  background-color: $black;
   color: $white;
   font-size: 1.1rem;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.05em;
-  margin-bottom: 2rem;
-  margin-top: 0;
+  margin: 0;
   padding: 0.5rem 1rem;
-  text-transform: uppercase;
 }
+
+.toc {
+  background-color: $ash;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  padding: 0;
+
+  .row {
+    $border: 1px solid darken($ash, 5%);
+    border-bottom: $border;
+    border-left: $border;
+    border-right: $border;
+    list-style: none;
+  }
+
+  .row-link {
+    color: $black;
+    display: block;
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background-color: $white;
+      color: $link-color;
+    }
+  }
+}
+
+.back-to-toc {
+  display: none;
+
+  @include media-width(from, $container-width) {
+    color: $black;
+    background-color: darken($ash, 2%);
+    bottom: 1rem;
+    display: block;
+    position: fixed;
+    right: 1rem;
+    transition: all 0.1s linear;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+

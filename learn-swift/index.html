@@ -4,3 +4,16 @@ title: "Learn Swift"
 category: learn-swift
 active: learn-swift
 ---
+
+<ul class="toc" id="toc">
+  <h1 class="category-title">Contents</h1>
+  {% for post in site.categories.[page.category] reversed %}
+    <li class="row">
+      <a class="row-link" href="#{{ post.url | replace: '/', '' | replace: 'learn-swift', '' }}">
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="#toc" class="back-to-toc">Contents</a>

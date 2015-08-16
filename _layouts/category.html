@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<h1 class="category-title">{{ page.title }}</h1>
+{{ content }}
 
 <ul class="post-list">
   {% for post in site.categories.[page.category] reversed %}
-    <li class="post-list-item">
+    <li class="post-list-item" id="{{ post.url | replace: '/', '' | replace: 'learn-swift', '' }}">
       {% include post.html %}
     </li>
   {% endfor %}
