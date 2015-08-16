@@ -9,15 +9,15 @@
 
 %shake {
   @extend %animated;
-  animation-name: shake;
   animation-duration: 1s;
+  animation-name: shake;
   animation-timing-function: ease;
 }
 
 %pulsate {
-  animation-name: pulsate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  animation-name: pulsate;
 }
 
 $initial-bounce-overshoot: -40px;

@@ -3,7 +3,7 @@ $code-background-color: #343642;
 .highlight {
   background-color: $background-color;
   border-radius: 0.3em;
-  color: #c1c2c3;
+  color: #C1C2C3;
   display: block;
   padding: 1em;
   transition: all 0.1s;
@@ -20,7 +20,7 @@ $code-background-color: #343642;
   }
 
   .hll {
-    background-color: #ffc;
+    background-color: #FFC;
   }
 
   .c, // Comment
@@ -38,13 +38,13 @@ $code-background-color: #343642;
   .kd, // Keyword.Declaration
   .kp, // Keyword.Pseudo
   .kr { // Keyword.Reserved
-    color: #bb89dd;
+    color: #BB89DD;
   }
 
   .kt, // Keyword.Type
   .nc, // Name.Class
   .nn { // Name.Namespace
-    color: #e9a94b;
+    color: #E9A94B;
   }
 
   .err, // Error
@@ -55,13 +55,13 @@ $code-background-color: #343642;
   .vc, // Name.Variable.Class
   .vg, // Name.Variable.Global
   .vi { // Name.Variable.Instance
-    color: #ff6166;
+    color: #FF6166;
   }
 
   .na, // Name.Attribute
   .nf, // Name.Function
   .nx { // Name.Other
-    color: #729fcf;
+    color: #729FCF;
   }
 
   .gu, // Generic.Subheading
@@ -70,7 +70,7 @@ $code-background-color: #343642;
   .nt, // Name.Tag
   .o, // Operator
   .ow { // Operator.Word
-    color: #e9a94b;
+    color: #E9A94B;
   }
 
   .il, // Literal.Number.Integer.Long
@@ -82,7 +82,7 @@ $code-background-color: #343642;
   .mo, // Literal.Number.Oct
   .se, // Literal.String.Escape
   .si { // Literal.String.Interpol
-    color: #e9a94b;
+    color: #E9A94B;
   }
 
   .bp, // Name.Builtin.Pseudo
@@ -108,6 +108,6 @@ $code-background-color: #343642;
   .sr, // Literal.String.Regex
   .ss, // Literal.String.Symbol
   .sx { // Literal.String.Other
-    color: #04c69e;
+    color: #04C69E;
   }
 }

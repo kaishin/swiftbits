@@ -1,6 +1,6 @@
 body {
-  font-family: $sans-serif;
   color: $black;
+  font-family: $sans-serif;
 }
 
 h1,
@@ -27,8 +27,8 @@ pre {
 code {
   background-color: $background-color;
   border-radius: 3px;
-  padding: 0 0.4em;
   font-size: 0.9rem;
+  padding: 0 0.4em;
 }
 
 sup {
