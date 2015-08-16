@@ -7,7 +7,7 @@ layout: default
 <ul class="post-list">
   {% for post in site.categories.[page.category] reversed %}
     <li class="post-list-item">
-      {% include post.html url=post.url title=post.title date=post.date swift=post.swift body=post.content category=post.category %}
+      {% include post.html %}
     </li>
   {% endfor %}
 </ul>
