@@ -1,14 +1,32 @@
 $gap: 0.777em;
 
 .main-header {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
 
-  &::after {
-    background-image: linear-gradient(35deg, $casablanca, $red-orange);
-    content: "";
-    display: block;
-    height: 8px;
-    position: relative;
+.main-nav {
+  background-image: linear-gradient(35deg, $casablanca, $red-orange);
+  padding: 0.8rem 0;
+
+  .link-item {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  a {
+    background-color: rgba($white, 0.2);
+    border-radius: 3px;
+    color: $white;
+    font-weight: 100;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $white;
+      color: mix($casablanca, $red-orange);
+      font-weight: 400;
+    }
   }
 }
 
