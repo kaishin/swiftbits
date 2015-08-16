@@ -18,14 +18,22 @@ $gap: 0.777em;
     background-color: rgba($white, 0.2);
     border-radius: 3px;
     color: $white;
-    font-weight: 100;
+    font-weight: 400;
     padding: 0.2rem 1rem;
     text-decoration: none;
+    transition: all 0.1s linear;
+
+    &:hover,
+    &.active {
+      color: mix($casablanca, $red-orange);
+    }
+
+    &.active {
+      background-color: $white;
+    }
 
     &:hover {
-      background-color: $white;
-      color: mix($casablanca, $red-orange);
-      font-weight: 400;
+      background-color: rgba($white, 0.6);
     }
   }
 }
