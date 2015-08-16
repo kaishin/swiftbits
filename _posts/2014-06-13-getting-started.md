@@ -32,7 +32,7 @@ Variables can be re-assigned:
 playerName = "Blue"
 ~~~
 
-...but cannot be `nil`, unless they are optional[^1].
+...but cannot be `nil`, unless they are optional[^intro1].
 
 ~~~swift
 playerName = nil
@@ -55,7 +55,7 @@ gameTitle = "Pokémon Blue"
 // -> Error
 ~~~
 
-Like variables, constants cannot be `nil`[^1].
+Like variables, constants cannot be `nil`[^intro1].
 
 ### Type Inference
 
@@ -76,4 +76,4 @@ var currentHP = "Current HP: \(totalHP - damage)"
 // -> "Current HP: 5"
 ~~~
 
-[^1]: Variables and constants that are explicitly declared as optional can be `nil`. More on that later.
+[^intro1]: Variables and constants that are explicitly declared as optional can be `nil`. More on that later.

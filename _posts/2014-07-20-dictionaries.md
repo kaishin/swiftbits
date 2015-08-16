@@ -56,7 +56,7 @@ routeOneEncounterRates.isEmpty
 
 ### Getting Dictionary Values
 
-Like arrays, you can use subscript syntax to retrieve the value[^1] corresponding to
+Like arrays, you can use subscript syntax to retrieve the value[^dict1] corresponding to
 a given key.
 
 ~~~swift
@@ -112,4 +112,4 @@ You can compare two dictioanries using the `==` operator:
 
 Notice how the order of key-value pairs doesn't matter in dictionaries.
 
-[^1]: In practice, what you get is an optional value, which means it can be `nil`. More on that later.
+[^dict1]: In practice, what you get is an optional value, which means it can be `nil`. More on that later.
