@@ -1,16 +1,15 @@
 <article class="post">
   <header class="post-header">
+    <div class="post-metadata">
+      <time datetime="{{ include.date | data_to_xmlschema }}">
+        {{ include.date | date: "%b %-d, %Y" }} – {{ include.category | replace: "-", " " | upcase }}
+      </time>
+    </div>
     <h1 class="post-title">
       <a class="post-link" href="{{ include.url | prepend: site.baseurl }}">
         {{ include.title }}
       </a>
     </h1>
-
-    <div class="post-metadata">
-      <time datetime="{{ include.date | data_to_xmlschema }}">
-        {{ include.date | date: "%b %-d, %Y" }}
-      </time>
-    </div>
   </header>
 
   <section class="post-content">
