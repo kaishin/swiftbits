@@ -1,0 +1,12 @@
+.category-title {
+  background-color: darken($black, 10%);
+  border-bottom: 2px double $black;
+  border-radius: 2px;
+  color: $white;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
