@@ -1,7 +1,7 @@
 footer {
   $padding: 1.8rem;
   @extend %container;
-  border-top: 1px solid $ash;
+  border-top: 1px solid darken($ash, 20%);
   color: $gray;
   display: block;
   font-style: 0.9rem;
