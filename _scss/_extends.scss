@@ -52,6 +52,7 @@
   max-width: $container-width;
   padding-left: $container-padding;
   padding-right: $container-padding;
+  position: relative;
 
   @include media-width(from, $container-breakpoint) {
     padding-left: 0;
