@@ -1,5 +1,9 @@
+$radius: 4px;
+
 .category-title {
   background-color: $black;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
   color: $white;
   font-size: 1.1rem;
   font-weight: 400;
@@ -9,31 +13,29 @@
 }
 
 .toc {
-  background-color: $ash;
-  border-radius: 2px;
+  background-color: lighten($black, 8%);
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  color: $white;
   margin-bottom: 2rem;
+  margin-top: 0;
   overflow: hidden;
-  padding: 0;
+  padding: 1rem 2.5rem;
 
   .row {
-    $border: 1px solid darken($ash, 5%);
-    border-bottom: $border;
-    border-left: $border;
-    border-right: $border;
-    list-style: none;
+    padding-bottom: 0.4rem;
+    position: relative;
   }
 
   .row-link {
-    color: $black;
-    display: block;
+    color: rgba($white, 0.8);
     font-weight: 100;
-    padding: 0.5rem 1rem;
     text-decoration: none;
     transition: all 0.1s linear;
 
     &:hover {
-      background-color: $white;
-      color: $link-color;
+      color: $white;
+      text-decoration: underline;
     }
   }
 }
