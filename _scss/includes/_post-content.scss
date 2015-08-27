@@ -92,7 +92,7 @@ article[class*=post] {
   }
 
   pre {
-    $offset: 3rem;
+    $offset: 2rem;
 
     @include media-width(from, $container-width + 10) {
       margin-left: -$offset;
