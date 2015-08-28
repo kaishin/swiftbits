@@ -70,7 +70,7 @@ A `switch` statement needs to be exhaustive; every possible value should be cove
 A single case can check against multiple values:
 
 ~~~swift
-switch elementalType {
+switch wildPokémonType {
 case "Rock", "Fire":
   print("Go! Squirtle!")
 case "Bug", "Plant":

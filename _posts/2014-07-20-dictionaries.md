@@ -27,7 +27,7 @@ var fishingEncounterRates: [String: Double] = [:]
 It's also possible to create an empty dictionary using type inference like so:
 
 ~~~swift
-var fishingEncounterRates = [String: Double]()
+fishingEncounterRates = [String: Double]()
 ~~~
 
 
@@ -60,7 +60,7 @@ Like arrays, you can use subscript syntax to retrieve the value[^dict1] correspo
 a given key.
 
 ~~~swift
-routeOneEncounterRates["Rattata"]
+let rattataRate = routeOneEncounterRates["Rattata"]
 // -> 0.45
 ~~~
 

@@ -61,15 +61,15 @@ Range operators allow you to express a range of a values using lower and upper b
 The *closed range operator* includes the value corresponding to the upper bound:
 
 ~~~swift
-moveSet[1...2]
-// -> ["Tackle", "Harden"]
+let closedRange = moves[0...1]
+// -> ["String Shot", Tackle"]
 ~~~
 
 The *half-closed* range operator omits the value corresponding to the upper bound:
 
 ~~~swift
-moveSet[1..<2]
-// -> ["Tackle"]
+let halfClosedRange = moves[0..<1]
+// -> ["String Shot"]
 ~~~
 
 ### Remainder Operator
@@ -131,11 +131,11 @@ Note that the unary *plus* operator is just syntactic sugar and does not change 
 If the increment or decrement operators are appended as postfix operators (`value++`), the variable is modified *after* its value is returned:
 
 ~~~swift
-remainingHP
+let stepOne = remainingHP
 // -> 35
-remainingHP--
+let stepTwo = remainingHP--
 // -> 35
-remainingHP
+let stepThree = remainingHP
 // -> 34
 ~~~
 

@@ -1,29 +1,33 @@
+argv = require("yargs").argv
 browserSync = require "browser-sync"
 cache = require "gulp-cached"
 coffee = require "gulp-coffee"
+dateFormat = require "dateformat"
 del = require "del"
 gulp = require "gulp"
 gutil = require "gulp-util"
 include = require "gulp-include"
+literate = require "gulp-writ"
 mediaQueries = require "gulp-combine-media-queries"
 minifyCSS = require "gulp-minify-css"
 minifyJS = require "gulp-uglify"
 prefix = require "gulp-autoprefixer"
+removeEmptyLines = require "gulp-remove-empty-lines"
+rename = require "gulp-rename"
+replace = require "gulp-replace"
 runSequence = require "run-sequence"
+run = require "gulp-run"
 sass = require "gulp-sass"
 scssLint = require "gulp-scss-lint"
 shell = require "gulp-shell"
-
-argv = require("yargs").argv
-dateFormat = require "dateformat"
-rename = require "gulp-rename"
-replace = require "gulp-replace"
 slugify = require "underscore.string/slugify"
+
 now = new Date()
 title = argv.t ? "Untitled"
 dashedTitle = slugify(title)
 messages =
   jekyllBuild: "Rebuilding Jekyll..."
+  swiftSuccess: "\u2705  Swift compiled sucessfully!"
 
 sourceFolder = "."
 destinationFolder = "./_site"
@@ -48,6 +52,9 @@ gulp.task "default", ["develop"]
 
 gulp.task "develop", ->
   runSequence ["watch", "browser-sync"]
+
+gulp.task "swift", ->
+  runSequence ["generate-swift", "run-swift"]
 
 gulp.task "build", ->
   runSequence ["sass", "coffee", "vendorJS"], "lintSass", "jekyll-build"
@@ -75,7 +82,7 @@ gulp.task "doctor",
   shell.task "jekyll doctor"
 
 gulp.task "sass", ->
-  gulp.src("#{paths.sass}/*.scss")
+  gulp.src "#{paths.sass}/*.scss"
     .pipe sass
       errLogToConsole: true
       precision: 2
@@ -88,7 +95,7 @@ gulp.task "sass", ->
     .pipe browserSync.reload(stream: true)
 
 gulp.task "lintSass", ->
-  gulp.src("#{paths.sass}/*.scss")
+  gulp.src "#{paths.sass}/*.scss"
     .pipe cache paths.sass
     .pipe scssLint
       "config": ".scss-lint.yml",
@@ -97,7 +104,7 @@ gulp.task "lintSass", ->
     .on "error", (error) -> gutil.log(error.message)
 
 gulp.task "coffee", ->
-  gulp.src("#{paths.coffee}/*.coffee")
+  gulp.src "#{paths.coffee}/*.coffee"
     .pipe cache paths.coffee
     .pipe coffee bare: true
     .on "error", (error) -> gutil.log(error.message)
@@ -108,7 +115,7 @@ gulp.task "coffee", ->
     .pipe browserSync.reload(stream: true)
 
 gulp.task "vendorJS", ->
-  gulp.src("#{paths.coffee}/vendor.js")
+  gulp.src "#{paths.coffee}/vendor.js"
     .pipe include()
     .on "error", (error) -> gutil.log(error.message)
     .pipe cache paths.scripts
@@ -126,9 +133,27 @@ gulp.task "browser-sync", ->
     open: true
     browser: "chrome"
 
- gulp.task "post", ->
-  gulp.src("./_posts/_template.md")
+gulp.task "post", ->
+  gulp.src "./_posts/_template.md"
     .pipe rename "#{dateFormat(now, 'yyyy-mm-dd')}-#{dashedTitle}.md"
     .pipe replace(/DATE_PLACEHOLDER/g, "#{dateFormat(now, 'yyyy-mm-dd hh:MM:ss o')}")
     .pipe replace(/TITLE_PLACEHOLDER/g, dashedTitle)
     .pipe gulp.dest("./_posts")
+
+gulp.task "generate-swift", ->
+  gulp.src ["./_posts/*.md", "!./_posts/_template.md"]
+    .pipe replace(/(?!\/\/\ \-\>\ Error)\/\/.+/g, "")
+    .pipe rename
+      extname: ".swift.md"
+    .pipe literate()
+    .pipe replace(/(.*\n)\/\/\ \-\>\ Error/g, "// $1")
+    .pipe removeEmptyLines()
+    .pipe gulp.dest("./_swift")
+
+gulp.task "run-swift", ->
+  gulp.src "./_swift/*.swift"
+    .pipe shell "swift <%= file.path %>", quiet: true
+  run("swift --version").exec()
+  gutil.log(messages.swiftSuccess)
+
+

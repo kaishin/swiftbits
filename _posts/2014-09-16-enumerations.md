@@ -27,7 +27,7 @@ enum StarterType {
 The elements can also be declared in the same line:
 
 ~~~swift
-enum StarterType {
+enum PokémonType {
   case Grass, Fire, Water
 }
 ~~~
@@ -99,7 +99,7 @@ enum MoveCategory: String {
   case Status = "Status Move"
 }
 
-let physicalTypeName = MoveCategory.Physical.rawValue
+var physicalTypeName = MoveCategory.Physical.rawValue
 // -> "Physical Move"
 ~~~
 
@@ -114,13 +114,13 @@ Raw values can be `String`, `Character`, `Int`, or `Float`/`Double`.
 If you declare the raw value type but not explicitly set it in one or more cases, the compiler assigns implicit raw values to said cases.
 
 ~~~swift
-enum MoveCategory: String {
+enum RawMoveCategory: String {
   case Physical
   case Special
   case Status
 }
 
-let physicalTypeName = MoveCategory.Physical.rawValue
+physicalTypeName = RawMoveCategory.Physical.rawValue
 // -> "Physical"
 ~~~
 
