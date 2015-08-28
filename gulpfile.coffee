@@ -56,7 +56,7 @@ gulp.task "swift", ->
   runSequence ["generate-swift", "run-swift"]
 
 gulp.task "build", ->
-  runSequence ["sass", "coffee", "vendorJS"], "lintSass", "jekyll-build"
+  runSequence ["sass", "coffee", "vendorJS"], "lintSass", "jekyll-build", "swift"
 
 gulp.task "clean",
   del.bind(null, ["_site"])
