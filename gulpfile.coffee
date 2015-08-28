@@ -19,7 +19,6 @@ runSequence = require "run-sequence"
 run = require "gulp-run"
 sass = require "gulp-sass"
 scssLint = require "gulp-scss-lint"
-shell = require "gulp-shell"
 slugify = require "underscore.string/slugify"
 
 now = new Date()
@@ -68,18 +67,20 @@ gulp.task "watch", ["sass", "coffee", "jekyll-serve"], ->
   gulp.watch "#{paths.coffee}/vendor.js", ["vendorJS"]
   gulp.watch paths.jekyllFiles, ["jekyll-rebuild"]
 
-gulp.task "jekyll-serve",
-  shell.task "bundle exec jekyll build --config _config.yml,_config.serve.yml", quiet: true
+gulp.task "jekyll-serve", ->
+  run "bundle exec jekyll build --config _config.yml,_config.serve.yml", silent: true
   browserSync.notify messages.jekyllBuild
 
-gulp.task "jekyll-build",
-  shell.task "bundle exec jekyll build"
+gulp.task "jekyll-build", ->
+  run "bundle exec jekyll build"
+    .exec()
 
 gulp.task "jekyll-rebuild", ["jekyll-serve"], ->
   browserSync.reload()
 
-gulp.task "doctor",
-  shell.task "jekyll doctor"
+gulp.task "doctor", ->
+  run "jekyll doctor"
+    .exec()
 
 gulp.task "sass", ->
   gulp.src "#{paths.sass}/*.scss"
@@ -152,7 +153,7 @@ gulp.task "generate-swift", ->
 
 gulp.task "run-swift", ->
   gulp.src "./_swift/*.swift"
-    .pipe shell "swift <%= file.path %>", quiet: true
+    .pipe run "swift <%= file.path %>", silent: true
   run("swift --version").exec()
   gutil.log(messages.swiftSuccess)
 
