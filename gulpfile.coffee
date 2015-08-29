@@ -4,7 +4,7 @@ cache = require "gulp-cached"
 coffee = require "gulp-coffee"
 dateFormat = require "dateformat"
 del = require "del"
-deploy = require "gulp-gh-pages"
+ghPages = require "gulp-gh-pages"
 gulp = require "gulp"
 gutil = require "gulp-util"
 include = require "gulp-include"
@@ -59,12 +59,12 @@ gulp.task "swift", ->
   runSequence "generate-swift", "run-swift"
 
 gulp.task "build", ->
-  runSequence "lint-scss", "swift", ["sass", "coffee", "vendor-js"], "uncss", "jekyll-build"
+  runSequence "lint-scss", "swift", "uncss", "jekyll-build"
 
 gulp.task "clean",
   del.bind(null, ["_site"])
 
-gulp.task "watch", ["sass", "coffee", "jekyll-build-local"], ->
+gulp.task "watch", ["sass", "coffee", "vendor-js", "jekyll-build-local"], ->
   gulp.watch "#{paths.sass}/**/*.scss", ["sass"]
   gulp.watch "#{paths.coffee}/**/*.coffee", ["coffee"]
   gulp.watch "#{paths.coffee}/vendor.js", ["vendor-js"]
@@ -170,6 +170,6 @@ gulp.task "run-swift", ->
     .pipe run "swift ./_swift/<%= file.path.replace(file.base, '') %>", silent: true
     .on "end", -> gutil.log(messages.swiftSuccess)
 
-gulp.task "deploy", ["build"], ->
+gulp.task "deploy", ->
   gulp.src "#{destinationFolder}/**/*"
-    .pipe deploy()
+    .pipe ghPages()
