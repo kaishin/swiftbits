@@ -57,7 +57,7 @@ gulp.task "swift", ->
   runSequence ["generate-swift", "run-swift"]
 
 gulp.task "build", ->
-  runSequence ["sass", "coffee", "vendor-js"], "list-scss", "jekyll-build", "swift"
+  runSequence ["sass", "coffee", "vendor-js"], "lint-scss", "jekyll-build", "swift"
 
 gulp.task "clean",
   del.bind(null, ["_site"])
@@ -97,7 +97,7 @@ gulp.task "sass", ->
     .pipe gulp.dest(paths.styles)
     .pipe browserSync.reload(stream: true)
 
-gulp.task "list-scss", ->
+gulp.task "lint-scss", ->
   gulp.src "#{paths.sass}/*.scss"
     .pipe cache paths.sass
     .pipe scssLint
