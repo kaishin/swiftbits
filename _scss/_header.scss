@@ -11,7 +11,17 @@ $gap: 0.777em;
   .link-item {
     display: inline-block;
     list-style: none;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .link-icon {
+    height: 1rem;
+    margin-bottom: 1px;
+    vertical-align: middle;
+  }
+
+  .icon {
+    padding: 0.2rem 0.8arem;
   }
 
   a {

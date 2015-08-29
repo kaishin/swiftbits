@@ -16,11 +16,16 @@
   </section>
   <nav class="main-nav">
     <ul class="link-list" data-role="container">
-      <li class="link-item ">
+      <li class="link-item">
         <a href="/" {% if page.active == "home" %}class="active"{% endif %}>Home</a>
       </li>
-      <li class="link-item ">
+      <li class="link-item">
         <a href="/learn-swift" {% if page.active == "learn-swift" %}class="active"{% endif %}>Learn Swift</a>
+      </li>
+      <li class="link-item">
+        <a href="{{ site.feed }}" class="icon">
+          <img src="/images/rss.svg" alt="RSS Feed" class="link-icon" />
+        </a>
       </li>
     </ul>
   </nav>
