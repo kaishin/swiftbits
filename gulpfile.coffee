@@ -72,7 +72,7 @@ gulp.task "jekyll-serve", ->
   browserSync.notify messages.jekyllBuild
 
 gulp.task "jekyll-build", ->
-  run "bundle exec jekyll build"
+  run "bundle exec jekyll build", silent: true
     .exec()
 
 gulp.task "jekyll-rebuild", ["jekyll-serve"], ->

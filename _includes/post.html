@@ -19,8 +19,16 @@
   </header>
 
   <section class="post-content">
-    {% if post.swift %}
-      <p class="swift-version">The code below has been compiled using <strong>Swift {{ post.swift }}</strong></p>
+    {% if post.tags contains "tutorial" %}
+      {% if post.swift %}
+        {% assign version = post.swift %}
+      {% else %}
+        {% assign version = site.latestSwift %}
+      {% endif %}
+
+      <p class="swift-version">
+        The code below has been compiled using <strong>Swift {{ version }}</strong>
+      </p>
     {% endif %}
     {{ content }}
   </section>

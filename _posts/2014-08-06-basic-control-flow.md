@@ -7,7 +7,6 @@ tags:
   - tutorial
   - pokémon
 teaser: "This section takes a look at what Swift has to offer in terms of control flow, an essential part of every programming language. In this first part we will look at 'if' and 'switch' statements."
-swift: 2.0ß4
 ---
 
 ### Conditional Statements

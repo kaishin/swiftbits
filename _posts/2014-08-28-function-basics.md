@@ -7,7 +7,6 @@ tags:
   - tutorial
   - pokémon
 teaser: "Functions are an essential part of any modern programming language. Let's look at what Swift has to offer."
-swift: 2.0ß4
 ---
 
 ### Defining Functions
