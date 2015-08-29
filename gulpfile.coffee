@@ -4,6 +4,7 @@ cache = require "gulp-cached"
 coffee = require "gulp-coffee"
 dateFormat = require "dateformat"
 del = require "del"
+deploy = require "gulp-gh-pages"
 gulp = require "gulp"
 gutil = require "gulp-util"
 include = require "gulp-include"
@@ -158,4 +159,6 @@ gulp.task "run-swift", ->
   run("swift --version").exec()
   gutil.log(messages.swiftSuccess)
 
-
+gulp.task "deploy", ["build"], ->
+  gulp.src "#{destinationFolder}/**/*"
+    .pipe deploy()
