@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noodp, noydir">
+  <meta http-equiv="cleartype" content="on">
+  <title>Enumerations</title>
+  <meta name="description" content="Defining Enumerations">
+  <meta name="keywords" content="beginner, tutorial, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
+  
+  <meta http-equiv="date" content="2014-09-16 20:00:00 +0200">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/enumerations/">
+  <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://swiftbits.redalemeden.com/feed.xml" />
+  <script src="//use.typekit.net/jra4cdq.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+</head>
+
+
+  <body>
+    <header class="main-header">
+  <section class="header-content" data-role="container">
+    <div class="logo">
+      <a href="/" class="link">
+        <img src="/images/logo.png" alt="Swiftbits logo" class="logo-image" />
+      </a>
+    </div>
+    <div class="intro">
+      <div class="intro-content">
+        <a href="/" class="link">
+          <span class="main-heading">Swiftbits</span>
+        </a>
+        <p class="main-description">Swift recipes, snippets, and resources.</p>
+      </div>
+    </div>
+  </section>
+  <nav class="main-nav">
+    <ul class="link-list" data-role="container">
+      <li class="link-item ">
+        <a href="/" >Home</a>
+      </li>
+      <li class="link-item ">
+        <a href="/learn-swift" >Learn Swift</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    <main class="main-content-box" data-role="container">
+      
+  
+
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-metadata">
+      <time datetime="2014-09-16 20:00:00 +0200">
+        Sep 16, 2014 – LEARN SWIFT
+      </time>
+    </div>
+    <h1 class="post-title">
+      <a class="post-link" href="/learn-swift/enumerations/">
+        Enumerations
+      </a>
+    </h1>
+  </header>
+
+  <section class="post-content">
+    
+      
+        
+      
+
+      <p class="swift-version">
+        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/gh-pages/_swift/2014-09-16-enumerations.swift"> Github</a>.
+      </p>
+    
+    <h3 id="defining-enumerations">Defining Enumerations</h3>
+
+<p>Enumerations, also commonly referred to as <em>enums</em>, are a data type that holds a set of named, mutually exclusive values.</p>
+
+<p>Enumerations are declared using the <code class="highlighter-rouge">enum</code> keyword, with each member preceded by the <code class="highlighter-rouge">case</code> keyword:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">StarterType</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="kt">Grass</span>
+  <span class="k">case</span> <span class="kt">Fire</span>
+  <span class="k">case</span> <span class="kt">Water</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>The elements can also be declared in the same line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">PokémonType</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="kt">Grass</span><span class="p">,</span> <span class="kt">Fire</span><span class="p">,</span> <span class="kt">Water</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Use dot syntax to declare a variable or constant enumeration value:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">WaterType</span> <span class="o">=</span> <span class="kt">StarterType</span><span class="o">.</span><span class="kt">Water</span>
+</code></pre>
+</div>
+
+<p>If you explicitly set the type of the variable or constant, you can omit the enumeration name in the right-hand side of the assignment:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">FireType</span><span class="p">:</span> <span class="kt">StarterType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Fire</span>
+</code></pre>
+</div>
+
+<h3 id="switching-on-enumeration-values">Switching on Enumeration Values</h3>
+
+<p>Enumerations are commonly used in <code class="highlighter-rouge">switch</code> statements:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">chosenStarterType</span> <span class="o">=</span> <span class="kt">StarterType</span><span class="o">.</span><span class="kt">Water</span>
+
+<span class="k">switch</span> <span class="n">chosenStarterType</span> <span class="p">{</span>
+<span class="k">case</span> <span class="o">.</span><span class="kt">Grass</span><span class="p">,</span> <span class="o">.</span><span class="kt">Water</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Brock, here I come!"</span><span class="p">)</span>
+<span class="k">case</span> <span class="o">.</span><span class="kt">Fire</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Wild Caterpies, here I come!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Brock, here I come!
+</span></code></pre>
+</div>
+
+<h3 id="associated-values">Associated Values</h3>
+
+<p>Enumeration members can hold associated values of any type. The type of the associated value should be specified in the enumeration declaration:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">Move</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="kt">Healing</span><span class="p">(</span><span class="nv">percent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+  <span class="k">case</span> <span class="kt">Damage</span><span class="p">(</span><span class="nv">power</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+  <span class="k">case</span> <span class="kt">Status</span><span class="p">(</span><span class="nv">effect</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">tackle</span> <span class="o">=</span> <span class="kt">Move</span><span class="o">.</span><span class="kt">Damage</span><span class="p">(</span><span class="nv">power</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>You can check the associated value of an enumeration using a <code class="highlighter-rouge">switch</code> statement:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">tackle</span> <span class="p">{</span>
+<span class="k">case</span> <span class="o">.</span><span class="kt">Healing</span><span class="p">(</span><span class="k">let</span> <span class="nv">percentHealed</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Heals </span><span class="se">\(</span><span class="n">percentHealed</span><span class="se">)</span><span class="s"> of the pokémon's HP."</span><span class="p">)</span>
+<span class="k">case</span> <span class="o">.</span><span class="kt">Damage</span><span class="p">(</span><span class="k">let</span> <span class="nv">basePower</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Deals damage with a base power of </span><span class="se">\(</span><span class="n">basePower</span><span class="se">)</span><span class="s">."</span><span class="p">)</span>
+<span class="k">case</span> <span class="o">.</span><span class="kt">Status</span><span class="p">(</span><span class="k">let</span> <span class="nv">statusEffect</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"A status move that inflicts </span><span class="se">\(</span><span class="n">statusEffect</span><span class="se">)</span><span class="s">."</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Deals damage with a base power of 50.
+</span></code></pre>
+</div>
+
+<h3 id="raw-values">Raw Values</h3>
+
+<p>Beside associated values, enumeration members can also hold default—or raw—values. Unlike associated values, each member has always the same raw value that’s specified when the enumeration is declared. To get the raw value of an enumeration member, use <code class="highlighter-rouge">rawValue</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">MoveCategory</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="kt">Physical</span> <span class="o">=</span> <span class="s">"Physical Move"</span>
+  <span class="k">case</span> <span class="kt">Special</span> <span class="o">=</span> <span class="s">"Special Move"</span>
+  <span class="k">case</span> <span class="kt">Status</span> <span class="o">=</span> <span class="s">"Status Move"</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">physicalTypeName</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
+<span class="c1">// -&gt; "Physical Move"
+</span></code></pre>
+</div>
+
+<p>To get an enumeration member from a raw value, use <code class="highlighter-rouge">MoveCategory(rawValue: String)</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">statusType</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"Status Move"</span><span class="p">)</span>
+<span class="c1">// -&gt; .Status
+</span></code></pre>
+</div>
+
+<p>Raw values can be <code class="highlighter-rouge">String</code>, <code class="highlighter-rouge">Character</code>, <code class="highlighter-rouge">Int</code>, or <code class="highlighter-rouge">Float</code>/<code class="highlighter-rouge">Double</code>.<br />
+If you declare the raw value type but not explicitly set it in one or more cases, the compiler assigns implicit raw values to said cases.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">RawMoveCategory</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="kt">Physical</span>
+  <span class="k">case</span> <span class="kt">Special</span>
+  <span class="k">case</span> <span class="kt">Status</span>
+<span class="p">}</span>
+
+<span class="n">physicalTypeName</span> <span class="o">=</span> <span class="kt">RawMoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
+<span class="c1">// -&gt; "Physical"
+</span></code></pre>
+</div>
+
+
+  </section>
+</article>
+
+
+    </main>
+    <footer>
+  <p>
+    Designed &amp; maintained by <a href="http://redalemeden.com">Reda Lemeden</a><br>
+    To keep this website ad-free, please consider <a href="https://www.coinbase.com/checkouts/b800c9299c4afe8af704ae9bb4a1b58a">donating Bitcoins</a>.
+  </p>
+  <script src="/scripts/vendor.js" type="text/javascript"></script>
+  <script src="/scripts/main.js" type="text/javascript"></script>
+</footer>
+
+  </body>
+</html>

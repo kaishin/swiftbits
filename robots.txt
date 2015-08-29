@@ -1,5 +1,2 @@
----
-layout: null
----
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: http://swiftbits.redalemeden.com/sitemap.xml

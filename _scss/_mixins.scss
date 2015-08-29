@@ -1,7 +1,0 @@
-@mixin link {
-  &,
-  &:link,
-  &:visited {
-    @content;
-  }
-}
