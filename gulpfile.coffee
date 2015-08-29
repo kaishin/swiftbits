@@ -21,6 +21,7 @@ run = require "gulp-run"
 sass = require "gulp-sass"
 scssLint = require "gulp-scss-lint"
 slugify = require "underscore.string/slugify"
+uncss = require "gulp-uncss"
 
 now = new Date()
 title = argv.t ? "Untitled"
@@ -28,6 +29,7 @@ dashedTitle = slugify(title)
 messages =
   jekyllBuild: "Rebuilding Jekyll..."
   swiftSuccess: "\u2705  Swift compiled sucessfully!"
+  uncssSuccess: "\u2705  CSS cleaned sucessfully!"
 
 sourceFolder = "."
 destinationFolder = "./_site"
@@ -57,7 +59,7 @@ gulp.task "swift", ->
   runSequence "generate-swift", "run-swift"
 
 gulp.task "build", ->
-  runSequence ["sass", "coffee", "vendor-js"], "lint-scss", "jekyll-build", "swift"
+  runSequence "lint-scss", "swift", ["sass", "coffee", "vendor-js"], "uncss", "jekyll-build"
 
 gulp.task "clean",
   del.bind(null, ["_site"])
@@ -105,6 +107,15 @@ gulp.task "lint-scss", ->
       "bundleExec": true
     .pipe scssLint.failReporter()
     .on "error", (error) -> gutil.log(error.message)
+
+gulp.task "uncss", ->
+  gulp.src "#{paths.styles}*.css"
+    .pipe uncss
+      html: ["#{destinationFolder}/**/*.html"]
+    .pipe minifyCSS()
+    .pipe gulp.dest(paths.destinationStyles)
+    .pipe gulp.dest(paths.styles)
+    .on "end", -> gutil.log(messages.uncssSuccess)
 
 gulp.task "coffee", ->
   gulp.src "#{paths.coffee}/*.coffee"
