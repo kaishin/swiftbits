@@ -1,11 +1,10 @@
 footer {
   $padding: 1.8rem;
-  @extend %container;
-  border-top: 1px solid darken($ash, 20%);
-  color: $gray;
+  background-image: linear-gradient(35deg, $lochmara, $turquoise);
+  color: rgba($white, 0.7);
   display: block;
   font-style: 0.9rem;
-  font-weight: 100;
+  font-weight: 200;
   padding-bottom: $padding;
   padding-top: $padding;
   position: relative;
@@ -13,5 +12,17 @@ footer {
 
   .copyright {
     font-family: "Helvetica Neue", "Arial", sans-serif;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  .container {
+    @extend %container;
   }
 }

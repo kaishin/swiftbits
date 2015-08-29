@@ -14,6 +14,11 @@ $gap: 0.777em;
     margin-right: 0.5rem;
   }
 
+  .link-item-icon {
+    @extend .link-item;
+    float: right;
+  }
+
   .link-icon {
     height: 1rem;
     margin-bottom: 1px;

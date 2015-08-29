@@ -36,3 +36,7 @@ sup {
   top: 0;
   vertical-align: super;
 }
+
+::placeholder {
+  color: darken($ash, 20%);
+}

@@ -1,0 +1,37 @@
+.newsletter-form {
+  border-bottom: 1px solid rgba($white, 0.2);
+  margin: 0 auto 3rem;
+  max-width: $container-width / 2;
+  padding-bottom: 2rem;
+}
+
+.form-inputs {
+  $radius: 4px;
+  display: flex;
+
+  input {
+    height: 2.5rem;
+    border: none;
+  }
+
+  [name="email"] {
+    border-radius: $radius 0 0 $radius;
+    color: $black;
+    flex: 1;
+    padding-left: 0.5rem;
+  }
+
+  [type="submit"] {
+    background-color: transparent;
+    border-radius: 0 $radius $radius 0;
+    border: 2px solid $white;
+    color: $white;
+    font-weight: 400;
+    padding: 0 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba($white, 0.3);
+    }
+  }
+}
