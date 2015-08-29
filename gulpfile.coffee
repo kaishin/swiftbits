@@ -51,10 +51,10 @@ paths =
 gulp.task "default", ["develop"]
 
 gulp.task "develop", ->
-  runSequence ["watch", "browser-sync"]
+  runSequence "watch", "browser-sync"
 
 gulp.task "swift", ->
-  runSequence ["generate-swift", "run-swift"]
+  runSequence "generate-swift", "run-swift"
 
 gulp.task "build", ->
   runSequence ["sass", "coffee", "vendor-js"], "lint-scss", "jekyll-build", "swift"
