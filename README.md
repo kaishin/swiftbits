@@ -1,4 +1,3 @@
 # Swiftbits
-##### ""
 
-"Short doses of Swift"
+Source code of http://swiftbits.redalemeden.com
