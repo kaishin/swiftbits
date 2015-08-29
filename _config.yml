@@ -31,6 +31,7 @@ kramdown:
 
 permalink: /:categories/:title/
 exclude: [
+  "bower.json",
   "node_modules",
   "gulp.js",
   "gulpfile.coffee",
