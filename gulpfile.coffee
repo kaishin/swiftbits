@@ -154,10 +154,10 @@ gulp.task "generate-swift", ->
     .pipe gulp.dest("./_swift")
 
 gulp.task "run-swift", ->
-  gulp.src "./_swift/*.swift"
-    .pipe run "swift <%= file.path %>", silent: true
   run("swift --version").exec()
-  gutil.log(messages.swiftSuccess)
+  gulp.src "./_swift/*.swift"
+    .pipe run "swift ./_swift/<%= file.path.replace(file.base, '') %>", silent: true
+    .on "end", -> gutil.log(messages.swiftSuccess)
 
 gulp.task "deploy", ["build"], ->
   gulp.src "#{destinationFolder}/**/*"
