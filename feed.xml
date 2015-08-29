@@ -3,10 +3,10 @@
   <channel>
     <title>Swiftbits</title>
     <description>Swift snippets, tips, resources, and links.</description>
-    <link>http://swiftbits.redalemeden.com/</link>
-    <atom:link href="http://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Aug 2015 10:49:51 +0200</pubDate>
-    <lastBuildDate>Sat, 29 Aug 2015 10:49:51 +0200</lastBuildDate>
+    <link>localhost:4000/</link>
+    <atom:link href="localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 29 Aug 2015 11:18:33 +0200</pubDate>
+    <lastBuildDate>Sat, 29 Aug 2015 11:18:33 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -127,8 +127,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 </description>
         <pubDate>Tue, 16 Sep 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/enumerations/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/enumerations/</guid>
+        <link>localhost:4000/learn-swift/enumerations/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/enumerations/</guid>
         
         <category>beginner</category>
         
@@ -276,8 +276,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Aug 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/function-basics/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/function-basics/</guid>
+        <link>localhost:4000/learn-swift/function-basics/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/function-basics/</guid>
         
         <category>beginner</category>
         
@@ -399,8 +399,8 @@ They are defined by appending a &lt;code class=&quot;highlighter-rouge&quot;&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 20:55:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/optionals/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/optionals/</guid>
+        <link>localhost:4000/learn-swift/optionals/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/optionals/</guid>
         
         <category>beginner</category>
         
@@ -578,8 +578,8 @@ They are defined by appending a &lt;code class=&quot;highlighter-rouge&quot;&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 17:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</guid>
+        <link>localhost:4000/learn-swift/basic-control-flow/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/basic-control-flow/</guid>
         
         <category>beginner</category>
         
@@ -769,8 +769,8 @@ the left operand at the same time:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 17:45:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/basic-operators/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/basic-operators/</guid>
+        <link>localhost:4000/learn-swift/basic-operators/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/basic-operators/</guid>
         
         <category>beginner</category>
         
@@ -843,8 +843,8 @@ the left operand at the same time:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 14:30:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/tuples/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/tuples/</guid>
+        <link>localhost:4000/learn-swift/tuples/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/tuples/</guid>
         
         <category>beginner</category>
         
@@ -969,8 +969,8 @@ a given key.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/dictionaries/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/dictionaries/</guid>
+        <link>localhost:4000/learn-swift/dictionaries/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/dictionaries/</guid>
         
         <category>beginner</category>
         
@@ -1149,8 +1149,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/arrays/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/arrays/</guid>
+        <link>localhost:4000/learn-swift/arrays/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/arrays/</guid>
         
         <category>beginner</category>
         
@@ -1240,8 +1240,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Jun 2014 14:56:02 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/getting-started/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/getting-started/</guid>
+        <link>localhost:4000/learn-swift/getting-started/</link>
+        <guid isPermaLink="true">localhost:4000/learn-swift/getting-started/</guid>
         
         <category>beginner</category>
         
