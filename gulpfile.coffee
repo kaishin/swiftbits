@@ -30,6 +30,7 @@ messages =
   jekyllBuild: "Rebuilding Jekyll..."
   swiftSuccess: "\u2705  Swift compiled sucessfully!"
   uncssSuccess: "\u2705  CSS cleaned sucessfully!"
+  uncssStart: "Cleaning CSS..."
 
 sourceFolder = "."
 destinationFolder = "./_site"
@@ -109,6 +110,7 @@ gulp.task "lint-scss", ->
     .on "error", (error) -> gutil.log(error.message)
 
 gulp.task "uncss", ->
+  gutil.log(messages.uncssStart)
   gulp.src "#{paths.styles}*.css"
     .pipe uncss
       html: ["#{destinationFolder}/**/*.html"]
