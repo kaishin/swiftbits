@@ -21,7 +21,7 @@ url: http://swiftbits.redalemeden.com
 feed: http://feedpress.me/swiftbits
 future: false
 show_drafts: false
-paginate: 10
+paginate: 5
 paginate_path: "/page-:num"
 limit_posts: 0
 gems:
