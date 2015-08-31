@@ -10,8 +10,8 @@
   display: flex;
 
   input {
-    height: 2.5rem;
     border: none;
+    height: 2.5rem;
   }
 
   [name="email"] {
@@ -23,8 +23,8 @@
 
   [type="submit"] {
     background-color: transparent;
-    border-radius: 0 $radius $radius 0;
     border: 2px solid $white;
+    border-radius: 0 $radius $radius 0;
     color: $white;
     font-weight: 400;
     padding: 0 1rem;

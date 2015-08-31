@@ -3,23 +3,22 @@
   font-size: 2.2rem;
   font-weight: 200;
   line-height: 1.1;
-  padding-bottom: 0.6rem;
   margin-bottom: 1.5rem;
   margin-top: 3rem;
+  padding-bottom: 0.6rem;
 }
 
 .toc {
   margin-bottom: 3rem;
-  overflow: hidden;
-  padding: 0;
   overflow: visible;
+  padding: 0;
 
   .row {
-    padding-bottom: 0.4rem;
-    position: relative;
     color: rgba($black, 0.4);
     font-weight: 100;
     list-style: none;
+    padding-bottom: 0.4rem;
+    position: relative;
 
     &:hover {
       list-style: decimal;
@@ -41,16 +40,16 @@
   display: none;
 
   @include media-width(from, $container-width) {
-    color: $black;
     background-color: rgba($black, 0.05);
+    border-radius: 4px;
     bottom: 1rem;
+    color: $black;
     display: block;
+    padding: 0.5rem 1rem;
     position: fixed;
     right: 1rem;
-    transition: all 0.1s linear;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    transition: all 0.1s linear;
     z-index: 2;
 
     &:hover {

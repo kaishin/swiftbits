@@ -1,4 +1,4 @@
-article[class*=post] {
+.post {
   $image-outdent: 5%;
   $margin: 1.5em;
 
@@ -31,8 +31,8 @@ article[class*=post] {
 
   ul,
   ol {
-    padding: 0;
     list-style-type: none;
+    padding: 0;
   }
 
   blockquote {
@@ -63,8 +63,8 @@ article[class*=post] {
 
     &:hover,
     &:focus {
-      text-decoration: underline;
       color: $link-hover-color;
+      text-decoration: underline;
     }
 
     &:link {
@@ -108,9 +108,9 @@ article[class*=post] {
 }
 
 .swift-version {
-  padding: 1em;
+  background-color: mix(lighten($casablanca, 35%), #FFFF00, 80%);
   border-radius: 3px;
-  font-size: 0.85em;
-  background-color: mix(lighten($casablanca, 35%), yellow, 80%);
   display: block;
+  font-size: 0.85em;
+  padding: 1em;
 }

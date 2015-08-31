@@ -19,7 +19,6 @@ replace = require "gulp-replace"
 runSequence = require "run-sequence"
 run = require "gulp-run"
 sass = require "gulp-sass"
-scssLint = require "gulp-scss-lint"
 slugify = require "underscore.string/slugify"
 uncss = require "gulp-uncss"
 
@@ -103,13 +102,8 @@ gulp.task "sass", ->
     .pipe browserSync.reload(stream: true)
 
 gulp.task "lint-scss", ->
-  gulp.src "#{paths.sass}/*.scss"
-    .pipe cache paths.sass
-    .pipe scssLint
-      "config": ".scss-lint.yml",
-      "bundleExec": true
-    .pipe scssLint.failReporter()
-    .on "error", (error) -> gutil.log(error.message)
+  run("bundle exec scss-lint #{paths.sass}")
+    .exec()
 
 gulp.task "uncss", ->
   gutil.log(messages.uncssStart)

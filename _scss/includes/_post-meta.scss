@@ -1,7 +1,7 @@
 .post-header {
+  border-bottom: 1px solid $tertiary-color;
   margin-bottom: 2rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid $tertiary-color;
 }
 
 .post-title {
@@ -30,8 +30,8 @@
 
 [class*=metadata] {
   color: $gray;
-  font-weight: 300;
   font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .post-metadata {
@@ -39,8 +39,8 @@
 
   [role=img] {
     display: inline-block;
-    width: 2.5rem;
     margin-bottom: 0.08em;
+    width: 2.5rem;
   }
 }
 

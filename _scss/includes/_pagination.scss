@@ -9,8 +9,8 @@ $margin: 0.14rem;
 
 [class*=page-link] {
   @include size(3rem);
-  border-radius: 50%;
   border: 1px solid $link-color;
+  border-radius: 50%;
   font-weight: 100;
   padding-top: 0.7rem;
   text-align: center;
