@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://swiftbits.redalemeden.com/meta/site-relaunch/</loc>
+    <lastmod>2015-08-30T08:26:02+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://swiftbits.redalemeden.com/learn-swift/enumerations/</loc>
     <lastmod>2014-09-16T20:00:00+02:00</lastmod>
   </url>
@@ -41,8 +45,5 @@
   </url>
   <url>
     <loc>http://swiftbits.redalemeden.com/learn-swift/</loc>
-  </url>
-  <url>
-    <loc>http://swiftbits.redalemeden.com/page-2/</loc>
   </url>
 </urlset>

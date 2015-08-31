@@ -783,8 +783,7 @@ a given key.</p>
 
 <h3 id="compound-assignment-operators">Compound Assignment Operators</h3>
 
-<p>These operators execute an operation and assign the result to<br />
-the left operand at the same time:</p>
+<p>These operators execute an operation and assign the result to the left operand at the same time:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
 <span class="n">remainingHP</span> <span class="o">+=</span> <span class="mi">10</span>
@@ -1002,19 +1001,19 @@ the left operand at the same time:</p>
 
 <p>Cases in a <code class="highlighter-rouge">switch</code> statement can check if a value is included in a range:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">baseAttack</span> <span class="o">=</span> <span class="mi">89</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">attack</span> <span class="o">=</span> <span class="mi">89</span>
 
-<span class="k">switch</span> <span class="n">baseAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">attack</span> <span class="p">{</span>
 <span class="k">case</span> <span class="mi">1</span><span class="o">...</span><span class="mi">70</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"This pokémon is useless. Set it free."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Not ready for competitive play."</span><span class="p">)</span>
 <span class="k">case</span> <span class="mi">71</span><span class="o">...</span><span class="mi">150</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking!"</span><span class="p">)</span>
 <span class="k">case</span> <span class="mi">151</span><span class="o">...</span><span class="mi">200</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber!"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber territory..."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon!"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Now we're talking.
+<span class="c1">// -&gt; Now we're talking!
 </span></code></pre>
 </div>
 
@@ -1022,16 +1021,15 @@ the left operand at the same time:</p>
 
 <p>Tuples can be used as values in <code class="highlighter-rouge">switch</code> cases. You can ignore a value in the tuple by replacing it with <code class="highlighter-rouge">_</code> in the case’s test:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">baseSpecialAttack</span> <span class="o">=</span> <span class="mi">55</span>
-<span class="k">var</span> <span class="nv">baseMixedAttack</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseAttack</span><span class="p">,</span> <span class="n">baseSpecialAttack</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">offense</span> <span class="o">=</span> <span class="p">(</span><span class="nv">attack</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="nv">specialAttack</span><span class="p">:</span> <span class="mi">55</span><span class="p">)</span>
 
-<span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
 <span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Good mixed sweeper."</span><span class="p">)</span>
 <span class="k">case</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good special sweeper."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great special sweeper."</span><span class="p">)</span>
 <span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good physical sweeper."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great physical sweeper."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
 <span class="p">}</span>
@@ -1039,29 +1037,13 @@ the left operand at the same time:</p>
 </span></code></pre>
 </div>
 
-<h3 id="binding-values">Binding Values</h3>
-
-<p>Matched values can be bound to constants or variables and reused inside the case’s body:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
-<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="k">let</span> <span class="nv">specialAttack</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good physical sweeper with a special attack of </span><span class="se">\(</span><span class="n">specialAttack</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="k">case</span> <span class="p">(</span><span class="k">let</span> <span class="nv">attack</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good special sweeper with an attack of </span><span class="se">\(</span><span class="n">attack</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Good physical sweeper with a special attack of 55
-</span></code></pre>
-</div>
-
 <h3 id="where">Where</h3>
 
 <p>Cases in a <code class="highlighter-rouge">switch</code> statement can use a <code class="highlighter-rouge">where</code> clause to perform additional checks:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">baseMixedAttack</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">offense</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
 
-<span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
 <span class="k">case</span> <span class="nf">let</span> <span class="p">(</span><span class="n">attack</span><span class="p">,</span> <span class="n">specialAttack</span><span class="p">)</span> <span class="k">where</span> <span class="n">attack</span> <span class="o">==</span> <span class="nv">specialAttack</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Perfectly balanced attack stats."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
@@ -1107,8 +1089,7 @@ the left operand at the same time:</p>
     
     <h3 id="declaring-optionals">Declaring Optionals</h3>
 
-<p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you).<br />
-They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
+<p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you). They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item
 </span><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>

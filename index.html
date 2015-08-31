@@ -78,6 +78,65 @@
 <article class="post">
   <header class="post-header">
     <div class="post-metadata">
+      <time datetime="2015-08-30 08:26:02 +0200">
+        Aug 30, 2015 – META
+      </time>
+    </div>
+    <h1 class="post-title">
+      <a class="post-link" href="/meta/site-relaunch/">
+        Site Relaunch
+      </a>
+    </h1>
+  </header>
+
+  <section class="post-content">
+    
+    <p>Soon after the Swift announcement last year, I decided to start writing a series of introductory tutorials for busy people who did not want to wade through the exhaustive official documentation.</p>
+
+<p>The site launched as <em>learn-swift.co</em> and managed to draw a few hundred subscribers across Twitter, RSS, and email. After writing the initial batch of posts covering most of the basic concepts, I decided to take a pause to figure out the next steps.</p>
+
+<p>Fast forward a year later. Swift 2.0 is almost out of beta and—better yet—is scheduled to go open-source by the end of the year. To celebrate the occasion, I decided to resume where I left off a year ago.</p>
+
+<p>Today I’m happy to relaunch the site as <em>Swiftbits</em>. Here’s a rundown of the most salient changes:</p>
+
+<ul>
+  <li>
+    <p>New design, including a new logo.</p>
+  </li>
+  <li>
+    <p>New RSS feed. <a href="http://feedpress.me/swiftbits">Re-subscribe here</a>.</p>
+  </li>
+  <li>
+    <p>All tutorials were updated for Swift 2.0 and grouped under their <a href="/learn-swift">own category</a>.</p>
+  </li>
+  <li>
+    <p>New code examples. Bonus points if you get all the references.</p>
+  </li>
+  <li>
+    <p>The exact version against which the code samples were compiled can be visible at the top of each tutorial.</p>
+  </li>
+  <li>
+    <p>Playgrounds were replaced with Swift source code; it’s more versatile and comes with less overhead.</p>
+  </li>
+</ul>
+
+<p>Follow Swiftbits on <a href="https://twitter.com/swiftbitsnews">Twitter</a> to stay in the loop.</p>
+
+<p>Happy Swifting!</p>
+
+  </section>
+</article>
+
+    </li>
+  
+    <li class="post-list-item">
+      
+  
+
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-metadata">
       <time datetime="2014-09-16 20:00:00 +0200">
         Sep 16, 2014 – LEARN SWIFT
       </time>
@@ -416,8 +475,7 @@ If you declare the raw value type but not explicitly set it in one or more cases
     
     <h3 id="declaring-optionals">Declaring Optionals</h3>
 
-<p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you).<br />
-They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
+<p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you). They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item
 </span><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
@@ -647,19 +705,19 @@ They are defined by appending a <code class="highlighter-rouge">?</code> at the 
 
 <p>Cases in a <code class="highlighter-rouge">switch</code> statement can check if a value is included in a range:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">baseAttack</span> <span class="o">=</span> <span class="mi">89</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">attack</span> <span class="o">=</span> <span class="mi">89</span>
 
-<span class="k">switch</span> <span class="n">baseAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">attack</span> <span class="p">{</span>
 <span class="k">case</span> <span class="mi">1</span><span class="o">...</span><span class="mi">70</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"This pokémon is useless. Set it free."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Not ready for competitive play."</span><span class="p">)</span>
 <span class="k">case</span> <span class="mi">71</span><span class="o">...</span><span class="mi">150</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking!"</span><span class="p">)</span>
 <span class="k">case</span> <span class="mi">151</span><span class="o">...</span><span class="mi">200</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber!"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber territory..."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon!"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Now we're talking.
+<span class="c1">// -&gt; Now we're talking!
 </span></code></pre>
 </div>
 
@@ -667,16 +725,15 @@ They are defined by appending a <code class="highlighter-rouge">?</code> at the 
 
 <p>Tuples can be used as values in <code class="highlighter-rouge">switch</code> cases. You can ignore a value in the tuple by replacing it with <code class="highlighter-rouge">_</code> in the case’s test:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">baseSpecialAttack</span> <span class="o">=</span> <span class="mi">55</span>
-<span class="k">var</span> <span class="nv">baseMixedAttack</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseAttack</span><span class="p">,</span> <span class="n">baseSpecialAttack</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">offense</span> <span class="o">=</span> <span class="p">(</span><span class="nv">attack</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="nv">specialAttack</span><span class="p">:</span> <span class="mi">55</span><span class="p">)</span>
 
-<span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
 <span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Good mixed sweeper."</span><span class="p">)</span>
 <span class="k">case</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good special sweeper."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great special sweeper."</span><span class="p">)</span>
 <span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good physical sweeper."</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great physical sweeper."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
 <span class="p">}</span>
@@ -684,243 +741,19 @@ They are defined by appending a <code class="highlighter-rouge">?</code> at the 
 </span></code></pre>
 </div>
 
-<h3 id="binding-values">Binding Values</h3>
-
-<p>Matched values can be bound to constants or variables and reused inside the case’s body:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
-<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="k">let</span> <span class="nv">specialAttack</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good physical sweeper with a special attack of </span><span class="se">\(</span><span class="n">specialAttack</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="k">case</span> <span class="p">(</span><span class="k">let</span> <span class="nv">attack</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good special sweeper with an attack of </span><span class="se">\(</span><span class="n">attack</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Good physical sweeper with a special attack of 55
-</span></code></pre>
-</div>
-
 <h3 id="where">Where</h3>
 
 <p>Cases in a <code class="highlighter-rouge">switch</code> statement can use a <code class="highlighter-rouge">where</code> clause to perform additional checks:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">baseMixedAttack</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">offense</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
 
-<span class="k">switch</span> <span class="n">baseMixedAttack</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
 <span class="k">case</span> <span class="nf">let</span> <span class="p">(</span><span class="n">attack</span><span class="p">,</span> <span class="n">specialAttack</span><span class="p">)</span> <span class="k">where</span> <span class="n">attack</span> <span class="o">==</span> <span class="nv">specialAttack</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Perfectly balanced attack stats."</span><span class="p">)</span>
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Unbalanced attack stats."</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="c1">// -&gt; Perfectly balanced attack stats.
-</span></code></pre>
-</div>
-
-  </section>
-</article>
-
-    </li>
-  
-    <li class="post-list-item">
-      
-  
-
-
-<article class="post">
-  <header class="post-header">
-    <div class="post-metadata">
-      <time datetime="2014-07-30 17:45:00 +0200">
-        Jul 30, 2014 – LEARN SWIFT
-      </time>
-    </div>
-    <h1 class="post-title">
-      <a class="post-link" href="/learn-swift/basic-operators/">
-        Basic Operators
-      </a>
-    </h1>
-  </header>
-
-  <section class="post-content">
-    
-      
-        
-      
-
-      <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-30-basic-operators.swift"> Github</a>.
-      </p>
-    
-    <h3 id="assignment-operator">Assignment Operator</h3>
-
-<p>The assignment operator (<code class="highlighter-rouge">=</code>) is used either to initialize a value regardless of its type, or update it if it was declared as a variable.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokémon</span> <span class="o">=</span> <span class="s">"Caterpie"</span>
-<span class="k">let</span> <span class="nv">wildPokémon</span> <span class="o">=</span> <span class="n">pokémon</span>
-<span class="n">wildPokémon</span>
-<span class="c1">// -&gt; Caterpie
-</span></code></pre>
-</div>
-
-<p>The assignment operator does not return a value.</p>
-
-<h3 id="arithmetic-operators">Arithmetic Operators</h3>
-
-<p>Swift comes with all the arithmetic operators you would expect in a modern programming language.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">+</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45
-</span><span class="mi">35</span> <span class="o">-</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 25
-</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 20
-</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
-</div>
-
-<p>The addition operator can also be used to concatenate two or more strings:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">"Viridian"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"City"</span>
-<span class="c1">// -&gt; Viridian City
-</span></code></pre>
-</div>
-
-<p>Or arrays:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">moves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"String Shot"</span><span class="p">,</span> <span class="s">"Tackle"</span><span class="p">]</span>
-<span class="k">let</span> <span class="nv">moreMoves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Harden"</span><span class="p">]</span>
-<span class="k">var</span> <span class="nv">moveSet</span> <span class="o">=</span> <span class="n">moves</span> <span class="o">+</span> <span class="n">moreMoves</span>
-<span class="c1">// -&gt; ["String Shot", "Tackle", "Harden"]
-</span></code></pre>
-</div>
-
-<h3 id="range-operators">Range Operators</h3>
-
-<p>Range operators allow you to express a range of a values using lower and upper bounds. They come in two flavors.</p>
-
-<p>The <em>closed range operator</em> includes the value corresponding to the upper bound:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">closedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">...</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot", Tackle"]
-</span></code></pre>
-</div>
-
-<p>The <em>half-closed</em> range operator omits the value corresponding to the upper bound:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">halfClosedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot"]
-</span></code></pre>
-</div>
-
-<h3 id="remainder-operator">Remainder Operator</h3>
-
-<p>The remainder operator (<code class="highlighter-rouge">%</code>) outputs the remainder of a division of two numbers:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 1
-</span></code></pre>
-</div>
-
-<p>It also works with floats and negative numbers:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
-<span class="c1">// -&gt; 5
-</span><span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
-<span class="c1">// -&gt; 3.0
-</span></code></pre>
-</div>
-
-<h3 id="compound-assignment-operators">Compound Assignment Operators</h3>
-
-<p>These operators execute an operation and assign the result to<br />
-the left operand at the same time:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="n">remainingHP</span> <span class="o">+=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45 (remainingHP = remainingHP + 10)
-</span><span class="n">remainingHP</span> <span class="o">-=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP - 10)
-</span><span class="n">remainingHP</span> <span class="o">*=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 70 (remainingHP = remainingHP * 2)
-</span><span class="n">remainingHP</span> <span class="o">/=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP / 2)
-</span><span class="n">remainingHP</span> <span class="o">%=</span> <span class="mi">6</span>
-<span class="c1">// -&gt; 5 (remainingHP = remainingHP % 6)
-</span></code></pre>
-</div>
-
-<h3 id="unary-operators">Unary Operators</h3>
-
-<p>Swift has all the unary operators that are common in other languages:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="o">++</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 36
-</span><span class="o">--</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span>
-<span class="k">let</span> <span class="nv">damageToKO</span> <span class="o">=</span> <span class="o">-</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; -35
-</span><span class="o">+</span><span class="n">damageToKO</span>
-<span class="c1">// -&gt; -35
-</span></code></pre>
-</div>
-
-<p>Note that the unary <em>plus</em> operator is just syntactic sugar and does not change the value it was prepended to.</p>
-
-<p>If the increment or decrement operators are appended as postfix operators (<code class="highlighter-rouge">value++</code>), the variable is modified <em>after</em> its value is returned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">stepOne</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepTwo</span> <span class="o">=</span> <span class="n">remainingHP</span><span class="o">--</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepThree</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 34
-</span></code></pre>
-</div>
-
-<h3 id="comparison-operators">Comparison Operators</h3>
-
-<p>Comparison operators are binary operators that compare two values and return a boolean:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">==</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is equal)
-</span><span class="mi">180</span> <span class="o">!=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is not equal)
-</span>
-<span class="mi">180</span> <span class="o">&gt;</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than)
-</span><span class="mi">35</span> <span class="o">&lt;</span> <span class="mi">180</span>
-<span class="c1">// -&gt; true (is less than)
-</span>
-<span class="mi">35</span> <span class="o">&gt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than or equal)
-</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; false (is less than or equal)
-</span></code></pre>
-</div>
-
-<h3 id="logical-operators">Logical Operators</h3>
-
-<p>Swift has three logical operators that all return a boolean value:</p>
-
-<ul>
-  <li>The NOT operator (<code class="highlighter-rouge">!value</code>) inverts a boolean value.</li>
-  <li>The AND operator (<code class="highlighter-rouge">value1 &amp;&amp; value2</code>) returns <code class="highlighter-rouge">true</code> if all values are <code class="highlighter-rouge">true</code>.</li>
-  <li>The OR operator (<code class="highlighter-rouge">value1 || value2</code>) returns <code class="highlighter-rouge">true</code> if at least one value is <code class="highlighter-rouge">true</code>.</li>
-</ul>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">56</span>
-<span class="k">var</span> <span class="nv">lastPokemon</span> <span class="o">=</span> <span class="kc">true</span>
-<span class="k">var</span> <span class="nv">oneHitKO</span> <span class="o">=</span> <span class="p">(</span><span class="n">damage</span> <span class="o">&gt;</span> <span class="n">remainingHP</span><span class="p">)</span>
-<span class="c1">// -&gt; true
-</span>
-<span class="o">!</span><span class="n">oneHitKO</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">&amp;&amp;</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">||</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; true
 </span></code></pre>
 </div>
 
