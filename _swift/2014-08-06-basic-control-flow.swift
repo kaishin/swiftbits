@@ -37,39 +37,30 @@ case "Fire":
 default:
   print("Pikachu will not be sent out this round.")
 }
-let baseAttack = 89
-switch baseAttack {
+let attack = 89
+switch attack {
 case 1...70:
-  print("This pokémon is useless. Set it free.")
+  print("Not ready for competitive play.")
 case 71...150:
-  print("Now we're talking.")
+  print("Now we're talking!")
 case 151...200:
-  print("Uber!")
+  print("Uber territory...")
 default:
-  print("Hackemon!")
+  print("Hackemon.")
 }
-let baseSpecialAttack = 55
-var baseMixedAttack = (baseAttack, baseSpecialAttack)
-switch baseMixedAttack {
+var offense = (attack: 90, specialAttack: 55)
+switch offense {
 case (80...200, 80...200):
   print("Good mixed sweeper.")
 case (_, 80...200):
-  print("Good special sweeper.")
+  print("Great special sweeper.")
 case (80...200, _):
-  print("Good physical sweeper.")
+  print("Great physical sweeper.")
 default:
   print("Not competitive enough.")
 }
-switch baseMixedAttack {
-case (80...200, let specialAttack):
-  print("Good physical sweeper with a special attack of \(specialAttack)")
-case (let attack, 80...200):
-  print("Good special sweeper with an attack of \(attack)")
-default:
-  print("Not competitive enough.")
-}
-baseMixedAttack.0 = 55
-switch baseMixedAttack {
+offense.0 = 55
+switch offense {
 case let (attack, specialAttack) where attack == specialAttack:
   print("Perfectly balanced attack stats.")
 default:
