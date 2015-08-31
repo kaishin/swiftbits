@@ -42,7 +42,7 @@
 
   @include media-width(from, $container-width) {
     color: $black;
-    background-color: darken($ash, 2%);
+    background-color: rgba($black, 0.05);
     bottom: 1rem;
     display: block;
     position: fixed;
@@ -51,9 +51,10 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    z-index: 2;
 
     &:hover {
-      background-color: $black;
+      background-color: rgba($black, 0.2);
       color: $white;
     }
   }

@@ -5,9 +5,9 @@ category: learn-swift
 active: learn-swift
 ---
 
-<h1 class="category-title">{{ page.title }} – Contents</h1>
+<h1 class="category-title" id="toc-title">{{ page.title }} – Contents</h1>
 
-<ol class="toc" id="toc">
+<ol class="toc">
   {% for post in site.categories.[page.category] reversed %}
     <li class="row">
       <a class="row-link" href="#{{ post.url | replace: '/', '' | replace: 'learn-swift', '' }}">
@@ -17,4 +17,4 @@ active: learn-swift
   {% endfor %}
 </ol>
 
-<a href="#toc" class="back-to-toc">Top</a>
+<a href="#toc-title" class="back-to-toc">Top</a>
