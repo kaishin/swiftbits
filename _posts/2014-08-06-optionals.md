@@ -11,8 +11,7 @@ teaser: "Optionals are variables or constants that can either have a value or be
 
 ### Declaring Optionals
 
-Optionals are variables or constants that can either have a value or be `nil` (or `.None` for the picky among you).
-They are defined by appending a `?` at the end of the type in the declaration:
+Optionals are variables or constants that can either have a value or be `nil` (or `.None` for the picky among you). They are defined by appending a `?` at the end of the type in the declaration:
 
 ~~~swift
 var heldItem: String? // Pokémon may or may not be holding an item

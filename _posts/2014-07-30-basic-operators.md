@@ -91,8 +91,7 @@ It also works with floats and negative numbers:
 
 ### Compound Assignment Operators
 
-These operators execute an operation and assign the result to
-the left operand at the same time:
+These operators execute an operation and assign the result to the left operand at the same time:
 
 ~~~swift
 var remainingHP = 35

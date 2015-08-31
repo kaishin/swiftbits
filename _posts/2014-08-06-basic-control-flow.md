@@ -103,19 +103,19 @@ You can also explicitly end execution using the keyword `break` anywhere in the 
 Cases in a `switch` statement can check if a value is included in a range:
 
 ~~~swift
-let baseAttack = 89
+let attack = 89
 
-switch baseAttack {
+switch attack {
 case 1...70:
-  print("This pokémon is useless. Set it free.")
+  print("Not ready for competitive play.")
 case 71...150:
-  print("Now we're talking.")
+  print("Now we're talking!")
 case 151...200:
-  print("Uber!")
+  print("Uber territory...")
 default:
-  print("Hackemon!")
+  print("Hackemon.")
 }
-// -> Now we're talking.
+// -> Now we're talking!
 ~~~
 
 ### Tuple Matching
@@ -123,36 +123,19 @@ default:
 Tuples can be used as values in `switch` cases. You can ignore a value in the tuple by replacing it with `_` in the case's test:
 
 ~~~swift
-let baseSpecialAttack = 55
-var baseMixedAttack = (baseAttack, baseSpecialAttack)
+var offense = (attack: 90, specialAttack: 55)
 
-switch baseMixedAttack {
+switch offense {
 case (80...200, 80...200):
   print("Good mixed sweeper.")
 case (_, 80...200):
-  print("Good special sweeper.")
+  print("Great special sweeper.")
 case (80...200, _):
-  print("Good physical sweeper.")
+  print("Great physical sweeper.")
 default:
   print("Not competitive enough.")
 }
 // -> Good physical sweeper.
-~~~
-
-### Binding Values
-
-Matched values can be bound to constants or variables and reused inside the case's body:
-
-~~~swift
-switch baseMixedAttack {
-case (80...200, let specialAttack):
-  print("Good physical sweeper with a special attack of \(specialAttack)")
-case (let attack, 80...200):
-  print("Good special sweeper with an attack of \(attack)")
-default:
-  print("Not competitive enough.")
-}
-// -> Good physical sweeper with a special attack of 55
 ~~~
 
 ### Where
@@ -160,9 +143,9 @@ default:
 Cases in a `switch` statement can use a `where` clause to perform additional checks:
 
 ~~~swift
-baseMixedAttack.0 = 55
+offense.0 = 55
 
-switch baseMixedAttack {
+switch offense {
 case let (attack, specialAttack) where attack == specialAttack:
   print("Perfectly balanced attack stats.")
 default:
