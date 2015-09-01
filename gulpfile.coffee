@@ -61,11 +61,14 @@ gulp.task "swift", ->
 gulp.task "build", ->
   runSequence "swift", "jekyll-build"
 
-gulp.task "build-styles", ->
+gulp.task "styles", ->
   runSequence "lint-scss", "uncss"
 
-gulp.task "rebuild", ->
+gulp.task "rebuild-local", ->
   runSequence "jekyll-build-local", "reload"
+
+gulp.task "yolo", ->
+  runSequence "build", "deploy"
 
 gulp.task "clean",
   del.bind(null, ["_site"])
@@ -74,7 +77,7 @@ gulp.task "watch", ["sass", "coffee", "vendor-js", "jekyll-build-local"], ->
   gulp.watch "#{paths.sass}/**/*.scss", ["sass"]
   gulp.watch "#{paths.coffee}/**/*.coffee", ["coffee"]
   gulp.watch "#{paths.coffee}/vendor.js", ["vendor-js"]
-  gulp.watch paths.jekyllFiles, ["rebuild"]
+  gulp.watch paths.jekyllFiles, ["rebuild-local"]
 
 gulp.task "jekyll-build-local", ->
   run "bundle exec jekyll build --config _config.yml,_config.serve.yml", silent: true
