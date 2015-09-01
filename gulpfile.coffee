@@ -59,7 +59,10 @@ gulp.task "swift", ->
   runSequence "generate-swift", "run-swift"
 
 gulp.task "build", ->
-  runSequence "lint-scss", "swift", "uncss", "jekyll-build"
+  runSequence "swift", "jekyll-build"
+
+gulp.task "build-styles", ->
+  runSequence "lint-scss", "uncss"
 
 gulp.task "rebuild", ->
   runSequence "jekyll-build-local", "reload"
