@@ -24,6 +24,6 @@ Today I'm happy to relaunch the site as *Swiftbits*. Here's a rundown of the mos
 
 - Playgrounds were replaced with Swift source code; it's more versatile and comes with less overhead.
 
-Follow Swiftbits on [Twitter](https://twitter.com/swiftbitsnews) to stay in the loop.
+Follow Swiftbits on [Twitter]({{ site.twitter }}) to stay in the loop.
 
 Happy Swifting!

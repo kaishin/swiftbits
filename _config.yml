@@ -19,6 +19,7 @@ author:
 baseurl: ""
 url: http://swiftbits.redalemeden.com
 feed: http://feedpress.me/swiftbits
+twitter: https://twitter.com/swiftbitsies
 future: false
 show_drafts: false
 paginate: 5
