@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://swiftbits.redalemeden.com/meta/site-relaunch/</loc>
+    <loc>localhost:4000/meta/site-relaunch/</loc>
     <lastmod>2015-08-30T08:26:02+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/enumerations/</loc>
+    <loc>localhost:4000/learn-swift/enumerations/</loc>
     <lastmod>2014-09-16T20:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/function-basics/</loc>
+    <loc>localhost:4000/learn-swift/function-basics/</loc>
     <lastmod>2014-08-28T20:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/optionals/</loc>
+    <loc>localhost:4000/learn-swift/optionals/</loc>
     <lastmod>2014-08-06T20:55:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</loc>
+    <loc>localhost:4000/learn-swift/basic-control-flow/</loc>
     <lastmod>2014-08-06T17:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/basic-operators/</loc>
+    <loc>localhost:4000/learn-swift/basic-operators/</loc>
     <lastmod>2014-07-30T17:45:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/tuples/</loc>
+    <loc>localhost:4000/learn-swift/tuples/</loc>
     <lastmod>2014-07-28T14:30:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/dictionaries/</loc>
+    <loc>localhost:4000/learn-swift/dictionaries/</loc>
     <lastmod>2014-07-05T20:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/arrays/</loc>
+    <loc>localhost:4000/learn-swift/arrays/</loc>
     <lastmod>2014-07-05T20:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/getting-started/</loc>
+    <loc>localhost:4000/learn-swift/getting-started/</loc>
     <lastmod>2014-06-13T14:56:02+02:00</lastmod>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/</loc>
+    <loc>localhost:4000/</loc>
   </url>
   <url>
-    <loc>http://swiftbits.redalemeden.com/learn-swift/</loc>
-  </url>
-  <url>
-    <loc>http://swiftbits.redalemeden.com/page-2/</loc>
+    <loc>localhost:4000/learn-swift/</loc>
   </url>
 </urlset>
