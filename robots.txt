@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: localhost:4000/sitemap.xml
+Sitemap: http://swiftbits.redalemeden.com/sitemap.xml
