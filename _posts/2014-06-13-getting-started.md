@@ -40,8 +40,7 @@ playerName = nil
 
 ### Constants
 
-Constants are declared similarly to [variables](#variables), except they use the
-keyword `let` instead:
+Constants are declared similarly to [variables](#variables), except they use the keyword `let` instead:
 
 ~~~swift
 let gameTitle: String = "Pokémon Red"
