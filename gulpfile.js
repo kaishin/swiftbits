@@ -190,7 +190,7 @@ gulp.task("swift", ["generate-swift", "run-swift"], function() {
 })
 
 gulp.task("deploy", function() {
-  gulp.src(targetFolder + "/**/*")
+  return gulp.src(targetFolder + "/**/*")
   .pipe(ghPages({
     message: "Deploy // " + Date()
   }))
