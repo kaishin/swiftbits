@@ -1,7 +1,7 @@
 title: "Swiftbits"
 description: "Swift snippets, tips, resources, and links."
 tagline: "Short doses of Swift"
-latestSwift: 2.0ß6
+latestSwift: 2.2
 keywords:
  - swift
  - swift-lang
@@ -17,16 +17,17 @@ author:
   name: "Reda Lemeden"
 
 baseurl: ""
-url: https://swiftbits.redalemeden.com
 feed: http://feedpress.me/swiftbits
-twitter: https://twitter.com/swiftbitsies
 future: false
-show_drafts: false
+limit_posts: 0
 paginate: 5
 paginate_path: "/page-:num"
-limit_posts: 0
-gems:
-  - jekyll-sitemap
+show_drafts: false
+source: source
+twitter: https://twitter.com/swiftbitsies
+url: https://swiftbits.redalemeden.com
+
+gems: [jekyll-sitemap, jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM
@@ -34,7 +35,6 @@ kramdown:
 
 permalink: /:categories/:title/
 exclude: [
-  "bower.json",
   "node_modules",
   "gulp.js",
   "gulpfile.coffee",
@@ -42,6 +42,11 @@ exclude: [
   "README.md",
   "Gemfile",
   "Gemfile.lock"
+]
+
+keep_files: [
+  "css",
+  "scripts"
 ]
 
 defaults:

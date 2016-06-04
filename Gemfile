@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 2.5.3"
-gem "jekyll-sitemap", "~> 0.8.0"
-gem "rouge", "~> 1.7.7"
-gem "kramdown", "~> 1.5.0"
-gem "scss-lint", "~> 0.31.0"
+gem "jekyll", "~> 3.0.0"
+gem "jekyll-sitemap", "~> 0.10.0"
+gem "jekyll-paginate", "~> 1.1"
+gem "rouge", "~> 1.10.0"
+gem "kramdown", "~> 1.9.0"
+gem "scss-lint", "~> 0.38.0"
