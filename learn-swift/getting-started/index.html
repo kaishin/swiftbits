@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-06-13 14:56:02 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/getting-started/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/getting-started/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-06-13-getting-started.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-06-13-getting-started.swift"> Github</a>.
       </p>
     
     <h3 id="console-output">Console Output</h3>
@@ -121,14 +117,13 @@
 <p>…but cannot be <code class="highlighter-rouge">nil</code>, unless they are optional<sup id="fnref:intro1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">playerName</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="constants">Constants</h3>
 
-<p>Constants are declared similarly to <a href="#variables">variables</a>, except they use the<br />
-keyword <code class="highlighter-rouge">let</code> instead:</p>
+<p>Constants are declared similarly to <a href="#variables">variables</a>, except they use the keyword <code class="highlighter-rouge">let</code> instead:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">gameTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Pokémon Red"</span>
 </code></pre>
@@ -137,8 +132,8 @@ keyword <code class="highlighter-rouge">let</code> instead:</p>
 <p>…and cannot be re-assigned:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">gameTitle</span> <span class="o">=</span> <span class="s">"Pokémon Blue"</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <p>Like variables, constants cannot be <code class="highlighter-rouge">nil</code><sup id="fnref:intro1:1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
@@ -158,8 +153,8 @@ keyword <code class="highlighter-rouge">let</code> instead:</p>
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">totalHP</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="k">var</span> <span class="nv">currentHP</span> <span class="o">=</span> <span class="s">"Current HP: </span><span class="se">\(</span><span class="n">totalHP</span> <span class="o">-</span> <span class="n">damage</span><span class="se">)</span><span class="s">"</span>
-<span class="c1">// -&gt; "Current HP: 5"
-</span></code></pre>
+<span class="c1">// -&gt; "Current HP: 5"</span>
+</code></pre>
 </div>
 
 <div class="footnotes">

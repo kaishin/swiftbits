@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-07-28 14:30:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/tuples/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/tuples/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-28-tuples.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-28-tuples.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-tuples">Declaring Tuples</h3>
@@ -121,26 +117,26 @@
 <p>Use dot syntax to access the value stored at a given index:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">slowSpeedLabel</span> <span class="o">=</span> <span class="n">slowTextSpeed</span><span class="o">.</span><span class="mi">1</span>
-<span class="c1">// -&gt; Slow
-</span></code></pre>
+<span class="c1">// -&gt; Slow</span>
+</code></pre>
 </div>
 
 <p>To retrieve some values while ignoring others, use the following syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">fastSpeedLabel</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
 <span class="n">fastSpeedLabel</span>
-<span class="c1">// -&gt; Fast
-</span><span class="nf">let</span> <span class="p">(</span><span class="n">fastSpeedValue</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
+<span class="c1">// -&gt; Fast</span>
+<span class="nf">let</span> <span class="p">(</span><span class="n">fastSpeedValue</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
 <span class="n">fastSpeedValue</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>If the values were labeld during declaration, you can access them using their labels:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">speedLabel</span> <span class="o">=</span> <span class="n">textSpeed</span><span class="o">.</span><span class="n">label</span>
-<span class="c1">// -&gt; Medium
-</span></code></pre>
+<span class="c1">// -&gt; Medium</span>
+</code></pre>
 </div>
 
 <h3 id="updating-tuple-values">Updating Tuple Values</h3>
@@ -149,8 +145,8 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">textSpeed</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s">"Fast"</span>
 <span class="n">textSpeed</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="c1">// -&gt; (3, "Fast")
-</span></code></pre>
+<span class="c1">// -&gt; (3, "Fast")</span>
+</code></pre>
 </div>
 
   </section>

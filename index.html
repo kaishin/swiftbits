@@ -13,7 +13,7 @@
   
   
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -72,8 +72,6 @@
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -131,8 +129,6 @@
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -151,11 +147,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-09-16-enumerations.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-09-16-enumerations.swift"> Github</a>.
       </p>
     
     <h3 id="defining-enumerations">Defining Enumerations</h3>
@@ -204,8 +198,8 @@
 <span class="k">case</span> <span class="o">.</span><span class="kt">Fire</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Wild Caterpies, here I come!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Brock, here I come!
-</span></code></pre>
+<span class="c1">// -&gt; Brock, here I come!</span>
+</code></pre>
 </div>
 
 <h3 id="associated-values">Associated Values</h3>
@@ -232,8 +226,8 @@
 <span class="k">case</span> <span class="o">.</span><span class="kt">Status</span><span class="p">(</span><span class="k">let</span> <span class="nv">statusEffect</span><span class="p">):</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"A status move that inflicts </span><span class="se">\(</span><span class="n">statusEffect</span><span class="se">)</span><span class="s">."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Deals damage with a base power of 50.
-</span></code></pre>
+<span class="c1">// -&gt; Deals damage with a base power of 50.</span>
+</code></pre>
 </div>
 
 <h3 id="raw-values">Raw Values</h3>
@@ -247,15 +241,15 @@
 <span class="p">}</span>
 
 <span class="k">var</span> <span class="nv">physicalTypeName</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
-<span class="c1">// -&gt; "Physical Move"
-</span></code></pre>
+<span class="c1">// -&gt; "Physical Move"</span>
+</code></pre>
 </div>
 
 <p>To get an enumeration member from a raw value, use <code class="highlighter-rouge">MoveCategory(rawValue: String)</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">statusType</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"Status Move"</span><span class="p">)</span>
-<span class="c1">// -&gt; .Status
-</span></code></pre>
+<span class="c1">// -&gt; .Status</span>
+</code></pre>
 </div>
 
 <p>Raw values can be <code class="highlighter-rouge">String</code>, <code class="highlighter-rouge">Character</code>, <code class="highlighter-rouge">Int</code>, or <code class="highlighter-rouge">Float</code>/<code class="highlighter-rouge">Double</code>.<br />
@@ -268,8 +262,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="n">physicalTypeName</span> <span class="o">=</span> <span class="kt">RawMoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
-<span class="c1">// -&gt; "Physical"
-</span></code></pre>
+<span class="c1">// -&gt; "Physical"</span>
+</code></pre>
 </div>
 
 
@@ -280,8 +274,6 @@ If you declare the raw value type but not explicitly set it in one or more cases
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -300,11 +292,9 @@ If you declare the raw value type but not explicitly set it in one or more cases
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-28-function-basics.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-28-function-basics.swift"> Github</a>.
       </p>
     
     <h3 id="defining-functions">Defining Functions</h3>
@@ -344,10 +334,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <p>To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can’t be omitted even in the absence of required parameters:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Ultra Ball"</span><span class="p">)</span>
-<span class="c1">// -&gt; Items
-// -&gt; Ultra Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Ultra Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="multiple-parameters">Multiple Parameters</h3>
@@ -360,11 +350,11 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Super Ball"</span><span class="p">,</span> <span class="nv">statusAttack</span><span class="p">:</span> <span class="s">"Hypnosis"</span><span class="p">)</span>
-<span class="c1">// -&gt; Hypnosis
-// -&gt; Items
-// -&gt; Ultra Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Hypnosis</span>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Ultra Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="multiple-return-values">Multiple Return Values</h3>
@@ -382,10 +372,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>
-<span class="c1">// -&gt; (5, 67)
-</span><span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="c1">// -&gt; (1, 19)
-</span></code></pre>
+<span class="c1">// -&gt; (5, 67)</span>
+<span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="c1">// -&gt; (1, 19)</span>
+</code></pre>
 </div>
 
 <h3 id="external-parameter-names">External Parameter Names</h3>
@@ -399,10 +389,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">withBall</span><span class="p">:</span> <span class="s">"Speed Ball"</span><span class="p">)</span>
-<span class="c1">// -&gt; Items
-// -&gt; Speed Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Speed Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <p>Notice how the parameter name is now part of the function’s signature.</p>
@@ -418,10 +408,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="nf">lazilyCatchWildPokémon</span><span class="p">()</span>
-<span class="c1">// -&gt; Items
-// -&gt; Poké Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Poké Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="variadic-parameters">Variadic Parameters</h3>
@@ -435,8 +425,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="nf">useMoves</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">,</span> <span class="s">"Leech Seed"</span><span class="p">)</span>
-<span class="c1">// -&gt; "Tackle", "Leech Seed"
-</span></code></pre>
+<span class="c1">// -&gt; "Tackle", "Leech Seed"</span>
+</code></pre>
 </div>
 
   </section>
@@ -446,8 +436,6 @@ If you declare the raw value type but not explicitly set it in one or more cases
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -466,32 +454,30 @@ If you declare the raw value type but not explicitly set it in one or more cases
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-06-optionals.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-optionals.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-optionals">Declaring Optionals</h3>
 
 <p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you). They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item
-</span><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Life Orb"
-</span><span class="n">heldItem</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; nil
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item</span>
+<span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
+<span class="c1">// -&gt; "Life Orb"</span>
+<span class="n">heldItem</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="c1">// -&gt; nil</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-optionals">Inspecting Optionals</h3>
 
 <p>You can compare the optional against <code class="highlighter-rouge">nil</code> to find out if it contains a value or not:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isNil</span> <span class="o">=</span> <span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
 <p>This can also be used in <code class="highlighter-rouge">if</code> statements:</p>
@@ -499,8 +485,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"No held items."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; No held items.
-</span></code></pre>
+<span class="c1">// -&gt; No held items.</span>
+</code></pre>
 </div>
 
 <h3 id="forced-unwrapping">Forced Unwrapping</h3>
@@ -510,8 +496,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"You knocked off the foe's Caterpie's </span><span class="se">\(</span><span class="n">heldItem</span><span class="o">!</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
-<span class="c1">// -&gt; You knocked off the foe's Caterpie's Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; You knocked off the foe's Caterpie's Life Orb</span>
+</code></pre>
 </div>
 
 <p>Unwrapping allows you to directly access the value contained in the optional.</p>
@@ -523,8 +509,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">itemName</span> <span class="o">=</span> <span class="n">heldItem</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Knock off the </span><span class="se">\(</span><span class="n">itemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Knock off the Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; Knock off the Life Orb</span>
+</code></pre>
 </div>
 
 <p>Starting Swift 1.2, it became possible to bind more than one optional in the same declaration:</p>
@@ -534,8 +520,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">if</span> <span class="k">let</span> <span class="nv">itemName</span> <span class="o">=</span> <span class="n">heldItem</span><span class="p">,</span> <span class="k">let</span> <span class="nv">moveName</span> <span class="o">=</span> <span class="n">move</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">moveName</span><span class="se">)</span><span class="s"> the </span><span class="se">\(</span><span class="n">itemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Knock off the Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; Knock off the Life Orb</span>
+</code></pre>
 </div>
 
 <h3 id="implicit-unwrapping">Implicit Unwrapping</h3>
@@ -544,8 +530,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">implicitlyUnwrappedItemName</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="o">=</span> <span class="s">"Berry"</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"Wild Vulpix always carry a </span><span class="se">\(</span><span class="n">implicitlyUnwrappedItemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="c1">// -&gt; "Wild Vulpix always carry a Berry"
-</span></code></pre>
+<span class="c1">// -&gt; "Wild Vulpix always carry a Berry"</span>
+</code></pre>
 </div>
 
 <p>Using this method, you don’t have to append <code class="highlighter-rouge">!</code> to unwrap the value contained in the optional; it will be implicitly unwrapped for you.</p>
@@ -556,10 +542,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">staryuHeldItemRates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Float</span><span class="p">]?</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stardust"</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">"Star Piece"</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">]</span>
 <span class="n">staryuHeldItemRates</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; Error
-</span><span class="n">staryuHeldItemRates</span><span class="p">?</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+<span class="n">staryuHeldItemRates</span><span class="p">?</span><span class="o">.</span><span class="n">isEmpty</span>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>Optional chaining can also be used to get/set properties, which will be introduced later.</p>
@@ -570,12 +556,12 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">preferredHeldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">"Leftovers"</span>
 <span class="k">var</span> <span class="nv">itemToHold</span> <span class="o">=</span> <span class="n">preferredHeldItem</span> <span class="p">??</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Leftovers"
-</span>
+<span class="c1">// -&gt; "Leftovers"</span>
+
 <span class="n">preferredHeldItem</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="n">itemToHold</span> <span class="o">=</span> <span class="n">preferredHeldItem</span> <span class="p">??</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Life Orb"
-</span></code></pre>
+<span class="c1">// -&gt; "Life Orb"</span>
+</code></pre>
 </div>
 
   </section>
@@ -585,8 +571,6 @@ If you declare the raw value type but not explicitly set it in one or more cases
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -605,11 +589,9 @@ If you declare the raw value type but not explicitly set it in one or more cases
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-06-basic-control-flow.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-basic-control-flow.swift"> Github</a>.
       </p>
     
     <h3 id="conditional-statements">Conditional Statements</h3>
@@ -621,8 +603,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <p>With <code class="highlighter-rouge">else</code>:</p>
@@ -632,8 +614,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Tackle
-</span></code></pre>
+<span class="c1">// -&gt; Tackle</span>
+</code></pre>
 </div>
 
 <h3 id="chaining-conditionals">Chaining Conditionals</h3>
@@ -647,8 +629,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Come back, Bulbasaur!
-</span></code></pre>
+<span class="c1">// -&gt; Come back, Bulbasaur!</span>
+</code></pre>
 </div>
 
 <h3 id="switch-statements">Switch Statements</h3>
@@ -663,8 +645,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <p>A <code class="highlighter-rouge">switch</code> statement needs to be exhaustive; every possible value should be covered. The <code class="highlighter-rouge">default</code> case covers all the remaining cases.</p>
@@ -679,8 +661,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <h3 id="switch-fall-through">Switch Fall-through</h3>
@@ -695,8 +677,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Pikachu will not be sent out this round."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go, Squirtle!
-</span></code></pre>
+<span class="c1">// -&gt; Go, Squirtle!</span>
+</code></pre>
 </div>
 
 <p>You can also explicitly end execution using the keyword <code class="highlighter-rouge">break</code> anywhere in the statement.</p>
@@ -717,8 +699,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Now we're talking!
-</span></code></pre>
+<span class="c1">// -&gt; Now we're talking!</span>
+</code></pre>
 </div>
 
 <h3 id="tuple-matching">Tuple Matching</h3>
@@ -737,8 +719,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Good physical sweeper.
-</span></code></pre>
+<span class="c1">// -&gt; Good physical sweeper.</span>
+</code></pre>
 </div>
 
 <h3 id="where">Where</h3>
@@ -753,8 +735,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Unbalanced attack stats."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Perfectly balanced attack stats.
-</span></code></pre>
+<span class="c1">// -&gt; Perfectly balanced attack stats.</span>
+</code></pre>
 </div>
 
   </section>

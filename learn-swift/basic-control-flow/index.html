@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-08-06 17:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/basic-control-flow/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-06-basic-control-flow.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-basic-control-flow.swift"> Github</a>.
       </p>
     
     <h3 id="conditional-statements">Conditional Statements</h3>
@@ -105,8 +101,8 @@
 <span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <p>With <code class="highlighter-rouge">else</code>:</p>
@@ -116,8 +112,8 @@
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Tackle
-</span></code></pre>
+<span class="c1">// -&gt; Tackle</span>
+</code></pre>
 </div>
 
 <h3 id="chaining-conditionals">Chaining Conditionals</h3>
@@ -131,8 +127,8 @@
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Come back, Bulbasaur!
-</span></code></pre>
+<span class="c1">// -&gt; Come back, Bulbasaur!</span>
+</code></pre>
 </div>
 
 <h3 id="switch-statements">Switch Statements</h3>
@@ -147,8 +143,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <p>A <code class="highlighter-rouge">switch</code> statement needs to be exhaustive; every possible value should be covered. The <code class="highlighter-rouge">default</code> case covers all the remaining cases.</p>
@@ -163,8 +159,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!
-</span></code></pre>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
 </div>
 
 <h3 id="switch-fall-through">Switch Fall-through</h3>
@@ -179,8 +175,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Pikachu will not be sent out this round."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Go, Squirtle!
-</span></code></pre>
+<span class="c1">// -&gt; Go, Squirtle!</span>
+</code></pre>
 </div>
 
 <p>You can also explicitly end execution using the keyword <code class="highlighter-rouge">break</code> anywhere in the statement.</p>
@@ -201,8 +197,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Now we're talking!
-</span></code></pre>
+<span class="c1">// -&gt; Now we're talking!</span>
+</code></pre>
 </div>
 
 <h3 id="tuple-matching">Tuple Matching</h3>
@@ -221,8 +217,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Good physical sweeper.
-</span></code></pre>
+<span class="c1">// -&gt; Good physical sweeper.</span>
+</code></pre>
 </div>
 
 <h3 id="where">Where</h3>
@@ -237,8 +233,8 @@
 <span class="k">default</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Unbalanced attack stats."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Perfectly balanced attack stats.
-</span></code></pre>
+<span class="c1">// -&gt; Perfectly balanced attack stats.</span>
+</code></pre>
 </div>
 
   </section>

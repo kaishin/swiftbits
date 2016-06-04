@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-07-30 17:45:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/basic-operators/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/basic-operators/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-30-basic-operators.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-30-basic-operators.swift"> Github</a>.
       </p>
     
     <h3 id="assignment-operator">Assignment Operator</h3>
@@ -103,8 +99,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokémon</span> <span class="o">=</span> <span class="s">"Caterpie"</span>
 <span class="k">let</span> <span class="nv">wildPokémon</span> <span class="o">=</span> <span class="n">pokémon</span>
 <span class="n">wildPokémon</span>
-<span class="c1">// -&gt; Caterpie
-</span></code></pre>
+<span class="c1">// -&gt; Caterpie</span>
+</code></pre>
 </div>
 
 <p>The assignment operator does not return a value.</p>
@@ -114,21 +110,21 @@
 <p>Swift comes with all the arithmetic operators you would expect in a modern programming language.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">+</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45
-</span><span class="mi">35</span> <span class="o">-</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 25
-</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 20
-</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 45</span>
+<span class="mi">35</span> <span class="o">-</span> <span class="mi">10</span>
+<span class="c1">// -&gt; 25</span>
+<span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 20</span>
+<span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>The addition operator can also be used to concatenate two or more strings:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">"Viridian"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"City"</span>
-<span class="c1">// -&gt; Viridian City
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">cityName</span> <span class="o">=</span> <span class="s">"Viridian"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"City"</span>
+<span class="c1">// -&gt; Viridian City</span>
+</code></pre>
 </div>
 
 <p>Or arrays:</p>
@@ -136,8 +132,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">moves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"String Shot"</span><span class="p">,</span> <span class="s">"Tackle"</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">moreMoves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Harden"</span><span class="p">]</span>
 <span class="k">var</span> <span class="nv">moveSet</span> <span class="o">=</span> <span class="n">moves</span> <span class="o">+</span> <span class="n">moreMoves</span>
-<span class="c1">// -&gt; ["String Shot", "Tackle", "Harden"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot", "Tackle", "Harden"]</span>
+</code></pre>
 </div>
 
 <h3 id="range-operators">Range Operators</h3>
@@ -147,33 +143,33 @@
 <p>The <em>closed range operator</em> includes the value corresponding to the upper bound:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">closedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">...</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot", Tackle"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot", Tackle"]</span>
+</code></pre>
 </div>
 
 <p>The <em>half-closed</em> range operator omits the value corresponding to the upper bound:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">halfClosedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot"]</span>
+</code></pre>
 </div>
 
 <h3 id="remainder-operator">Remainder Operator</h3>
 
 <p>The remainder operator (<code class="highlighter-rouge">%</code>) outputs the remainder of a division of two numbers:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 1
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">remainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="c1">// -&gt; 1</span>
+</code></pre>
 </div>
 
 <p>It also works with floats and negative numbers:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
-<span class="c1">// -&gt; 5
-</span><span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
-<span class="c1">// -&gt; 3.0
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">negativeRemainder</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
+<span class="c1">// -&gt; 5</span>
+<span class="k">let</span> <span class="nv">decimalRemainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
+<span class="c1">// -&gt; 3.0</span>
+</code></pre>
 </div>
 
 <h3 id="compound-assignment-operators">Compound Assignment Operators</h3>
@@ -182,46 +178,16 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
 <span class="n">remainingHP</span> <span class="o">+=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45 (remainingHP = remainingHP + 10)
-</span><span class="n">remainingHP</span> <span class="o">-=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP - 10)
-</span><span class="n">remainingHP</span> <span class="o">*=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 70 (remainingHP = remainingHP * 2)
-</span><span class="n">remainingHP</span> <span class="o">/=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP / 2)
-</span><span class="n">remainingHP</span> <span class="o">%=</span> <span class="mi">6</span>
-<span class="c1">// -&gt; 5 (remainingHP = remainingHP % 6)
-</span></code></pre>
-</div>
-
-<h3 id="unary-operators">Unary Operators</h3>
-
-<p>Swift has all the unary operators that are common in other languages:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="o">++</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 36
-</span><span class="o">--</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span>
-<span class="k">let</span> <span class="nv">damageToKO</span> <span class="o">=</span> <span class="o">-</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; -35
-</span><span class="o">+</span><span class="n">damageToKO</span>
-<span class="c1">// -&gt; -35
-</span></code></pre>
-</div>
-
-<p>Note that the unary <em>plus</em> operator is just syntactic sugar and does not change the value it was prepended to.</p>
-
-<p>If the increment or decrement operators are appended as postfix operators (<code class="highlighter-rouge">value++</code>), the variable is modified <em>after</em> its value is returned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">stepOne</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepTwo</span> <span class="o">=</span> <span class="n">remainingHP</span><span class="o">--</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepThree</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 34
-</span></code></pre>
+<span class="c1">// -&gt; 45 (remainingHP = remainingHP + 10)</span>
+<span class="n">remainingHP</span> <span class="o">-=</span> <span class="mi">10</span>
+<span class="c1">// -&gt; 35 (remainingHP = remainingHP - 10)</span>
+<span class="n">remainingHP</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 70 (remainingHP = remainingHP * 2)</span>
+<span class="n">remainingHP</span> <span class="o">/=</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 35 (remainingHP = remainingHP / 2)</span>
+<span class="n">remainingHP</span> <span class="o">%=</span> <span class="mi">6</span>
+<span class="c1">// -&gt; 5 (remainingHP = remainingHP % 6)</span>
+</code></pre>
 </div>
 
 <h3 id="comparison-operators">Comparison Operators</h3>
@@ -229,20 +195,20 @@
 <p>Comparison operators are binary operators that compare two values and return a boolean:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">==</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is equal)
-</span><span class="mi">180</span> <span class="o">!=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is not equal)
-</span>
+<span class="c1">// -&gt; true (is equal)</span>
+<span class="mi">180</span> <span class="o">!=</span> <span class="mi">35</span>
+<span class="c1">// -&gt; true (is not equal)</span>
+
 <span class="mi">180</span> <span class="o">&gt;</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than)
-</span><span class="mi">35</span> <span class="o">&lt;</span> <span class="mi">180</span>
-<span class="c1">// -&gt; true (is less than)
-</span>
+<span class="c1">// -&gt; true (is greater than)</span>
+<span class="mi">35</span> <span class="o">&lt;</span> <span class="mi">180</span>
+<span class="c1">// -&gt; true (is less than)</span>
+
 <span class="mi">35</span> <span class="o">&gt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than or equal)
-</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; false (is less than or equal)
-</span></code></pre>
+<span class="c1">// -&gt; true (is greater than or equal)</span>
+<span class="mi">180</span> <span class="o">&lt;=</span> <span class="mi">35</span>
+<span class="c1">// -&gt; false (is less than or equal)</span>
+</code></pre>
 </div>
 
 <h3 id="logical-operators">Logical Operators</h3>
@@ -258,15 +224,15 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">56</span>
 <span class="k">var</span> <span class="nv">lastPokemon</span> <span class="o">=</span> <span class="kc">true</span>
 <span class="k">var</span> <span class="nv">oneHitKO</span> <span class="o">=</span> <span class="p">(</span><span class="n">damage</span> <span class="o">&gt;</span> <span class="n">remainingHP</span><span class="p">)</span>
-<span class="c1">// -&gt; true
-</span>
-<span class="o">!</span><span class="n">oneHitKO</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">&amp;&amp;</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">||</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<span class="c1">// -&gt; true</span>
+
+<span class="k">let</span> <span class="nv">notOneHitKO</span> <span class="o">=</span> <span class="o">!</span><span class="n">oneHitKO</span>
+<span class="c1">// -&gt; false</span>
+<span class="k">let</span> <span class="nv">andOperator</span> <span class="o">=</span> <span class="n">notOneHitKO</span> <span class="o">&amp;&amp;</span> <span class="n">lastPokemon</span>
+<span class="c1">// -&gt; false</span>
+<span class="k">let</span> <span class="nv">orOperator</span> <span class="o">=</span> <span class="n">notOneHitKO</span> <span class="o">||</span> <span class="n">lastPokemon</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
   </section>

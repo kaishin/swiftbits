@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-07-05 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/arrays/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/arrays/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-05-arrays.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-05-arrays.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-arrays">Declaring Arrays</h3>
@@ -114,15 +110,15 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>An array can only hold values of the same type:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">starters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Bulbasaur"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"Squirtle"</span><span class="p">]</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <p>You can create an array of a certain length and give its elements a default value like so:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">items</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">count</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">repeatedValue</span><span class="p">:</span> <span class="s">"Potion"</span><span class="p">)</span>
-<span class="c1">// ["Potion", "Potion", "Potion"]
-</span></code></pre>
+<span class="c1">// ["Potion", "Potion", "Potion"]</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-arrays">Inspecting Arrays</h3>
@@ -130,40 +126,40 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>You can get the number of values in an array using <code class="highlighter-rouge">count</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">count</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>To check whether an array is empty, you can use the <code class="highlighter-rouge">isEmpty()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>To get the first or last value<sup id="fnref:array1"><a href="#fn:array1" class="footnote">1</a></sup> in an array, use the <code class="highlighter-rouge">first()</code> and <code class="highlighter-rouge">last()</code> methods respectively:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">first</span>
-<span class="c1">// -&gt; "Bulbasaur"
-</span><span class="n">starters</span><span class="o">.</span><span class="n">last</span>
-<span class="c1">// -&gt; "Squirtle"
-</span></code></pre>
+<span class="c1">// -&gt; "Bulbasaur"</span>
+<span class="n">starters</span><span class="o">.</span><span class="n">last</span>
+<span class="c1">// -&gt; "Squirtle"</span>
+</code></pre>
 </div>
 
 <p>Use the <code class="highlighter-rouge">contains()</code> method to check if the array contains a given value:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isBulbasaurStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Bulbasaur"</span><span class="p">)</span>
-<span class="c1">// -&gt; true
-</span><span class="k">let</span> <span class="nv">isPidgeotStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Pidgeot"</span><span class="p">)</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; true</span>
+<span class="k">let</span> <span class="nv">isPidgeotStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Pidgeot"</span><span class="p">)</span>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>Beware that this won’t work if the value being checked is of a different type than the one the array holds:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="getting-array-values">Getting Array Values</h3>
@@ -171,8 +167,8 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>Use subscript syntax to access the value stored at a given index:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokemon</span> <span class="o">=</span> <span class="n">starters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1">// -&gt; "Bulbasaur"
-</span></code></pre>
+<span class="c1">// -&gt; "Bulbasaur"</span>
+</code></pre>
 </div>
 
 <p>Note that the first item has an index of 0.</p>
@@ -182,12 +178,12 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>To add a new value, use the <code class="highlighter-rouge">append()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Articuno"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno"]
-</span><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Zapdos"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno", "Zapdos"]
-</span><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Articuno"]</span>
+<span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Zapdos"</span><span class="p">)</span>
+<span class="c1">// -&gt; ["Articuno", "Zapdos"]</span>
+<span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
+<span class="c1">// -&gt; ["Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="concatenating-arrays">Concatenating Arrays</h3>
@@ -195,8 +191,8 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>You can concatenate two arrays using the <code class="highlighter-rouge">+=</code> operator:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span> <span class="o">+=</span> <span class="n">legendaries</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="mutating-arrays">Mutating Arrays</h3>
@@ -206,8 +202,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">otherLegendaries</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="nf">otherLegendaries</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="inserting-values">Inserting Values</h3>
@@ -215,8 +211,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To insert a value at a given index, use <code class="highlighter-rouge">insert</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="s">"Pikachu"</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="updating-array-values">Updating Array Values</h3>
@@ -224,8 +220,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To update an existing value, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Mewtwo"</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Mewtwo", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Mewtwo", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="deleting-array-values">Deleting Array Values</h3>
@@ -233,22 +229,22 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To delete a value at a specific index, use <code class="highlighter-rouge">removeAtIndex()</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeAtIndex</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Moltres"]</span>
+</code></pre>
 </div>
 
 <p>Use <code class="highlighter-rouge">removeLast()</code> to, remove the last value:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno"]</span>
+</code></pre>
 </div>
 
 <p>You can also remove multiple values by using <code class="highlighter-rouge">removeRange()</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeRange</span><span class="p">(</span><span class="mi">3</span><span class="o">...</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle"]</span>
+</code></pre>
 </div>
 
 <div class="footnotes">

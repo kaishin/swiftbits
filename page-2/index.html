@@ -13,7 +13,7 @@
   
   
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/page-2/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/page-2/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -72,8 +72,6 @@
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -92,11 +90,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-30-basic-operators.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-30-basic-operators.swift"> Github</a>.
       </p>
     
     <h3 id="assignment-operator">Assignment Operator</h3>
@@ -106,8 +102,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokémon</span> <span class="o">=</span> <span class="s">"Caterpie"</span>
 <span class="k">let</span> <span class="nv">wildPokémon</span> <span class="o">=</span> <span class="n">pokémon</span>
 <span class="n">wildPokémon</span>
-<span class="c1">// -&gt; Caterpie
-</span></code></pre>
+<span class="c1">// -&gt; Caterpie</span>
+</code></pre>
 </div>
 
 <p>The assignment operator does not return a value.</p>
@@ -117,21 +113,21 @@
 <p>Swift comes with all the arithmetic operators you would expect in a modern programming language.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">+</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45
-</span><span class="mi">35</span> <span class="o">-</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 25
-</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 20
-</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 45</span>
+<span class="mi">35</span> <span class="o">-</span> <span class="mi">10</span>
+<span class="c1">// -&gt; 25</span>
+<span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 20</span>
+<span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>The addition operator can also be used to concatenate two or more strings:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">"Viridian"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"City"</span>
-<span class="c1">// -&gt; Viridian City
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">cityName</span> <span class="o">=</span> <span class="s">"Viridian"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"City"</span>
+<span class="c1">// -&gt; Viridian City</span>
+</code></pre>
 </div>
 
 <p>Or arrays:</p>
@@ -139,8 +135,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">moves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"String Shot"</span><span class="p">,</span> <span class="s">"Tackle"</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">moreMoves</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Harden"</span><span class="p">]</span>
 <span class="k">var</span> <span class="nv">moveSet</span> <span class="o">=</span> <span class="n">moves</span> <span class="o">+</span> <span class="n">moreMoves</span>
-<span class="c1">// -&gt; ["String Shot", "Tackle", "Harden"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot", "Tackle", "Harden"]</span>
+</code></pre>
 </div>
 
 <h3 id="range-operators">Range Operators</h3>
@@ -150,33 +146,33 @@
 <p>The <em>closed range operator</em> includes the value corresponding to the upper bound:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">closedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">...</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot", Tackle"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot", Tackle"]</span>
+</code></pre>
 </div>
 
 <p>The <em>half-closed</em> range operator omits the value corresponding to the upper bound:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">halfClosedRange</span> <span class="o">=</span> <span class="n">moves</span><span class="p">[</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">// -&gt; ["String Shot"]
-</span></code></pre>
+<span class="c1">// -&gt; ["String Shot"]</span>
+</code></pre>
 </div>
 
 <h3 id="remainder-operator">Remainder Operator</h3>
 
 <p>The remainder operator (<code class="highlighter-rouge">%</code>) outputs the remainder of a division of two numbers:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
-<span class="c1">// -&gt; 1
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">remainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="c1">// -&gt; 1</span>
+</code></pre>
 </div>
 
 <p>It also works with floats and negative numbers:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
-<span class="c1">// -&gt; 5
-</span><span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
-<span class="c1">// -&gt; 3.0
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">negativeRemainder</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
+<span class="c1">// -&gt; 5</span>
+<span class="k">let</span> <span class="nv">decimalRemainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
+<span class="c1">// -&gt; 3.0</span>
+</code></pre>
 </div>
 
 <h3 id="compound-assignment-operators">Compound Assignment Operators</h3>
@@ -185,46 +181,16 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
 <span class="n">remainingHP</span> <span class="o">+=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 45 (remainingHP = remainingHP + 10)
-</span><span class="n">remainingHP</span> <span class="o">-=</span> <span class="mi">10</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP - 10)
-</span><span class="n">remainingHP</span> <span class="o">*=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 70 (remainingHP = remainingHP * 2)
-</span><span class="n">remainingHP</span> <span class="o">/=</span> <span class="mi">2</span>
-<span class="c1">// -&gt; 35 (remainingHP = remainingHP / 2)
-</span><span class="n">remainingHP</span> <span class="o">%=</span> <span class="mi">6</span>
-<span class="c1">// -&gt; 5 (remainingHP = remainingHP % 6)
-</span></code></pre>
-</div>
-
-<h3 id="unary-operators">Unary Operators</h3>
-
-<p>Swift has all the unary operators that are common in other languages:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">remainingHP</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="o">++</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 36
-</span><span class="o">--</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span>
-<span class="k">let</span> <span class="nv">damageToKO</span> <span class="o">=</span> <span class="o">-</span><span class="n">remainingHP</span>
-<span class="c1">// -&gt; -35
-</span><span class="o">+</span><span class="n">damageToKO</span>
-<span class="c1">// -&gt; -35
-</span></code></pre>
-</div>
-
-<p>Note that the unary <em>plus</em> operator is just syntactic sugar and does not change the value it was prepended to.</p>
-
-<p>If the increment or decrement operators are appended as postfix operators (<code class="highlighter-rouge">value++</code>), the variable is modified <em>after</em> its value is returned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">stepOne</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepTwo</span> <span class="o">=</span> <span class="n">remainingHP</span><span class="o">--</span>
-<span class="c1">// -&gt; 35
-</span><span class="k">let</span> <span class="nv">stepThree</span> <span class="o">=</span> <span class="n">remainingHP</span>
-<span class="c1">// -&gt; 34
-</span></code></pre>
+<span class="c1">// -&gt; 45 (remainingHP = remainingHP + 10)</span>
+<span class="n">remainingHP</span> <span class="o">-=</span> <span class="mi">10</span>
+<span class="c1">// -&gt; 35 (remainingHP = remainingHP - 10)</span>
+<span class="n">remainingHP</span> <span class="o">*=</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 70 (remainingHP = remainingHP * 2)</span>
+<span class="n">remainingHP</span> <span class="o">/=</span> <span class="mi">2</span>
+<span class="c1">// -&gt; 35 (remainingHP = remainingHP / 2)</span>
+<span class="n">remainingHP</span> <span class="o">%=</span> <span class="mi">6</span>
+<span class="c1">// -&gt; 5 (remainingHP = remainingHP % 6)</span>
+</code></pre>
 </div>
 
 <h3 id="comparison-operators">Comparison Operators</h3>
@@ -232,20 +198,20 @@
 <p>Comparison operators are binary operators that compare two values and return a boolean:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">35</span> <span class="o">==</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is equal)
-</span><span class="mi">180</span> <span class="o">!=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is not equal)
-</span>
+<span class="c1">// -&gt; true (is equal)</span>
+<span class="mi">180</span> <span class="o">!=</span> <span class="mi">35</span>
+<span class="c1">// -&gt; true (is not equal)</span>
+
 <span class="mi">180</span> <span class="o">&gt;</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than)
-</span><span class="mi">35</span> <span class="o">&lt;</span> <span class="mi">180</span>
-<span class="c1">// -&gt; true (is less than)
-</span>
+<span class="c1">// -&gt; true (is greater than)</span>
+<span class="mi">35</span> <span class="o">&lt;</span> <span class="mi">180</span>
+<span class="c1">// -&gt; true (is less than)</span>
+
 <span class="mi">35</span> <span class="o">&gt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; true (is greater than or equal)
-</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="mi">35</span>
-<span class="c1">// -&gt; false (is less than or equal)
-</span></code></pre>
+<span class="c1">// -&gt; true (is greater than or equal)</span>
+<span class="mi">180</span> <span class="o">&lt;=</span> <span class="mi">35</span>
+<span class="c1">// -&gt; false (is less than or equal)</span>
+</code></pre>
 </div>
 
 <h3 id="logical-operators">Logical Operators</h3>
@@ -261,15 +227,15 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">56</span>
 <span class="k">var</span> <span class="nv">lastPokemon</span> <span class="o">=</span> <span class="kc">true</span>
 <span class="k">var</span> <span class="nv">oneHitKO</span> <span class="o">=</span> <span class="p">(</span><span class="n">damage</span> <span class="o">&gt;</span> <span class="n">remainingHP</span><span class="p">)</span>
-<span class="c1">// -&gt; true
-</span>
-<span class="o">!</span><span class="n">oneHitKO</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">&amp;&amp;</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; false
-</span><span class="o">!</span><span class="n">oneHitKO</span> <span class="o">||</span> <span class="n">lastPokemon</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<span class="c1">// -&gt; true</span>
+
+<span class="k">let</span> <span class="nv">notOneHitKO</span> <span class="o">=</span> <span class="o">!</span><span class="n">oneHitKO</span>
+<span class="c1">// -&gt; false</span>
+<span class="k">let</span> <span class="nv">andOperator</span> <span class="o">=</span> <span class="n">notOneHitKO</span> <span class="o">&amp;&amp;</span> <span class="n">lastPokemon</span>
+<span class="c1">// -&gt; false</span>
+<span class="k">let</span> <span class="nv">orOperator</span> <span class="o">=</span> <span class="n">notOneHitKO</span> <span class="o">||</span> <span class="n">lastPokemon</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
   </section>
@@ -279,8 +245,6 @@
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -299,11 +263,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-28-tuples.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-28-tuples.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-tuples">Declaring Tuples</h3>
@@ -331,26 +293,26 @@
 <p>Use dot syntax to access the value stored at a given index:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">slowSpeedLabel</span> <span class="o">=</span> <span class="n">slowTextSpeed</span><span class="o">.</span><span class="mi">1</span>
-<span class="c1">// -&gt; Slow
-</span></code></pre>
+<span class="c1">// -&gt; Slow</span>
+</code></pre>
 </div>
 
 <p>To retrieve some values while ignoring others, use the following syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">fastSpeedLabel</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
 <span class="n">fastSpeedLabel</span>
-<span class="c1">// -&gt; Fast
-</span><span class="nf">let</span> <span class="p">(</span><span class="n">fastSpeedValue</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
+<span class="c1">// -&gt; Fast</span>
+<span class="nf">let</span> <span class="p">(</span><span class="n">fastSpeedValue</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">fastTextSpeed</span>
 <span class="n">fastSpeedValue</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>If the values were labeld during declaration, you can access them using their labels:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">speedLabel</span> <span class="o">=</span> <span class="n">textSpeed</span><span class="o">.</span><span class="n">label</span>
-<span class="c1">// -&gt; Medium
-</span></code></pre>
+<span class="c1">// -&gt; Medium</span>
+</code></pre>
 </div>
 
 <h3 id="updating-tuple-values">Updating Tuple Values</h3>
@@ -359,8 +321,8 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">textSpeed</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s">"Fast"</span>
 <span class="n">textSpeed</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="c1">// -&gt; (3, "Fast")
-</span></code></pre>
+<span class="c1">// -&gt; (3, "Fast")</span>
+</code></pre>
 </div>
 
   </section>
@@ -370,8 +332,6 @@
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -390,11 +350,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-20-dictionaries.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-20-dictionaries.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-dictionaries">Declaring Dictionaries</h3>
@@ -420,8 +378,8 @@
 <p>All keys must be of the same type. The same applies for values:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="s">"55%"</span><span class="p">]</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-dictionaries">Inspecting Dictionaries</h3>
@@ -429,15 +387,15 @@
 <p>You can get the number of key/value pairs in a dictionary using <code class="highlighter-rouge">count</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="o">.</span><span class="n">count</span>
-<span class="c1">// -&gt; 2
-</span></code></pre>
+<span class="c1">// -&gt; 2</span>
+</code></pre>
 </div>
 
 <p>To check whether a dictionary is empty, you can use the <code class="highlighter-rouge">isEmpty()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <h3 id="getting-dictionary-values">Getting Dictionary Values</h3>
@@ -446,8 +404,8 @@
 a given key.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">rattataRate</span> <span class="o">=</span> <span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Rattata"</span><span class="p">]</span>
-<span class="c1">// -&gt; 0.45
-</span></code></pre>
+<span class="c1">// -&gt; 0.45</span>
+</code></pre>
 </div>
 
 <h3 id="adding-to-a-dictionary">Adding to a Dictionary</h3>
@@ -455,8 +413,8 @@ a given key.</p>
 <p>To add a new key/value pair, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">fishingEncounterRates</span><span class="p">[</span><span class="s">"Poliwag"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="c1">// -&gt; ["Poliwag": 0.5]
-</span></code></pre>
+<span class="c1">// -&gt; ["Poliwag": 0.5]</span>
+</code></pre>
 </div>
 
 <h3 id="updating-dictionary-values">Updating Dictionary Values</h3>
@@ -464,8 +422,8 @@ a given key.</p>
 <p>To update an existing value, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Mewtwo"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="c1">// -&gt; ["Rattata": 0.45, "Mewtwo": 0, "Pidgey": 0.55]
-</span></code></pre>
+<span class="c1">// -&gt; ["Rattata": 0.45, "Mewtwo": 0, "Pidgey": 0.55]</span>
+</code></pre>
 </div>
 
 <h3 id="mutating-dictionaries">Mutating Dictionaries</h3>
@@ -474,8 +432,8 @@ a given key.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokéMart</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Poké Ball"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"Potion"</span><span class="p">:</span> <span class="mi">300</span><span class="p">]</span>
 <span class="n">pokéMart</span><span class="p">[</span><span class="s">"Antidote"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="deleting-dictionary-values">Deleting Dictionary Values</h3>
@@ -483,17 +441,17 @@ a given key.</p>
 <p>To delete an existing key-value pair, make its value <code class="highlighter-rouge">nil</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Mewtwo"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; ["Rattata": 0.45, "Pidgey": 0.55]
-</span></code></pre>
+<span class="c1">// -&gt; ["Rattata": 0.45, "Pidgey": 0.55]</span>
+</code></pre>
 </div>
 
 <h3 id="comparing-dictionaries">Comparing Dictionaries</h3>
 
 <p>You can compare two dictioanries using the <code class="highlighter-rouge">==</code> operator:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">,</span> <span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">]</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">comparison</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">,</span> <span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">]</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
 <p>Notice how the order of key-value pairs doesn’t matter in dictionaries.</p>
@@ -513,8 +471,6 @@ a given key.</p>
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -533,11 +489,9 @@ a given key.</p>
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-05-arrays.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-05-arrays.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-arrays">Declaring Arrays</h3>
@@ -558,15 +512,15 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>An array can only hold values of the same type:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">starters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Bulbasaur"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"Squirtle"</span><span class="p">]</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <p>You can create an array of a certain length and give its elements a default value like so:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">items</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">count</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">repeatedValue</span><span class="p">:</span> <span class="s">"Potion"</span><span class="p">)</span>
-<span class="c1">// ["Potion", "Potion", "Potion"]
-</span></code></pre>
+<span class="c1">// ["Potion", "Potion", "Potion"]</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-arrays">Inspecting Arrays</h3>
@@ -574,40 +528,40 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>You can get the number of values in an array using <code class="highlighter-rouge">count</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">count</span>
-<span class="c1">// -&gt; 3
-</span></code></pre>
+<span class="c1">// -&gt; 3</span>
+</code></pre>
 </div>
 
 <p>To check whether an array is empty, you can use the <code class="highlighter-rouge">isEmpty()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>To get the first or last value<sup id="fnref:array1"><a href="#fn:array1" class="footnote">1</a></sup> in an array, use the <code class="highlighter-rouge">first()</code> and <code class="highlighter-rouge">last()</code> methods respectively:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="n">first</span>
-<span class="c1">// -&gt; "Bulbasaur"
-</span><span class="n">starters</span><span class="o">.</span><span class="n">last</span>
-<span class="c1">// -&gt; "Squirtle"
-</span></code></pre>
+<span class="c1">// -&gt; "Bulbasaur"</span>
+<span class="n">starters</span><span class="o">.</span><span class="n">last</span>
+<span class="c1">// -&gt; "Squirtle"</span>
+</code></pre>
 </div>
 
 <p>Use the <code class="highlighter-rouge">contains()</code> method to check if the array contains a given value:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isBulbasaurStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Bulbasaur"</span><span class="p">)</span>
-<span class="c1">// -&gt; true
-</span><span class="k">let</span> <span class="nv">isPidgeotStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Pidgeot"</span><span class="p">)</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; true</span>
+<span class="k">let</span> <span class="nv">isPidgeotStarter</span> <span class="o">=</span> <span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"Pidgeot"</span><span class="p">)</span>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>Beware that this won’t work if the value being checked is of a different type than the one the array holds:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="getting-array-values">Getting Array Values</h3>
@@ -615,8 +569,8 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>Use subscript syntax to access the value stored at a given index:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokemon</span> <span class="o">=</span> <span class="n">starters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1">// -&gt; "Bulbasaur"
-</span></code></pre>
+<span class="c1">// -&gt; "Bulbasaur"</span>
+</code></pre>
 </div>
 
 <p>Note that the first item has an index of 0.</p>
@@ -626,12 +580,12 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>To add a new value, use the <code class="highlighter-rouge">append()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Articuno"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno"]
-</span><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Zapdos"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno", "Zapdos"]
-</span><span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Articuno"]</span>
+<span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Zapdos"</span><span class="p">)</span>
+<span class="c1">// -&gt; ["Articuno", "Zapdos"]</span>
+<span class="n">legendaries</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
+<span class="c1">// -&gt; ["Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="concatenating-arrays">Concatenating Arrays</h3>
@@ -639,8 +593,8 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 <p>You can concatenate two arrays using the <code class="highlighter-rouge">+=</code> operator:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span> <span class="o">+=</span> <span class="n">legendaries</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="mutating-arrays">Mutating Arrays</h3>
@@ -650,8 +604,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">otherLegendaries</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="nf">otherLegendaries</span><span class="p">(</span><span class="s">"Moltres"</span><span class="p">)</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="inserting-values">Inserting Values</h3>
@@ -659,8 +613,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To insert a value at a given index, use <code class="highlighter-rouge">insert</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="s">"Pikachu"</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Zapdos", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Zapdos", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="updating-array-values">Updating Array Values</h3>
@@ -668,8 +622,8 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To update an existing value, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Mewtwo"</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Mewtwo", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Mewtwo", "Moltres"]</span>
+</code></pre>
 </div>
 
 <h3 id="deleting-array-values">Deleting Array Values</h3>
@@ -677,22 +631,22 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>To delete a value at a specific index, use <code class="highlighter-rouge">removeAtIndex()</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeAtIndex</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Moltres"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Moltres"]</span>
+</code></pre>
 </div>
 
 <p>Use <code class="highlighter-rouge">removeLast()</code> to, remove the last value:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno"]</span>
+</code></pre>
 </div>
 
 <p>You can also remove multiple values by using <code class="highlighter-rouge">removeRange()</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeRange</span><span class="p">(</span><span class="mi">3</span><span class="o">...</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle"]
-</span></code></pre>
+<span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle"]</span>
+</code></pre>
 </div>
 
 <div class="footnotes">
@@ -710,8 +664,6 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
   
     <li class="post-list-item">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -730,11 +682,9 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-06-13-getting-started.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-06-13-getting-started.swift"> Github</a>.
       </p>
     
     <h3 id="console-output">Console Output</h3>
@@ -762,14 +712,13 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 <p>…but cannot be <code class="highlighter-rouge">nil</code>, unless they are optional<sup id="fnref:intro1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">playerName</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="constants">Constants</h3>
 
-<p>Constants are declared similarly to <a href="#variables">variables</a>, except they use the<br />
-keyword <code class="highlighter-rouge">let</code> instead:</p>
+<p>Constants are declared similarly to <a href="#variables">variables</a>, except they use the keyword <code class="highlighter-rouge">let</code> instead:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">gameTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Pokémon Red"</span>
 </code></pre>
@@ -778,8 +727,8 @@ keyword <code class="highlighter-rouge">let</code> instead:</p>
 <p>…and cannot be re-assigned:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">gameTitle</span> <span class="o">=</span> <span class="s">"Pokémon Blue"</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <p>Like variables, constants cannot be <code class="highlighter-rouge">nil</code><sup id="fnref:intro1:1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
@@ -799,8 +748,8 @@ keyword <code class="highlighter-rouge">let</code> instead:</p>
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">totalHP</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="k">var</span> <span class="nv">currentHP</span> <span class="o">=</span> <span class="s">"Current HP: </span><span class="se">\(</span><span class="n">totalHP</span> <span class="o">-</span> <span class="n">damage</span><span class="se">)</span><span class="s">"</span>
-<span class="c1">// -&gt; "Current HP: 5"
-</span></code></pre>
+<span class="c1">// -&gt; "Current HP: 5"</span>
+</code></pre>
 </div>
 
 <div class="footnotes">
@@ -823,7 +772,7 @@ keyword <code class="highlighter-rouge">let</code> instead:</p>
   <ul class="pagination">
     
     <li>
-      <a class="next-page-link" aria-label="next page" title="Next Page" href="/index.html">&#65308;</a>
+      <a class="next-page-link" aria-label="next page" title="Next Page" href="/">&#65308;</a>
     </li>
     
 

@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-09-16 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/enumerations/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/enumerations/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-09-16-enumerations.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-09-16-enumerations.swift"> Github</a>.
       </p>
     
     <h3 id="defining-enumerations">Defining Enumerations</h3>
@@ -142,8 +138,8 @@
 <span class="k">case</span> <span class="o">.</span><span class="kt">Fire</span><span class="p">:</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Wild Caterpies, here I come!"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Brock, here I come!
-</span></code></pre>
+<span class="c1">// -&gt; Brock, here I come!</span>
+</code></pre>
 </div>
 
 <h3 id="associated-values">Associated Values</h3>
@@ -170,8 +166,8 @@
 <span class="k">case</span> <span class="o">.</span><span class="kt">Status</span><span class="p">(</span><span class="k">let</span> <span class="nv">statusEffect</span><span class="p">):</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"A status move that inflicts </span><span class="se">\(</span><span class="n">statusEffect</span><span class="se">)</span><span class="s">."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Deals damage with a base power of 50.
-</span></code></pre>
+<span class="c1">// -&gt; Deals damage with a base power of 50.</span>
+</code></pre>
 </div>
 
 <h3 id="raw-values">Raw Values</h3>
@@ -185,15 +181,15 @@
 <span class="p">}</span>
 
 <span class="k">var</span> <span class="nv">physicalTypeName</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
-<span class="c1">// -&gt; "Physical Move"
-</span></code></pre>
+<span class="c1">// -&gt; "Physical Move"</span>
+</code></pre>
 </div>
 
 <p>To get an enumeration member from a raw value, use <code class="highlighter-rouge">MoveCategory(rawValue: String)</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">statusType</span> <span class="o">=</span> <span class="kt">MoveCategory</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"Status Move"</span><span class="p">)</span>
-<span class="c1">// -&gt; .Status
-</span></code></pre>
+<span class="c1">// -&gt; .Status</span>
+</code></pre>
 </div>
 
 <p>Raw values can be <code class="highlighter-rouge">String</code>, <code class="highlighter-rouge">Character</code>, <code class="highlighter-rouge">Int</code>, or <code class="highlighter-rouge">Float</code>/<code class="highlighter-rouge">Double</code>.<br />
@@ -206,8 +202,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="p">}</span>
 
 <span class="n">physicalTypeName</span> <span class="o">=</span> <span class="kt">RawMoveCategory</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="n">rawValue</span>
-<span class="c1">// -&gt; "Physical"
-</span></code></pre>
+<span class="c1">// -&gt; "Physical"</span>
+</code></pre>
 </div>
 
 

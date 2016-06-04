@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://swiftbits.redalemeden.com/sitemap.xml
+Sitemap: https://swiftbits.redalemeden.com/sitemap.xml

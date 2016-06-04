@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-07-05 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/dictionaries/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/dictionaries/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-07-20-dictionaries.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-20-dictionaries.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-dictionaries">Declaring Dictionaries</h3>
@@ -119,8 +115,8 @@
 <p>All keys must be of the same type. The same applies for values:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="s">"55%"</span><span class="p">]</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-dictionaries">Inspecting Dictionaries</h3>
@@ -128,15 +124,15 @@
 <p>You can get the number of key/value pairs in a dictionary using <code class="highlighter-rouge">count</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="o">.</span><span class="n">count</span>
-<span class="c1">// -&gt; 2
-</span></code></pre>
+<span class="c1">// -&gt; 2</span>
+</code></pre>
 </div>
 
 <p>To check whether a dictionary is empty, you can use the <code class="highlighter-rouge">isEmpty()</code> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <h3 id="getting-dictionary-values">Getting Dictionary Values</h3>
@@ -145,8 +141,8 @@
 a given key.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">rattataRate</span> <span class="o">=</span> <span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Rattata"</span><span class="p">]</span>
-<span class="c1">// -&gt; 0.45
-</span></code></pre>
+<span class="c1">// -&gt; 0.45</span>
+</code></pre>
 </div>
 
 <h3 id="adding-to-a-dictionary">Adding to a Dictionary</h3>
@@ -154,8 +150,8 @@ a given key.</p>
 <p>To add a new key/value pair, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">fishingEncounterRates</span><span class="p">[</span><span class="s">"Poliwag"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="c1">// -&gt; ["Poliwag": 0.5]
-</span></code></pre>
+<span class="c1">// -&gt; ["Poliwag": 0.5]</span>
+</code></pre>
 </div>
 
 <h3 id="updating-dictionary-values">Updating Dictionary Values</h3>
@@ -163,8 +159,8 @@ a given key.</p>
 <p>To update an existing value, use the subscript syntax:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Mewtwo"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="c1">// -&gt; ["Rattata": 0.45, "Mewtwo": 0, "Pidgey": 0.55]
-</span></code></pre>
+<span class="c1">// -&gt; ["Rattata": 0.45, "Mewtwo": 0, "Pidgey": 0.55]</span>
+</code></pre>
 </div>
 
 <h3 id="mutating-dictionaries">Mutating Dictionaries</h3>
@@ -173,8 +169,8 @@ a given key.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">pokéMart</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Poké Ball"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"Potion"</span><span class="p">:</span> <span class="mi">300</span><span class="p">]</span>
 <span class="n">pokéMart</span><span class="p">[</span><span class="s">"Antidote"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="c1">// -&gt; Error
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+</code></pre>
 </div>
 
 <h3 id="deleting-dictionary-values">Deleting Dictionary Values</h3>
@@ -182,17 +178,17 @@ a given key.</p>
 <p>To delete an existing key-value pair, make its value <code class="highlighter-rouge">nil</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">routeOneEncounterRates</span><span class="p">[</span><span class="s">"Mewtwo"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; ["Rattata": 0.45, "Pidgey": 0.55]
-</span></code></pre>
+<span class="c1">// -&gt; ["Rattata": 0.45, "Pidgey": 0.55]</span>
+</code></pre>
 </div>
 
 <h3 id="comparing-dictionaries">Comparing Dictionaries</h3>
 
 <p>You can compare two dictioanries using the <code class="highlighter-rouge">==</code> operator:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">,</span> <span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">]</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">comparison</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s">"Pidgey"</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">,</span> <span class="s">"Rattata"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">]</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
 <p>Notice how the order of key-value pairs doesn’t matter in dictionaries.</p>

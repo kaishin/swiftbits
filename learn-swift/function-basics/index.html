@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-08-28 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/function-basics/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/function-basics/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,11 +87,9 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-28-function-basics.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-28-function-basics.swift"> Github</a>.
       </p>
     
     <h3 id="defining-functions">Defining Functions</h3>
@@ -133,10 +129,10 @@
 <p>To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can’t be omitted even in the absence of required parameters:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Ultra Ball"</span><span class="p">)</span>
-<span class="c1">// -&gt; Items
-// -&gt; Ultra Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Ultra Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="multiple-parameters">Multiple Parameters</h3>
@@ -149,11 +145,11 @@
 <span class="p">}</span>
 
 <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Super Ball"</span><span class="p">,</span> <span class="nv">statusAttack</span><span class="p">:</span> <span class="s">"Hypnosis"</span><span class="p">)</span>
-<span class="c1">// -&gt; Hypnosis
-// -&gt; Items
-// -&gt; Ultra Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Hypnosis</span>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Ultra Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="multiple-return-values">Multiple Return Values</h3>
@@ -171,10 +167,10 @@
 <span class="p">}</span>
 
 <span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>
-<span class="c1">// -&gt; (5, 67)
-</span><span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="c1">// -&gt; (1, 19)
-</span></code></pre>
+<span class="c1">// -&gt; (5, 67)</span>
+<span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="c1">// -&gt; (1, 19)</span>
+</code></pre>
 </div>
 
 <h3 id="external-parameter-names">External Parameter Names</h3>
@@ -188,10 +184,10 @@
 <span class="p">}</span>
 
 <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">withBall</span><span class="p">:</span> <span class="s">"Speed Ball"</span><span class="p">)</span>
-<span class="c1">// -&gt; Items
-// -&gt; Speed Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Speed Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <p>Notice how the parameter name is now part of the function’s signature.</p>
@@ -207,10 +203,10 @@
 <span class="p">}</span>
 
 <span class="nf">lazilyCatchWildPokémon</span><span class="p">()</span>
-<span class="c1">// -&gt; Items
-// -&gt; Poké Ball
-// -&gt; Wash, rinse, repeat.
-</span></code></pre>
+<span class="c1">// -&gt; Items</span>
+<span class="c1">// -&gt; Poké Ball</span>
+<span class="c1">// -&gt; Wash, rinse, repeat.</span>
+</code></pre>
 </div>
 
 <h3 id="variadic-parameters">Variadic Parameters</h3>
@@ -224,8 +220,8 @@
 <span class="p">}</span>
 
 <span class="nf">useMoves</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">,</span> <span class="s">"Leech Seed"</span><span class="p">)</span>
-<span class="c1">// -&gt; "Tackle", "Leech Seed"
-</span></code></pre>
+<span class="c1">// -&gt; "Tackle", "Leech Seed"</span>
+</code></pre>
 </div>
 
   </section>

@@ -3,11 +3,11 @@
   <channel>
     <title>Swiftbits</title>
     <description>Swift snippets, tips, resources, and links.</description>
-    <link>http://swiftbits.redalemeden.com/</link>
-    <atom:link href="http://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Sep 2015 12:40:59 +0200</pubDate>
-    <lastBuildDate>Tue, 01 Sep 2015 12:40:59 +0200</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>https://swiftbits.redalemeden.com/</link>
+    <atom:link href="https://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 04 Jun 2016 22:44:51 +0200</pubDate>
+    <lastBuildDate>Sat, 04 Jun 2016 22:44:51 +0200</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Site Relaunch</title>
@@ -45,8 +45,8 @@
 &lt;p&gt;Happy Swifting!&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Aug 2015 08:26:02 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/meta/site-relaunch/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/meta/site-relaunch/</guid>
+        <link>https://swiftbits.redalemeden.com/meta/site-relaunch/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/meta/site-relaunch/</guid>
         
         
         <category>meta</category>
@@ -101,8 +101,8 @@
 &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Fire&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wild Caterpies, here I come!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Brock, here I come!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Brock, here I come!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;associated-values&quot;&gt;Associated Values&lt;/h3&gt;
@@ -129,8 +129,8 @@
 &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A status move that inflicts &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statusEffect&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Deals damage with a base power of 50.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Deals damage with a base power of 50.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;raw-values&quot;&gt;Raw Values&lt;/h3&gt;
@@ -144,15 +144,15 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;physicalTypeName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MoveCategory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Physical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawValue&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Physical Move&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Physical Move&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To get an enumeration member from a raw value, use &lt;code class=&quot;highlighter-rouge&quot;&gt;MoveCategory(rawValue: String)&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MoveCategory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rawValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Status Move&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; .Status
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; .Status&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Raw values can be &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Character&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Int&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;Float&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;Double&lt;/code&gt;.&lt;br /&gt;
@@ -165,14 +165,14 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;physicalTypeName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;RawMoveCategory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Physical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawValue&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Physical&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Physical&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 </description>
         <pubDate>Tue, 16 Sep 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/enumerations/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/enumerations/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/enumerations/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/enumerations/</guid>
         
         <category>beginner</category>
         
@@ -224,10 +224,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can’t be omitted even in the absence of required parameters:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ultra Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items
-// -&amp;gt; Ultra Ball
-// -&amp;gt; Wash, rinse, repeat.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Ultra Ball&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;multiple-parameters&quot;&gt;Multiple Parameters&lt;/h3&gt;
@@ -240,11 +240,11 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Super Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusAttack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hypnosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Hypnosis
-// -&amp;gt; Items
-// -&amp;gt; Ultra Ball
-// -&amp;gt; Wash, rinse, repeat.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Hypnosis&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Ultra Ball&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;multiple-return-values&quot;&gt;Multiple Return Values&lt;/h3&gt;
@@ -262,10 +262,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (5, 67)
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (1, 19)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (5, 67)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (1, 19)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;external-parameter-names&quot;&gt;External Parameter Names&lt;/h3&gt;
@@ -279,10 +279,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withBall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Speed Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items
-// -&amp;gt; Speed Ball
-// -&amp;gt; Wash, rinse, repeat.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Speed Ball&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Notice how the parameter name is now part of the function’s signature.&lt;/p&gt;
@@ -298,10 +298,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;lazilyCatchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items
-// -&amp;gt; Poké Ball
-// -&amp;gt; Wash, rinse, repeat.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Poké Ball&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;variadic-parameters&quot;&gt;Variadic Parameters&lt;/h3&gt;
@@ -315,13 +315,13 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;useMoves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Leech Seed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Tackle&quot;, &quot;Leech Seed&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Tackle&quot;, &quot;Leech Seed&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Aug 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/function-basics/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/function-basics/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/function-basics/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/function-basics/</guid>
         
         <category>beginner</category>
         
@@ -340,21 +340,21 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;p&gt;Optionals are variables or constants that can either have a value or be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;.None&lt;/code&gt; for the picky among you). They are defined by appending a &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; at the end of the type in the declaration:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;heldItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Pokémon may or may not be holding an item
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Life Orb&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Life Orb&quot;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; nil
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;heldItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Pokémon may or may not be holding an item&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Life Orb&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Life Orb&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;inspecting-optionals&quot;&gt;Inspecting Optionals&lt;/h3&gt;
 
 &lt;p&gt;You can compare the optional against &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; to find out if it contains a value or not:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isNil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This can also be used in &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; statements:&lt;/p&gt;
@@ -362,8 +362,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No held items.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; No held items.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; No held items.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;forced-unwrapping&quot;&gt;Forced Unwrapping&lt;/h3&gt;
@@ -373,8 +373,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Life Orb&quot;&lt;/span&gt;
 
 &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;You knocked off the foe&#39;s Caterpie&#39;s &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; You knocked off the foe&#39;s Caterpie&#39;s Life Orb
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; You knocked off the foe&#39;s Caterpie&#39;s Life Orb&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Unwrapping allows you to directly access the value contained in the optional.&lt;/p&gt;
@@ -386,8 +386,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;itemName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Knock off the &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Knock off the Life Orb
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Knock off the Life Orb&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Starting Swift 1.2, it became possible to bind more than one optional in the same declaration:&lt;/p&gt;
@@ -397,8 +397,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;itemName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heldItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;moveName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moveName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; the &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Knock off the Life Orb
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Knock off the Life Orb&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;implicit-unwrapping&quot;&gt;Implicit Unwrapping&lt;/h3&gt;
@@ -407,8 +407,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;implicitlyUnwrappedItemName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Berry&quot;&lt;/span&gt;
 &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wild Vulpix always carry a &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;implicitlyUnwrappedItemName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Wild Vulpix always carry a Berry&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Wild Vulpix always carry a Berry&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Using this method, you don’t have to append &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; to unwrap the value contained in the optional; it will be implicitly unwrapped for you.&lt;/p&gt;
@@ -419,10 +419,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;staryuHeldItemRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Stardust&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Star Piece&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;staryuHeldItemRates&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;staryuHeldItemRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;staryuHeldItemRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Optional chaining can also be used to get/set properties, which will be introduced later.&lt;/p&gt;
@@ -433,17 +433,17 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;preferredHeldItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Leftovers&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;itemToHold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferredHeldItem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Life Orb&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Leftovers&quot;
-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Leftovers&quot;&lt;/span&gt;
+
 &lt;span class=&quot;n&quot;&gt;preferredHeldItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;itemToHold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preferredHeldItem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Life Orb&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Life Orb&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Life Orb&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 20:55:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/optionals/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/optionals/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/optionals/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/optionals/</guid>
         
         <category>beginner</category>
         
@@ -467,8 +467,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wildPokémonType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Bug&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Go! Charmander!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;With &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt;:&lt;/p&gt;
@@ -478,8 +478,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Tackle
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Tackle&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;chaining-conditionals&quot;&gt;Chaining Conditionals&lt;/h3&gt;
@@ -493,8 +493,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Come back, Bulbasaur!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Come back, Bulbasaur!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;switch-statements&quot;&gt;Switch Statements&lt;/h3&gt;
@@ -509,8 +509,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Go! Pikachu!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt; statement needs to be exhaustive; every possible value should be covered. The &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; case covers all the remaining cases.&lt;/p&gt;
@@ -525,8 +525,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Go! Pikachu!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go! Charmander!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;switch-fall-through&quot;&gt;Switch Fall-through&lt;/h3&gt;
@@ -541,8 +541,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pikachu will not be sent out this round.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go, Squirtle!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Go, Squirtle!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;You can also explicitly end execution using the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt; anywhere in the statement.&lt;/p&gt;
@@ -563,8 +563,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hackemon.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Now we&#39;re talking!
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Now we&#39;re talking!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;tuple-matching&quot;&gt;Tuple Matching&lt;/h3&gt;
@@ -583,8 +583,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Not competitive enough.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Good physical sweeper.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Good physical sweeper.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;where&quot;&gt;Where&lt;/h3&gt;
@@ -599,13 +599,13 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Unbalanced attack stats.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Perfectly balanced attack stats.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Perfectly balanced attack stats.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 17:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</guid>
         
         <category>beginner</category>
         
@@ -627,8 +627,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pokémon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Caterpie&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;wildPokémon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pokémon&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;wildPokémon&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Caterpie
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Caterpie&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The assignment operator does not return a value.&lt;/p&gt;
@@ -638,21 +638,21 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;Swift comes with all the arithmetic operators you would expect in a modern programming language.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 45
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 25
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 20
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 45&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 25&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 20&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The addition operator can also be used to concatenate two or more strings:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Viridian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;City&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Viridian City
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cityName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Viridian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;City&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Viridian City&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Or arrays:&lt;/p&gt;
@@ -660,8 +660,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;moves&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;String Shot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;moreMoves&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Harden&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;moveSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moves&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moreMoves&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;, &quot;Tackle&quot;, &quot;Harden&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;, &quot;Tackle&quot;, &quot;Harden&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;range-operators&quot;&gt;Range Operators&lt;/h3&gt;
@@ -671,33 +671,33 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;The &lt;em&gt;closed range operator&lt;/em&gt; includes the value corresponding to the upper bound:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;closedRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;, Tackle&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;, Tackle&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The &lt;em&gt;half-closed&lt;/em&gt; range operator omits the value corresponding to the upper bound:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;halfClosedRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;String Shot&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;remainder-operator&quot;&gt;Remainder Operator&lt;/h3&gt;
 
 &lt;p&gt;The remainder operator (&lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;) outputs the remainder of a division of two numbers:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;remainder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;It also works with floats and negative numbers:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 5
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.5&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3.0
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;negativeRemainder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 5&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;decimalRemainder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.5&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;compound-assignment-operators&quot;&gt;Compound Assignment Operators&lt;/h3&gt;
@@ -706,46 +706,16 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 45 (remainingHP = remainingHP + 10)
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35 (remainingHP = remainingHP - 10)
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 70 (remainingHP = remainingHP * 2)
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35 (remainingHP = remainingHP / 2)
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 5 (remainingHP = remainingHP % 6)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;unary-operators&quot;&gt;Unary Operators&lt;/h3&gt;
-
-&lt;p&gt;Swift has all the unary operators that are common in other languages:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 36
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damageToKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; -35
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;damageToKO&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; -35
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that the unary &lt;em&gt;plus&lt;/em&gt; operator is just syntactic sugar and does not change the value it was prepended to.&lt;/p&gt;
-
-&lt;p&gt;If the increment or decrement operators are appended as postfix operators (&lt;code class=&quot;highlighter-rouge&quot;&gt;value++&lt;/code&gt;), the variable is modified &lt;em&gt;after&lt;/em&gt; its value is returned:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stepOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stepTwo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stepThree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 34
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 45 (remainingHP = remainingHP + 10)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35 (remainingHP = remainingHP - 10)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 70 (remainingHP = remainingHP * 2)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 35 (remainingHP = remainingHP / 2)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 5 (remainingHP = remainingHP % 6)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;comparison-operators&quot;&gt;Comparison Operators&lt;/h3&gt;
@@ -753,20 +723,20 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;Comparison operators are binary operators that compare two values and return a boolean:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is equal)
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is not equal)
-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is equal)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is not equal)&lt;/span&gt;
+
 &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is greater than)
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is less than)
-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is greater than)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is less than)&lt;/span&gt;
+
 &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is greater than or equal)
-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false (is less than or equal)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true (is greater than or equal)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false (is less than or equal)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;logical-operators&quot;&gt;Logical Operators&lt;/h3&gt;
@@ -782,20 +752,20 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastPokemon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;oneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;damage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remainingHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true
-&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneHitKO&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastPokemon&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastPokemon&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;notOneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneHitKO&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;andOperator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notOneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastPokemon&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;orOperator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notOneHitKO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastPokemon&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 17:45:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/basic-operators/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/basic-operators/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/basic-operators/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/basic-operators/</guid>
         
         <category>beginner</category>
         
@@ -835,26 +805,26 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;Use dot syntax to access the value stored at a given index:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;slowSpeedLabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;slowTextSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Slow
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Slow&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To retrieve some values while ignoring others, use the following syntax:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastSpeedLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastTextSpeed&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;fastSpeedLabel&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Fast
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fastSpeedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastTextSpeed&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Fast&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fastSpeedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastTextSpeed&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;fastSpeedValue&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;If the values were labeld during declaration, you can access them using their labels:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;speedLabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Medium
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Medium&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;updating-tuple-values&quot;&gt;Updating Tuple Values&lt;/h3&gt;
@@ -863,13 +833,13 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;textSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Fast&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;textSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (3, &quot;Fast&quot;)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (3, &quot;Fast&quot;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 14:30:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/tuples/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/tuples/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/tuples/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/tuples/</guid>
         
         <category>beginner</category>
         
@@ -907,8 +877,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;All keys must be of the same type. The same applies for values:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;55%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;inspecting-dictionaries&quot;&gt;Inspecting Dictionaries&lt;/h3&gt;
@@ -916,15 +886,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;p&gt;You can get the number of key/value pairs in a dictionary using &lt;code class=&quot;highlighter-rouge&quot;&gt;count&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To check whether a dictionary is empty, you can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;isEmpty()&lt;/code&gt; function:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;getting-dictionary-values&quot;&gt;Getting Dictionary Values&lt;/h3&gt;
@@ -933,8 +903,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 a given key.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rattataRate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Rattata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 0.45
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 0.45&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;adding-to-a-dictionary&quot;&gt;Adding to a Dictionary&lt;/h3&gt;
@@ -942,8 +912,8 @@ a given key.&lt;/p&gt;
 &lt;p&gt;To add a new key/value pair, use the subscript syntax:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fishingEncounterRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Poliwag&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Poliwag&quot;: 0.5]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Poliwag&quot;: 0.5]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;updating-dictionary-values&quot;&gt;Updating Dictionary Values&lt;/h3&gt;
@@ -951,8 +921,8 @@ a given key.&lt;/p&gt;
 &lt;p&gt;To update an existing value, use the subscript syntax:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mewtwo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Rattata&quot;: 0.45, &quot;Mewtwo&quot;: 0, &quot;Pidgey&quot;: 0.55]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Rattata&quot;: 0.45, &quot;Mewtwo&quot;: 0, &quot;Pidgey&quot;: 0.55]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;mutating-dictionaries&quot;&gt;Mutating Dictionaries&lt;/h3&gt;
@@ -961,8 +931,8 @@ a given key.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pokéMart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Poké Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pokéMart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Antidote&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;deleting-dictionary-values&quot;&gt;Deleting Dictionary Values&lt;/h3&gt;
@@ -970,17 +940,17 @@ a given key.&lt;/p&gt;
 &lt;p&gt;To delete an existing key-value pair, make its value &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;routeOneEncounterRates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mewtwo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Rattata&quot;: 0.45, &quot;Pidgey&quot;: 0.55]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Rattata&quot;: 0.45, &quot;Pidgey&quot;: 0.55]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;comparing-dictionaries&quot;&gt;Comparing Dictionaries&lt;/h3&gt;
 
 &lt;p&gt;You can compare two dictioanries using the &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; operator:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Rattata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pidgey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Rattata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;comparison&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Rattata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pidgey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Rattata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Notice how the order of key-value pairs doesn’t matter in dictionaries.&lt;/p&gt;
@@ -994,8 +964,8 @@ a given key.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/dictionaries/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/dictionaries/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/dictionaries/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/dictionaries/</guid>
         
         <category>beginner</category>
         
@@ -1028,15 +998,15 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 &lt;p&gt;An array can only hold values of the same type:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;starters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bulbasaur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Squirtle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;You can create an array of a certain length and give its elements a default value like so:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;repeatedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// [&quot;Potion&quot;, &quot;Potion&quot;, &quot;Potion&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// [&quot;Potion&quot;, &quot;Potion&quot;, &quot;Potion&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;inspecting-arrays&quot;&gt;Inspecting Arrays&lt;/h3&gt;
@@ -1044,40 +1014,40 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 &lt;p&gt;You can get the number of values in an array using &lt;code class=&quot;highlighter-rouge&quot;&gt;count&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To check whether an array is empty, you can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;isEmpty()&lt;/code&gt; function:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To get the first or last value&lt;sup id=&quot;fnref:array1&quot;&gt;&lt;a href=&quot;#fn:array1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in an array, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;first()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;last()&lt;/code&gt; methods respectively:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Squirtle&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Squirtle&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;contains()&lt;/code&gt; method to check if the array contains a given value:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isBulbasaurStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bulbasaur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isPidgeotStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgeot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isPidgeotStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgeot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Beware that this won’t work if the value being checked is of a different type than the one the array holds:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;getting-array-values&quot;&gt;Getting Array Values&lt;/h3&gt;
@@ -1085,8 +1055,8 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 &lt;p&gt;Use subscript syntax to access the value stored at a given index:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pokemon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Note that the first item has an index of 0.&lt;/p&gt;
@@ -1096,12 +1066,12 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 &lt;p&gt;To add a new value, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;append()&lt;/code&gt; function:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Articuno&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;]
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Zapdos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;]
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Moltres&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Zapdos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Moltres&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;concatenating-arrays&quot;&gt;Concatenating Arrays&lt;/h3&gt;
@@ -1109,8 +1079,8 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 &lt;p&gt;You can concatenate two arrays using the &lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; operator:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;mutating-arrays&quot;&gt;Mutating Arrays&lt;/h3&gt;
@@ -1120,8 +1090,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;otherLegendaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
 &lt;span class=&quot;nf&quot;&gt;otherLegendaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Moltres&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;inserting-values&quot;&gt;Inserting Values&lt;/h3&gt;
@@ -1129,8 +1099,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;p&gt;To insert a value at a given index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;insert&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pikachu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;atIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;updating-array-values&quot;&gt;Updating Array Values&lt;/h3&gt;
@@ -1138,8 +1108,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;p&gt;To update an existing value, use the subscript syntax:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Mewtwo&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Mewtwo&quot;, &quot;Moltres&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Mewtwo&quot;, &quot;Moltres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;deleting-array-values&quot;&gt;Deleting Array Values&lt;/h3&gt;
@@ -1147,22 +1117,22 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;p&gt;To delete a value at a specific index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;removeAtIndex()&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Moltres&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Moltres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;removeLast()&lt;/code&gt; to, remove the last value:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeLast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;You can also remove multiple values by using &lt;code class=&quot;highlighter-rouge&quot;&gt;removeRange()&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -1174,8 +1144,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/arrays/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/arrays/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/arrays/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/arrays/</guid>
         
         <category>beginner</category>
         
@@ -1215,14 +1185,13 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;p&gt;…but cannot be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;, unless they are optional&lt;sup id=&quot;fnref:intro1&quot;&gt;&lt;a href=&quot;#fn:intro1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;playerName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;constants&quot;&gt;Constants&lt;/h3&gt;
 
-&lt;p&gt;Constants are declared similarly to &lt;a href=&quot;#variables&quot;&gt;variables&lt;/a&gt;, except they use the&lt;br /&gt;
-keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead:&lt;/p&gt;
+&lt;p&gt;Constants are declared similarly to &lt;a href=&quot;#variables&quot;&gt;variables&lt;/a&gt;, except they use the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;gameTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pokémon Red&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1231,8 +1200,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead
 &lt;p&gt;…and cannot be re-assigned:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gameTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pokémon Blue&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Like variables, constants cannot be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;&lt;sup id=&quot;fnref:intro1:1&quot;&gt;&lt;a href=&quot;#fn:intro1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
@@ -1252,8 +1221,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Current HP: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;damage&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Current HP: 5&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Current HP: 5&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
@@ -1265,8 +1234,8 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Jun 2014 14:56:02 +0200</pubDate>
-        <link>http://swiftbits.redalemeden.com/learn-swift/getting-started/</link>
-        <guid isPermaLink="true">http://swiftbits.redalemeden.com/learn-swift/getting-started/</guid>
+        <link>https://swiftbits.redalemeden.com/learn-swift/getting-started/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/getting-started/</guid>
         
         <category>beginner</category>
         

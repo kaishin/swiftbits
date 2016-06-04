@@ -13,7 +13,7 @@
   
   <meta http-equiv="date" content="2014-08-06 20:55:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://swiftbits.redalemeden.com/learn-swift/optionals/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/optionals/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -69,8 +69,6 @@
 
     <main class="main-content-box" data-role="container">
       
-  
-
 
 <article class="post">
   <header class="post-header">
@@ -89,32 +87,30 @@
   <section class="post-content">
     
       
-        
-      
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.0ß6</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/_swift/2014-08-06-optionals.swift"> Github</a>.
+        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-optionals.swift"> Github</a>.
       </p>
     
     <h3 id="declaring-optionals">Declaring Optionals</h3>
 
 <p>Optionals are variables or constants that can either have a value or be <code class="highlighter-rouge">nil</code> (or <code class="highlighter-rouge">.None</code> for the picky among you). They are defined by appending a <code class="highlighter-rouge">?</code> at the end of the type in the declaration:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item
-</span><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Life Orb"
-</span><span class="n">heldItem</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; nil
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">heldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="c1">// Pokémon may or may not be holding an item</span>
+<span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
+<span class="c1">// -&gt; "Life Orb"</span>
+<span class="n">heldItem</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="c1">// -&gt; nil</span>
+</code></pre>
 </div>
 
 <h3 id="inspecting-optionals">Inspecting Optionals</h3>
 
 <p>You can compare the optional against <code class="highlighter-rouge">nil</code> to find out if it contains a value or not:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; true
-</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isNil</span> <span class="o">=</span> <span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span>
+<span class="c1">// -&gt; true</span>
+</code></pre>
 </div>
 
 <p>This can also be used in <code class="highlighter-rouge">if</code> statements:</p>
@@ -122,8 +118,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">heldItem</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"No held items."</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; No held items.
-</span></code></pre>
+<span class="c1">// -&gt; No held items.</span>
+</code></pre>
 </div>
 
 <h3 id="forced-unwrapping">Forced Unwrapping</h3>
@@ -133,8 +129,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">heldItem</span> <span class="o">=</span> <span class="s">"Life Orb"</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"You knocked off the foe's Caterpie's </span><span class="se">\(</span><span class="n">heldItem</span><span class="o">!</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
-<span class="c1">// -&gt; You knocked off the foe's Caterpie's Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; You knocked off the foe's Caterpie's Life Orb</span>
+</code></pre>
 </div>
 
 <p>Unwrapping allows you to directly access the value contained in the optional.</p>
@@ -146,8 +142,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">itemName</span> <span class="o">=</span> <span class="n">heldItem</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Knock off the </span><span class="se">\(</span><span class="n">itemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Knock off the Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; Knock off the Life Orb</span>
+</code></pre>
 </div>
 
 <p>Starting Swift 1.2, it became possible to bind more than one optional in the same declaration:</p>
@@ -157,8 +153,8 @@
 <span class="k">if</span> <span class="k">let</span> <span class="nv">itemName</span> <span class="o">=</span> <span class="n">heldItem</span><span class="p">,</span> <span class="k">let</span> <span class="nv">moveName</span> <span class="o">=</span> <span class="n">move</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">moveName</span><span class="se">)</span><span class="s"> the </span><span class="se">\(</span><span class="n">itemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="c1">// -&gt; Knock off the Life Orb
-</span></code></pre>
+<span class="c1">// -&gt; Knock off the Life Orb</span>
+</code></pre>
 </div>
 
 <h3 id="implicit-unwrapping">Implicit Unwrapping</h3>
@@ -167,8 +163,8 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">implicitlyUnwrappedItemName</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="o">=</span> <span class="s">"Berry"</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"Wild Vulpix always carry a </span><span class="se">\(</span><span class="n">implicitlyUnwrappedItemName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-<span class="c1">// -&gt; "Wild Vulpix always carry a Berry"
-</span></code></pre>
+<span class="c1">// -&gt; "Wild Vulpix always carry a Berry"</span>
+</code></pre>
 </div>
 
 <p>Using this method, you don’t have to append <code class="highlighter-rouge">!</code> to unwrap the value contained in the optional; it will be implicitly unwrapped for you.</p>
@@ -179,10 +175,10 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">staryuHeldItemRates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Float</span><span class="p">]?</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Stardust"</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">"Star Piece"</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">]</span>
 <span class="n">staryuHeldItemRates</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; Error
-</span><span class="n">staryuHeldItemRates</span><span class="p">?</span><span class="o">.</span><span class="n">isEmpty</span>
-<span class="c1">// -&gt; false
-</span></code></pre>
+<span class="c1">// -&gt; Error</span>
+<span class="n">staryuHeldItemRates</span><span class="p">?</span><span class="o">.</span><span class="n">isEmpty</span>
+<span class="c1">// -&gt; false</span>
+</code></pre>
 </div>
 
 <p>Optional chaining can also be used to get/set properties, which will be introduced later.</p>
@@ -193,12 +189,12 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">preferredHeldItem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">"Leftovers"</span>
 <span class="k">var</span> <span class="nv">itemToHold</span> <span class="o">=</span> <span class="n">preferredHeldItem</span> <span class="p">??</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Leftovers"
-</span>
+<span class="c1">// -&gt; "Leftovers"</span>
+
 <span class="n">preferredHeldItem</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="n">itemToHold</span> <span class="o">=</span> <span class="n">preferredHeldItem</span> <span class="p">??</span> <span class="s">"Life Orb"</span>
-<span class="c1">// -&gt; "Life Orb"
-</span></code></pre>
+<span class="c1">// -&gt; "Life Orb"</span>
+</code></pre>
 </div>
 
   </section>
