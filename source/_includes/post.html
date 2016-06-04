@@ -27,7 +27,7 @@
       {% endif %}
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift {{ version }}</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/{{ post.path | remove: ".md" | replace: "_posts", "swift" }}.swift"> Github</a>.
+        Swift version: <strong>{{ version }}</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/{{ post.path | remove: ".md" | replace: "_posts", "swift" }}.swift">View all code snippets in this post on Github</a>
       </p>
     {% endif %}
     {{ content }}

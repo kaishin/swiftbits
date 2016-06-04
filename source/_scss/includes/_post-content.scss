@@ -113,4 +113,16 @@
   display: block;
   font-size: 0.85em;
   padding: 1em;
+
+  a {
+    text-decoration: none;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:link,
+    &:visited {
+      color: $geebung;
+    }
+  }
 }
