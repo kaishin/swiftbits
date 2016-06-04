@@ -182,15 +182,10 @@ gulp.task("generate-swift", function() {
 });
 
 gulp.task("swift-version", shell.task("swift --version;"))
-
-gulp.task("run-swift", ["swift-version"], function() {
-  gulp.src(paths.sourceSwift + "*.swift")
-  .pipe(shell("swift " + paths.sourceSwift + "<%= file.path.replace(file.base, '') %>"), {
-    silent: true
-  }).on("end", function() {
-    return gutil.log(messages.swiftSuccess);
-  });
-});
+gulp.task("run-swift", ["swift-version"], shell.task("./bin/test >> /dev/null"))
+gulp.task("swift", ["generate-swift", "run-swift"], function() {
+  gutil.log(messages.swiftSuccess);
+})
 
 gulp.task("deploy", function() {
   gulp.src(targetFolder + "/**/*")

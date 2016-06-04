@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+for file in ./swift/*.swift; do swift $file; done

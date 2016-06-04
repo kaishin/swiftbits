@@ -26,7 +26,7 @@ heldItem = nil
 You can compare the optional against `nil` to find out if it contains a value or not:
 
 ~~~swift
-heldItem == nil
+let isNil = heldItem == nil
 // -> true
 ~~~
 

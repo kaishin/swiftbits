@@ -10,4 +10,4 @@ routeOneEncounterRates["Mewtwo"] = 0.0
 let pokéMart = ["Poké Ball": 200, "Potion": 300]
 // pokéMart["Antidote"] = 100
 routeOneEncounterRates["Mewtwo"] = nil
-["Rattata": 0.45, "Pidgey": 0.55] == ["Pidgey": 0.55, "Rattata": 0.45]
+let comparison = ["Rattata": 0.45, "Pidgey": 0.55] == ["Pidgey": 0.55, "Rattata": 0.45]

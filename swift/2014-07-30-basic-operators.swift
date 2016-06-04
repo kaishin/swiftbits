@@ -5,29 +5,21 @@ wildPokémon
 35 - 10
 10 * 2
 10 / 3
-"Viridian" + " " + "City"
+let cityName = "Viridian" + " " + "City"
 let moves = ["String Shot", "Tackle"]
 let moreMoves = ["Harden"]
 var moveSet = moves + moreMoves
 let closedRange = moves[0...1]
 let halfClosedRange = moves[0..<1]
-10 % 3
-35 % -15
-10 % 3.5
+let remainder = 10 % 3
+let negativeRemainder = 35 % -15
+let decimalRemainder = 10 % 3.5
 var remainingHP = 35
 remainingHP += 10
 remainingHP -= 10
 remainingHP *= 2
 remainingHP /= 2
 remainingHP %= 6
-remainingHP = 35
-++remainingHP
---remainingHP
-let damageToKO = -remainingHP
-+damageToKO
-let stepOne = remainingHP
-let stepTwo = remainingHP--
-let stepThree = remainingHP
 35 == 35
 180 != 35
 180 > 35
@@ -37,6 +29,6 @@ let stepThree = remainingHP
 var damage = 56
 var lastPokemon = true
 var oneHitKO = (damage > remainingHP)
-!oneHitKO
-!oneHitKO && lastPokemon
-!oneHitKO || lastPokemon
+let notOneHitKO = !oneHitKO
+let andOperator = notOneHitKO && lastPokemon
+let orOperator = notOneHitKO || lastPokemon

@@ -40,7 +40,7 @@ Swift comes with all the arithmetic operators you would expect in a modern progr
 The addition operator can also be used to concatenate two or more strings:
 
 ~~~swift
-"Viridian" + " " + "City"
+let cityName = "Viridian" + " " + "City"
 // -> Viridian City
 ~~~
 
@@ -76,16 +76,16 @@ let halfClosedRange = moves[0..<1]
 The remainder operator (`%`) outputs the remainder of a division of two numbers:
 
 ~~~swift
-10 % 3
+let remainder = 10 % 3
 // -> 1
 ~~~
 
 It also works with floats and negative numbers:
 
 ~~~swift
-35 % -15
+let negativeRemainder = 35 % -15
 // -> 5
-10 % 3.5
+let decimalRemainder = 10 % 3.5
 // -> 3.0
 ~~~
 
@@ -105,36 +105,6 @@ remainingHP /= 2
 // -> 35 (remainingHP = remainingHP / 2)
 remainingHP %= 6
 // -> 5 (remainingHP = remainingHP % 6)
-~~~
-
-### Unary Operators
-
-Swift has all the unary operators that are common in other languages:
-
-~~~swift
-remainingHP = 35
-++remainingHP
-// -> 36
---remainingHP
-// -> 35
-
-let damageToKO = -remainingHP
-// -> -35
-+damageToKO
-// -> -35
-~~~
-
-Note that the unary *plus* operator is just syntactic sugar and does not change the value it was prepended to.
-
-If the increment or decrement operators are appended as postfix operators (`value++`), the variable is modified *after* its value is returned:
-
-~~~swift
-let stepOne = remainingHP
-// -> 35
-let stepTwo = remainingHP--
-// -> 35
-let stepThree = remainingHP
-// -> 34
 ~~~
 
 ### Comparison Operators
@@ -172,10 +142,10 @@ var lastPokemon = true
 var oneHitKO = (damage > remainingHP)
 // -> true
 
-!oneHitKO
+let notOneHitKO = !oneHitKO
 // -> false
-!oneHitKO && lastPokemon
+let andOperator = notOneHitKO && lastPokemon
 // -> false
-!oneHitKO || lastPokemon
+let orOperator = notOneHitKO || lastPokemon
 // -> true
 ~~~

@@ -105,7 +105,7 @@ routeOneEncounterRates["Mewtwo"] = nil
 You can compare two dictioanries using the `==` operator:
 
 ~~~swift
-["Rattata": 0.45, "Pidgey": 0.55] == ["Pidgey": 0.55, "Rattata": 0.45]
+let comparison = ["Rattata": 0.45, "Pidgey": 0.55] == ["Pidgey": 0.55, "Rattata": 0.45]
 // -> true
 ~~~
 

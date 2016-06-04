@@ -1,7 +1,7 @@
 var heldItem: String? 
 heldItem = "Life Orb"
 heldItem = nil
-heldItem == nil
+let isNil = heldItem == nil
 if heldItem == nil {
   print("No held items.")
 }
