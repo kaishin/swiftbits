@@ -1,6 +1,7 @@
 argv = require("yargs").argv;
 browserSync = require("browser-sync")
 cache = require("gulp-cached")
+clip = require("gulp-clip-empty-files")
 dateFormat = require("dateformat")
 del = require("del")
 ghPages = require("gulp-gh-pages")
@@ -178,6 +179,7 @@ gulp.task("generate-swift", function() {
   .pipe(literate())
   .pipe(replace(/(.*\n)\/\/\ \-\>\ Error/g, "// $1"))
   .pipe(removeEmptyLines())
+  .pipe(clip())
   .pipe(gulp.dest(paths.targetSwift))
 });
 
