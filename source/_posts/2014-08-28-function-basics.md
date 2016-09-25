@@ -1,10 +1,9 @@
 ---
 title: "Function Basics"
 date: 2014-08-28 20:00:00 +0200
-category: learn-swift
+category: tutorials
 tags:
   - beginner
-  - tutorial
   - pokémon
 teaser: "Functions are an essential part of any modern programming language. Let's look at what Swift has to offer."
 ---

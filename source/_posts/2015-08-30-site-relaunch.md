@@ -16,7 +16,7 @@ Today I'm happy to relaunch the site as *Swiftbits*. Here's a rundown of the mos
 
 - New RSS feed. [Re-subscribe here]({{ site.feed }}).
 
-- All tutorials were updated for Swift 2.0 and grouped under their [own category](/learn-swift).
+- All tutorials were updated for Swift 2.0 and grouped under their [own category](/tutorials).
 
 - New code examples. Bonus points if you get all the references.
 

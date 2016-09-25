@@ -1,10 +1,9 @@
 ---
 title: "Basic Operators"
 date: 2014-07-30 17:45 +0200
-category: learn-swift
+category: tutorials
 tags:
   - beginner
-  - tutorial
   - pokémon
 teaser: "Operators are symbols that are used to modify or inspect values. Let's backtrack a bit and have a look at some basic ones in Swift."
 ---

@@ -1,10 +1,9 @@
 ---
 title: "Optionals"
 date: 2014-08-06 20:55 +0200
-category: learn-swift
+category: tutorials
 tags:
   - beginner
-  - tutorial
   - pokémon
 teaser: "Optionals are variables or constants that can either have a value or be nil."
 ---

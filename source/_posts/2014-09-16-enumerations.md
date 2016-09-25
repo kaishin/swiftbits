@@ -1,10 +1,9 @@
 ---
 title: "Enumerations"
 date: 2014-09-16 20:00:00 +0200
-category: learn-swift
+category: tutorials
 tags:
   - beginner
-  - tutorial
   - pokémon
 teaser: "This section explores Enumerations in Swift and what makes them more powerful and flexible than their Objective-C counterparts."
 ---
