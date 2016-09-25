@@ -6,6 +6,7 @@ tags:
   - beginner
   - pokémon
 teaser: "Operators are symbols that are used to modify or inspect values. Let's backtrack a bit and have a look at some basic ones in Swift."
+code: true
 ---
 
 ### Assignment Operator

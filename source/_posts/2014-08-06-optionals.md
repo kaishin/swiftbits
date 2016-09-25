@@ -6,6 +6,7 @@ tags:
   - beginner
   - pokémon
 teaser: "Optionals are variables or constants that can either have a value or be nil."
+code: true
 ---
 
 ### Declaring Optionals

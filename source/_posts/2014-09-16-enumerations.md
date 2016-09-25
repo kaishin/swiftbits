@@ -6,6 +6,7 @@ tags:
   - beginner
   - pokémon
 teaser: "This section explores Enumerations in Swift and what makes them more powerful and flexible than their Objective-C counterparts."
+code: true
 ---
 
 ### Defining Enumerations

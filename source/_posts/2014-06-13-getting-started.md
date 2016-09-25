@@ -6,6 +6,7 @@ tags:
   - beginner
   - pokémon
 teaser: "In this first section, we cover variables, constants, type inference, casting, and string interpolation."
+code: true
 ---
 
 ### Console Output

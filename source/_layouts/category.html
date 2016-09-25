@@ -2,12 +2,38 @@
 layout: default
 ---
 
-{{ content }}
-
 <ul class="post-list">
-  {% for post in site.categories.[page.category] reversed %}
-    <li class="post-list-item" id="{{ post.url | replace: '/', '' | replace: 'learn-swift', '' }}">
-      {% include post.html %}
-    </li>
+  {% for post in site.categories.[page.category] %}
+  <li class="post-list-item">
+    <article class="post">
+      <header class="post-header">
+        <div class="post-metadata">
+          <time datetime="{{ post.date | data_to_xmlschema }}">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+        </div>
+        <h1 class="post-title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        </h1>
+      </header>
+
+      <section class="post-content">
+        {% if post.code %}
+          {% if post.swift %}
+            {% assign version = post.swift %}
+          {% else %}
+            {% assign version = site.latestSwift %}
+          {% endif %}
+
+          <p class="swift-version">
+            Swift version: <strong>{{ version }}</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/{{ post.path | remove: ".md" | replace: "_posts", "swift" }}.swift">View all code snippets in this post on Github</a>
+          </p>
+        {% endif %}
+        {{ post.content | markdownify }}
+      </section>
+    </article>
+  </li>
   {% endfor %}
 </ul>

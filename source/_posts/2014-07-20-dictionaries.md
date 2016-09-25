@@ -6,6 +6,7 @@ tags:
   - beginner
   - pokémon
 teaser: "In this section, we'll take a look at Swift dictionaries."
+code: true
 ---
 
 ### Declaring Dictionaries

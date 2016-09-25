@@ -1,0 +1,16 @@
+---
+layout: category
+title: "Tutorials"
+category: tutorials
+active: tutorials
+---
+
+<ul class="post-list">
+  {% for post in paginator.posts %}
+    <li class="post-list-item">
+      {% include post.html %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% include pagination.html %}
