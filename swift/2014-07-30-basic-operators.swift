@@ -13,7 +13,7 @@ let closedRange = moves[0...1]
 let halfClosedRange = moves[0..<1]
 let remainder = 10 % 3
 let negativeRemainder = 35 % -15
-let decimalRemainder = 10 % 3.5
+Float(10).truncatingRemainder(dividingBy: 3.5)
 var remainingHP = 35
 remainingHP += 10
 remainingHP -= 10

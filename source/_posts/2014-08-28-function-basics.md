@@ -46,7 +46,7 @@ func isMasterBall(successPercent: Double) -> Bool {
 To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can't be omitted even in the absence of required parameters:
 
 ~~~swift
-catchWildPokémon("Ultra Ball")
+catchWildPokémon(ballType: "Ultra Ball")
 // -> Items
 // -> Ultra Ball
 // -> Wash, rinse, repeat.
@@ -59,10 +59,10 @@ Multiple parameters should be separated by commas:
 ~~~swift
 func catchWildPokémon(ballType: String, statusAttack: String) {
   print(statusAttack)
-  catchWildPokémon(ballType)
+  catchWildPokémon(ballType: ballType)
 }
 
-catchWildPokémon("Super Ball", statusAttack: "Hypnosis")
+catchWildPokémon(ballType: "Super Ball", statusAttack: "Hypnosis")
 // -> Hypnosis
 // -> Items
 // -> Ultra Ball
@@ -84,37 +84,46 @@ func falseSwipe(currentHP: Double) -> (remainingHP: Double, damage: Double) {
   }
 }
 
-falseSwipe(72)
+falseSwipe(currentHP: 72)
 // -> (5, 67)
-falseSwipe(20)
+falseSwipe(currentHP: 20)
 // -> (1, 19)
 ~~~
 
 ### External Parameter Names
 
-In the `catchWildPokémon(ballType: String) function above, `ballType` is only used within the function, not in its call signature. For more clarity of intent, you can provide an external name for each parameter by placing it before its internal one:
+In the `catchWildPokémon(ballType: String)` function above, `ballType` acts both as the internal and external name of the parameter. To reduce redundancy, you can provide an external name for each parameter by placing it before its internal one:
 
 ~~~swift
-func catchWildPokémon(withBall ballType: String) {
+func catchWildPokémon(with ballType: String) {
   print("Items")
   print(ballType)
   print("Wash, rinse, repeat.")
 }
 
-catchWildPokémon(withBall: "Speed Ball")
+catchWildPokémon(with: "Speed Ball")
 // -> Items
 // -> Speed Ball
 // -> Wash, rinse, repeat.
 ~~~
 
-Notice how the parameter name is now part of the function's signature.
+The function call now reads better. You can also skip naming the parameter altogether using `_` like so:
+
+~~~swift
+func use(_ move: String) {
+  print(move)
+}
+
+use("Tackle")
+// -> "Tackle"
+~~~
 
 ### Default Parameter Values
 
 You can assign default values to your function parameters:
 
 ~~~swift
-func lazilyCatchWildPokémon(ballType: String = "Poké Ball") {
+func lazilyCatchWildPokémon(with ballType: String = "Poké Ball") {
   print("Items")
   print(ballType)
   print("Wash, rinse, repeat.")
@@ -126,18 +135,17 @@ lazilyCatchWildPokémon()
 // -> Wash, rinse, repeat.
 ~~~
 
-
 ### Variadic Parameters
 
 Functions can take an arbitrary number of arguments of the same type, called variadic parameters. Variadic parameters use `...` after their type label in the function definition:
 
 ~~~swift
-func useMoves(moves: String...) {
+func use(_ moves: String...) {
   for move in moves {
     print(move)
   }
 }
 
-useMoves("Tackle", "Leech Seed")
+use("Tackle", "Leech Seed")
 // -> "Tackle", "Leech Seed"
 ~~~

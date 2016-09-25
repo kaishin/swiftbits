@@ -1,7 +1,8 @@
 title: "Swiftbits"
 description: "Swift snippets, tips, resources, and links."
 tagline: "Short doses of Swift"
-latestSwift: 2.2
+latestSwift: 3.0
+
 keywords:
  - swift
  - swift-lang

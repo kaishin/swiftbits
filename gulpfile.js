@@ -184,7 +184,9 @@ gulp.task("generate-swift", function() {
 });
 
 gulp.task("swift-version", shell.task("swift --version;"))
+
 gulp.task("run-swift", ["swift-version"], shell.task("./bin/test >> /dev/null"))
+
 gulp.task("swift", ["generate-swift", "run-swift"], function() {
   gutil.log(messages.swiftSuccess);
 })

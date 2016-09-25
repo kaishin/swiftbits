@@ -80,13 +80,18 @@ let remainder = 10 % 3
 // -> 1
 ~~~
 
-It also works with floats and negative numbers:
+It also works with negative numbers:
 
 ~~~swift
 let negativeRemainder = 35 % -15
 // -> 5
-let decimalRemainder = 10 % 3.5
-// -> 3.0
+~~~
+
+For decimals, you will have to make sure that both number are of type `Float` or `Double`:
+
+~~~swift
+Float(10).truncatingRemainder(dividingBy: 3.5)
+// -> 3
 ~~~
 
 ### Compound Assignment Operators

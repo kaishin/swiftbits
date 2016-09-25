@@ -1,7 +1,7 @@
 var starters = ["Bulbasaur", "Charmander", "Squirtle"]
 var legendaries: [String] = []
 // var starters = ["Bulbasaur", 2, "Squirtle"]
-var items = [String](count: 3, repeatedValue: "Potion")
+var items = [String](repeating: "Potion", count: 3)
 starters.count
 starters.isEmpty
 starters.first
@@ -16,8 +16,8 @@ legendaries.append("Moltres")
 starters += legendaries
 let otherLegendaries: [String] = []
 // otherLegendaries("Moltres")
-starters.insert("Pikachu", atIndex: 3)
+starters.insert("Pikachu", at: 3)
 starters[5] = "Mewtwo"
-starters.removeAtIndex(5)
+starters.remove(at: 5)
 starters.removeLast()
-starters.removeRange(3...4)
+starters.removeSubrange(3...4)

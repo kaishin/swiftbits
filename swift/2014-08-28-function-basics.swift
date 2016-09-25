@@ -11,12 +11,12 @@ func catchWildPokémon(ballType: String) {
 func isMasterBall(successPercent: Double) -> Bool {
   return successPercent == 100
 }
-catchWildPokémon("Ultra Ball")
+catchWildPokémon(ballType: "Ultra Ball")
 func catchWildPokémon(ballType: String, statusAttack: String) {
   print(statusAttack)
-  catchWildPokémon(ballType)
+  catchWildPokémon(ballType: ballType)
 }
-catchWildPokémon("Super Ball", statusAttack: "Hypnosis")
+catchWildPokémon(ballType: "Super Ball", statusAttack: "Hypnosis")
 func falseSwipe(currentHP: Double) -> (remainingHP: Double, damage: Double) {
   let potentialDamage = 67.0
   if potentialDamage >= currentHP {
@@ -25,23 +25,27 @@ func falseSwipe(currentHP: Double) -> (remainingHP: Double, damage: Double) {
     return(currentHP - potentialDamage, potentialDamage)
   }
 }
-falseSwipe(72)
-falseSwipe(20)
-func catchWildPokémon(withBall ballType: String) {
+falseSwipe(currentHP: 72)
+falseSwipe(currentHP: 20)
+func catchWildPokémon(with ballType: String) {
   print("Items")
   print(ballType)
   print("Wash, rinse, repeat.")
 }
-catchWildPokémon(withBall: "Speed Ball")
-func lazilyCatchWildPokémon(ballType: String = "Poké Ball") {
+catchWildPokémon(with: "Speed Ball")
+func use(_ move: String) {
+  print(move)
+}
+use("Tackle")
+func lazilyCatchWildPokémon(with ballType: String = "Poké Ball") {
   print("Items")
   print(ballType)
   print("Wash, rinse, repeat.")
 }
 lazilyCatchWildPokémon()
-func useMoves(moves: String...) {
+func use(_ moves: String...) {
   for move in moves {
     print(move)
   }
 }
-useMoves("Tackle", "Leech Seed")
+use("Tackle", "Leech Seed")
