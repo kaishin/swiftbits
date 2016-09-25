@@ -9,11 +9,11 @@
   <meta http-equiv="cleartype" content="on">
   <title>Arrays</title>
   <meta name="description" content="Declaring Arrays">
-  <meta name="keywords" content="beginner, pokémon, tutorial, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
+  <meta name="keywords" content="beginner, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
   
   <meta http-equiv="date" content="2014-07-05 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/arrays/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/tutorials/arrays/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -56,7 +56,7 @@
         <a href="/" >Home</a>
       </li>
       <li class="link-item">
-        <a href="/learn-swift" >Learn Swift</a>
+        <a href="/tutorials" >Tutorials</a>
       </li>
       <li class="link-item-icon">
         <a href="http://feedpress.me/swiftbits" class="icon">
@@ -74,11 +74,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-07-05 20:00:00 +0200">
-        Jul 5, 2014 – LEARN SWIFT
+        Jul 5, 2014 – TUTORIALS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/learn-swift/arrays/">
+      <a class="post-link" href="/tutorials/arrays/">
         Arrays
       </a>
     </h1>
@@ -89,7 +89,7 @@
       
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-05-arrays.swift"> Github</a>.
+        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-05-arrays.swift">View all code snippets in this post on Github</a>
       </p>
     
     <h3 id="declaring-arrays">Declaring Arrays</h3>
@@ -116,7 +116,7 @@ It can also be explicitly set using the <code class="highlighter-rouge">[Type]</
 
 <p>You can create an array of a certain length and give its elements a default value like so:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">items</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">count</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">repeatedValue</span><span class="p">:</span> <span class="s">"Potion"</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">items</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">](</span><span class="nv">repeating</span><span class="p">:</span> <span class="s">"Potion"</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
 <span class="c1">// ["Potion", "Potion", "Potion"]</span>
 </code></pre>
 </div>
@@ -210,7 +210,7 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 
 <p>To insert a value at a given index, use <code class="highlighter-rouge">insert</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="s">"Pikachu"</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="s">"Pikachu"</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
 <span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Zapdos", "Moltres"]</span>
 </code></pre>
 </div>
@@ -226,9 +226,9 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 
 <h3 id="deleting-array-values">Deleting Array Values</h3>
 
-<p>To delete a value at a specific index, use <code class="highlighter-rouge">removeAtIndex()</code>:</p>
+<p>To delete a value at a specific index, use <code class="highlighter-rouge">remove(at:)</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeAtIndex</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">remove</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
 <span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Articuno", "Moltres"]</span>
 </code></pre>
 </div>
@@ -240,9 +240,9 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 </code></pre>
 </div>
 
-<p>You can also remove multiple values by using <code class="highlighter-rouge">removeRange()</code>:</p>
+<p>You can also remove multiple values by using <code class="highlighter-rouge">removeSubrange()</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeRange</span><span class="p">(</span><span class="mi">3</span><span class="o">...</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">starters</span><span class="o">.</span><span class="nf">removeSubrange</span><span class="p">(</span><span class="mi">3</span><span class="o">...</span><span class="mi">4</span><span class="p">)</span>
 <span class="c1">// -&gt; ["Bulbasaur", "Charmander", "Squirtle"]</span>
 </code></pre>
 </div>

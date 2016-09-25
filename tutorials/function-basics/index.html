@@ -9,11 +9,11 @@
   <meta http-equiv="cleartype" content="on">
   <title>Function Basics</title>
   <meta name="description" content="Defining Functions">
-  <meta name="keywords" content="beginner, tutorial, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
+  <meta name="keywords" content="beginner, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
   
   <meta http-equiv="date" content="2014-08-28 20:00:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/function-basics/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/tutorials/function-basics/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -56,7 +56,7 @@
         <a href="/" >Home</a>
       </li>
       <li class="link-item">
-        <a href="/learn-swift" >Learn Swift</a>
+        <a href="/tutorials" >Tutorials</a>
       </li>
       <li class="link-item-icon">
         <a href="http://feedpress.me/swiftbits" class="icon">
@@ -74,11 +74,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-08-28 20:00:00 +0200">
-        Aug 28, 2014 – LEARN SWIFT
+        Aug 28, 2014 – TUTORIALS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/learn-swift/function-basics/">
+      <a class="post-link" href="/tutorials/function-basics/">
         Function Basics
       </a>
     </h1>
@@ -89,7 +89,7 @@
       
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-28-function-basics.swift"> Github</a>.
+        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-28-function-basics.swift">View all code snippets in this post on Github</a>
       </p>
     
     <h3 id="defining-functions">Defining Functions</h3>
@@ -128,7 +128,7 @@
 
 <p>To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can’t be omitted even in the absence of required parameters:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Ultra Ball"</span><span class="p">)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">ballType</span><span class="p">:</span> <span class="s">"Ultra Ball"</span><span class="p">)</span>
 <span class="c1">// -&gt; Items</span>
 <span class="c1">// -&gt; Ultra Ball</span>
 <span class="c1">// -&gt; Wash, rinse, repeat.</span>
@@ -141,10 +141,10 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">ballType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">statusAttack</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="n">statusAttack</span><span class="p">)</span>
-  <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="n">ballType</span><span class="p">)</span>
+  <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">ballType</span><span class="p">:</span> <span class="n">ballType</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="nf">catchWildPokémon</span><span class="p">(</span><span class="s">"Super Ball"</span><span class="p">,</span> <span class="nv">statusAttack</span><span class="p">:</span> <span class="s">"Hypnosis"</span><span class="p">)</span>
+<span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">ballType</span><span class="p">:</span> <span class="s">"Super Ball"</span><span class="p">,</span> <span class="nv">statusAttack</span><span class="p">:</span> <span class="s">"Hypnosis"</span><span class="p">)</span>
 <span class="c1">// -&gt; Hypnosis</span>
 <span class="c1">// -&gt; Items</span>
 <span class="c1">// -&gt; Ultra Ball</span>
@@ -154,7 +154,7 @@
 
 <h3 id="multiple-return-values">Multiple Return Values</h3>
 
-<p>Functions can also return <a href="/learn-swift/tuples/">tuples</a>:</p>
+<p>Functions can also return <a href="/tutorials/tuples/">tuples</a>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">falseSwipe</span><span class="p">(</span><span class="nv">currentHP</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">remainingHP</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">damage</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">let</span> <span class="nv">potentialDamage</span> <span class="o">=</span> <span class="mf">67.0</span>
@@ -166,37 +166,46 @@
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>
+<span class="nf">falseSwipe</span><span class="p">(</span><span class="nv">currentHP</span><span class="p">:</span> <span class="mi">72</span><span class="p">)</span>
 <span class="c1">// -&gt; (5, 67)</span>
-<span class="nf">falseSwipe</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="nf">falseSwipe</span><span class="p">(</span><span class="nv">currentHP</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
 <span class="c1">// -&gt; (1, 19)</span>
 </code></pre>
 </div>
 
 <h3 id="external-parameter-names">External Parameter Names</h3>
 
-<p>In the <code class="highlighter-rouge">catchWildPokémon(ballType: String) function above, </code>ballType` is only used within the function, not in its call signature. For more clarity of intent, you can provide an external name for each parameter by placing it before its internal one:</p>
+<p>In the <code class="highlighter-rouge">catchWildPokémon(ballType: String)</code> function above, <code class="highlighter-rouge">ballType</code> acts both as the internal and external name of the parameter. To reduce redundancy, you can provide an external name for each parameter by placing it before its internal one:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="n">withBall</span> <span class="nv">ballType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">catchWildPokémon</span><span class="p">(</span><span class="n">with</span> <span class="nv">ballType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Items"</span><span class="p">)</span>
   <span class="nf">print</span><span class="p">(</span><span class="n">ballType</span><span class="p">)</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Wash, rinse, repeat."</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">withBall</span><span class="p">:</span> <span class="s">"Speed Ball"</span><span class="p">)</span>
+<span class="nf">catchWildPokémon</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="s">"Speed Ball"</span><span class="p">)</span>
 <span class="c1">// -&gt; Items</span>
 <span class="c1">// -&gt; Speed Ball</span>
 <span class="c1">// -&gt; Wash, rinse, repeat.</span>
 </code></pre>
 </div>
 
-<p>Notice how the parameter name is now part of the function’s signature.</p>
+<p>The function call now reads better. You can also skip naming the parameter altogether using <code class="highlighter-rouge">_</code> like so:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">use</span><span class="p">(</span><span class="n">_</span> <span class="nv">move</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">use</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
+<span class="c1">// -&gt; "Tackle"</span>
+</code></pre>
+</div>
 
 <h3 id="default-parameter-values">Default Parameter Values</h3>
 
 <p>You can assign default values to your function parameters:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">lazilyCatchWildPokémon</span><span class="p">(</span><span class="nv">ballType</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Poké Ball"</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">lazilyCatchWildPokémon</span><span class="p">(</span><span class="n">with</span> <span class="nv">ballType</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Poké Ball"</span><span class="p">)</span> <span class="p">{</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Items"</span><span class="p">)</span>
   <span class="nf">print</span><span class="p">(</span><span class="n">ballType</span><span class="p">)</span>
   <span class="nf">print</span><span class="p">(</span><span class="s">"Wash, rinse, repeat."</span><span class="p">)</span>
@@ -213,13 +222,13 @@
 
 <p>Functions can take an arbitrary number of arguments of the same type, called variadic parameters. Variadic parameters use <code class="highlighter-rouge">...</code> after their type label in the function definition:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">useMoves</span><span class="p">(</span><span class="nv">moves</span><span class="p">:</span> <span class="kt">String</span><span class="o">...</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">use</span><span class="p">(</span><span class="n">_</span> <span class="nv">moves</span><span class="p">:</span> <span class="kt">String</span><span class="o">...</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="n">move</span> <span class="k">in</span> <span class="n">moves</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nf">useMoves</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">,</span> <span class="s">"Leech Seed"</span><span class="p">)</span>
+<span class="nf">use</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">,</span> <span class="s">"Leech Seed"</span><span class="p">)</span>
 <span class="c1">// -&gt; "Tackle", "Leech Seed"</span>
 </code></pre>
 </div>

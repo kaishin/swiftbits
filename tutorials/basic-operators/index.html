@@ -9,11 +9,11 @@
   <meta http-equiv="cleartype" content="on">
   <title>Basic Operators</title>
   <meta name="description" content="Assignment Operator">
-  <meta name="keywords" content="beginner, tutorial, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
+  <meta name="keywords" content="beginner, pokémon, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
   
   <meta http-equiv="date" content="2014-07-30 17:45:00 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://swiftbits.redalemeden.com/learn-swift/basic-operators/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/tutorials/basic-operators/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -56,7 +56,7 @@
         <a href="/" >Home</a>
       </li>
       <li class="link-item">
-        <a href="/learn-swift" >Learn Swift</a>
+        <a href="/tutorials" >Tutorials</a>
       </li>
       <li class="link-item-icon">
         <a href="http://feedpress.me/swiftbits" class="icon">
@@ -74,11 +74,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-07-30 17:45:00 +0200">
-        Jul 30, 2014 – LEARN SWIFT
+        Jul 30, 2014 – TUTORIALS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/learn-swift/basic-operators/">
+      <a class="post-link" href="/tutorials/basic-operators/">
         Basic Operators
       </a>
     </h1>
@@ -89,7 +89,7 @@
       
 
       <p class="swift-version">
-        The code snippets below have been compiled using <strong>Swift 2.2</strong>. View them on <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-30-basic-operators.swift"> Github</a>.
+        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-07-30-basic-operators.swift">View all code snippets in this post on Github</a>
       </p>
     
     <h3 id="assignment-operator">Assignment Operator</h3>
@@ -163,12 +163,17 @@
 </code></pre>
 </div>
 
-<p>It also works with floats and negative numbers:</p>
+<p>It also works with negative numbers:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">negativeRemainder</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">%</span> <span class="o">-</span><span class="mi">15</span>
 <span class="c1">// -&gt; 5</span>
-<span class="k">let</span> <span class="nv">decimalRemainder</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">%</span> <span class="mf">3.5</span>
-<span class="c1">// -&gt; 3.0</span>
+</code></pre>
+</div>
+
+<p>For decimals, you will have to make sure that both number are of type <code class="highlighter-rouge">Float</code> or <code class="highlighter-rouge">Double</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kt">Float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="nf">truncatingRemainder</span><span class="p">(</span><span class="nv">dividingBy</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">)</span>
+<span class="c1">// -&gt; 3</span>
 </code></pre>
 </div>
 

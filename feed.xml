@@ -5,8 +5,8 @@
     <description>Swift snippets, tips, resources, and links.</description>
     <link>https://swiftbits.redalemeden.com/</link>
     <atom:link href="https://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jun 2016 22:44:51 +0200</pubDate>
-    <lastBuildDate>Sat, 04 Jun 2016 22:44:51 +0200</lastBuildDate>
+    <pubDate>Sun, 25 Sep 2016 19:59:34 +0200</pubDate>
+    <lastBuildDate>Sun, 25 Sep 2016 19:59:34 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -27,7 +27,7 @@
     &lt;p&gt;New RSS feed. &lt;a href=&quot;http://feedpress.me/swiftbits&quot;&gt;Re-subscribe here&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;All tutorials were updated for Swift 2.0 and grouped under their &lt;a href=&quot;/learn-swift&quot;&gt;own category&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;All tutorials were updated for Swift 2.0 and grouped under their &lt;a href=&quot;/tutorials&quot;&gt;own category&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;New code examples. Bonus points if you get all the references.&lt;/p&gt;
@@ -171,17 +171,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 </description>
         <pubDate>Tue, 16 Sep 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/enumerations/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/enumerations/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/enumerations/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/enumerations/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -223,7 +221,7 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;p&gt;To call a function, use its name followed immediately by parentheses containing any required parameters. The parentheses can’t be omitted even in the absence of required parameters:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ultra Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Ultra Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Ultra Ball&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
@@ -236,10 +234,10 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusAttack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statusAttack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Super Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusAttack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hypnosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Super Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statusAttack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hypnosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Hypnosis&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Ultra Ball&lt;/span&gt;
@@ -249,7 +247,7 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;h3 id=&quot;multiple-return-values&quot;&gt;Multiple Return Values&lt;/h3&gt;
 
-&lt;p&gt;Functions can also return &lt;a href=&quot;/learn-swift/tuples/&quot;&gt;tuples&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Functions can also return &lt;a href=&quot;/tutorials/tuples/&quot;&gt;tuples&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;remainingHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;potentialDamage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;67.0&lt;/span&gt;
@@ -261,37 +259,46 @@ If you declare the raw value type but not explicitly set it in one or more cases
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (5, 67)&lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; (1, 19)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;external-parameter-names&quot;&gt;External Parameter Names&lt;/h3&gt;
 
-&lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;catchWildPokémon(ballType: String) function above, &lt;/code&gt;ballType` is only used within the function, not in its call signature. For more clarity of intent, you can provide an external name for each parameter by placing it before its internal one:&lt;/p&gt;
+&lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;catchWildPokémon(ballType: String)&lt;/code&gt; function above, &lt;code class=&quot;highlighter-rouge&quot;&gt;ballType&lt;/code&gt; acts both as the internal and external name of the parameter. To reduce redundancy, you can provide an external name for each parameter by placing it before its internal one:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withBall&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Items&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wash, rinse, repeat.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withBall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Speed Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;catchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Speed Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Items&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Speed Ball&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Wash, rinse, repeat.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Notice how the parameter name is now part of the function’s signature.&lt;/p&gt;
+&lt;p&gt;The function call now reads better. You can also skip naming the parameter altogether using &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt; like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Tackle&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;default-parameter-values&quot;&gt;Default Parameter Values&lt;/h3&gt;
 
 &lt;p&gt;You can assign default values to your function parameters:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lazilyCatchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Poké Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lazilyCatchWildPokémon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Poké Ball&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Items&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ballType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wash, rinse, repeat.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -308,29 +315,27 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;p&gt;Functions can take an arbitrary number of arguments of the same type, called variadic parameters. Variadic parameters use &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt; after their type label in the function definition:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;useMoves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;moves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;moves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;moves&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nf&quot;&gt;useMoves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Leech Seed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tackle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Leech Seed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Tackle&quot;, &quot;Leech Seed&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Aug 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/function-basics/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/function-basics/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/function-basics/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/function-basics/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -442,17 +447,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 20:55:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/optionals/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/optionals/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/optionals/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/optionals/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -604,17 +607,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 17:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/basic-control-flow/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/basic-control-flow/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/basic-control-flow/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -691,12 +692,17 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It also works with floats and negative numbers:&lt;/p&gt;
+&lt;p&gt;It also works with negative numbers:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;negativeRemainder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 5&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;decimalRemainder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.5&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For decimals, you will have to make sure that both number are of type &lt;code class=&quot;highlighter-rouge&quot;&gt;Float&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;Double&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;truncatingRemainder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dividingBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -764,17 +770,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 17:45:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/basic-operators/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/basic-operators/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/basic-operators/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/basic-operators/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -838,17 +842,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 14:30:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/tuples/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/tuples/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/tuples/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/tuples/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -964,17 +966,15 @@ a given key.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/dictionaries/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/dictionaries/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/dictionaries/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/dictionaries/</guid>
         
         <category>beginner</category>
-        
-        <category>tutorial</category>
         
         <category>pokémon</category>
         
         
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -1004,7 +1004,7 @@ It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&q
 
 &lt;p&gt;You can create an array of a certain length and give its elements a default value like so:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;repeatedValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;repeating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// [&quot;Potion&quot;, &quot;Potion&quot;, &quot;Potion&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1098,7 +1098,7 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 
 &lt;p&gt;To insert a value at a given index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;insert&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pikachu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;atIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pikachu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1114,9 +1114,9 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 
 &lt;h3 id=&quot;deleting-array-values&quot;&gt;Deleting Array Values&lt;/h3&gt;
 
-&lt;p&gt;To delete a value at a specific index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;removeAtIndex()&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;To delete a value at a specific index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;remove(at:)&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Moltres&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1128,9 +1128,9 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You can also remove multiple values by using &lt;code class=&quot;highlighter-rouge&quot;&gt;removeRange()&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;You can also remove multiple values by using &lt;code class=&quot;highlighter-rouge&quot;&gt;removeSubrange()&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeSubrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1144,17 +1144,15 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/arrays/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/arrays/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/arrays/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/arrays/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
-        <category>tutorial</category>
         
-        
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
@@ -1234,17 +1232,15 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Jun 2014 14:56:02 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/learn-swift/getting-started/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/learn-swift/getting-started/</guid>
+        <link>https://swiftbits.redalemeden.com/tutorials/getting-started/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/getting-started/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
-        <category>tutorial</category>
         
-        
-        <category>learn-swift</category>
+        <category>tutorials</category>
         
       </item>
     
