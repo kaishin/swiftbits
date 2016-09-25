@@ -1,4 +1,4 @@
-argv = require("yargs").argv;
+argv = require("yargs").argv
 browserSync = require("browser-sync")
 cache = require("gulp-cached")
 clip = require("gulp-clip-empty-files")
