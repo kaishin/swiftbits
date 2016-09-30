@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 date: 2014-06-13 14:56:02 +0200
-category: tutorials
+category: basics
 tags:
   - beginner
   - pokémon

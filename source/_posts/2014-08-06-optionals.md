@@ -1,7 +1,7 @@
 ---
 title: "Optionals"
 date: 2014-08-06 20:55 +0200
-category: tutorials
+category: basics
 tags:
   - beginner
   - pokémon

@@ -1,7 +1,7 @@
 ---
 title: "Basic Operators"
 date: 2014-07-30 17:45 +0200
-category: tutorials
+category: basics
 tags:
   - beginner
   - pokémon

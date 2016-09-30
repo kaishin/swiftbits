@@ -1,7 +1,7 @@
 ---
 title: "Function Basics"
 date: 2014-08-28 20:00:00 +0200
-category: tutorials
+category: basics
 tags:
   - beginner
   - pokémon
