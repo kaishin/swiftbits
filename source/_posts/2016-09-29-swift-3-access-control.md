@@ -8,7 +8,7 @@ teaser: "A cheatsheet for Swift 3 access control keywords."
 code: false
 ---
 
-Swift 3 introcuded finer-grained control over what can access what in your code.
+Swift 3 introduced finer-grained control over what can access what in your code.
 The addition of 2 keywords made things less obvious, however. Here is a
 cheatsheet to help with the transition:
 
@@ -28,5 +28,4 @@ be subclassed.
 - **Open**: Entity can be accessed from within other modules. Classes can be
 subclassed in other modules if they are marked as `open`. Each method and
 property needs to be marked as `open` to be overrideable in subclasses.
-
 
