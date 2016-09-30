@@ -21,7 +21,7 @@
   img {
     border-radius: $border-radius;
     box-shadow: 0 0 0 1px rgba($black , 0.05);
-    margin-left: $image-outdent * -1;
+    margin: 1.5rem 0 1.5rem $image-outdent * -1;
     max-width: 100% + ($image-outdent * 2);
   }
 
