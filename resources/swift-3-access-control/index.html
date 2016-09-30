@@ -7,13 +7,13 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="robots" content="noodp, noydir">
   <meta http-equiv="cleartype" content="on">
-  <title>Site Relaunch</title>
-  <meta name="description" content="Soon after the Swift announcement last year, I decided to start writing a series of introductory tutorials for busy people who did not want to wade through t...">
-  <meta name="keywords" content="swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
+  <title>Swift 3 Access Control</title>
+  <meta name="description" content="Swift 3 introduced finer-grained control over what can access what in your code.The addition of 2 keywords made things less obvious, however. Here is acheats...">
+  <meta name="keywords" content="swift3, swift, swift-lang, ios, osx, mac, swiftbits, snippets, resources, tips, links">
   
-  <meta http-equiv="date" content="2015-08-30 08:26:02 +0200">
+  <meta http-equiv="date" content="2016-09-29 09:33:19 +0200">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://swiftbits.redalemeden.com/meta/site-relaunch/">
+  <link rel="canonical" href="https://swiftbits.redalemeden.com/resources/swift-3-access-control/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -76,51 +76,42 @@
 <article class="post">
   <header class="post-header">
     <div class="post-metadata">
-      <time datetime="2015-08-30 08:26:02 +0200">
-        Aug 30, 2015 – META
+      <time datetime="2016-09-29 09:33:19 +0200">
+        Sep 29, 2016 – RESOURCES
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/meta/site-relaunch/">
-        Site Relaunch
+      <a class="post-link" href="/resources/swift-3-access-control/">
+        Swift 3 Access Control
       </a>
     </h1>
   </header>
 
   <section class="post-content">
     
-    <p>Soon after the Swift announcement last year, I decided to start writing a series of introductory tutorials for busy people who did not want to wade through the exhaustive official documentation.</p>
+    <p>Swift 3 introduced finer-grained control over what can access what in your code.<br />
+The addition of 2 keywords made things less obvious, however. Here is a<br />
+cheatsheet to help with the transition:</p>
 
-<p>The site launched as <em>learn-swift.co</em> and managed to draw a few hundred subscribers across Twitter, RSS, and email. After writing the initial batch of posts covering most of the basic concepts, I decided to take a pause to figure out the next steps.</p>
-
-<p>Fast forward a year later. Swift 2.0 is almost out of beta and—better yet—is scheduled to go open-source by the end of the year. To celebrate the occasion, I decided to resume where I left off a year ago.</p>
-
-<p>Today I’m happy to relaunch the site as <em>Swiftbits</em>. Here’s a rundown of the most salient changes:</p>
+<p><img src="/images/access-control-swift3.svg" alt="Swift 3 access control keywords" /></p>
 
 <ul>
-  <li>
-    <p>New design, including a new logo.</p>
-  </li>
-  <li>
-    <p>New RSS feed. <a href="http://feedpress.me/swiftbits">Re-subscribe here</a>.</p>
-  </li>
-  <li>
-    <p>All tutorials were updated for Swift 2.0 and grouped under their <a href="/tutorials">own category</a>.</p>
-  </li>
-  <li>
-    <p>New code examples. Bonus points if you get all the references.</p>
-  </li>
-  <li>
-    <p>The exact version against which the code samples were compiled can be visible at the top of each tutorial.</p>
-  </li>
-  <li>
-    <p>Playgrounds were replaced with Swift source code; it’s more versatile and comes with less overhead.</p>
-  </li>
+  <li><strong>Private</strong>: Entity can only be accessed within the same scope it was defined<br />
+in. A <code class="highlighter-rouge">private</code> class can only be subclassed by another <code class="highlighter-rouge">private</code> class defined<br />
+in the same scope.</li>
+  <li><strong>File private</strong>: Entity can only be accessed within the same file. You can<br />
+subclass <code class="highlighter-rouge">fileprivate</code> classes and override their <code class="highlighter-rouge">fileprivate</code> methods and<br />
+properties.</li>
+  <li><strong>Internal</strong>: Entity can only be accessed within the same module, i.e. app or<br />
+framework target. This is the <em>default</em> if no access keyword is specified. You<br />
+can subclass classes and override their non-private methods and properties.</li>
+  <li><strong>Public</strong>: Entity can be accessed from within other modules. Classes cannot<br />
+be subclassed.</li>
+  <li><strong>Open</strong>: Entity can be accessed from within other modules. Classes can be<br />
+subclassed in other modules if they are marked as <code class="highlighter-rouge">open</code>. Each method and<br />
+property needs to be marked as <code class="highlighter-rouge">open</code> to be overrideable in subclasses.</li>
 </ul>
 
-<p>Follow Swiftbits on <a href="https://twitter.com/swiftbitsies">Twitter</a> to stay in the loop.</p>
-
-<p>Happy Swifting!</p>
 
   </section>
 </article>

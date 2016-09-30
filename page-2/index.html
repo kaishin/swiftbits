@@ -56,7 +56,10 @@
         <a href="/" class="active">Home</a>
       </li>
       <li class="link-item">
-        <a href="/tutorials" >Tutorials</a>
+        <a href="/basics" >Basics</a>
+      </li>
+      <li class="link-item">
+        <a href="/resources" >Resources</a>
       </li>
       <li class="link-item-icon">
         <a href="http://feedpress.me/swiftbits" class="icon">
@@ -76,12 +79,187 @@
 <article class="post">
   <header class="post-header">
     <div class="post-metadata">
-      <time datetime="2014-07-30 17:45:00 +0200">
-        Jul 30, 2014 – TUTORIALS
+      <time datetime="2014-08-06 17:00:00 +0200">
+        Aug 6, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/basic-operators/">
+      <a class="post-link" href="/basics/basic-control-flow/">
+        Basic Control Flow
+      </a>
+    </h1>
+  </header>
+
+  <section class="post-content">
+    
+      
+
+      <p class="swift-version">
+        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-basic-control-flow.swift">View all code snippets in this post on Github</a>
+      </p>
+    
+    <h3 id="conditional-statements">Conditional Statements</h3>
+
+<p>The <code class="highlighter-rouge">if</code> statement evaluates a boolean value and executes a code block if it’s <code class="highlighter-rouge">true</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">wildPokémonType</span> <span class="o">=</span> <span class="s">"Bug"</span>
+
+<span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
+</div>
+
+<p>With <code class="highlighter-rouge">else</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Rock"</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Leech Seed"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Tackle</span>
+</code></pre>
+</div>
+
+<h3 id="chaining-conditionals">Chaining Conditionals</h3>
+
+<p>Multiple <code class="highlighter-rouge">if</code> statements can be chained:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Water"</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Leech Seed"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Come back, Bulbasaur!"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Come back, Bulbasaur!</span>
+</code></pre>
+</div>
+
+<h3 id="switch-statements">Switch Statements</h3>
+
+<p>The <code class="highlighter-rouge">switch</code> statement evaluates a value against multiple patterns then executes the code corresponding to the one that matches:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">wildPokémonType</span> <span class="p">{</span>
+<span class="k">case</span> <span class="s">"Water"</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Bulbasaur!"</span><span class="p">)</span>
+<span class="k">case</span> <span class="s">"Bug"</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
+</div>
+
+<p>A <code class="highlighter-rouge">switch</code> statement needs to be exhaustive; every possible value should be covered. The <code class="highlighter-rouge">default</code> case covers all the remaining cases.</p>
+
+<p>A single case can check against multiple values:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">wildPokémonType</span> <span class="p">{</span>
+<span class="k">case</span> <span class="s">"Rock"</span><span class="p">,</span> <span class="s">"Fire"</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Squirtle!"</span><span class="p">)</span>
+<span class="k">case</span> <span class="s">"Bug"</span><span class="p">,</span> <span class="s">"Plant"</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Go! Charmander!</span>
+</code></pre>
+</div>
+
+<h3 id="switch-fall-through">Switch Fall-through</h3>
+
+<p>The execution of a <code class="highlighter-rouge">switch</code> statement stops as soon a case is matched:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">someType</span> <span class="o">=</span> <span class="s">"Fire"</span>
+
+<span class="k">switch</span> <span class="n">someType</span> <span class="p">{</span>
+<span class="k">case</span> <span class="s">"Fire"</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Go, Squirtle!"</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Pikachu will not be sent out this round."</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Go, Squirtle!</span>
+</code></pre>
+</div>
+
+<p>You can also explicitly end execution using the keyword <code class="highlighter-rouge">break</code> anywhere in the statement.</p>
+
+<h3 id="range-matching">Range Matching</h3>
+
+<p>Cases in a <code class="highlighter-rouge">switch</code> statement can check if a value is included in a range:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">attack</span> <span class="o">=</span> <span class="mi">89</span>
+
+<span class="k">switch</span> <span class="n">attack</span> <span class="p">{</span>
+<span class="k">case</span> <span class="mi">1</span><span class="o">...</span><span class="mi">70</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Not ready for competitive play."</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">71</span><span class="o">...</span><span class="mi">150</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking!"</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">151</span><span class="o">...</span><span class="mi">200</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber territory..."</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Now we're talking!</span>
+</code></pre>
+</div>
+
+<h3 id="tuple-matching">Tuple Matching</h3>
+
+<p>Tuples can be used as values in <code class="highlighter-rouge">switch</code> cases. You can ignore a value in the tuple by replacing it with <code class="highlighter-rouge">_</code> in the case’s test:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">offense</span> <span class="o">=</span> <span class="p">(</span><span class="nv">attack</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="nv">specialAttack</span><span class="p">:</span> <span class="mi">55</span><span class="p">)</span>
+
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
+<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Good mixed sweeper."</span><span class="p">)</span>
+<span class="k">case</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great special sweeper."</span><span class="p">)</span>
+<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Great physical sweeper."</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Good physical sweeper.</span>
+</code></pre>
+</div>
+
+<h3 id="where">Where</h3>
+
+<p>Cases in a <code class="highlighter-rouge">switch</code> statement can use a <code class="highlighter-rouge">where</code> clause to perform additional checks:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">offense</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
+
+<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
+<span class="k">case</span> <span class="nf">let</span> <span class="p">(</span><span class="n">attack</span><span class="p">,</span> <span class="n">specialAttack</span><span class="p">)</span> <span class="k">where</span> <span class="n">attack</span> <span class="o">==</span> <span class="nv">specialAttack</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Perfectly balanced attack stats."</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Unbalanced attack stats."</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// -&gt; Perfectly balanced attack stats.</span>
+</code></pre>
+</div>
+
+  </section>
+</article>
+
+    </li>
+  
+    <li class="post-list-item">
+      
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-metadata">
+      <time datetime="2014-07-30 17:45:00 +0200">
+        Jul 30, 2014 – BASICS
+      </time>
+    </div>
+    <h1 class="post-title">
+      <a class="post-link" href="/basics/basic-operators/">
         Basic Operators
       </a>
     </h1>
@@ -255,11 +433,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-07-28 14:30:00 +0200">
-        Jul 28, 2014 – TUTORIALS
+        Jul 28, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/tuples/">
+      <a class="post-link" href="/basics/tuples/">
         Tuples
       </a>
     </h1>
@@ -342,11 +520,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-07-05 20:00:00 +0200">
-        Jul 5, 2014 – TUTORIALS
+        Jul 5, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/dictionaries/">
+      <a class="post-link" href="/basics/dictionaries/">
         Dictionaries
       </a>
     </h1>
@@ -481,11 +659,11 @@ a given key.</p>
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-07-05 20:00:00 +0200">
-        Jul 5, 2014 – TUTORIALS
+        Jul 5, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/arrays/">
+      <a class="post-link" href="/basics/arrays/">
         Arrays
       </a>
     </h1>
@@ -667,109 +845,6 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
 
     </li>
   
-    <li class="post-list-item">
-      
-
-<article class="post">
-  <header class="post-header">
-    <div class="post-metadata">
-      <time datetime="2014-06-13 14:56:02 +0200">
-        Jun 13, 2014 – TUTORIALS
-      </time>
-    </div>
-    <h1 class="post-title">
-      <a class="post-link" href="/tutorials/getting-started/">
-        Getting Started
-      </a>
-    </h1>
-  </header>
-
-  <section class="post-content">
-    
-      
-
-      <p class="swift-version">
-        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-06-13-getting-started.swift">View all code snippets in this post on Github</a>
-      </p>
-    
-    <h3 id="console-output">Console Output</h3>
-
-<p>Use the <code class="highlighter-rouge">print()</code> function to print to the console:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"Hello there! Welcome to the world of Pokémon!"</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="variables">Variables</h3>
-
-<p>Variables are declared using the keyword <code class="highlighter-rouge">var</code>, followed by the variable name and <a href="#type-inference">optionally</a> its type. A value can be assigned to the variable using the <code class="highlighter-rouge">=</code> operand:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">playerName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Red"</span>
-</code></pre>
-</div>
-
-<p>Variables can be re-assigned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">playerName</span> <span class="o">=</span> <span class="s">"Blue"</span>
-</code></pre>
-</div>
-
-<p>…but cannot be <code class="highlighter-rouge">nil</code>, unless they are optional<sup id="fnref:intro1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">playerName</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="c1">// -&gt; Error</span>
-</code></pre>
-</div>
-
-<h3 id="constants">Constants</h3>
-
-<p>Constants are declared similarly to <a href="#variables">variables</a>, except they use the keyword <code class="highlighter-rouge">let</code> instead:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">gameTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Pokémon Red"</span>
-</code></pre>
-</div>
-
-<p>…and cannot be re-assigned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">gameTitle</span> <span class="o">=</span> <span class="s">"Pokémon Blue"</span>
-<span class="c1">// -&gt; Error</span>
-</code></pre>
-</div>
-
-<p>Like variables, constants cannot be <code class="highlighter-rouge">nil</code><sup id="fnref:intro1:1"><a href="#fn:intro1" class="footnote">1</a></sup>.</p>
-
-<h3 id="type-inference">Type Inference</h3>
-
-<p>Type inference refers to the compiler’s ability to implicitly determine the type of a variable without having to specify it in the declaration:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">rivalName</span> <span class="o">=</span> <span class="s">"Blue"</span>
-</code></pre>
-</div>
-
-<h3 id="string-interpolation">String Interpolation</h3>
-
-<p>Values can be included in strings using a <code class="highlighter-rouge">\</code> and the desired value between parentheses:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">totalHP</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="k">var</span> <span class="nv">damage</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">var</span> <span class="nv">currentHP</span> <span class="o">=</span> <span class="s">"Current HP: </span><span class="se">\(</span><span class="n">totalHP</span> <span class="o">-</span> <span class="n">damage</span><span class="se">)</span><span class="s">"</span>
-<span class="c1">// -&gt; "Current HP: 5"</span>
-</code></pre>
-</div>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:intro1">
-      <p>Variables and constants that are explicitly declared as optional can be <code class="highlighter-rouge">nil</code>. More on that later. <a href="#fnref:intro1" class="reversefootnote">&#8617;</a> <a href="#fnref:intro1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
-    </li>
-  </ol>
-</div>
-
-  </section>
-</article>
-
-    </li>
-  
 </ul>
 
 
@@ -781,6 +856,10 @@ keyword <code class="highlighter-rouge">var</code>; constant arrays are immutabl
     </li>
     
 
+    
+    <li>
+      <a class="previous-page-link" aria-label="previous page" title="Previous Page" href="/page-3">&#65310;</a>
+    </li>
     
   </ul>
 </nav>

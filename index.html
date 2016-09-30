@@ -56,7 +56,10 @@
         <a href="/" class="active">Home</a>
       </li>
       <li class="link-item">
-        <a href="/tutorials" >Tutorials</a>
+        <a href="/basics" >Basics</a>
+      </li>
+      <li class="link-item">
+        <a href="/resources" >Resources</a>
       </li>
       <li class="link-item-icon">
         <a href="http://feedpress.me/swiftbits" class="icon">
@@ -69,6 +72,54 @@
 
     <main class="main-content-box" data-role="container">
       <ul class="post-list">
+  
+    <li class="post-list-item">
+      
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-metadata">
+      <time datetime="2016-09-29 09:33:19 +0200">
+        Sep 29, 2016 – RESOURCES
+      </time>
+    </div>
+    <h1 class="post-title">
+      <a class="post-link" href="/resources/swift-3-access-control/">
+        Swift 3 Access Control
+      </a>
+    </h1>
+  </header>
+
+  <section class="post-content">
+    
+    <p>Swift 3 introduced finer-grained control over what can access what in your code.<br />
+The addition of 2 keywords made things less obvious, however. Here is a<br />
+cheatsheet to help with the transition:</p>
+
+<p><img src="/images/access-control-swift3.svg" alt="Swift 3 access control keywords" /></p>
+
+<ul>
+  <li><strong>Private</strong>: Entity can only be accessed within the same scope it was defined<br />
+in. A <code class="highlighter-rouge">private</code> class can only be subclassed by another <code class="highlighter-rouge">private</code> class defined<br />
+in the same scope.</li>
+  <li><strong>File private</strong>: Entity can only be accessed within the same file. You can<br />
+subclass <code class="highlighter-rouge">fileprivate</code> classes and override their <code class="highlighter-rouge">fileprivate</code> methods and<br />
+properties.</li>
+  <li><strong>Internal</strong>: Entity can only be accessed within the same module, i.e. app or<br />
+framework target. This is the <em>default</em> if no access keyword is specified. You<br />
+can subclass classes and override their non-private methods and properties.</li>
+  <li><strong>Public</strong>: Entity can be accessed from within other modules. Classes cannot<br />
+be subclassed.</li>
+  <li><strong>Open</strong>: Entity can be accessed from within other modules. Classes can be<br />
+subclassed in other modules if they are marked as <code class="highlighter-rouge">open</code>. Each method and<br />
+property needs to be marked as <code class="highlighter-rouge">open</code> to be overrideable in subclasses.</li>
+</ul>
+
+
+  </section>
+</article>
+
+    </li>
   
     <li class="post-list-item">
       
@@ -134,11 +185,11 @@
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-09-16 20:00:00 +0200">
-        Sep 16, 2014 – TUTORIALS
+        Sep 16, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/enumerations/">
+      <a class="post-link" href="/basics/enumerations/">
         Enumerations
       </a>
     </h1>
@@ -279,11 +330,11 @@ If you declare the raw value type but not explicitly set it in one or more cases
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-08-28 20:00:00 +0200">
-        Aug 28, 2014 – TUTORIALS
+        Aug 28, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/function-basics/">
+      <a class="post-link" href="/basics/function-basics/">
         Function Basics
       </a>
     </h1>
@@ -359,7 +410,7 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 <h3 id="multiple-return-values">Multiple Return Values</h3>
 
-<p>Functions can also return <a href="/tutorials/tuples/">tuples</a>:</p>
+<p>Functions can also return <a href="/basics/tuples/">tuples</a>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">falseSwipe</span><span class="p">(</span><span class="nv">currentHP</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">remainingHP</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">damage</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">let</span> <span class="nv">potentialDamage</span> <span class="o">=</span> <span class="mf">67.0</span>
@@ -450,11 +501,11 @@ If you declare the raw value type but not explicitly set it in one or more cases
   <header class="post-header">
     <div class="post-metadata">
       <time datetime="2014-08-06 20:55:00 +0200">
-        Aug 6, 2014 – TUTORIALS
+        Aug 6, 2014 – BASICS
       </time>
     </div>
     <h1 class="post-title">
-      <a class="post-link" href="/tutorials/optionals/">
+      <a class="post-link" href="/basics/optionals/">
         Optionals
       </a>
     </h1>
@@ -570,181 +621,6 @@ If you declare the raw value type but not explicitly set it in one or more cases
 <span class="n">preferredHeldItem</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="n">itemToHold</span> <span class="o">=</span> <span class="n">preferredHeldItem</span> <span class="p">??</span> <span class="s">"Life Orb"</span>
 <span class="c1">// -&gt; "Life Orb"</span>
-</code></pre>
-</div>
-
-  </section>
-</article>
-
-    </li>
-  
-    <li class="post-list-item">
-      
-
-<article class="post">
-  <header class="post-header">
-    <div class="post-metadata">
-      <time datetime="2014-08-06 17:00:00 +0200">
-        Aug 6, 2014 – TUTORIALS
-      </time>
-    </div>
-    <h1 class="post-title">
-      <a class="post-link" href="/tutorials/basic-control-flow/">
-        Basic Control Flow
-      </a>
-    </h1>
-  </header>
-
-  <section class="post-content">
-    
-      
-
-      <p class="swift-version">
-        Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2014-08-06-basic-control-flow.swift">View all code snippets in this post on Github</a>
-      </p>
-    
-    <h3 id="conditional-statements">Conditional Statements</h3>
-
-<p>The <code class="highlighter-rouge">if</code> statement evaluates a boolean value and executes a code block if it’s <code class="highlighter-rouge">true</code>:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">wildPokémonType</span> <span class="o">=</span> <span class="s">"Bug"</span>
-
-<span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!</span>
-</code></pre>
-</div>
-
-<p>With <code class="highlighter-rouge">else</code>:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Rock"</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Leech Seed"</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Tackle</span>
-</code></pre>
-</div>
-
-<h3 id="chaining-conditionals">Chaining Conditionals</h3>
-
-<p>Multiple <code class="highlighter-rouge">if</code> statements can be chained:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Water"</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Leech Seed"</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">wildPokémonType</span> <span class="o">==</span> <span class="s">"Bug"</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Come back, Bulbasaur!"</span><span class="p">)</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Tackle"</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Come back, Bulbasaur!</span>
-</code></pre>
-</div>
-
-<h3 id="switch-statements">Switch Statements</h3>
-
-<p>The <code class="highlighter-rouge">switch</code> statement evaluates a value against multiple patterns then executes the code corresponding to the one that matches:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">wildPokémonType</span> <span class="p">{</span>
-<span class="k">case</span> <span class="s">"Water"</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Bulbasaur!"</span><span class="p">)</span>
-<span class="k">case</span> <span class="s">"Bug"</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!</span>
-</code></pre>
-</div>
-
-<p>A <code class="highlighter-rouge">switch</code> statement needs to be exhaustive; every possible value should be covered. The <code class="highlighter-rouge">default</code> case covers all the remaining cases.</p>
-
-<p>A single case can check against multiple values:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">switch</span> <span class="n">wildPokémonType</span> <span class="p">{</span>
-<span class="k">case</span> <span class="s">"Rock"</span><span class="p">,</span> <span class="s">"Fire"</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Squirtle!"</span><span class="p">)</span>
-<span class="k">case</span> <span class="s">"Bug"</span><span class="p">,</span> <span class="s">"Plant"</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Charmander!"</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go! Pikachu!"</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Go! Charmander!</span>
-</code></pre>
-</div>
-
-<h3 id="switch-fall-through">Switch Fall-through</h3>
-
-<p>The execution of a <code class="highlighter-rouge">switch</code> statement stops as soon a case is matched:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">someType</span> <span class="o">=</span> <span class="s">"Fire"</span>
-
-<span class="k">switch</span> <span class="n">someType</span> <span class="p">{</span>
-<span class="k">case</span> <span class="s">"Fire"</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Go, Squirtle!"</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Pikachu will not be sent out this round."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Go, Squirtle!</span>
-</code></pre>
-</div>
-
-<p>You can also explicitly end execution using the keyword <code class="highlighter-rouge">break</code> anywhere in the statement.</p>
-
-<h3 id="range-matching">Range Matching</h3>
-
-<p>Cases in a <code class="highlighter-rouge">switch</code> statement can check if a value is included in a range:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">attack</span> <span class="o">=</span> <span class="mi">89</span>
-
-<span class="k">switch</span> <span class="n">attack</span> <span class="p">{</span>
-<span class="k">case</span> <span class="mi">1</span><span class="o">...</span><span class="mi">70</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Not ready for competitive play."</span><span class="p">)</span>
-<span class="k">case</span> <span class="mi">71</span><span class="o">...</span><span class="mi">150</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Now we're talking!"</span><span class="p">)</span>
-<span class="k">case</span> <span class="mi">151</span><span class="o">...</span><span class="mi">200</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Uber territory..."</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Hackemon."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Now we're talking!</span>
-</code></pre>
-</div>
-
-<h3 id="tuple-matching">Tuple Matching</h3>
-
-<p>Tuples can be used as values in <code class="highlighter-rouge">switch</code> cases. You can ignore a value in the tuple by replacing it with <code class="highlighter-rouge">_</code> in the case’s test:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">offense</span> <span class="o">=</span> <span class="p">(</span><span class="nv">attack</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="nv">specialAttack</span><span class="p">:</span> <span class="mi">55</span><span class="p">)</span>
-
-<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
-<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Good mixed sweeper."</span><span class="p">)</span>
-<span class="k">case</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Great special sweeper."</span><span class="p">)</span>
-<span class="k">case</span> <span class="p">(</span><span class="mi">80</span><span class="o">...</span><span class="mi">200</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Great physical sweeper."</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Not competitive enough."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Good physical sweeper.</span>
-</code></pre>
-</div>
-
-<h3 id="where">Where</h3>
-
-<p>Cases in a <code class="highlighter-rouge">switch</code> statement can use a <code class="highlighter-rouge">where</code> clause to perform additional checks:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">offense</span><span class="o">.</span><span class="mi">0</span> <span class="o">=</span> <span class="mi">55</span>
-
-<span class="k">switch</span> <span class="n">offense</span> <span class="p">{</span>
-<span class="k">case</span> <span class="nf">let</span> <span class="p">(</span><span class="n">attack</span><span class="p">,</span> <span class="n">specialAttack</span><span class="p">)</span> <span class="k">where</span> <span class="n">attack</span> <span class="o">==</span> <span class="nv">specialAttack</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Perfectly balanced attack stats."</span><span class="p">)</span>
-<span class="k">default</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s">"Unbalanced attack stats."</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// -&gt; Perfectly balanced attack stats.</span>
 </code></pre>
 </div>
 

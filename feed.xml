@@ -5,9 +5,46 @@
     <description>Swift snippets, tips, resources, and links.</description>
     <link>https://swiftbits.redalemeden.com/</link>
     <atom:link href="https://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Sep 2016 19:59:34 +0200</pubDate>
-    <lastBuildDate>Sun, 25 Sep 2016 19:59:34 +0200</lastBuildDate>
+    <pubDate>Fri, 30 Sep 2016 23:06:36 +0200</pubDate>
+    <lastBuildDate>Fri, 30 Sep 2016 23:06:36 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Swift 3 Access Control</title>
+        <description>&lt;p&gt;Swift 3 introduced finer-grained control over what can access what in your code.&lt;br /&gt;
+The addition of 2 keywords made things less obvious, however. Here is a&lt;br /&gt;
+cheatsheet to help with the transition:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/access-control-swift3.svg&quot; alt=&quot;Swift 3 access control keywords&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt;: Entity can only be accessed within the same scope it was defined&lt;br /&gt;
+in. A &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt; class can only be subclassed by another &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt; class defined&lt;br /&gt;
+in the same scope.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;File private&lt;/strong&gt;: Entity can only be accessed within the same file. You can&lt;br /&gt;
+subclass &lt;code class=&quot;highlighter-rouge&quot;&gt;fileprivate&lt;/code&gt; classes and override their &lt;code class=&quot;highlighter-rouge&quot;&gt;fileprivate&lt;/code&gt; methods and&lt;br /&gt;
+properties.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internal&lt;/strong&gt;: Entity can only be accessed within the same module, i.e. app or&lt;br /&gt;
+framework target. This is the &lt;em&gt;default&lt;/em&gt; if no access keyword is specified. You&lt;br /&gt;
+can subclass classes and override their non-private methods and properties.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Public&lt;/strong&gt;: Entity can be accessed from within other modules. Classes cannot&lt;br /&gt;
+be subclassed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open&lt;/strong&gt;: Entity can be accessed from within other modules. Classes can be&lt;br /&gt;
+subclassed in other modules if they are marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt;. Each method and&lt;br /&gt;
+property needs to be marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; to be overrideable in subclasses.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 29 Sep 2016 09:33:19 +0200</pubDate>
+        <link>https://swiftbits.redalemeden.com/resources/swift-3-access-control/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/resources/swift-3-access-control/</guid>
+        
+        <category>swift3</category>
+        
+        
+        <category>resources</category>
+        
+      </item>
     
       <item>
         <title>Site Relaunch</title>
@@ -171,15 +208,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 </description>
         <pubDate>Tue, 16 Sep 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/enumerations/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/enumerations/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/enumerations/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/enumerations/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -247,7 +284,7 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 &lt;h3 id=&quot;multiple-return-values&quot;&gt;Multiple Return Values&lt;/h3&gt;
 
-&lt;p&gt;Functions can also return &lt;a href=&quot;/tutorials/tuples/&quot;&gt;tuples&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Functions can also return &lt;a href=&quot;/basics/tuples/&quot;&gt;tuples&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;falseSwipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;remainingHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;potentialDamage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;67.0&lt;/span&gt;
@@ -327,15 +364,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Aug 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/function-basics/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/function-basics/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/function-basics/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/function-basics/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -447,15 +484,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 20:55:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/optionals/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/optionals/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/optionals/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/optionals/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -607,15 +644,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 17:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/basic-control-flow/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/basic-control-flow/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/basic-control-flow/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/basic-control-flow/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -770,15 +807,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 17:45:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/basic-operators/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/basic-operators/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/basic-operators/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/basic-operators/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -842,15 +879,15 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 14:30:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/tuples/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/tuples/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/tuples/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/tuples/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -966,15 +1003,15 @@ a given key.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/dictionaries/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/dictionaries/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/dictionaries/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/dictionaries/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
@@ -1144,103 +1181,15 @@ keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; consta
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/arrays/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/arrays/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/arrays/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/arrays/</guid>
         
         <category>beginner</category>
         
         <category>pokémon</category>
         
         
-        <category>tutorials</category>
-        
-      </item>
-    
-      <item>
-        <title>Getting Started</title>
-        <description>&lt;h3 id=&quot;console-output&quot;&gt;Console Output&lt;/h3&gt;
-
-&lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; function to print to the console:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello there! Welcome to the world of Pokémon!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;variables&quot;&gt;Variables&lt;/h3&gt;
-
-&lt;p&gt;Variables are declared using the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;, followed by the variable name and &lt;a href=&quot;#type-inference&quot;&gt;optionally&lt;/a&gt; its type. A value can be assigned to the variable using the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; operand:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;playerName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Red&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Variables can be re-assigned:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;playerName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Blue&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;…but cannot be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;, unless they are optional&lt;sup id=&quot;fnref:intro1&quot;&gt;&lt;a href=&quot;#fn:intro1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;playerName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;constants&quot;&gt;Constants&lt;/h3&gt;
-
-&lt;p&gt;Constants are declared similarly to &lt;a href=&quot;#variables&quot;&gt;variables&lt;/a&gt;, except they use the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; instead:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;gameTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pokémon Red&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;…and cannot be re-assigned:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gameTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Pokémon Blue&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Like variables, constants cannot be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;&lt;sup id=&quot;fnref:intro1:1&quot;&gt;&lt;a href=&quot;#fn:intro1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;type-inference&quot;&gt;Type Inference&lt;/h3&gt;
-
-&lt;p&gt;Type inference refers to the compiler’s ability to implicitly determine the type of a variable without having to specify it in the declaration:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rivalName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Blue&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;string-interpolation&quot;&gt;String Interpolation&lt;/h3&gt;
-
-&lt;p&gt;Values can be included in strings using a &lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt; and the desired value between parentheses:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;damage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;currentHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Current HP: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;totalHP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;damage&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Current HP: 5&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:intro1&quot;&gt;
-      &lt;p&gt;Variables and constants that are explicitly declared as optional can be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. More on that later. &lt;a href=&quot;#fnref:intro1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:intro1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 13 Jun 2014 14:56:02 +0200</pubDate>
-        <link>https://swiftbits.redalemeden.com/tutorials/getting-started/</link>
-        <guid isPermaLink="true">https://swiftbits.redalemeden.com/tutorials/getting-started/</guid>
-        
-        <category>beginner</category>
-        
-        <category>pokémon</category>
-        
-        
-        <category>tutorials</category>
+        <category>basics</category>
         
       </item>
     
