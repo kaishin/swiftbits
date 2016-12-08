@@ -13,7 +13,7 @@
   
   
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://swiftbits.redalemeden.com/basics/">
+  <link rel="canonical" href="localhost:4000/basics/">
   <link rel="alternate" type="application/rss+xml" title="Swiftbits" href="http://feedpress.me/swiftbits" />
   <script src="//use.typekit.net/jra4cdq.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -72,6 +72,108 @@
 
     <main class="main-content-box" data-role="container">
       <ul class="post-list">
+  
+  <li class="post-list-item">
+    <article class="post">
+      <header class="post-header">
+        <div class="post-metadata">
+          <time datetime="2016-12-04 06:55:50 +0100">
+            Dec 4, 2016
+          </time>
+        </div>
+        <h1 class="post-title">
+          <a class="post-link" href="/basics/units-in-foundation/">
+            Units in Foundation
+          </a>
+        </h1>
+      </header>
+
+      <section class="post-content">
+        
+          
+
+          <p class="swift-version">
+            Swift version: <strong>3.0</strong> | <a href="https://github.com/kaishin/swiftbits/blob/master/swift/2016-12-04-units-in-foundation.swift">View all code snippets in this post on Github</a>
+          </p>
+        
+        <p>Starting iOS 10 and macOS 10.12, <em>Foundation</em> supports units and measurments out of the box, in the form of <a href="https://developer.apple.com/reference/foundation/unit">(NS)Unit</a> and <a href="https://developer.apple.com/reference/foundation/nsmeasurement">(NS)Measurment</a> respectively.</p>
+
+<p>To get started, let’s import <code class="highlighter-rouge">Foundation</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+</code></pre>
+</div>
+
+<p>To define a measurment, a <em>value</em> and a <em>unit</em> are needed:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">snorlaxWeight</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">460</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitMass</span><span class="o">.</span><span class="n">kilograms</span><span class="p">)</span>
+<span class="c1">// -&gt; 460.0 kg</span>
+</code></pre>
+</div>
+
+<p>You can then effortlessly convert the measurment to another unit:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">snorlaxWightInImperial</span> <span class="o">=</span> <span class="n">snorlaxWeight</span><span class="o">.</span><span class="nf">converted</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="o">.</span><span class="n">pounds</span><span class="p">)</span>
+<span class="c1">// -&gt; 1014.12723328454 lb</span>
+</code></pre>
+</div>
+
+<p>You can also define your own unit by extending one of the default <a href="https://developer.apple.com/reference/foundation/dimension"><em>dimensions</em></a> available:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">extension</span> <span class="kt">UnitMass</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="k">let</span> <span class="nv">snorlax</span> <span class="o">=</span> <span class="kt">UnitMass</span><span class="p">(</span><span class="nv">symbol</span><span class="p">:</span> <span class="s">"snorlax"</span><span class="p">,</span> <span class="nv">converter</span><span class="p">:</span> <span class="kt">UnitConverterLinear</span><span class="p">(</span><span class="nv">coefficient</span><span class="p">:</span> <span class="mi">460</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>The converter is used to transform the measurment from any given unit to the base unit of the dimension; Kilograms in the case of <code class="highlighter-rouge">UnitMass</code>. You can inspect the base unit of any dimension by calling <code class="highlighter-rouge">baseUnit()</code> on it.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kt">UnitMass</span><span class="o">.</span><span class="nf">baseUnit</span><span class="p">()</span>
+<span class="c1">// -&gt; kg</span>
+</code></pre>
+</div>
+
+<p>Once defined, your custom unit can be used alongside the pre-defined ones:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">statueOfLibertyMass</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">225_000</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitMass</span><span class="o">.</span><span class="n">kilograms</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">statueOfLibertyMassInSnorlax</span> <span class="o">=</span> <span class="n">statueOfLibertyMass</span><span class="o">.</span><span class="nf">converted</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="o">.</span><span class="n">snorlax</span><span class="p">)</span>
+<span class="c1">// -&gt; 489.130434782609 snorlax</span>
+</code></pre>
+</div>
+
+<p>You can also define a custom dimension of units by subclassing <code class="highlighter-rouge">Dimension</code> if necessary. Here is an example that defines a new <code class="highlighter-rouge">UnitDataRate</code> class for measuring data transfer rates, often used in Internet speed tests:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">UnitDataRate</span><span class="p">:</span> <span class="kt">Dimension</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="k">let</span> <span class="nv">kilobitPerSecond</span> <span class="o">=</span> <span class="kt">UnitDataRate</span><span class="p">(</span><span class="nv">symbol</span><span class="p">:</span> <span class="s">"kbps"</span><span class="p">,</span> <span class="nv">converter</span><span class="p">:</span> <span class="kt">UnitConverterLinear</span><span class="p">(</span><span class="nv">coefficient</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span>
+  <span class="kd">static</span> <span class="k">let</span> <span class="nv">megabitPerSecond</span> <span class="o">=</span> <span class="kt">UnitDataRate</span><span class="p">(</span><span class="nv">symbol</span><span class="p">:</span> <span class="s">"Mbps"</span><span class="p">,</span> <span class="nv">converter</span><span class="p">:</span> <span class="kt">UnitConverterLinear</span><span class="p">(</span><span class="nv">coefficient</span><span class="p">:</span> <span class="mi">1_000</span><span class="p">))</span>
+  <span class="kd">static</span> <span class="k">let</span> <span class="nv">gigabitPerSecond</span> <span class="o">=</span> <span class="kt">UnitDataRate</span><span class="p">(</span><span class="nv">symbol</span><span class="p">:</span> <span class="s">"Gbps"</span><span class="p">,</span> <span class="nv">converter</span><span class="p">:</span> <span class="kt">UnitConverterLinear</span><span class="p">(</span><span class="nv">coefficient</span><span class="p">:</span> <span class="mi">1_000_000</span><span class="p">))</span>
+
+  <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">baseUnit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UnitDataRate</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">.</span><span class="n">megabitPerSecond</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">speed</span> <span class="o">=</span> <span class="kt">Measurement</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitDataRate</span><span class="o">.</span><span class="n">megabitPerSecond</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">speedInKpbs</span> <span class="o">=</span> <span class="n">speed</span><span class="o">.</span><span class="nf">converted</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="o">.</span><span class="n">kilobitPerSecond</span><span class="p">)</span>
+
+<span class="c1">// -&gt; 100000 kbps</span>
+</code></pre>
+</div>
+
+<h3 id="learn-more">Learn More</h3>
+
+<ul>
+  <li><a href="https://developer.apple.com/videos/play/wwdc2016/238/">WWDC session 238</a></li>
+  <li><a href="https://oleb.net/blog/2016/07/measurements-and-units/">Measurements and Units in Foundation</a> by Ole Begemann.</li>
+  <li><a href="https://videos.raywenderlich.com/screencasts/ios-10-measurements-units">iOS 10: Measurements &amp; Units Screencast</a> by Sam Davies.</li>
+</ul>
+
+<p><img src="/images/snorlax.png" title="A wild Snorlax appears!" width="28" height="28" style="border: none; opacity: 0.7; box-shadow: none; margin: 0;" /></p>
+
+
+      </section>
+    </article>
+  </li>
   
   <li class="post-list-item">
     <article class="post">
