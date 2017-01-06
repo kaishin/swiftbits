@@ -3,11 +3,105 @@
   <channel>
     <title>Swiftbits</title>
     <description>Swift snippets, tips, resources, and links.</description>
-    <link>localhost:4000/</link>
-    <atom:link href="localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Dec 2016 17:40:18 +0100</pubDate>
-    <lastBuildDate>Sun, 04 Dec 2016 17:40:18 +0100</lastBuildDate>
+    <link>https://swiftbits.redalemeden.com/</link>
+    <atom:link href="https://swiftbits.redalemeden.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 09 Dec 2016 00:23:52 +0100</pubDate>
+    <lastBuildDate>Fri, 09 Dec 2016 00:23:52 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Units in Foundation</title>
+        <description>&lt;p&gt;Starting iOS 10 and macOS 10.12, &lt;em&gt;Foundation&lt;/em&gt; supports units and measurments out of the box, in the form of &lt;a href=&quot;https://developer.apple.com/reference/foundation/unit&quot;&gt;(NS)Unit&lt;/a&gt; and &lt;a href=&quot;https://developer.apple.com/reference/foundation/nsmeasurement&quot;&gt;(NS)Measurment&lt;/a&gt; respectively.&lt;/p&gt;
+
+&lt;p&gt;To get started, let’s import &lt;code class=&quot;highlighter-rouge&quot;&gt;Foundation&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To define a measurment, a &lt;em&gt;value&lt;/em&gt; and a &lt;em&gt;unit&lt;/em&gt; are needed:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;snorlaxWeight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;460&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitMass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilograms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 460.0 kg&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can then effortlessly convert the measurment to another unit:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;snorlaxWightInImperial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;snorlaxWeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pounds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 1014.12723328454 lb&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also define your own unit by extending one of the default &lt;a href=&quot;https://developer.apple.com/reference/foundation/dimension&quot;&gt;&lt;em&gt;dimensions&lt;/em&gt;&lt;/a&gt; available:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitMass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;snorlax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitMass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;snorlax&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;converter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitConverterLinear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coefficient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;460&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The converter is used to transform the measurment from any given unit to the base unit of the dimension; Kilograms in the case of &lt;code class=&quot;highlighter-rouge&quot;&gt;UnitMass&lt;/code&gt;. You can inspect the base unit of any dimension by calling &lt;code class=&quot;highlighter-rouge&quot;&gt;baseUnit()&lt;/code&gt; on it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;UnitMass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;baseUnit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; kg&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once defined, your custom unit can be used alongside the pre-defined ones:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statueOfLibertyMass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;225_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitMass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilograms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;statueOfLibertyMassInSnorlax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statueOfLibertyMass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snorlax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 489.130434782609 snorlax&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also define a custom dimension of units by subclassing &lt;code class=&quot;highlighter-rouge&quot;&gt;Dimension&lt;/code&gt; if necessary. Here is an example that defines a new &lt;code class=&quot;highlighter-rouge&quot;&gt;UnitDataRate&lt;/code&gt; class for measuring data transfer rates, often used in Internet speed tests:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Dimension&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;kilobitPerSecond&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;kbps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;converter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitConverterLinear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coefficient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;megabitPerSecond&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Mbps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;converter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitConverterLinear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coefficient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;gigabitPerSecond&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Gbps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;converter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitConverterLinear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coefficient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1_000_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;baseUnit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;megabitPerSecond&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;speed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDataRate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;megabitPerSecond&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;speedInKpbs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilobitPerSecond&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 100000 kbps&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;learn-more&quot;&gt;Learn More&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/238/&quot;&gt;WWDC session 238&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://oleb.net/blog/2016/07/measurements-and-units/&quot;&gt;Measurements and Units in Foundation&lt;/a&gt; by Ole Begemann.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://videos.raywenderlich.com/screencasts/ios-10-measurements-units&quot;&gt;iOS 10: Measurements &amp;amp; Units Screencast&lt;/a&gt; by Sam Davies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/snorlax.png&quot; title=&quot;A wild Snorlax appears!&quot; width=&quot;28&quot; height=&quot;28&quot; style=&quot;border: none; opacity: 0.7; box-shadow: none; margin: 0;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 04 Dec 2016 06:55:50 +0100</pubDate>
+        <link>https://swiftbits.redalemeden.com/basics/units-in-foundation/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/units-in-foundation/</guid>
+        
+        <category>swift3</category>
+        
+        <category>foundation</category>
+        
+        <category>measurments</category>
+        
+        <category>dimension</category>
+        
+        
+        <category>basics</category>
+        
+      </item>
     
       <item>
         <title>Swift 3 Access Control</title>
@@ -36,8 +130,8 @@ property needs to be marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;o
 
 </description>
         <pubDate>Thu, 29 Sep 2016 09:33:19 +0200</pubDate>
-        <link>localhost:4000/resources/swift-3-access-control/</link>
-        <guid isPermaLink="true">localhost:4000/resources/swift-3-access-control/</guid>
+        <link>https://swiftbits.redalemeden.com/resources/swift-3-access-control/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/resources/swift-3-access-control/</guid>
         
         <category>swift3</category>
         
@@ -82,8 +176,8 @@ property needs to be marked as &lt;code class=&quot;highlighter-rouge&quot;&gt;o
 &lt;p&gt;Happy Swifting!&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Aug 2015 08:26:02 +0200</pubDate>
-        <link>localhost:4000/meta/site-relaunch/</link>
-        <guid isPermaLink="true">localhost:4000/meta/site-relaunch/</guid>
+        <link>https://swiftbits.redalemeden.com/meta/site-relaunch/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/meta/site-relaunch/</guid>
         
         
         <category>meta</category>
@@ -208,8 +302,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 
 </description>
         <pubDate>Tue, 16 Sep 2014 20:00:00 +0200</pubDate>
-        <link>localhost:4000/basics/enumerations/</link>
-        <guid isPermaLink="true">localhost:4000/basics/enumerations/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/enumerations/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/enumerations/</guid>
         
         <category>beginner</category>
         
@@ -364,8 +458,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Aug 2014 20:00:00 +0200</pubDate>
-        <link>localhost:4000/basics/function-basics/</link>
-        <guid isPermaLink="true">localhost:4000/basics/function-basics/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/function-basics/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/function-basics/</guid>
         
         <category>beginner</category>
         
@@ -484,8 +578,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 20:55:00 +0200</pubDate>
-        <link>localhost:4000/basics/optionals/</link>
-        <guid isPermaLink="true">localhost:4000/basics/optionals/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/optionals/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/optionals/</guid>
         
         <category>beginner</category>
         
@@ -644,8 +738,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 06 Aug 2014 17:00:00 +0200</pubDate>
-        <link>localhost:4000/basics/basic-control-flow/</link>
-        <guid isPermaLink="true">localhost:4000/basics/basic-control-flow/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/basic-control-flow/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/basic-control-flow/</guid>
         
         <category>beginner</category>
         
@@ -807,8 +901,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 17:45:00 +0200</pubDate>
-        <link>localhost:4000/basics/basic-operators/</link>
-        <guid isPermaLink="true">localhost:4000/basics/basic-operators/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/basic-operators/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/basic-operators/</guid>
         
         <category>beginner</category>
         
@@ -879,8 +973,8 @@ If you declare the raw value type but not explicitly set it in one or more cases
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 14:30:00 +0200</pubDate>
-        <link>localhost:4000/basics/tuples/</link>
-        <guid isPermaLink="true">localhost:4000/basics/tuples/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/tuples/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/tuples/</guid>
         
         <category>beginner</category>
         
@@ -1003,186 +1097,8 @@ a given key.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>localhost:4000/basics/dictionaries/</link>
-        <guid isPermaLink="true">localhost:4000/basics/dictionaries/</guid>
-        
-        <category>beginner</category>
-        
-        <category>pokémon</category>
-        
-        
-        <category>basics</category>
-        
-      </item>
-    
-      <item>
-        <title>Arrays</title>
-        <description>&lt;h3 id=&quot;declaring-arrays&quot;&gt;Declaring Arrays&lt;/h3&gt;
-
-&lt;p&gt;Arrays hold a collection of values with the same type. They can be declared using the bracket shorthand syntax, commonly referred to as an &lt;em&gt;array literal&lt;/em&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;starters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bulbasaur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Charmander&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Squirtle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The type of values in an array can be inferred as in the example above (string).&lt;br /&gt;
-It can also be explicitly set using the &lt;code class=&quot;highlighter-rouge&quot;&gt;[Type]&lt;/code&gt; syntax:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;An array can only hold values of the same type:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;starters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bulbasaur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Squirtle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;You can create an array of a certain length and give its elements a default value like so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;repeating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// [&quot;Potion&quot;, &quot;Potion&quot;, &quot;Potion&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;inspecting-arrays&quot;&gt;Inspecting Arrays&lt;/h3&gt;
-
-&lt;p&gt;You can get the number of values in an array using &lt;code class=&quot;highlighter-rouge&quot;&gt;count&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; 3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;To check whether an array is empty, you can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;isEmpty()&lt;/code&gt; function:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;To get the first or last value&lt;sup id=&quot;fnref:array1&quot;&gt;&lt;a href=&quot;#fn:array1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in an array, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;first()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;last()&lt;/code&gt; methods respectively:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Squirtle&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;contains()&lt;/code&gt; method to check if the array contains a given value:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isBulbasaurStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bulbasaur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; true&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isPidgeotStarter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pidgeot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Beware that this won’t work if the value being checked is of a different type than the one the array holds:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;getting-array-values&quot;&gt;Getting Array Values&lt;/h3&gt;
-
-&lt;p&gt;Use subscript syntax to access the value stored at a given index:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pokemon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; &quot;Bulbasaur&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that the first item has an index of 0.&lt;/p&gt;
-
-&lt;h3 id=&quot;adding-array-values&quot;&gt;Adding Array Values&lt;/h3&gt;
-
-&lt;p&gt;To add a new value, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;append()&lt;/code&gt; function:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Articuno&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Zapdos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Moltres&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;concatenating-arrays&quot;&gt;Concatenating Arrays&lt;/h3&gt;
-
-&lt;p&gt;You can concatenate two arrays using the &lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; operator:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;legendaries&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;mutating-arrays&quot;&gt;Mutating Arrays&lt;/h3&gt;
-
-&lt;p&gt;In order to mutate the values included in an array, it needs to be declared as a variable using the&lt;br /&gt;
-keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;; constant arrays are immutable:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;otherLegendaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;otherLegendaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Moltres&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Error&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;inserting-values&quot;&gt;Inserting Values&lt;/h3&gt;
-
-&lt;p&gt;To insert a value at a given index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;insert&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Pikachu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Zapdos&quot;, &quot;Moltres&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;updating-array-values&quot;&gt;Updating Array Values&lt;/h3&gt;
-
-&lt;p&gt;To update an existing value, use the subscript syntax:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Mewtwo&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Mewtwo&quot;, &quot;Moltres&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;deleting-array-values&quot;&gt;Deleting Array Values&lt;/h3&gt;
-
-&lt;p&gt;To delete a value at a specific index, use &lt;code class=&quot;highlighter-rouge&quot;&gt;remove(at:)&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;, &quot;Moltres&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;removeLast()&lt;/code&gt; to, remove the last value:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeLast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;, &quot;Pikachu&quot;, &quot;Articuno&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;You can also remove multiple values by using &lt;code class=&quot;highlighter-rouge&quot;&gt;removeSubrange()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;starters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeSubrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// -&amp;gt; [&quot;Bulbasaur&quot;, &quot;Charmander&quot;, &quot;Squirtle&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:array1&quot;&gt;
-      &lt;p&gt;In practice, what you get is an optional value, which means it can be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;, for example when the array is empty. More on optionals later. &lt;a href=&quot;#fnref:array1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 05 Jul 2014 20:00:00 +0200</pubDate>
-        <link>localhost:4000/basics/arrays/</link>
-        <guid isPermaLink="true">localhost:4000/basics/arrays/</guid>
+        <link>https://swiftbits.redalemeden.com/basics/dictionaries/</link>
+        <guid isPermaLink="true">https://swiftbits.redalemeden.com/basics/dictionaries/</guid>
         
         <category>beginner</category>
         
