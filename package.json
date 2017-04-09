@@ -2,11 +2,12 @@
   "name": "swiftbits",
   "private": true,
   "main": "gulpfile.js",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.8.0",
     "dateformat": "^1.0.11",
     "del": "^2.0.0",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-cached": "^1.1.0",
     "gulp-clip-empty-files": "^0.1.2",
     "gulp-cssnano": "^2.0.0",
