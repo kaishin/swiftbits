@@ -16,6 +16,11 @@
 }
 
 .post-link {
+  font-family: "ingra-condensed", $sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
   &,
   &:link,
   &:visited {

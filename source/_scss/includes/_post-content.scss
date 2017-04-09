@@ -44,7 +44,7 @@
 }
 
 .post-content {
-  font-weight: 300;
+  font-weight: 400;
 
   h3 {
     margin: 2rem 0 0;
@@ -52,6 +52,10 @@
 
   p {
     margin: 0.8rem 0;
+
+    code {
+      font-style: italic;
+    }
   }
 
   a {
@@ -107,12 +111,13 @@
   font-size: 0.9em;
 }
 
-.swift-version {
+p.swift-version {
   background-color: mix(lighten($casablanca, 35%), #FFFF00, 80%);
   border-radius: 3px;
   display: block;
   font-size: 0.85em;
   padding: 1em;
+  margin-bottom: 2rem;
 
   a {
     text-decoration: none;
