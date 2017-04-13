@@ -80,23 +80,30 @@ $gap: 0.777em;
 }
 
 .main-heading {
-  color: $black;
-  font-size: 1.6rem;
-  font-weight: 100;
+  color: $link-color;
+  font-family: "ingra-condensed", $sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
   line-height: 1.4;
   margin: 0;
+  text-transform: uppercase;
   transition: color 0.2s linear;
 
   &:hover {
-    color: $link-color;
+    color: $black;
   }
 }
 
 .main-description {
   color: $gray;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo-image {

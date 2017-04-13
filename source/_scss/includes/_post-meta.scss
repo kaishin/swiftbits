@@ -17,8 +17,9 @@
 
 .post-link {
   font-family: "ingra-condensed", $sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
 
   &,
@@ -36,7 +37,6 @@
 [class*=metadata] {
   color: $gray;
   font-size: 0.9rem;
-  font-weight: 300;
 }
 
 .post-metadata {
