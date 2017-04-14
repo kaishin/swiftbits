@@ -17,7 +17,7 @@
   <nav class="main-nav">
     <ul class="link-list" data-role="container">
       <li class="link-item">
-        <a href="/" {% if page.active == "home" %}class="active"{% endif %}>Home</a>
+        <a href="/" {% if page.active == "home" %}class="active"{% endif %}>All</a>
       </li>
       <li class="link-item">
         <a href="/basics" {% if page.active == "basics" %}class="active"{% endif %}>Basics</a>
@@ -27,6 +27,9 @@
       </li>
       <li class="link-item">
         <a href="/recipes" {% if page.active == "recipes" %}class="active"{% endif %}>Recipes</a>
+      </li>
+      <li class="link-item">
+        <a href="/snippets" {% if page.active == "snippets" %}class="active"{% endif %}>Snippets</a>
       </li>
       <li class="link-item-icon">
         <a href="{{ site.feed }}" class="icon">
