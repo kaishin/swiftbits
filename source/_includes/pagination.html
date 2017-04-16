@@ -3,13 +3,13 @@
   <ul class="pagination">
     {% if paginator.previous_page %}
     <li>
-      <a class="next-page-link" aria-label="next page" title="Next Page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&#65308;</a>
+      <a class="next-page-link" aria-label="next page" title="Next Page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
     </li>
     {% endif %}
 
     {% if paginator.next_page %}
     <li>
-      <a class="previous-page-link" aria-label="previous page" title="Previous Page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&#65310;</a>
+      <a class="previous-page-link" aria-label="previous page" title="Previous Page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
     </li>
     {% endif %}
   </ul>
